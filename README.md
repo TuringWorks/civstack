@@ -42,7 +42,10 @@ The "brain" need not be a single large model trained one way. CivStack assumes a
 - **Optimization methods:** imitation / behavior cloning, model-based & offline RL, **RLHF/RLAIF**, sim-to-real, self-supervised pretraining, supervised fine-tuning, **distillation & compression** (LLM → SLM → tiny LM), search & planning (MCTS, MPC), classical optimization & control, **formal verification**, and evolutionary search.
 - **Selection rubric:** exhaustiveness vs efficiency, determinism and verifiability, latency and power, data availability, and consequence — with a verified deterministic safety layer beneath anything learned.
 
-The roles that design and run this spectrum live in `skills/_catalogs/capability-optimization/`. This is a deliberately productizable layer: a **method/model router** that picks the cheapest, safest way to deliver each capability is the commercial core of an embodied-AI platform.
+The roles that design and run this spectrum live in `skills/_catalogs/capability-optimization/`. This is a deliberately productizable layer: a **method/model router** that picks the cheapest, safest way to deliver each capability is the commercial core of an embodied-AI platform. A working version ships here:
+
+- **[`docs/capability-routing-matrix.md`](docs/capability-routing-matrix.md)** — the routing matrix: decision inputs, a capability-archetype lookup table, ordered decision rules, and worked examples.
+- **[`tools/capability-router.html`](tools/capability-router.html)** — an interactive selector: choose a capability's safety, latency, verifiability, task type, data, compute, and connectivity, and it recommends a model tier, optimization method(s), and a safe fallback with the rationale.
 
 ---
 
@@ -77,7 +80,8 @@ civstack/
 ├── README.md
 ├── LICENSE
 ├── docs/
-│   └── country-economy-core-jtbd.md      # the source strategy map
+│   ├── country-economy-core-jtbd.md      # the source strategy map
+│   └── capability-routing-matrix.md      # how to route capabilities to tier + method
 ├── skills/
 │   ├── 00-framework/SKILL.md             # start here: shared model + index
 │   ├── 01-governance/

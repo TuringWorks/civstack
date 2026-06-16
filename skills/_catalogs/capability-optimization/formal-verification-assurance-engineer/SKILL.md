@@ -60,6 +60,8 @@ Use it when a task calls for this work: proves and assures safety-critical behav
 4. Reserve large learned models for open-ended judgment; reserve deterministic/verified methods for safety-critical loops.
 5. Measure on the real task, compare tiers/methods, and keep a verified safety layer beneath anything learned.
 
+> **Decision tool:** use the routing matrix in `docs/capability-routing-matrix.md` and the interactive selector `tools/capability-router.html` to turn a capability's constraints (safety, latency, verifiability, task type, data, compute, connectivity) into a recommended tier, method, and fallback.
+
 ## Failure modes and safeguards
 
 - **Over-reach** — using a large learned model where a verifiable controller would be safer and cheaper. Mitigation: the selection rubric and a verified safety layer.
