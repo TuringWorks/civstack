@@ -105,6 +105,18 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** Apprentice lineworker/technician → journeyman → foreman; system-operator trainee → certified system operator → shift supervisor → control-center manager; EIT → PE → engineering manager; energy trader.
+- **Skills, tools & tech:** EMS/SCADA, OMS (outage management), ADMS/DMS, ISO/RTO market platforms, PI historian, PSS/E, GIS.
+- **Qualifications, certs & licenses:** NERC System Operator certification (RC/BA/TO), journeyman electrical license, PE, NRC reactor operator (nuclear), OSHA, CDL.
+- **KPIs in postings:** SAIDI/SAIFI reliability, area control error/load balance, restoration time, OSHA recordables, market-settlement accuracy.
+- **Posting venues:** ZipRecruiter, Glassdoor, BuiltIn, LinkedIn, IBEW, utility career pages.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

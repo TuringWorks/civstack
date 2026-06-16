@@ -105,6 +105,18 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** Assistant/freelancer → reporter/producer/designer → senior/editor → managing editor/creative director; nonprofit: program coordinator → manager → director.
+- **Skills, tools & tech:** CMS, Adobe Creative Cloud, NLE (Premiere/Avid), DAM/archive systems, social-publishing and audience-analytics tools.
+- **Qualifications, certs & licenses:** Degrees in journalism/arts (rarely licensed); SAG-AFTRA (performers), seminary/ordination (clergy), coaching certifications, SAA (archivists).
+- **KPIs in postings:** Audience/reach/engagement, subscriptions, accuracy/corrections, event attendance, donations, community trust.
+- **Posting venues:** LinkedIn, MediaBistro, JournalismJobs, Idealist (nonprofit), Indeed, guild/industry boards.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

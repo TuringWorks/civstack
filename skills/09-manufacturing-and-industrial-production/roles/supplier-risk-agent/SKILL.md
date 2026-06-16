@@ -105,6 +105,18 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** Operator/assembler → technician/setup → process/quality engineer → production supervisor → plant manager; maintenance apprentice → journeyman → reliability engineer.
+- **Skills, tools & tech:** MES, ERP (SAP), PLC/SCADA, CAD/CAM, SPC/quality (Minitab), CMMS, industrial robotics, Lean/Six Sigma.
+- **Qualifications, certs & licenses:** Six Sigma Green/Black Belt, ASQ CQE/CQA, PE, CMfgE, PMP, OSHA/forklift, journeyman trades.
+- **KPIs in postings:** OEE, scrap/defect rate (PPM), on-time delivery, downtime/MTBF, safety TRIR.
+- **Posting venues:** Indeed, LinkedIn, ZipRecruiter, manufacturing boards, Snagajob (hourly).
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

@@ -105,6 +105,24 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+**In the job market, this agent maps to:** Food Safety Manager, QA Manager, Compliance Specialist.
+
+Employers typically list — **tools:** HACCP/HARPC plans, LIMS, audit and traceability systems. **Qualifications/certs:** PCQI (FSMA), ServSafe, SQF/BRC or GlobalG.A.P. practitioner.
+
+Measured on audit scores and recall readiness; posted on Indeed and AgCareers.com.
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** Farmworker/technician → crew lead/grower → farm/ranch manager → operations director; agronomy track; food safety: QA tech → QA manager → director of food safety.
+- **Skills, tools & tech:** Farm-management software (Climate FieldView, John Deere Operations Center, Granular), precision-ag/GIS, irrigation controllers, telematics, LIMS, HACCP/food-safety systems, ERP.
+- **Qualifications, certs & licenses:** CCA (Certified Crop Adviser), pesticide applicator license, PCQI (FSMA), ServSafe, DVM (veterinary), RD/RDN (dietitian), GlobalG.A.P., CDL for ag transport.
+- **KPIs in postings:** Yield, input cost per acre/unit, loss/waste, food-safety audit scores, traceability completeness, on-time fulfillment.
+- **Posting venues:** AgCareers.com, Indeed, LinkedIn, GovernmentJobs (USDA/extension), Snagajob (seasonal/hourly), local co-ops.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

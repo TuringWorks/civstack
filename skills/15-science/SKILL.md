@@ -48,6 +48,18 @@ Every job in this sector moves through the same seven steps. Use it as a checkli
 
 These remain human-owned. AI personnel and robots augment them; they do not replace the accountable owner.
 
+## Labor-market grounding (how these roles are advertised)
+
+The human roles this operating system staffs appear on job boards with concrete, checkable signals. The AI-personnel and robot skills here are designed to *support* these advertised roles, not to replace the accountable human in them.
+
+- **Advertised titles & seniority ladder:** Research associate → scientist → senior/principal investigator → lab/department director; computational and tech-transfer/patent tracks.
+- **Skills, tools & tech employers list:** Lab instruments with LIMS/ELN, Python/R, statistical and HPC/simulation software, bioinformatics pipelines, CAD, metrology equipment.
+- **Qualifications, certifications & licenses:** PhD (most research-lead roles), PE (standards), USPTO patent bar (patent agent/attorney), GLP/GMP and biosafety training, metrology certifications.
+- **KPIs / metrics in postings:** Publications/citations, grants funded, replication/validation rate, patents filed, milestone delivery, measurement accuracy.
+- **Where these roles are posted:** Nature Careers, HigherEdJobs, LinkedIn, Indeed, USAJOBS (national labs/NIST), industry R&D pages.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## AI personnel in this operating system (deployable role skills)
 
 Each of the following has a dedicated, extensive skill under `roles/`. Deploy them under the named human supervisor:

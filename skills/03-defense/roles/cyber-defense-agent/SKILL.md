@@ -105,6 +105,18 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** Analyst/officer (entry) → senior analyst → branch chief → SES/flag officer; Foreign Service officer ranks; military O-1…O-6.
+- **Skills, tools & tech:** Classified analytic and geospatial (GIS) platforms, OSINT tooling, SIGINT/IMINT systems, language tools, defense logistics systems.
+- **Qualifications, certs & licenses:** TS/SCI clearance (often polygraph), Foreign Service exam, DAWIA (acquisition), language proficiency (DLPT/ILR), military commissioning.
+- **KPIs in postings:** Mission readiness, intelligence timeliness/accuracy, interdiction rates, negotiation/treaty outcomes, force-protection incidents.
+- **Posting venues:** USAJOBS, IC Careers (CIA/NSA/DIA/NGA), Feds Hire Vets, ClearanceJobs, agency portals.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

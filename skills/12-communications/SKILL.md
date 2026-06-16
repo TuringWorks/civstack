@@ -50,6 +50,18 @@ Every job in this sector moves through the same seven steps. Use it as a checkli
 
 These remain human-owned. AI personnel and robots augment them; they do not replace the accountable owner.
 
+## Labor-market grounding (how these roles are advertised)
+
+The human roles this operating system staffs appear on job boards with concrete, checkable signals. The AI-personnel and robot skills here are designed to *support* these advertised roles, not to replace the accountable human in them.
+
+- **Advertised titles & seniority ladder:** SWE I → SWE II/senior → staff/principal → engineering manager → director/VP; data: analyst → data scientist/engineer → senior → lead; security: SOC Tier 1 → Tier 2/3 → security engineer → CISO; AI: ML engineer → senior/applied scientist → AI engineering manager. (Real 2026 postings: 'Senior Engineering Manager, AI' base ~$228K–$373K.)
+- **Skills, tools & tech employers list:** Python, SQL, Java/Go/TypeScript; cloud (AWS/Azure/GCP); Kubernetes/Docker; CI/CD, Git, Terraform; PyTorch/TensorFlow/scikit-learn; Spark/Snowflake/BigQuery; SIEM/EDR.
+- **Qualifications, certifications & licenses:** Cloud certs (AWS/Azure/GCP), CKA; security ladder Security+ → CySA+ → CISSP/CISM; CCNA/CCNP (network); CEH; CS/related degree common.
+- **KPIs / metrics in postings:** Uptime/SLOs, DORA metrics (deploy frequency, lead time, MTTR, change-fail rate), defect/escape rate, incident counts, model-eval metrics, cost.
+- **Where these roles are posted:** Dice, LinkedIn, Wellfound (startups), BuiltIn, Indeed, Upwork (freelance), ClearanceJobs (cleared).
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## AI personnel in this operating system (deployable role skills)
 
 Each of the following has a dedicated, extensive skill under `roles/`. Deploy them under the named human supervisor:

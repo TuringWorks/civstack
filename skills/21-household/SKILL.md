@@ -47,6 +47,18 @@ Every job in this sector moves through the same seven steps. Use it as a checkli
 
 These remain human-owned. AI personnel and robots augment them; they do not replace the accountable owner.
 
+## Labor-market grounding (how these roles are advertised)
+
+The human roles this operating system staffs appear on job boards with concrete, checkable signals. The AI-personnel and robot skills here are designed to *support* these advertised roles, not to replace the accountable human in them.
+
+- **Advertised titles & seniority ladder:** Caregiver/aide → senior aide/lead → care coordinator → program manager; social work: BSW → MSW/LCSW → supervisor.
+- **Skills, tools & tech employers list:** Scheduling/EVV systems, care-plan and family-communication apps, case-management systems, benefits portals.
+- **Qualifications, certifications & licenses:** CNA, HHA, CPR/First Aid, CDA (child development), LSW/LCSW, Community Health Worker certification, background checks.
+- **KPIs / metrics in postings:** Client safety/falls, satisfaction, care-plan adherence, placement/stability, caseload outcomes, response time.
+- **Where these roles are posted:** Care.com, Snagajob, Indeed, GovernmentJobs (county social services), Idealist (nonprofit), local agencies.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## AI personnel in this operating system (deployable role skills)
 
 Each of the following has a dedicated, extensive skill under `roles/`. Deploy them under the named human supervisor:

@@ -105,6 +105,18 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** Staff accountant/tax examiner → senior analyst/auditor → manager/controller → finance director/CFO; procurement: buyer → contract specialist → warranted contracting officer. Public roles carry GS grades.
+- **Skills, tools & tech:** ERP (SAP, Oracle, Workday), GL/AP and tax systems, Excel/Power BI, e-sourcing/procurement (SAP Ariba, Coupa), GASB/GAAP reporting, data-analytics.
+- **Qualifications, certs & licenses:** CPA, CGFM (government financial manager), CIA, CFE (fraud), CPPB/CPPO and FAC-C/DAWIA (federal contracting), CGAP.
+- **KPIs in postings:** Collection rate, days-to-close, budget variance, audit findings, procurement cycle time, savings captured, fraud loss rate.
+- **Posting venues:** USAJOBS, GovernmentJobs, LinkedIn, Indeed; AGA/GFOA boards for public finance.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

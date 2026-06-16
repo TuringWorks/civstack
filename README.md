@@ -83,7 +83,9 @@ civstack/
 
 ## Anatomy of a skill
 
-Every role `SKILL.md` carries YAML frontmatter (`name`, a "pushy" triggering `description`) plus an extensive body: what the role is, when to trigger it, operating-system context, the seven-step lifecycle, responsibilities, inputs/outputs, **decision rights**, human/AI/robot teaming, a hard **accountability boundary**, tools and interfaces, collaborators, success metrics, **failure modes & safeguards**, **context modifiers for any nation**, and a step-by-step operating procedure.
+Every role `SKILL.md` carries YAML frontmatter (`name`, a "pushy" triggering `description`) plus an extensive body: what the role is, when to trigger it, operating-system context, the seven-step lifecycle, responsibilities, inputs/outputs, **decision rights**, human/AI/robot teaming, a hard **accountability boundary**, tools and interfaces, collaborators, success metrics, **failure modes & safeguards**, **context modifiers for any nation**, **labor-market grounding** (real advertised titles and seniority ladder, the skills/tools/tech employers list, qualifications/certifications/licenses, KPIs from postings, and which job boards carry the role), and a step-by-step operating procedure.
+
+The grounding is calibrated to how each role is actually advertised in 2026 across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards — spot-verified against public listings and O\*NET/BLS. Flagship sectors (communications/software, healthcare, finance, food, governance) additionally carry per-role market mapping (the exact human titles, tools, and certifications each agent supports).
 
 ## How to use it
 

@@ -47,6 +47,18 @@ Every job in this sector moves through the same seven steps. Use it as a checkli
 
 These remain human-owned. AI personnel and robots augment them; they do not replace the accountable owner.
 
+## Labor-market grounding (how these roles are advertised)
+
+The human roles this operating system staffs appear on job boards with concrete, checkable signals. The AI-personnel and robot skills here are designed to *support* these advertised roles, not to replace the accountable human in them.
+
+- **Advertised titles & seniority ladder:** Assistant/freelancer → reporter/producer/designer → senior/editor → managing editor/creative director; nonprofit: program coordinator → manager → director.
+- **Skills, tools & tech employers list:** CMS, Adobe Creative Cloud, NLE (Premiere/Avid), DAM/archive systems, social-publishing and audience-analytics tools.
+- **Qualifications, certifications & licenses:** Degrees in journalism/arts (rarely licensed); SAG-AFTRA (performers), seminary/ordination (clergy), coaching certifications, SAA (archivists).
+- **KPIs / metrics in postings:** Audience/reach/engagement, subscriptions, accuracy/corrections, event attendance, donations, community trust.
+- **Where these roles are posted:** LinkedIn, MediaBistro, JournalismJobs, Idealist (nonprofit), Indeed, guild/industry boards.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## AI personnel in this operating system (deployable role skills)
 
 Each of the following has a dedicated, extensive skill under `roles/`. Deploy them under the named human supervisor:

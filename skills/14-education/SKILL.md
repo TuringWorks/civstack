@@ -49,6 +49,18 @@ Every job in this sector moves through the same seven steps. Use it as a checkli
 
 These remain human-owned. AI personnel and robots augment them; they do not replace the accountable owner.
 
+## Labor-market grounding (how these roles are advertised)
+
+The human roles this operating system staffs appear on job boards with concrete, checkable signals. The AI-personnel and robot skills here are designed to *support* these advertised roles, not to replace the accountable human in them.
+
+- **Advertised titles & seniority ladder:** Aide/TA → teacher → instructional coach/lead → assistant principal → principal → superintendent; higher ed: adjunct → assistant/associate/full professor; L&D specialist → manager → CLO.
+- **Skills, tools & tech employers list:** LMS (Canvas, Schoology), SIS (PowerSchool), assessment platforms, library systems (ILS), instructional-design and EdTech tools.
+- **Qualifications, certifications & licenses:** State teaching license/credential (Praxis), subject/special-ed/ESL endorsements, MLS (librarian), administrator credential, ATD/CPTD (L&D).
+- **KPIs / metrics in postings:** Learning gains/proficiency, graduation/completion, attendance, credential pass rates, learner satisfaction, time-to-competency.
+- **Where these roles are posted:** SchoolSpring, GovernmentJobs (districts), HigherEdJobs, Indeed, LinkedIn, Idealist (nonprofit education).
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## AI personnel in this operating system (deployable role skills)
 
 Each of the following has a dedicated, extensive skill under `roles/`. Deploy them under the named human supervisor:

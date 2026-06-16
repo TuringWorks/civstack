@@ -105,6 +105,18 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** Caregiver/aide → senior aide/lead → care coordinator → program manager; social work: BSW → MSW/LCSW → supervisor.
+- **Skills, tools & tech:** Scheduling/EVV systems, care-plan and family-communication apps, case-management systems, benefits portals.
+- **Qualifications, certs & licenses:** CNA, HHA, CPR/First Aid, CDA (child development), LSW/LCSW, Community Health Worker certification, background checks.
+- **KPIs in postings:** Client safety/falls, satisfaction, care-plan adherence, placement/stability, caseload outcomes, response time.
+- **Posting venues:** Care.com, Snagajob, Indeed, GovernmentJobs (county social services), Idealist (nonprofit), local agencies.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

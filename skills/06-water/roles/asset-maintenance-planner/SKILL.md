@@ -105,6 +105,18 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** Operator trainee → certified operator (Grade I–IV) → chief operator/superintendent → utility director; engineering: EIT → PE.
+- **Skills, tools & tech:** SCADA, GIS, hydraulic modeling (EPANET, WaterGEMS), LIMS, CMMS (asset/maintenance), telemetry.
+- **Qualifications, certs & licenses:** State water/wastewater operator certification (Grades I–IV), PE (civil/environmental), backflow tester, confined-space, CDL (some).
+- **KPIs in postings:** Water-quality compliance, non-revenue water/leakage, NPDES permit compliance, boil-water/outage events, asset condition.
+- **Posting venues:** GovernmentJobs, Careers.<state>.gov, AWWA/WEF job boards, Indeed, ZipRecruiter.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

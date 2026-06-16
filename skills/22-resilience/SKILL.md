@@ -46,6 +46,18 @@ Every job in this sector moves through the same seven steps. Use it as a checkli
 
 These remain human-owned. AI personnel and robots augment them; they do not replace the accountable owner.
 
+## Labor-market grounding (how these roles are advertised)
+
+The human roles this operating system staffs appear on job boards with concrete, checkable signals. The AI-personnel and robot skills here are designed to *support* these advertised roles, not to replace the accountable human in them.
+
+- **Advertised titles & seniority ladder:** Analyst → BCM/risk specialist → manager → director of resilience/BCDR; emergency planner → senior → CEM; supply-chain-risk and catastrophe-modeling tracks.
+- **Skills, tools & tech employers list:** BCM platforms (Fusion, Archer), GRC, risk registers, scenario/simulation tools, supply-chain mapping, catastrophe models (Moody's RMS, Verisk), GIS.
+- **Qualifications, certifications & licenses:** CBCP/MBCP (DRI), CEM, PMP, FRM, ISO 22301 lead auditor, CISSP (cyber-resilience).
+- **KPIs / metrics in postings:** RTO/RPO achievement, exercise/test pass rate, time-to-recover, single-point-of-failure coverage, claims throughput.
+- **Where these roles are posted:** LinkedIn, Indeed, DRI/continuity boards, USAJOBS/GovernmentJobs (emergency management), ClearanceJobs.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## AI personnel in this operating system (deployable role skills)
 
 Each of the following has a dedicated, extensive skill under `roles/`. Deploy them under the named human supervisor:

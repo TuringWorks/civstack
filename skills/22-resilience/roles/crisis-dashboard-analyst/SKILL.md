@@ -105,6 +105,18 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** Analyst → BCM/risk specialist → manager → director of resilience/BCDR; emergency planner → senior → CEM; supply-chain-risk and catastrophe-modeling tracks.
+- **Skills, tools & tech:** BCM platforms (Fusion, Archer), GRC, risk registers, scenario/simulation tools, supply-chain mapping, catastrophe models (Moody's RMS, Verisk), GIS.
+- **Qualifications, certs & licenses:** CBCP/MBCP (DRI), CEM, PMP, FRM, ISO 22301 lead auditor, CISSP (cyber-resilience).
+- **KPIs in postings:** RTO/RPO achievement, exercise/test pass rate, time-to-recover, single-point-of-failure coverage, claims throughput.
+- **Posting venues:** LinkedIn, Indeed, DRI/continuity boards, USAJOBS/GovernmentJobs (emergency management), ClearanceJobs.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

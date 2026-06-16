@@ -105,6 +105,18 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** Technician/operator → environmental scientist/analyst → project manager → program director; ranger → senior → manager; sustainability analyst → manager → director.
+- **Skills, tools & tech:** GIS, remote sensing, carbon/emissions-accounting platforms, environmental monitoring/LIMS, modeling, EHS systems.
+- **Qualifications, certs & licenses:** PE (environmental), PG, CHMM (hazmat), CSP, CDL (waste), Certified Energy Manager, ISO 14001 lead auditor, pesticide/remediation licenses.
+- **KPIs in postings:** Emissions reduced, diversion/recycling rate, permit compliance, remediation milestones, habitat/biodiversity metrics.
+- **Posting venues:** GovernmentJobs (EPA/state), USAJOBS, Indeed, LinkedIn, conservation/environmental boards, Idealist.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

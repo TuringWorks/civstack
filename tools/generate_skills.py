@@ -818,6 +818,231 @@ EMBODIED_AI_ROLES = [
      "Owns the data flywheel: logging, labeling, privacy, and the pipelines that turn real-world operation into better world models, policies, and critics."),
 ]
 
+# ---------------------------------------------------------------------------
+# LABOR-MARKET / JOB-DESCRIPTION GROUNDING  (per sector)
+# Grounded in 2026 posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter,
+# Glassdoor, USAJOBS, GovernmentJobs, and specialized boards; spot-verified against
+# public listings and O*NET/BLS. dict: num -> {ladder, tools, certs, kpis, venues}
+# ---------------------------------------------------------------------------
+SECTOR_JD = {
+ 1: dict(
+   ladder="Public track: program/management analyst, benefits/eligibility specialist, city manager — graded GS-5/7/9 (entry) → GS-11/12 (journey) → GS-13/14 (senior) → GS-15/SES (executive); state/local equivalents. Legal track: paralegal → associate → senior/managing attorney → general counsel.",
+   tools="Case and records management systems, legislative drafting and bill-tracking tools (e.g. LegiScan), FOIA/redaction platforms, eligibility systems, e-filing/court systems, Westlaw/LexisNexis, GIS, Microsoft 365.",
+   certs="JD + state bar (attorneys); PMP, Certified Public Manager (CPM); paralegal certificate (NALA/NFPA); many federal roles require a security clearance and pass a civil-service assessment.",
+   kpis="Case processing time and backlog, eligibility accuracy and appeal/error rates, FOIA response timeliness, audit findings, constituent satisfaction, service uptime.",
+   venues="USAJOBS (federal), GovernmentJobs and Careers.<state>.gov (state/county/city), LinkedIn, Indeed; legal roles also on bar-association boards."),
+ 2: dict(
+   ladder="Staff accountant/tax examiner → senior analyst/auditor → manager/controller → finance director/CFO; procurement: buyer → contract specialist → warranted contracting officer. Public roles carry GS grades.",
+   tools="ERP (SAP, Oracle, Workday), GL/AP and tax systems, Excel/Power BI, e-sourcing/procurement (SAP Ariba, Coupa), GASB/GAAP reporting, data-analytics.",
+   certs="CPA, CGFM (government financial manager), CIA, CFE (fraud), CPPB/CPPO and FAC-C/DAWIA (federal contracting), CGAP.",
+   kpis="Collection rate, days-to-close, budget variance, audit findings, procurement cycle time, savings captured, fraud loss rate.",
+   venues="USAJOBS, GovernmentJobs, LinkedIn, Indeed; AGA/GFOA boards for public finance."),
+ 3: dict(
+   ladder="Analyst/officer (entry) → senior analyst → branch chief → SES/flag officer; Foreign Service officer ranks; military O-1…O-6.",
+   tools="Classified analytic and geospatial (GIS) platforms, OSINT tooling, SIGINT/IMINT systems, language tools, defense logistics systems.",
+   certs="TS/SCI clearance (often polygraph), Foreign Service exam, DAWIA (acquisition), language proficiency (DLPT/ILR), military commissioning.",
+   kpis="Mission readiness, intelligence timeliness/accuracy, interdiction rates, negotiation/treaty outcomes, force-protection incidents.",
+   venues="USAJOBS, IC Careers (CIA/NSA/DIA/NGA), Feds Hire Vets, ClearanceJobs, agency portals."),
+ 4: dict(
+   ladder="Recruit/officer/EMT → detective/paramedic/senior → sergeant/lieutenant/captain → chief; dispatcher → comms supervisor; emergency-management coordinator → director.",
+   tools="CAD (computer-aided dispatch), RMS (records management), NIMS/ICS, body-cam/evidence systems, NCIC, GIS.",
+   certs="POST certification (police), state EMT/Paramedic (NREMT), Firefighter I/II, EMD, FEMA ICS/NIMS, CEM (certified emergency manager).",
+   kpis="Response and call-answer times, case clearance rate, incident outcomes, mutual-aid readiness, safety.",
+   venues="GovernmentJobs, National Testing Network/PoliceApp, USAJOBS, local agency sites, Snagajob (some support roles)."),
+ 5: dict(
+   ladder="Farmworker/technician → crew lead/grower → farm/ranch manager → operations director; agronomy track; food safety: QA tech → QA manager → director of food safety.",
+   tools="Farm-management software (Climate FieldView, John Deere Operations Center, Granular), precision-ag/GIS, irrigation controllers, telematics, LIMS, HACCP/food-safety systems, ERP.",
+   certs="CCA (Certified Crop Adviser), pesticide applicator license, PCQI (FSMA), ServSafe, DVM (veterinary), RD/RDN (dietitian), GlobalG.A.P., CDL for ag transport.",
+   kpis="Yield, input cost per acre/unit, loss/waste, food-safety audit scores, traceability completeness, on-time fulfillment.",
+   venues="AgCareers.com, Indeed, LinkedIn, GovernmentJobs (USDA/extension), Snagajob (seasonal/hourly), local co-ops."),
+ 6: dict(
+   ladder="Operator trainee → certified operator (Grade I–IV) → chief operator/superintendent → utility director; engineering: EIT → PE.",
+   tools="SCADA, GIS, hydraulic modeling (EPANET, WaterGEMS), LIMS, CMMS (asset/maintenance), telemetry.",
+   certs="State water/wastewater operator certification (Grades I–IV), PE (civil/environmental), backflow tester, confined-space, CDL (some).",
+   kpis="Water-quality compliance, non-revenue water/leakage, NPDES permit compliance, boil-water/outage events, asset condition.",
+   venues="GovernmentJobs, Careers.<state>.gov, AWWA/WEF job boards, Indeed, ZipRecruiter."),
+ 7: dict(
+   ladder="Apprentice lineworker/technician → journeyman → foreman; system-operator trainee → certified system operator → shift supervisor → control-center manager; EIT → PE → engineering manager; energy trader.",
+   tools="EMS/SCADA, OMS (outage management), ADMS/DMS, ISO/RTO market platforms, PI historian, PSS/E, GIS.",
+   certs="NERC System Operator certification (RC/BA/TO), journeyman electrical license, PE, NRC reactor operator (nuclear), OSHA, CDL.",
+   kpis="SAIDI/SAIFI reliability, area control error/load balance, restoration time, OSHA recordables, market-settlement accuracy.",
+   venues="ZipRecruiter, Glassdoor, BuiltIn, LinkedIn, IBEW, utility career pages."),
+ 8: dict(
+   ladder="Operator/technician → process/plant engineer → superintendent → plant manager; geologist and metallurgist tracks.",
+   tools="DCS process control, LIMS, mine-planning (Surpac, Vulcan), SCADA, EHS systems, simulation.",
+   certs="PE, MSHA training, CSP (safety), HAZWOPER, Professional Geologist (PG), CIH (industrial hygiene).",
+   kpis="Throughput/recovery, yield and quality, safety (TRIR), environmental compliance, downtime.",
+   venues="Indeed, LinkedIn, ZipRecruiter, mining/chemical industry boards."),
+ 9: dict(
+   ladder="Operator/assembler → technician/setup → process/quality engineer → production supervisor → plant manager; maintenance apprentice → journeyman → reliability engineer.",
+   tools="MES, ERP (SAP), PLC/SCADA, CAD/CAM, SPC/quality (Minitab), CMMS, industrial robotics, Lean/Six Sigma.",
+   certs="Six Sigma Green/Black Belt, ASQ CQE/CQA, PE, CMfgE, PMP, OSHA/forklift, journeyman trades.",
+   kpis="OEE, scrap/defect rate (PPM), on-time delivery, downtime/MTBF, safety TRIR.",
+   venues="Indeed, LinkedIn, ZipRecruiter, manufacturing boards, Snagajob (hourly)."),
+ 10: dict(
+   ladder="Laborer/apprentice → journeyman tradesperson → foreman/superintendent → project manager; design: intern architect/EIT → licensed architect/PE → principal; planner → senior planner → director.",
+   tools="BIM (Revit), AutoCAD, Procore/Bluebeam, estimating (PlanSwift), scheduling (Primavera P6, MS Project), GIS, permitting systems.",
+   certs="PE, licensed architect (ARE/AIA), LEED, PMP, OSHA 30, ICC code certifications, trade journeyman/master licenses, PLS (surveyor).",
+   kpis="Schedule/cost variance (CPI/SPI), safety (TRIR/EMR), punch-list/defects, inspection pass rate, permit cycle time.",
+   venues="Indeed, LinkedIn, ZipRecruiter, construction boards, GovernmentJobs (inspectors/planners), trade unions."),
+ 11: dict(
+   ladder="Driver/warehouse associate → lead/dispatcher → operations supervisor → terminal/DC manager → director of logistics; pilot and ATC tracks; mechanic apprentice → A&P/journeyman.",
+   tools="TMS, WMS, route optimization, ELD/telematics, dispatch systems, EDI, fleet-maintenance systems.",
+   certs="CDL (A/B/C) + endorsements (HazMat, tanker) with ELDT/FMCSA medical, FAA A&P (mechanics), ATP/commercial pilot, FAA ATC, APICS CSCP/CLTD, TWIC (ports), OSHA/forklift.",
+   kpis="On-time delivery, cost per mile/shipment, fleet utilization, DOT safety compliance, dwell time, damage rate.",
+   venues="iHireTransportation, Indeed, ZipRecruiter, Snagajob (hourly), Dice (logistics tech), USAJOBS (FAA/USPS)."),
+ 12: dict(
+   ladder="SWE I → SWE II/senior → staff/principal → engineering manager → director/VP; data: analyst → data scientist/engineer → senior → lead; security: SOC Tier 1 → Tier 2/3 → security engineer → CISO; AI: ML engineer → senior/applied scientist → AI engineering manager. (Real 2026 postings: 'Senior Engineering Manager, AI' base ~$228K–$373K.)",
+   tools="Python, SQL, Java/Go/TypeScript; cloud (AWS/Azure/GCP); Kubernetes/Docker; CI/CD, Git, Terraform; PyTorch/TensorFlow/scikit-learn; Spark/Snowflake/BigQuery; SIEM/EDR.",
+   certs="Cloud certs (AWS/Azure/GCP), CKA; security ladder Security+ → CySA+ → CISSP/CISM; CCNA/CCNP (network); CEH; CS/related degree common.",
+   kpis="Uptime/SLOs, DORA metrics (deploy frequency, lead time, MTTR, change-fail rate), defect/escape rate, incident counts, model-eval metrics, cost.",
+   venues="Dice, LinkedIn, Wellfound (startups), BuiltIn, Indeed, Upwork (freelance), ClearanceJobs (cleared)."),
+ 13: dict(
+   ladder="Aide/MA/tech → RN/therapist → charge/lead → nurse manager/director → CNO; physician: resident → attending → chief; public health analyst → epidemiologist → health officer.",
+   tools="EHR (Epic, Cerner), PACS (imaging), CPOE, telehealth, LIS, scheduling, claims/revenue-cycle, disease-surveillance systems.",
+   certs="State RN license (NCLEX-RN) with BLS/ACLS/PALS (AHA); MD/DO + board certification + state license + DEA; PA-C/NP; RPh (pharmacist); ARRT (radiology); MPH/CPH (public health); specialty certs (e.g. CCRN).",
+   kpis="Clinical quality/outcomes (HCAHPS, readmissions), patient-safety events, length of stay, throughput, coding accuracy, vaccination/coverage rates.",
+   venues="Indeed, Vivian and Incredible Health (nursing), Health eCareers, LinkedIn, GovernmentJobs (public health), hospital career pages."),
+ 14: dict(
+   ladder="Aide/TA → teacher → instructional coach/lead → assistant principal → principal → superintendent; higher ed: adjunct → assistant/associate/full professor; L&D specialist → manager → CLO.",
+   tools="LMS (Canvas, Schoology), SIS (PowerSchool), assessment platforms, library systems (ILS), instructional-design and EdTech tools.",
+   certs="State teaching license/credential (Praxis), subject/special-ed/ESL endorsements, MLS (librarian), administrator credential, ATD/CPTD (L&D).",
+   kpis="Learning gains/proficiency, graduation/completion, attendance, credential pass rates, learner satisfaction, time-to-competency.",
+   venues="SchoolSpring, GovernmentJobs (districts), HigherEdJobs, Indeed, LinkedIn, Idealist (nonprofit education)."),
+ 15: dict(
+   ladder="Research associate → scientist → senior/principal investigator → lab/department director; computational and tech-transfer/patent tracks.",
+   tools="Lab instruments with LIMS/ELN, Python/R, statistical and HPC/simulation software, bioinformatics pipelines, CAD, metrology equipment.",
+   certs="PhD (most research-lead roles), PE (standards), USPTO patent bar (patent agent/attorney), GLP/GMP and biosafety training, metrology certifications.",
+   kpis="Publications/citations, grants funded, replication/validation rate, patents filed, milestone delivery, measurement accuracy.",
+   venues="Nature Careers, HigherEdJobs, LinkedIn, Indeed, USAJOBS (national labs/NIST), industry R&D pages."),
+ 16: dict(
+   ladder="Analyst → associate → VP → director → MD (banking); accountant → senior → manager → controller → CFO; actuarial exam ladder; trader/portfolio manager.",
+   tools="Excel/VBA, Bloomberg/FactSet, SQL/Python, ERP and core-banking, risk systems, AML/KYC platforms (NICE Actimize, World-Check), actuarial software.",
+   certs="CPA, CFA, FRM, CAIA, actuarial (ASA/FSA, ACAS/FCAS), CAMS (AML), FINRA Series 7/63/66/24, CFP (advisors).",
+   kpis="P&L/return, risk-adjusted metrics (Sharpe, VaR), loss/default and fraud-loss rates, close cycle, regulatory-reporting accuracy, NPS.",
+   venues="eFinancialCareers, LinkedIn, Indeed, Wellfound (fintech), Glassdoor."),
+ 17: dict(
+   ladder="Associate/agent → team lead/shift → store/restaurant manager → district/regional manager → VP ops; sales: SDR → AE → senior AE → sales manager; support: agent → senior → team lead → support manager.",
+   tools="POS, CRM (Salesforce, HubSpot), e-commerce (Shopify), helpdesk (Zendesk, Intercom), inventory/merchandising, marketing automation.",
+   certs="ServSafe (food), TIPS (alcohol service), CHA (hospitality), Salesforce certifications, CCXP (customer experience), OSHA/forklift (backroom).",
+   kpis="Sales/conversion, average order value, CSAT/NPS, first-contact resolution, inventory turns, labor cost %, retention/churn.",
+   venues="Snagajob (hourly retail/restaurant), Indeed, ZipRecruiter, LinkedIn (corporate/sales), Wellfound (e-commerce startups)."),
+ 18: dict(
+   ladder="Assistant/freelancer → reporter/producer/designer → senior/editor → managing editor/creative director; nonprofit: program coordinator → manager → director.",
+   tools="CMS, Adobe Creative Cloud, NLE (Premiere/Avid), DAM/archive systems, social-publishing and audience-analytics tools.",
+   certs="Degrees in journalism/arts (rarely licensed); SAG-AFTRA (performers), seminary/ordination (clergy), coaching certifications, SAA (archivists).",
+   kpis="Audience/reach/engagement, subscriptions, accuracy/corrections, event attendance, donations, community trust.",
+   venues="LinkedIn, MediaBistro, JournalismJobs, Idealist (nonprofit), Indeed, guild/industry boards."),
+ 19: dict(
+   ladder="Technician/operator → environmental scientist/analyst → project manager → program director; ranger → senior → manager; sustainability analyst → manager → director.",
+   tools="GIS, remote sensing, carbon/emissions-accounting platforms, environmental monitoring/LIMS, modeling, EHS systems.",
+   certs="PE (environmental), PG, CHMM (hazmat), CSP, CDL (waste), Certified Energy Manager, ISO 14001 lead auditor, pesticide/remediation licenses.",
+   kpis="Emissions reduced, diversion/recycling rate, permit compliance, remediation milestones, habitat/biodiversity metrics.",
+   venues="GovernmentJobs (EPA/state), USAJOBS, Indeed, LinkedIn, conservation/environmental boards, Idealist."),
+ 20: dict(
+   ladder="HR coordinator → HR generalist/recruiter → HR manager/HRBP → director → CHRO; comp, L&D, and employee-relations tracks.",
+   tools="ATS (Workday, Greenhouse), HRIS, payroll, LMS, people-analytics, compensation-benchmarking and engagement-survey tools.",
+   certs="SHRM-CP/SCP, PHR/SPHR (HRCI), CCP (compensation), CEBS (benefits), CPP (payroll), JD (employment law).",
+   kpis="Time-to-fill, quality of hire, retention/turnover, engagement (eNPS), pay equity, training completion, compliance.",
+   venues="LinkedIn, Indeed, SHRM, ZipRecruiter, Glassdoor."),
+ 21: dict(
+   ladder="Caregiver/aide → senior aide/lead → care coordinator → program manager; social work: BSW → MSW/LCSW → supervisor.",
+   tools="Scheduling/EVV systems, care-plan and family-communication apps, case-management systems, benefits portals.",
+   certs="CNA, HHA, CPR/First Aid, CDA (child development), LSW/LCSW, Community Health Worker certification, background checks.",
+   kpis="Client safety/falls, satisfaction, care-plan adherence, placement/stability, caseload outcomes, response time.",
+   venues="Care.com, Snagajob, Indeed, GovernmentJobs (county social services), Idealist (nonprofit), local agencies."),
+ 22: dict(
+   ladder="Analyst → BCM/risk specialist → manager → director of resilience/BCDR; emergency planner → senior → CEM; supply-chain-risk and catastrophe-modeling tracks.",
+   tools="BCM platforms (Fusion, Archer), GRC, risk registers, scenario/simulation tools, supply-chain mapping, catastrophe models (Moody's RMS, Verisk), GIS.",
+   certs="CBCP/MBCP (DRI), CEM, PMP, FRM, ISO 22301 lead auditor, CISSP (cyber-resilience).",
+   kpis="RTO/RPO achievement, exercise/test pass rate, time-to-recover, single-point-of-failure coverage, claims throughput.",
+   venues="LinkedIn, Indeed, DRI/continuity boards, USAJOBS/GovernmentJobs (emergency management), ClearanceJobs."),
+}
+
+# Deep per-role JD grounding for flagship sectors. slug -> {titles, tools, certs, note}
+ROLE_JD = {
+ # Sector 12 — Communications & Software
+ "coding-agent": dict(
+   titles="Software Engineer I/II, Senior/Staff Software Engineer, Full-Stack/Backend Engineer.",
+   tools="Git and CI/CD, the team's language stack and IDEs, code-review and test frameworks, cloud and containers.",
+   certs="CS or related degree common (not required); cloud certs a plus.",
+   note="The highest-volume technical posting on Dice, LinkedIn, Wellfound, and BuiltIn; this agent maps directly to the IC software-engineer ladder."),
+ "soc-triage-agent": dict(
+   titles="SOC Analyst Tier 1/2, Security Operations Analyst, Incident Response Analyst.",
+   tools="SIEM (Splunk, Microsoft Sentinel), EDR/XDR, SOAR playbooks, threat-intel feeds.",
+   certs="Security+ (Tier 1) → CySA+ or GCIH (Tier 2/3); CISSP/CISM for leadership.",
+   note="Postings cluster on Dice and ClearanceJobs; explicitly structured by SOC tier, which maps to this agent's escalation thresholds."),
+ "ai-model-evaluation-agent": dict(
+   titles="AI Safety Evaluator, Model Risk Analyst, Applied Scientist, Responsible-AI Lead.",
+   tools="Evaluation harnesses and benchmarks, Python/ML stack, experiment tracking, red-team tooling.",
+   certs="ML/stats background; model-risk roles may expect SR 11-7 familiarity.",
+   note="A fast-emerging title set on LinkedIn and Wellfound; sits under the AI-governance lead and the 'Senior Engineering Manager, AI' org documented in real 2026 postings."),
+ # Sector 13 — Healthcare
+ "clinical-documentation-agent": dict(
+   titles="Clinical Documentation Specialist, Medical Scribe (supports Physician/Nurse).",
+   tools="EHR (Epic, Cerner), dictation/ambient-scribe tools, coding references (ICD-10/CPT).",
+   certs="CCDS/CDIP (CDI); the supervising clinician holds an active license.",
+   note="Posted on Health eCareers and Indeed; measured on note turnaround and coding accuracy."),
+ "imaging-triage-assistant": dict(
+   titles="Radiologist, Radiologic Technologist (supports read prioritization).",
+   tools="PACS, RIS, modality worklists, AI triage integrations.",
+   certs="MD + ABR board certification (radiologist); ARRT (technologist).",
+   note="Acts under the radiologist; never finalizes a read. Postings emphasize ABR/ARRT and PACS fluency."),
+ "public-health-surveillance-agent": dict(
+   titles="Epidemiologist, Public Health Analyst, Surveillance Coordinator.",
+   tools="Disease-surveillance systems, R/SAS, line-list and outbreak tooling, GIS.",
+   certs="MPH and/or CPH; many roles are public-sector graded positions.",
+   note="Advertised on GovernmentJobs and USAJOBS (CDC/state/county health departments)."),
+ # Sector 16 — Finance
+ "kyc-aml-review-agent": dict(
+   titles="AML/KYC Analyst, Financial Crime Analyst, Transaction Monitoring Analyst.",
+   tools="NICE Actimize, World-Check, case-management and sanctions-screening platforms.",
+   certs="CAMS (ACAMS) is the dominant credential; CFE a plus.",
+   note="Concentrated on eFinancialCareers and LinkedIn; measured on alert-clearance quality and SAR accuracy."),
+ "credit-memo-drafter": dict(
+   titles="Credit Analyst, Commercial Underwriter, Credit Risk Analyst.",
+   tools="Moody's/S&P tools, Excel financial models, spreading software, core-banking data.",
+   certs="Finance/accounting degree; CFA progress a plus.",
+   note="The credit decision stays with the underwriter; this agent drafts the memo and spreads financials."),
+ "reconciliation-agent": dict(
+   titles="Staff/Senior Accountant, GL Accountant, Reconciliations Analyst.",
+   tools="ERP (SAP, Oracle, NetSuite), BlackLine, Excel, bank-feed integrations.",
+   certs="CPA (or progress) common for senior roles.",
+   note="Measured on close-cycle days and reconciliation completeness; posted on LinkedIn and Indeed."),
+ # Sector 5 — Food & Agriculture
+ "crop-planning-agent": dict(
+   titles="Agronomist, Crop Adviser, Precision-Ag Specialist.",
+   tools="Climate FieldView, John Deere Operations Center, GIS, soil/tissue data.",
+   certs="CCA (Certified Crop Adviser), pesticide applicator license.",
+   note="Advertised on AgCareers.com and LinkedIn; measured on yield and input cost per acre."),
+ "autonomous-farm-operations-agent": dict(
+   titles="Farm/Ranch Manager, Farm Operations Manager, Production Manager.",
+   tools="Farm-management platforms, telematics/fleet, machinery and robot dispatch, ERP.",
+   certs="CCA/agronomy background and pesticide license help; CDL for some operations.",
+   note="The accountable owner of the crop cycle; this agent sequences machinery, robots, and field tasks against the plan."),
+ "food-safety-compliance-agent": dict(
+   titles="Food Safety Manager, QA Manager, Compliance Specialist.",
+   tools="HACCP/HARPC plans, LIMS, audit and traceability systems.",
+   certs="PCQI (FSMA), ServSafe, SQF/BRC or GlobalG.A.P. practitioner.",
+   note="Measured on audit scores and recall readiness; posted on Indeed and AgCareers.com."),
+ # Sector 1 — Governance
+ "benefits-adjudication-assistant": dict(
+   titles="Eligibility Specialist, Benefits/Claims Examiner, Caseworker.",
+   tools="Eligibility-determination systems, document/case management, identity verification.",
+   certs="Civil-service assessment; entry grades typically GS-5/7/9 or state equivalents.",
+   note="Advertised on USAJOBS and GovernmentJobs; the denial and appeal decision stays with the human officer."),
+ "legal-discovery-agent": dict(
+   titles="Paralegal, eDiscovery Analyst, Litigation Associate (support).",
+   tools="Relativity, Everlaw, Westlaw/LexisNexis, e-filing systems.",
+   certs="Paralegal certificate (NALA/NFPA); attorneys hold JD + state bar.",
+   note="Posted on LinkedIn and bar-association boards; the agent reviews and organizes, counsel decides."),
+ "legislative-research-agent": dict(
+   titles="Legislative Analyst, Policy Analyst, Legislative Aide.",
+   tools="Bill-tracking (LegiScan), legislative databases, statute/redline tooling.",
+   certs="Civil-service assessment; public-policy background common.",
+   note="Advertised on USAJOBS and GovernmentJobs; drafts and compares, members and counsel decide."),
+}
+
 print("Data loaded:", len(SECTORS), "sectors")
 
 # ---------------------------------------------------------------------------
@@ -900,6 +1125,7 @@ Every job in this sector moves through the same seven steps. Use it as a checkli
 
 These remain human-owned. AI personnel and robots augment them; they do not replace the accountable owner.
 
+{jd_block}
 ## AI personnel in this operating system (deployable role skills)
 
 Each of the following has a dedicated, extensive skill under `roles/`. Deploy them under the named human supervisor:
@@ -963,7 +1189,7 @@ The jobs above are universal; how they are staffed is not. Re-read this sector t
         name=name, desc=desc, num=sec["num"], title=title, title_lower=title.lower(),
         mission=sec["mission"], jtbd=jtbd, lifecycle=lifecycle_block("sector", title),
         families=families, role_list=role_list, robots=robots, nested_robots=nested_robots,
-        robot_stack_short=ROBOT_STACK_SHORT,
+        robot_stack_short=ROBOT_STACK_SHORT, jd_block=jd_sector_block(sec["num"]),
         accountability=sec["accountability"], collabs=collabs, context=CONTEXT_MODIFIERS)
     return sslug, body
 
@@ -1073,6 +1299,7 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 {context}
 
+{jd_block}
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.
@@ -1095,7 +1322,7 @@ Other role skills in this operating system (see `../`), and across these neighbo
         jtbd_short="\n".join("- %s" % j for j in sec["jtbd"][:3]),
         lifecycle=lifecycle_block("role", rname),
         accountability=sec["accountability"], collabs=", ".join(sec["collaborators"]),
-        context=CONTEXT_MODIFIERS)
+        context=CONTEXT_MODIFIERS, jd_block=jd_role_block(sec["num"], rslug))
     return rslug, body
 
 
@@ -1277,6 +1504,56 @@ When a task needs the physical job "{jtbd_lower}" in environments such as {envs}
     return rslug, body
 
 
+JD_SOURCE_NOTE = (
+    "> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, "
+    "USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\\*NET/BLS. "
+    "Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use."
+)
+
+
+def jd_sector_block(num):
+    """Full labor-market grounding section for a sector skill."""
+    jd = SECTOR_JD.get(num)
+    if not jd:
+        return ""
+    return (
+        "## Labor-market grounding (how these roles are advertised)\n\n"
+        "The human roles this operating system staffs appear on job boards with concrete, checkable signals. "
+        "The AI-personnel and robot skills here are designed to *support* these advertised roles, not to replace the "
+        "accountable human in them.\n\n"
+        "- **Advertised titles & seniority ladder:** %s\n"
+        "- **Skills, tools & tech employers list:** %s\n"
+        "- **Qualifications, certifications & licenses:** %s\n"
+        "- **KPIs / metrics in postings:** %s\n"
+        "- **Where these roles are posted:** %s\n\n"
+        "%s\n" % (jd["ladder"], jd["tools"], jd["certs"], jd["kpis"], jd["venues"], JD_SOURCE_NOTE)
+    )
+
+
+def jd_role_block(num, rslug):
+    """Labor-market grounding for a role skill: role-specific lead (if any) + sector signals."""
+    jd = SECTOR_JD.get(num)
+    if not jd:
+        return ""
+    lead = ""
+    r = ROLE_JD.get(rslug)
+    if r:
+        lead = ("**In the job market, this agent maps to:** %s\n\n"
+                "Employers typically list — **tools:** %s **Qualifications/certs:** %s\n\n"
+                "%s\n\n" % (r["titles"], r["tools"], r["certs"], r["note"]))
+    return (
+        "## Labor-market grounding\n\n"
+        "%s"
+        "This agent supports human roles advertised with concrete requirements (full detail in the sector skill):\n\n"
+        "- **Advertised titles & ladder:** %s\n"
+        "- **Skills, tools & tech:** %s\n"
+        "- **Qualifications, certs & licenses:** %s\n"
+        "- **KPIs in postings:** %s\n"
+        "- **Posting venues:** %s\n\n"
+        "%s\n" % (lead, jd["ladder"], jd["tools"], jd["certs"], jd["kpis"], jd["venues"], JD_SOURCE_NOTE)
+    )
+
+
 def render_sector_robot(sec, robot):
     rname, jtbd, envs, detail = robot
     rslug = slug(rname)
@@ -1340,12 +1617,14 @@ These remain human-owned. The robot executes within an engineered envelope and r
 
 {arch_fail}
 
+{jd_block}
 ## Adapting to any nation (context modifiers)
 
 In smallholder and informal-sector agriculture, this role may be shared equipment, cooperatively owned, or rented by the hour rather than owned per farm; affordability and repairability dominate. In high-income, labor-scarce settings it fills chronic field-labor shortages. Re-read through:
 
 {context}
 """.format(name=name, desc=desc, rname=rname, num=sec["num"], sname=sec["title"], sshort=sshort,
+           jd_block=jd_sector_block(sec["num"]),
            jtbd=jtbd, detail=detail, envs=envs,
            mission_lower=sec["mission"][0].lower() + sec["mission"][1:],
            stack_full=ROBOT_STACK_FULL, accountability=sec["accountability"],

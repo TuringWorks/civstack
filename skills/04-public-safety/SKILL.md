@@ -48,6 +48,18 @@ Every job in this sector moves through the same seven steps. Use it as a checkli
 
 These remain human-owned. AI personnel and robots augment them; they do not replace the accountable owner.
 
+## Labor-market grounding (how these roles are advertised)
+
+The human roles this operating system staffs appear on job boards with concrete, checkable signals. The AI-personnel and robot skills here are designed to *support* these advertised roles, not to replace the accountable human in them.
+
+- **Advertised titles & seniority ladder:** Recruit/officer/EMT → detective/paramedic/senior → sergeant/lieutenant/captain → chief; dispatcher → comms supervisor; emergency-management coordinator → director.
+- **Skills, tools & tech employers list:** CAD (computer-aided dispatch), RMS (records management), NIMS/ICS, body-cam/evidence systems, NCIC, GIS.
+- **Qualifications, certifications & licenses:** POST certification (police), state EMT/Paramedic (NREMT), Firefighter I/II, EMD, FEMA ICS/NIMS, CEM (certified emergency manager).
+- **KPIs / metrics in postings:** Response and call-answer times, case clearance rate, incident outcomes, mutual-aid readiness, safety.
+- **Where these roles are posted:** GovernmentJobs, National Testing Network/PoliceApp, USAJOBS, local agency sites, Snagajob (some support roles).
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## AI personnel in this operating system (deployable role skills)
 
 Each of the following has a dedicated, extensive skill under `roles/`. Deploy them under the named human supervisor:

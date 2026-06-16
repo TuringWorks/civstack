@@ -105,6 +105,24 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+**In the job market, this agent maps to:** Software Engineer I/II, Senior/Staff Software Engineer, Full-Stack/Backend Engineer.
+
+Employers typically list — **tools:** Git and CI/CD, the team's language stack and IDEs, code-review and test frameworks, cloud and containers. **Qualifications/certs:** CS or related degree common (not required); cloud certs a plus.
+
+The highest-volume technical posting on Dice, LinkedIn, Wellfound, and BuiltIn; this agent maps directly to the IC software-engineer ladder.
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** SWE I → SWE II/senior → staff/principal → engineering manager → director/VP; data: analyst → data scientist/engineer → senior → lead; security: SOC Tier 1 → Tier 2/3 → security engineer → CISO; AI: ML engineer → senior/applied scientist → AI engineering manager. (Real 2026 postings: 'Senior Engineering Manager, AI' base ~$228K–$373K.)
+- **Skills, tools & tech:** Python, SQL, Java/Go/TypeScript; cloud (AWS/Azure/GCP); Kubernetes/Docker; CI/CD, Git, Terraform; PyTorch/TensorFlow/scikit-learn; Spark/Snowflake/BigQuery; SIEM/EDR.
+- **Qualifications, certs & licenses:** Cloud certs (AWS/Azure/GCP), CKA; security ladder Security+ → CySA+ → CISSP/CISM; CCNA/CCNP (network); CEH; CS/related degree common.
+- **KPIs in postings:** Uptime/SLOs, DORA metrics (deploy frequency, lead time, MTTR, change-fail rate), defect/escape rate, incident counts, model-eval metrics, cost.
+- **Posting venues:** Dice, LinkedIn, Wellfound (startups), BuiltIn, Indeed, Upwork (freelance), ClearanceJobs (cleared).
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

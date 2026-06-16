@@ -14,3 +14,7 @@ venv/
 # Scratch
 *.tmp
 *.log
+
+# One-time helpers / artifacts (not part of the library)
+*.bundle
+commit-changes.sh

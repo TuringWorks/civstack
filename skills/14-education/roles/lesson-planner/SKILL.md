@@ -105,6 +105,18 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** Aide/TA → teacher → instructional coach/lead → assistant principal → principal → superintendent; higher ed: adjunct → assistant/associate/full professor; L&D specialist → manager → CLO.
+- **Skills, tools & tech:** LMS (Canvas, Schoology), SIS (PowerSchool), assessment platforms, library systems (ILS), instructional-design and EdTech tools.
+- **Qualifications, certs & licenses:** State teaching license/credential (Praxis), subject/special-ed/ESL endorsements, MLS (librarian), administrator credential, ATD/CPTD (L&D).
+- **KPIs in postings:** Learning gains/proficiency, graduation/completion, attendance, credential pass rates, learner satisfaction, time-to-competency.
+- **Posting venues:** SchoolSpring, GovernmentJobs (districts), HigherEdJobs, Indeed, LinkedIn, Idealist (nonprofit education).
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

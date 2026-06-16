@@ -105,6 +105,24 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+**In the job market, this agent maps to:** AML/KYC Analyst, Financial Crime Analyst, Transaction Monitoring Analyst.
+
+Employers typically list — **tools:** NICE Actimize, World-Check, case-management and sanctions-screening platforms. **Qualifications/certs:** CAMS (ACAMS) is the dominant credential; CFE a plus.
+
+Concentrated on eFinancialCareers and LinkedIn; measured on alert-clearance quality and SAR accuracy.
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** Analyst → associate → VP → director → MD (banking); accountant → senior → manager → controller → CFO; actuarial exam ladder; trader/portfolio manager.
+- **Skills, tools & tech:** Excel/VBA, Bloomberg/FactSet, SQL/Python, ERP and core-banking, risk systems, AML/KYC platforms (NICE Actimize, World-Check), actuarial software.
+- **Qualifications, certs & licenses:** CPA, CFA, FRM, CAIA, actuarial (ASA/FSA, ACAS/FCAS), CAMS (AML), FINRA Series 7/63/66/24, CFP (advisors).
+- **KPIs in postings:** P&L/return, risk-adjusted metrics (Sharpe, VaR), loss/default and fraud-loss rates, close cycle, regulatory-reporting accuracy, NPS.
+- **Posting venues:** eFinancialCareers, LinkedIn, Indeed, Wellfound (fintech), Glassdoor.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

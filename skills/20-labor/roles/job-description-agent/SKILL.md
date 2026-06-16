@@ -105,6 +105,18 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** HR coordinator → HR generalist/recruiter → HR manager/HRBP → director → CHRO; comp, L&D, and employee-relations tracks.
+- **Skills, tools & tech:** ATS (Workday, Greenhouse), HRIS, payroll, LMS, people-analytics, compensation-benchmarking and engagement-survey tools.
+- **Qualifications, certs & licenses:** SHRM-CP/SCP, PHR/SPHR (HRCI), CCP (compensation), CEBS (benefits), CPP (payroll), JD (employment law).
+- **KPIs in postings:** Time-to-fill, quality of hire, retention/turnover, engagement (eNPS), pay equity, training completion, compliance.
+- **Posting venues:** LinkedIn, Indeed, SHRM, ZipRecruiter, Glassdoor.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

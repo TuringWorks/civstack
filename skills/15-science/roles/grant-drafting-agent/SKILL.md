@@ -105,6 +105,18 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
 - **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.
 
+## Labor-market grounding
+
+This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
+
+- **Advertised titles & ladder:** Research associate → scientist → senior/principal investigator → lab/department director; computational and tech-transfer/patent tracks.
+- **Skills, tools & tech:** Lab instruments with LIMS/ELN, Python/R, statistical and HPC/simulation software, bioinformatics pipelines, CAD, metrology equipment.
+- **Qualifications, certs & licenses:** PhD (most research-lead roles), PE (standards), USPTO patent bar (patent agent/attorney), GLP/GMP and biosafety training, metrology certifications.
+- **KPIs in postings:** Publications/citations, grants funded, replication/validation rate, patents filed, milestone delivery, measurement accuracy.
+- **Posting venues:** Nature Careers, HigherEdJobs, LinkedIn, Indeed, USAJOBS (national labs/NIST), industry R&D pages.
+
+> Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.
