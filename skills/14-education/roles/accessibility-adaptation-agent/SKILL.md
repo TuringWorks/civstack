@@ -1,6 +1,6 @@
 ---
-name: accessibility-adaptation-agent
-description: AI-personnel skill: **Accessibility adaptation agent** for the Education operating system. This agent adapts materials for accessibility needs. Use this skill whenever a task in this domain needs this work (adapts materials for accessibility needs) — even if the user describes the task plainly rather than naming the role. Operates under a human special education teacher and stops at the sector's accountability boundary.
+name: "accessibility-adaptation-agent"
+description: "AI-personnel skill: **Accessibility adaptation agent** for the Education operating system. This agent adapts materials for accessibility needs. Use this skill whenever a task in this domain needs this work (adapts materials for accessibility needs) — even if the user describes the task plainly rather than naming the role. Operates under a human special education teacher and stops at the sector's accountability boundary."
 ---
 
 # Accessibility adaptation agent

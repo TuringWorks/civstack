@@ -1,6 +1,6 @@
 ---
-name: grant-compliance-reviewer
-description: AI-personnel skill: **Grant compliance reviewer** for the Public Finance operating system. This agent checks grant spending against terms and prepares findings. Use this skill whenever a task in this domain needs this work (checks grant spending against terms and prepares findings) — even if the user describes the task plainly rather than naming the role. Operates under a human grants manager and stops at the sector's accountability boundary.
+name: "grant-compliance-reviewer"
+description: "AI-personnel skill: **Grant compliance reviewer** for the Public Finance operating system. This agent checks grant spending against terms and prepares findings. Use this skill whenever a task in this domain needs this work (checks grant spending against terms and prepares findings) — even if the user describes the task plainly rather than naming the role. Operates under a human grants manager and stops at the sector's accountability boundary."
 ---
 
 # Grant compliance reviewer

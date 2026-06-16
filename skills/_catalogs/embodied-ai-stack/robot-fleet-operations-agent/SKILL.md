@@ -1,6 +1,6 @@
 ---
-name: embodied-robot-fleet-operations-agent
-description: Embodied-AI stack role: **Robot fleet operations agent** (AI agent) — schedules, dispatches, monitors, and load-balances a fleet of embodied agents and flags exceptions. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a robot operations manager.
+name: "embodied-robot-fleet-operations-agent"
+description: "Embodied-AI stack role: **Robot fleet operations agent** (AI agent) — schedules, dispatches, monitors, and load-balances a fleet of embodied agents and flags exceptions. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a robot operations manager."
 ---
 
 # Embodied-AI Stack — Robot fleet operations agent

@@ -1,6 +1,6 @@
 ---
-name: review-summarizer
-description: AI-personnel skill: **Review summarizer** for the Commerce operating system. This agent summarizes customer reviews and surfaces issues. Use this skill whenever a task in this domain needs this work (summarizes customer reviews and surfaces issues) — even if the user describes the task plainly rather than naming the role. Operates under a human product/store manager and stops at the sector's accountability boundary.
+name: "review-summarizer"
+description: "AI-personnel skill: **Review summarizer** for the Commerce operating system. This agent summarizes customer reviews and surfaces issues. Use this skill whenever a task in this domain needs this work (summarizes customer reviews and surfaces issues) — even if the user describes the task plainly rather than naming the role. Operates under a human product/store manager and stops at the sector's accountability boundary."
 ---
 
 # Review summarizer

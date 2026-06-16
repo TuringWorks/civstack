@@ -1,6 +1,6 @@
 ---
-name: catalog-tutor-trainer-agent
-description: Cross-economy AI-personnel role: **Tutor/trainer agent** — diagnose learner gaps and adapt practice. A reusable agent pattern that appears across many operating systems under a human teacher, coach. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need.
+name: "catalog-tutor-trainer-agent"
+description: "Cross-economy AI-personnel role: **Tutor/trainer agent** — diagnose learner gaps and adapt practice. A reusable agent pattern that appears across many operating systems under a human teacher, coach. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need."
 ---
 
 # AI Personnel Catalog — Tutor/trainer agent

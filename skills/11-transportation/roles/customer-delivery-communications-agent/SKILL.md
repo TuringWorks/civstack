@@ -1,6 +1,6 @@
 ---
-name: customer-delivery-communications-agent
-description: AI-personnel skill: **Customer delivery communications agent** for the Transportation operating system. This agent sends delivery status and exception updates. Use this skill whenever a task in this domain needs this work (sends delivery status and exception updates) — even if the user describes the task plainly rather than naming the role. Operates under a human last-mile operations manager and stops at the sector's accountability boundary.
+name: "customer-delivery-communications-agent"
+description: "AI-personnel skill: **Customer delivery communications agent** for the Transportation operating system. This agent sends delivery status and exception updates. Use this skill whenever a task in this domain needs this work (sends delivery status and exception updates) — even if the user describes the task plainly rather than naming the role. Operates under a human last-mile operations manager and stops at the sector's accountability boundary."
 ---
 
 # Customer delivery communications agent

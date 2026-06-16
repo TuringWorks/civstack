@@ -1,6 +1,6 @@
 ---
-name: flood-forecast-analyst
-description: AI-personnel skill: **Flood forecast analyst** for the Water operating system. This agent forecasts flood risk and informs drainage operations. Use this skill whenever a task in this domain needs this work (forecasts flood risk and informs drainage operations) — even if the user describes the task plainly rather than naming the role. Operates under a human floodplain manager and stops at the sector's accountability boundary.
+name: "flood-forecast-analyst"
+description: "AI-personnel skill: **Flood forecast analyst** for the Water operating system. This agent forecasts flood risk and informs drainage operations. Use this skill whenever a task in this domain needs this work (forecasts flood risk and informs drainage operations) — even if the user describes the task plainly rather than naming the role. Operates under a human floodplain manager and stops at the sector's accountability boundary."
 ---
 
 # Flood forecast analyst

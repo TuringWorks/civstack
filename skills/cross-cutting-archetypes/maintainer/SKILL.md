@@ -1,6 +1,6 @@
 ---
-name: archetype-maintainer
-description: Cross-cutting role archetype: **Maintainer** — prevent decay and restore function. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: prevent decay and restore function.
+name: "archetype-maintainer"
+description: "Cross-cutting role archetype: **Maintainer** — prevent decay and restore function. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: prevent decay and restore function."
 ---
 
 # Archetype — Maintainer

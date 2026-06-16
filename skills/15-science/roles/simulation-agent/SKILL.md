@@ -1,6 +1,6 @@
 ---
-name: simulation-agent
-description: AI-personnel skill: **Simulation agent** for the Science operating system. This agent runs and analyzes computational simulations. Use this skill whenever a task in this domain needs this work (runs and analyzes computational simulations) — even if the user describes the task plainly rather than naming the role. Operates under a human computational scientist and stops at the sector's accountability boundary.
+name: "simulation-agent"
+description: "AI-personnel skill: **Simulation agent** for the Science operating system. This agent runs and analyzes computational simulations. Use this skill whenever a task in this domain needs this work (runs and analyzes computational simulations) — even if the user describes the task plainly rather than naming the role. Operates under a human computational scientist and stops at the sector's accountability boundary."
 ---
 
 # Simulation agent

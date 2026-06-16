@@ -1,6 +1,6 @@
 ---
-name: machine-11-autonomous-port-straddle-carrier-ship-to-shore-crane
-description: Non-humanoid autonomous machine for the Transportation operating system: **Autonomous port straddle carrier & ship-to-shore crane** — stack, move, and load containers at the quay and yard. Best in: container ports and intermodal terminals. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-11-autonomous-port-straddle-carrier-ship-to-shore-crane"
+description: "Non-humanoid autonomous machine for the Transportation operating system: **Autonomous port straddle carrier & ship-to-shore crane** — stack, move, and load containers at the quay and yard. Best in: container ports and intermodal terminals. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Autonomous port straddle carrier & ship-to-shore crane

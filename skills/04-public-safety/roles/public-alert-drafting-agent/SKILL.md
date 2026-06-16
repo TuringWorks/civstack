@@ -1,6 +1,6 @@
 ---
-name: public-alert-drafting-agent
-description: AI-personnel skill: **Public alert drafting agent** for the Public Safety operating system. This agent drafts multilingual, accessible public warnings. Use this skill whenever a task in this domain needs this work (drafts multilingual, accessible public warnings) — even if the user describes the task plainly rather than naming the role. Operates under a human public information officer and stops at the sector's accountability boundary.
+name: "public-alert-drafting-agent"
+description: "AI-personnel skill: **Public alert drafting agent** for the Public Safety operating system. This agent drafts multilingual, accessible public warnings. Use this skill whenever a task in this domain needs this work (drafts multilingual, accessible public warnings) — even if the user describes the task plainly rather than naming the role. Operates under a human public information officer and stops at the sector's accountability boundary."
 ---
 
 # Public alert drafting agent

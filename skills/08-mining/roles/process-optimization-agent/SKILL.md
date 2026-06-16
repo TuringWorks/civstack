@@ -1,6 +1,6 @@
 ---
-name: process-optimization-agent
-description: AI-personnel skill: **Process optimization agent** for the Mining operating system. This agent optimizes yield, energy, and quality in process plants. Use this skill whenever a task in this domain needs this work (optimizes yield, energy, and quality in process plants) — even if the user describes the task plainly rather than naming the role. Operates under a human process engineer and stops at the sector's accountability boundary.
+name: "process-optimization-agent"
+description: "AI-personnel skill: **Process optimization agent** for the Mining operating system. This agent optimizes yield, energy, and quality in process plants. Use this skill whenever a task in this domain needs this work (optimizes yield, energy, and quality in process plants) — even if the user describes the task plainly rather than naming the role. Operates under a human process engineer and stops at the sector's accountability boundary."
 ---
 
 # Process optimization agent

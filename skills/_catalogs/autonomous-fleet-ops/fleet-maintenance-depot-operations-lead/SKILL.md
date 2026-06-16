@@ -1,6 +1,6 @@
 ---
-name: fleetops-fleet-maintenance-depot-operations-lead
-description: Autonomous-fleet operations role: **Fleet maintenance & depot operations lead** (Human engineering role (AI/robotics)) — keeps the fleet serviced, charged or fueled, calibrated, and depot-ready. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a depot operations manager.
+name: "fleetops-fleet-maintenance-depot-operations-lead"
+description: "Autonomous-fleet operations role: **Fleet maintenance & depot operations lead** (Human engineering role (AI/robotics)) — keeps the fleet serviced, charged or fueled, calibrated, and depot-ready. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a depot operations manager."
 ---
 
 # Autonomous-Fleet Ops — Fleet maintenance & depot operations lead

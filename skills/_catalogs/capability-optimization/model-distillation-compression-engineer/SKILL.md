@@ -1,6 +1,6 @@
 ---
-name: capopt-model-distillation-compression-engineer
-description: Capability/optimization role: **Model distillation & compression engineer** (Human engineering role (AI/robotics)) — distills large models into SLMs and tiny LMs and compresses them (quantization, pruning, sparsity) for on-device inference. Part of the layer that decides *how* robot and machine capabilities are built — across model tiers (LLM, SLM, tiny LM, deterministic) and many training methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation, classical control, formal methods). Use this skill when choosing or building how a capability is trained, optimized, or run on-device, even if the user only describes the underlying need. Works under a edge-AI lead.
+name: "capopt-model-distillation-compression-engineer"
+description: "Capability/optimization role: **Model distillation & compression engineer** (Human engineering role (AI/robotics)) — distills large models into SLMs and tiny LMs and compresses them (quantization, pruning, sparsity) for on-device inference. Part of the layer that decides *how* robot and machine capabilities are built — across model tiers (LLM, SLM, tiny LM, deterministic) and many training methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation, classical control, formal methods). Use this skill when choosing or building how a capability is trained, optimized, or run on-device, even if the user only describes the underlying need. Works under a edge-AI lead."
 ---
 
 # Capability & Optimization — Model distillation & compression engineer

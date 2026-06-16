@@ -1,6 +1,6 @@
 ---
-name: embodied-embodied-evaluation-red-team-agent
-description: Embodied-AI stack role: **Embodied evaluation & red-team agent** (AI agent) — stress-tests robot behavior for safety, robustness, and out-of-distribution and adversarial failure before and during deployment. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a robot safety officer.
+name: "embodied-embodied-evaluation-red-team-agent"
+description: "Embodied-AI stack role: **Embodied evaluation & red-team agent** (AI agent) — stress-tests robot behavior for safety, robustness, and out-of-distribution and adversarial failure before and during deployment. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a robot safety officer."
 ---
 
 # Embodied-AI Stack — Embodied evaluation & red-team agent

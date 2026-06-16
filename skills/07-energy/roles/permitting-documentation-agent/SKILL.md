@@ -1,6 +1,6 @@
 ---
-name: permitting-documentation-agent
-description: AI-personnel skill: **Permitting documentation agent** for the Energy operating system. This agent prepares siting and interconnection documentation. Use this skill whenever a task in this domain needs this work (prepares siting and interconnection documentation) — even if the user describes the task plainly rather than naming the role. Operates under a human project engineer and stops at the sector's accountability boundary.
+name: "permitting-documentation-agent"
+description: "AI-personnel skill: **Permitting documentation agent** for the Energy operating system. This agent prepares siting and interconnection documentation. Use this skill whenever a task in this domain needs this work (prepares siting and interconnection documentation) — even if the user describes the task plainly rather than naming the role. Operates under a human project engineer and stops at the sector's accountability boundary."
 ---
 
 # Permitting documentation agent

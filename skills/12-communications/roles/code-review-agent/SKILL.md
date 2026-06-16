@@ -1,6 +1,6 @@
 ---
-name: code-review-agent
-description: AI-personnel skill: **Code review agent** for the Communications operating system. This agent reviews diffs for bugs, security, and standards. Use this skill whenever a task in this domain needs this work (reviews diffs for bugs, security, and standards) — even if the user describes the task plainly rather than naming the role. Operates under a human tech lead and stops at the sector's accountability boundary.
+name: "code-review-agent"
+description: "AI-personnel skill: **Code review agent** for the Communications operating system. This agent reviews diffs for bugs, security, and standards. Use this skill whenever a task in this domain needs this work (reviews diffs for bugs, security, and standards) — even if the user describes the task plainly rather than naming the role. Operates under a human tech lead and stops at the sector's accountability boundary."
 ---
 
 # Code review agent

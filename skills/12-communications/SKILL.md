@@ -1,6 +1,6 @@
 ---
-name: os-12-communications
-description: Operating-system orchestrator skill for **Communications, Software, Cybersecurity, and Digital Infrastructure** (national operating system #12). Use this skill whenever work touches this sector's mission — Enable trusted computation, communication, data storage, software services, and cyber resilience — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-12-communications"
+description: "Operating-system orchestrator skill for **Communications, Software, Cybersecurity, and Digital Infrastructure** (national operating system #12). Use this skill whenever work touches this sector's mission — Enable trusted computation, communication, data storage, software services, and cyber resilience — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 12 — Communications, Software, Cybersecurity, and Digital Infrastructure

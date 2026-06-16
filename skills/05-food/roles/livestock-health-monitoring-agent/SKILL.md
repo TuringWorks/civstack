@@ -1,6 +1,6 @@
 ---
-name: livestock-health-monitoring-agent
-description: AI-personnel skill: **Livestock health monitoring agent** for the Food operating system. This agent monitors animal health, behavior, and welfare signals and flags issues for the vet. Use this skill whenever a task in this domain needs this work (monitors animal health, behavior, and welfare signals and flags issues for the vet) — even if the user describes the task plainly rather than naming the role. Operates under a human veterinarian / animal health technician and stops at the sector's accountability boundary.
+name: "livestock-health-monitoring-agent"
+description: "AI-personnel skill: **Livestock health monitoring agent** for the Food operating system. This agent monitors animal health, behavior, and welfare signals and flags issues for the vet. Use this skill whenever a task in this domain needs this work (monitors animal health, behavior, and welfare signals and flags issues for the vet) — even if the user describes the task plainly rather than naming the role. Operates under a human veterinarian / animal health technician and stops at the sector's accountability boundary."
 ---
 
 # Livestock health monitoring agent

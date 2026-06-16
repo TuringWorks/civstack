@@ -1,6 +1,6 @@
 ---
-name: catalog-policy-simulator-agent
-description: Cross-economy AI-personnel role: **Policy simulator agent** — model tradeoffs, distributional impacts, and scenarios. A reusable agent pattern that appears across many operating systems under a human policymaker. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need.
+name: "catalog-policy-simulator-agent"
+description: "Cross-economy AI-personnel role: **Policy simulator agent** — model tradeoffs, distributional impacts, and scenarios. A reusable agent pattern that appears across many operating systems under a human policymaker. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need."
 ---
 
 # AI Personnel Catalog — Policy simulator agent

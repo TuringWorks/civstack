@@ -1,6 +1,6 @@
 ---
-name: robot-manufacturing-cell-worker
-description: Humanoid/mobile robot role: **Manufacturing cell worker** — tend machines, assemble, inspect, rework. Best deployed in: brownfield factories. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments.
+name: "robot-manufacturing-cell-worker"
+description: "Humanoid/mobile robot role: **Manufacturing cell worker** — tend machines, assemble, inspect, rework. Best deployed in: brownfield factories. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments."
 ---
 
 # Humanoid Robot Catalog — Manufacturing cell worker

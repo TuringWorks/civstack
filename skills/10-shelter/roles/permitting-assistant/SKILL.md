@@ -1,6 +1,6 @@
 ---
-name: permitting-assistant
-description: AI-personnel skill: **Permitting assistant** for the Shelter operating system. This agent guides and pre-checks permit applications against code. Use this skill whenever a task in this domain needs this work (guides and pre-checks permit applications against code) — even if the user describes the task plainly rather than naming the role. Operates under a human code official and stops at the sector's accountability boundary.
+name: "permitting-assistant"
+description: "AI-personnel skill: **Permitting assistant** for the Shelter operating system. This agent guides and pre-checks permit applications against code. Use this skill whenever a task in this domain needs this work (guides and pre-checks permit applications against code) — even if the user describes the task plainly rather than naming the role. Operates under a human code official and stops at the sector's accountability boundary."
 ---
 
 # Permitting assistant

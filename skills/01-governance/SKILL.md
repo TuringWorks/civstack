@@ -1,6 +1,6 @@
 ---
-name: os-01-governance
-description: Operating-system orchestrator skill for **Governance, Law, and Public Administration** (national operating system #1). Use this skill whenever work touches this sector's mission — Create legitimate rules, enforce rights, resolve disputes, administer public programs, and maintain trust in institutions — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-01-governance"
+description: "Operating-system orchestrator skill for **Governance, Law, and Public Administration** (national operating system #1). Use this skill whenever work touches this sector's mission — Create legitimate rules, enforce rights, resolve disputes, administer public programs, and maintain trust in institutions — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 01 — Governance, Law, and Public Administration

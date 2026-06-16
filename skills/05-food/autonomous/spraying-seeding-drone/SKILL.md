@@ -1,6 +1,6 @@
 ---
-name: machine-05-spraying-seeding-drone
-description: Non-humanoid autonomous machine for the Food operating system: **Spraying & seeding drone** — apply crop inputs and seed precisely from the air on a prescription map. Best in: fields, orchards, vineyards, paddies, and steep or wet ground machines can't reach. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-05-spraying-seeding-drone"
+description: "Non-humanoid autonomous machine for the Food operating system: **Spraying & seeding drone** — apply crop inputs and seed precisely from the air on a prescription map. Best in: fields, orchards, vineyards, paddies, and steep or wet ground machines can't reach. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Spraying & seeding drone

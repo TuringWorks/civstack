@@ -1,6 +1,6 @@
 ---
-name: fleetops-vehicle-safety-operator-in-field
-description: Autonomous-fleet operations role: **Vehicle safety operator (in-field)** (Human-in-the-loop operator) — rides in or shadows the machine during validation and takes manual control when needed. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a operations supervisor.
+name: "fleetops-vehicle-safety-operator-in-field"
+description: "Autonomous-fleet operations role: **Vehicle safety operator (in-field)** (Human-in-the-loop operator) — rides in or shadows the machine during validation and takes manual control when needed. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a operations supervisor."
 ---
 
 # Autonomous-Fleet Ops — Vehicle safety operator (in-field)

@@ -1,6 +1,6 @@
 ---
-name: robot-inspection-walker
-description: Humanoid/mobile robot role: **Inspection walker** — patrol and inspect gauges, leaks, damage, inventory. Best deployed in: plants, utilities, warehouses. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments.
+name: "robot-inspection-walker"
+description: "Humanoid/mobile robot role: **Inspection walker** — patrol and inspect gauges, leaks, damage, inventory. Best deployed in: plants, utilities, warehouses. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments."
 ---
 
 # Humanoid Robot Catalog — Inspection walker

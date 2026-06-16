@@ -1,6 +1,6 @@
 ---
-name: fall-risk-monitor
-description: AI-personnel skill: **Fall-risk monitor** for the Household operating system. This agent monitors for falls and safety risks under oversight. Use this skill whenever a task in this domain needs this work (monitors for falls and safety risks under oversight) — even if the user describes the task plainly rather than naming the role. Operates under a human care team and stops at the sector's accountability boundary.
+name: "fall-risk-monitor"
+description: "AI-personnel skill: **Fall-risk monitor** for the Household operating system. This agent monitors for falls and safety risks under oversight. Use this skill whenever a task in this domain needs this work (monitors for falls and safety risks under oversight) — even if the user describes the task plainly rather than naming the role. Operates under a human care team and stops at the sector's accountability boundary."
 ---
 
 # Fall-risk monitor

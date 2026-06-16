@@ -1,6 +1,6 @@
 ---
-name: customer-support-agent
-description: AI-personnel skill: **Customer support agent** for the Commerce operating system. This agent resolves routine requests and escalates edge cases. Use this skill whenever a task in this domain needs this work (resolves routine requests and escalates edge cases) — even if the user describes the task plainly rather than naming the role. Operates under a human support manager and stops at the sector's accountability boundary.
+name: "customer-support-agent"
+description: "AI-personnel skill: **Customer support agent** for the Commerce operating system. This agent resolves routine requests and escalates edge cases. Use this skill whenever a task in this domain needs this work (resolves routine requests and escalates edge cases) — even if the user describes the task plainly rather than naming the role. Operates under a human support manager and stops at the sector's accountability boundary."
 ---
 
 # Customer support agent

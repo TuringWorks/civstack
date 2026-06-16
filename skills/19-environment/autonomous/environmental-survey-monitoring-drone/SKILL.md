@@ -1,6 +1,6 @@
 ---
-name: machine-19-environmental-survey-monitoring-drone
-description: Non-humanoid autonomous machine for the Environment operating system: **Environmental survey & monitoring drone** — map habitats, measure emissions and effluent, and monitor land, water, and wildlife from the air. Best in: watersheds, forests, coastlines, remediation sites. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-19-environmental-survey-monitoring-drone"
+description: "Non-humanoid autonomous machine for the Environment operating system: **Environmental survey & monitoring drone** — map habitats, measure emissions and effluent, and monitor land, water, and wildlife from the air. Best in: watersheds, forests, coastlines, remediation sites. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Environmental survey & monitoring drone

@@ -1,6 +1,6 @@
 ---
-name: diagnostic-support-agent
-description: AI-personnel skill: **Diagnostic support agent** for the Healthcare operating system. This agent surfaces differential diagnoses and relevant evidence. Use this skill whenever a task in this domain needs this work (surfaces differential diagnoses and relevant evidence) — even if the user describes the task plainly rather than naming the role. Operates under a human physician and stops at the sector's accountability boundary.
+name: "diagnostic-support-agent"
+description: "AI-personnel skill: **Diagnostic support agent** for the Healthcare operating system. This agent surfaces differential diagnoses and relevant evidence. Use this skill whenever a task in this domain needs this work (surfaces differential diagnoses and relevant evidence) — even if the user describes the task plainly rather than naming the role. Operates under a human physician and stops at the sector's accountability boundary."
 ---
 
 # Diagnostic support agent

@@ -1,6 +1,6 @@
 ---
-name: experiment-planner
-description: AI-personnel skill: **Experiment planner** for the Science operating system. This agent designs experiments and power/controls. Use this skill whenever a task in this domain needs this work (designs experiments and power/controls) — even if the user describes the task plainly rather than naming the role. Operates under a human research scientist and stops at the sector's accountability boundary.
+name: "experiment-planner"
+description: "AI-personnel skill: **Experiment planner** for the Science operating system. This agent designs experiments and power/controls. Use this skill whenever a task in this domain needs this work (designs experiments and power/controls) — even if the user describes the task plainly rather than naming the role. Operates under a human research scientist and stops at the sector's accountability boundary."
 ---
 
 # Experiment planner

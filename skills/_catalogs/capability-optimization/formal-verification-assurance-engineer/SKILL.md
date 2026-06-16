@@ -1,6 +1,6 @@
 ---
-name: capopt-formal-verification-assurance-engineer
-description: Capability/optimization role: **Formal verification & assurance engineer** (Human oversight role (accountability boundary)) — proves and assures safety-critical behavior with formal methods, runtime monitors, and certified envelopes. Part of the layer that decides *how* robot and machine capabilities are built — across model tiers (LLM, SLM, tiny LM, deterministic) and many training methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation, classical control, formal methods). Use this skill when choosing or building how a capability is trained, optimized, or run on-device, even if the user only describes the underlying need. Works under a safety lead.
+name: "capopt-formal-verification-assurance-engineer"
+description: "Capability/optimization role: **Formal verification & assurance engineer** (Human oversight role (accountability boundary)) — proves and assures safety-critical behavior with formal methods, runtime monitors, and certified envelopes. Part of the layer that decides *how* robot and machine capabilities are built — across model tiers (LLM, SLM, tiny LM, deterministic) and many training methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation, classical control, formal methods). Use this skill when choosing or building how a capability is trained, optimized, or run on-device, even if the user only describes the underlying need. Works under a safety lead."
 ---
 
 # Capability & Optimization — Formal verification & assurance engineer

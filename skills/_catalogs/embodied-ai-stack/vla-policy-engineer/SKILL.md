@@ -1,6 +1,6 @@
 ---
-name: embodied-vla-policy-engineer
-description: Embodied-AI stack role: **VLA policy engineer** (Human engineering role (AI/robotics)) — trains, evaluates, and maintains the Vision-Language-Action policies that turn instructions and perception into continuous motor control. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a robot learning manager.
+name: "embodied-vla-policy-engineer"
+description: "Embodied-AI stack role: **VLA policy engineer** (Human engineering role (AI/robotics)) — trains, evaluates, and maintains the Vision-Language-Action policies that turn instructions and perception into continuous motor control. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a robot learning manager."
 ---
 
 # Embodied-AI Stack — VLA policy engineer

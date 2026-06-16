@@ -1,6 +1,6 @@
 ---
-name: machine-autonomous-shuttle-bus
-description: Non-humanoid autonomous machine: **Autonomous shuttle / bus** — move passengers on fixed or flexible low-speed routes. Best in: campuses, downtowns, transit feeders. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls over a perception-to-control stack (trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform anywhere this physical job is needed, even if the user only describes the underlying need.
+name: "machine-autonomous-shuttle-bus"
+description: "Non-humanoid autonomous machine: **Autonomous shuttle / bus** — move passengers on fixed or flexible low-speed routes. Best in: campuses, downtowns, transit feeders. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls over a perception-to-control stack (trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform anywhere this physical job is needed, even if the user only describes the underlying need."
 ---
 
 # Autonomous Machine — Autonomous shuttle / bus

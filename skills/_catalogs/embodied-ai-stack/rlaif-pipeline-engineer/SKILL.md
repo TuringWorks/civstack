@@ -1,6 +1,6 @@
 ---
-name: embodied-rlaif-pipeline-engineer
-description: Embodied-AI stack role: **RLAIF pipeline engineer** (Human engineering role (AI/robotics)) — designs the reinforcement-learning-from-AI-feedback pipelines and AI critics that shape robot skills and judgment at scale. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a alignment / RL lead.
+name: "embodied-rlaif-pipeline-engineer"
+description: "Embodied-AI stack role: **RLAIF pipeline engineer** (Human engineering role (AI/robotics)) — designs the reinforcement-learning-from-AI-feedback pipelines and AI critics that shape robot skills and judgment at scale. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a alignment / RL lead."
 ---
 
 # Embodied-AI Stack — RLAIF pipeline engineer

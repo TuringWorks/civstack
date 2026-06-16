@@ -1,6 +1,6 @@
 ---
-name: crop-planning-agent
-description: AI-personnel skill: **Crop planning agent** for the Food operating system. This agent plans planting, rotation, and inputs against soil, weather, and market data. Use this skill whenever a task in this domain needs this work (plans planting, rotation, and inputs against soil, weather, and market data) — even if the user describes the task plainly rather than naming the role. Operates under a human agronomist and stops at the sector's accountability boundary.
+name: "crop-planning-agent"
+description: "AI-personnel skill: **Crop planning agent** for the Food operating system. This agent plans planting, rotation, and inputs against soil, weather, and market data. Use this skill whenever a task in this domain needs this work (plans planting, rotation, and inputs against soil, weather, and market data) — even if the user describes the task plainly rather than naming the role. Operates under a human agronomist and stops at the sector's accountability boundary."
 ---
 
 # Crop planning agent

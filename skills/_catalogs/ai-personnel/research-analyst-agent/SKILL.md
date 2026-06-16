@@ -1,6 +1,6 @@
 ---
-name: catalog-research-analyst-agent
-description: Cross-economy AI-personnel role: **Research analyst agent** — gather, compare, summarize, and cite evidence. A reusable agent pattern that appears across many operating systems under a human analyst, scientist, attorney, strategist. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need.
+name: "catalog-research-analyst-agent"
+description: "Cross-economy AI-personnel role: **Research analyst agent** — gather, compare, summarize, and cite evidence. A reusable agent pattern that appears across many operating systems under a human analyst, scientist, attorney, strategist. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need."
 ---
 
 # AI Personnel Catalog — Research analyst agent

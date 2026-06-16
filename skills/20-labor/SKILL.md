@@ -1,6 +1,6 @@
 ---
-name: os-20-labor
-description: Operating-system orchestrator skill for **Labor, Workforce Systems, and Organizational Life** (national operating system #20). Use this skill whenever work touches this sector's mission — Match people to work, protect workers, build organizations, and maintain productive cultures — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-20-labor"
+description: "Operating-system orchestrator skill for **Labor, Workforce Systems, and Organizational Life** (national operating system #20). Use this skill whenever work touches this sector's mission — Match people to work, protect workers, build organizations, and maintain productive cultures — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 20 — Labor, Workforce Systems, and Organizational Life

@@ -1,6 +1,6 @@
 ---
-name: machine-04-search-response-drone
-description: Non-humanoid autonomous machine for the Public Safety operating system: **Search & response drone** — search for people, map incidents, and deliver overhead situational awareness in emergencies. Best in: disaster zones, wildland fires, search areas. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-04-search-response-drone"
+description: "Non-humanoid autonomous machine for the Public Safety operating system: **Search & response drone** — search for people, map incidents, and deliver overhead situational awareness in emergencies. Best in: disaster zones, wildland fires, search areas. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Search & response drone

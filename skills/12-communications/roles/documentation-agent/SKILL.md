@@ -1,6 +1,6 @@
 ---
-name: documentation-agent
-description: AI-personnel skill: **Documentation agent** for the Communications operating system. This agent produces and maintains technical documentation. Use this skill whenever a task in this domain needs this work (produces and maintains technical documentation) — even if the user describes the task plainly rather than naming the role. Operates under a human domain owner and stops at the sector's accountability boundary.
+name: "documentation-agent"
+description: "AI-personnel skill: **Documentation agent** for the Communications operating system. This agent produces and maintains technical documentation. Use this skill whenever a task in this domain needs this work (produces and maintains technical documentation) — even if the user describes the task plainly rather than naming the role. Operates under a human domain owner and stops at the sector's accountability boundary."
 ---
 
 # Documentation agent

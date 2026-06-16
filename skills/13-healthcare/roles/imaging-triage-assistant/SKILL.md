@@ -1,6 +1,6 @@
 ---
-name: imaging-triage-assistant
-description: AI-personnel skill: **Imaging triage assistant** for the Healthcare operating system. This agent prioritizes and pre-reads imaging studies. Use this skill whenever a task in this domain needs this work (prioritizes and pre-reads imaging studies) — even if the user describes the task plainly rather than naming the role. Operates under a human radiologist and stops at the sector's accountability boundary.
+name: "imaging-triage-assistant"
+description: "AI-personnel skill: **Imaging triage assistant** for the Healthcare operating system. This agent prioritizes and pre-reads imaging studies. Use this skill whenever a task in this domain needs this work (prioritizes and pre-reads imaging studies) — even if the user describes the task plainly rather than naming the role. Operates under a human radiologist and stops at the sector's accountability boundary."
 ---
 
 # Imaging triage assistant

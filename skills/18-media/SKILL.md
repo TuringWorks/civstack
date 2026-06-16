@@ -1,6 +1,6 @@
 ---
-name: os-18-media
-description: Operating-system orchestrator skill for **Media, Culture, Arts, Sports, Religion, and Civic Life** (national operating system #18). Use this skill whenever work touches this sector's mission — Create meaning, shared narratives, recreation, identity, memory, and social cohesion — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-18-media"
+description: "Operating-system orchestrator skill for **Media, Culture, Arts, Sports, Religion, and Civic Life** (national operating system #18). Use this skill whenever work touches this sector's mission — Create meaning, shared narratives, recreation, identity, memory, and social cohesion — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 18 — Media, Culture, Arts, Sports, Religion, and Civic Life

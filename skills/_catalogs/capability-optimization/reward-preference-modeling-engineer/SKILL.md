@@ -1,6 +1,6 @@
 ---
-name: capopt-reward-preference-modeling-engineer
-description: Capability/optimization role: **Reward & preference modeling engineer** (Human engineering role (AI/robotics)) — builds the reward, preference, and constitutional signals that shape behavior (RLHF, RLAIF, rule-based rewards). Part of the layer that decides *how* robot and machine capabilities are built — across model tiers (LLM, SLM, tiny LM, deterministic) and many training methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation, classical control, formal methods). Use this skill when choosing or building how a capability is trained, optimized, or run on-device, even if the user only describes the underlying need. Works under a alignment lead.
+name: "capopt-reward-preference-modeling-engineer"
+description: "Capability/optimization role: **Reward & preference modeling engineer** (Human engineering role (AI/robotics)) — builds the reward, preference, and constitutional signals that shape behavior (RLHF, RLAIF, rule-based rewards). Part of the layer that decides *how* robot and machine capabilities are built — across model tiers (LLM, SLM, tiny LM, deterministic) and many training methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation, classical control, formal methods). Use this skill when choosing or building how a capability is trained, optimized, or run on-device, even if the user only describes the underlying need. Works under a alignment lead."
 ---
 
 # Capability & Optimization — Reward & preference modeling engineer

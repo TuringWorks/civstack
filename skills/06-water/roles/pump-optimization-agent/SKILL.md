@@ -1,6 +1,6 @@
 ---
-name: pump-optimization-agent
-description: AI-personnel skill: **Pump optimization agent** for the Water operating system. This agent optimizes pumping and energy use across the network. Use this skill whenever a task in this domain needs this work (optimizes pumping and energy use across the network) — even if the user describes the task plainly rather than naming the role. Operates under a human operations engineer and stops at the sector's accountability boundary.
+name: "pump-optimization-agent"
+description: "AI-personnel skill: **Pump optimization agent** for the Water operating system. This agent optimizes pumping and energy use across the network. Use this skill whenever a task in this domain needs this work (optimizes pumping and energy use across the network) — even if the user describes the task plainly rather than naming the role. Operates under a human operations engineer and stops at the sector's accountability boundary."
 ---
 
 # Pump optimization agent

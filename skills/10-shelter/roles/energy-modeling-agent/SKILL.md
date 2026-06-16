@@ -1,6 +1,6 @@
 ---
-name: energy-modeling-agent
-description: AI-personnel skill: **Energy modeling agent** for the Shelter operating system. This agent models building energy and comfort performance. Use this skill whenever a task in this domain needs this work (models building energy and comfort performance) — even if the user describes the task plainly rather than naming the role. Operates under a human MEP engineer and stops at the sector's accountability boundary.
+name: "energy-modeling-agent"
+description: "AI-personnel skill: **Energy modeling agent** for the Shelter operating system. This agent models building energy and comfort performance. Use this skill whenever a task in this domain needs this work (models building energy and comfort performance) — even if the user describes the task plainly rather than naming the role. Operates under a human MEP engineer and stops at the sector's accountability boundary."
 ---
 
 # Energy modeling agent

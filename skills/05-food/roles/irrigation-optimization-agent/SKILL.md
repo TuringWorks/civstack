@@ -1,6 +1,6 @@
 ---
-name: irrigation-optimization-agent
-description: AI-personnel skill: **Irrigation optimization agent** for the Food operating system. This agent schedules and meters irrigation against soil moisture, weather, crop stage, and water availability. Use this skill whenever a task in this domain needs this work (schedules and meters irrigation against soil moisture, weather, crop stage, and water availability) — even if the user describes the task plainly rather than naming the role. Operates under a human irrigation specialist and stops at the sector's accountability boundary.
+name: "irrigation-optimization-agent"
+description: "AI-personnel skill: **Irrigation optimization agent** for the Food operating system. This agent schedules and meters irrigation against soil moisture, weather, crop stage, and water availability. Use this skill whenever a task in this domain needs this work (schedules and meters irrigation against soil moisture, weather, crop stage, and water availability) — even if the user describes the task plainly rather than naming the role. Operates under a human irrigation specialist and stops at the sector's accountability boundary."
 ---
 
 # Irrigation optimization agent

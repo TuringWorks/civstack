@@ -1,6 +1,6 @@
 ---
-name: intelligence-triage-agent
-description: AI-personnel skill: **Intelligence triage agent** for the Defense operating system. This agent prioritizes and routes incoming reporting and tips. Use this skill whenever a task in this domain needs this work (prioritizes and routes incoming reporting and tips) — even if the user describes the task plainly rather than naming the role. Operates under a human threat analyst and stops at the sector's accountability boundary.
+name: "intelligence-triage-agent"
+description: "AI-personnel skill: **Intelligence triage agent** for the Defense operating system. This agent prioritizes and routes incoming reporting and tips. Use this skill whenever a task in this domain needs this work (prioritizes and routes incoming reporting and tips) — even if the user describes the task plainly rather than naming the role. Operates under a human threat analyst and stops at the sector's accountability boundary."
 ---
 
 # Intelligence triage agent

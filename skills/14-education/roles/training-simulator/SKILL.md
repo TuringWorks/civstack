@@ -1,6 +1,6 @@
 ---
-name: training-simulator
-description: AI-personnel skill: **Training simulator** for the Education operating system. This agent builds scenario-based practice for skills. Use this skill whenever a task in this domain needs this work (builds scenario-based practice for skills) — even if the user describes the task plainly rather than naming the role. Operates under a human corporate trainer and stops at the sector's accountability boundary.
+name: "training-simulator"
+description: "AI-personnel skill: **Training simulator** for the Education operating system. This agent builds scenario-based practice for skills. Use this skill whenever a task in this domain needs this work (builds scenario-based practice for skills) — even if the user describes the task plainly rather than naming the role. Operates under a human corporate trainer and stops at the sector's accountability boundary."
 ---
 
 # Training simulator

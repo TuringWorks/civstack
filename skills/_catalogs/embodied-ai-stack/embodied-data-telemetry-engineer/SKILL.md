@@ -1,6 +1,6 @@
 ---
-name: embodied-embodied-data-telemetry-engineer
-description: Embodied-AI stack role: **Embodied data & telemetry engineer** (Human engineering role (AI/robotics)) — curates demonstration, perception, and telemetry data and the feedback loop that continuously improves the stack. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a data platform lead.
+name: "embodied-embodied-data-telemetry-engineer"
+description: "Embodied-AI stack role: **Embodied data & telemetry engineer** (Human engineering role (AI/robotics)) — curates demonstration, perception, and telemetry data and the feedback loop that continuously improves the stack. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a data platform lead."
 ---
 
 # Embodied-AI Stack — Embodied data & telemetry engineer

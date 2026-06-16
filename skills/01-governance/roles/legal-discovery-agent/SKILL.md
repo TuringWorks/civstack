@@ -1,6 +1,6 @@
 ---
-name: legal-discovery-agent
-description: AI-personnel skill: **Legal discovery agent** for the Governance operating system. This agent reviews evidence, builds timelines, analyzes contracts, precedents, and filings. Use this skill whenever a task in this domain needs this work (reviews evidence, builds timelines, analyzes contracts, precedents, and filings) — even if the user describes the task plainly rather than naming the role. Operates under a human attorney and stops at the sector's accountability boundary.
+name: "legal-discovery-agent"
+description: "AI-personnel skill: **Legal discovery agent** for the Governance operating system. This agent reviews evidence, builds timelines, analyzes contracts, precedents, and filings. Use this skill whenever a task in this domain needs this work (reviews evidence, builds timelines, analyzes contracts, precedents, and filings) — even if the user describes the task plainly rather than naming the role. Operates under a human attorney and stops at the sector's accountability boundary."
 ---
 
 # Legal discovery agent

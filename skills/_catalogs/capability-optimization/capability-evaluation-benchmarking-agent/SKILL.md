@@ -1,6 +1,6 @@
 ---
-name: capopt-capability-evaluation-benchmarking-agent
-description: Capability/optimization role: **Capability evaluation & benchmarking agent** (AI agent) — measures capability, robustness, and regression across methods and model tiers and finds the efficient frontier. Part of the layer that decides *how* robot and machine capabilities are built — across model tiers (LLM, SLM, tiny LM, deterministic) and many training methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation, classical control, formal methods). Use this skill when choosing or building how a capability is trained, optimized, or run on-device, even if the user only describes the underlying need. Works under a evaluation lead.
+name: "capopt-capability-evaluation-benchmarking-agent"
+description: "Capability/optimization role: **Capability evaluation & benchmarking agent** (AI agent) — measures capability, robustness, and regression across methods and model tiers and finds the efficient frontier. Part of the layer that decides *how* robot and machine capabilities are built — across model tiers (LLM, SLM, tiny LM, deterministic) and many training methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation, classical control, formal methods). Use this skill when choosing or building how a capability is trained, optimized, or run on-device, even if the user only describes the underlying need. Works under a evaluation lead."
 ---
 
 # Capability & Optimization — Capability evaluation & benchmarking agent

@@ -1,6 +1,6 @@
 ---
-name: clinical-trial-matching-agent
-description: AI-personnel skill: **Clinical trial matching agent** for the Healthcare operating system. This agent matches patients to eligible trials. Use this skill whenever a task in this domain needs this work (matches patients to eligible trials) — even if the user describes the task plainly rather than naming the role. Operates under a human clinical researcher and stops at the sector's accountability boundary.
+name: "clinical-trial-matching-agent"
+description: "AI-personnel skill: **Clinical trial matching agent** for the Healthcare operating system. This agent matches patients to eligible trials. Use this skill whenever a task in this domain needs this work (matches patients to eligible trials) — even if the user describes the task plainly rather than naming the role. Operates under a human clinical researcher and stops at the sector's accountability boundary."
 ---
 
 # Clinical trial matching agent

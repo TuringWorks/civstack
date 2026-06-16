@@ -1,6 +1,6 @@
 ---
-name: ai-model-evaluation-agent
-description: AI-personnel skill: **AI model evaluation agent** for the Communications operating system. This agent tests AI outputs for quality, safety, bias, and drift. Use this skill whenever a task in this domain needs this work (tests AI outputs for quality, safety, bias, and drift) — even if the user describes the task plainly rather than naming the role. Operates under a human AI governance lead and stops at the sector's accountability boundary.
+name: "ai-model-evaluation-agent"
+description: "AI-personnel skill: **AI model evaluation agent** for the Communications operating system. This agent tests AI outputs for quality, safety, bias, and drift. Use this skill whenever a task in this domain needs this work (tests AI outputs for quality, safety, bias, and drift) — even if the user describes the task plainly rather than naming the role. Operates under a human AI governance lead and stops at the sector's accountability boundary."
 ---
 
 # AI model evaluation agent

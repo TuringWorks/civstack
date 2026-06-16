@@ -1,6 +1,6 @@
 ---
-name: robot-material-runner
-description: Humanoid/mobile robot role: **Material runner** — move supplies, tools, linens, mail, parts. Best deployed in: hospitals, hotels, factories, offices. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments.
+name: "robot-material-runner"
+description: "Humanoid/mobile robot role: **Material runner** — move supplies, tools, linens, mail, parts. Best deployed in: hospitals, hotels, factories, offices. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments."
 ---
 
 # Humanoid Robot Catalog — Material runner

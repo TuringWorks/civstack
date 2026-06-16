@@ -1,6 +1,6 @@
 ---
-name: os-08-mining
-description: Operating-system orchestrator skill for **Mining, Materials, Chemicals, and Industrial Inputs** (national operating system #8). Use this skill whenever work touches this sector's mission — Extract and transform raw materials into safe, reliable inputs for the economy — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-08-mining"
+description: "Operating-system orchestrator skill for **Mining, Materials, Chemicals, and Industrial Inputs** (national operating system #8). Use this skill whenever work touches this sector's mission — Extract and transform raw materials into safe, reliable inputs for the economy — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 08 — Mining, Materials, Chemicals, and Industrial Inputs

@@ -1,6 +1,6 @@
 ---
-name: continuity-plan-reviewer
-description: AI-personnel skill: **Continuity plan reviewer** for the Resilience operating system. This agent reviews and tests business-continuity plans. Use this skill whenever a task in this domain needs this work (reviews and tests business-continuity plans) — even if the user describes the task plainly rather than naming the role. Operates under a human business continuity manager and stops at the sector's accountability boundary.
+name: "continuity-plan-reviewer"
+description: "AI-personnel skill: **Continuity plan reviewer** for the Resilience operating system. This agent reviews and tests business-continuity plans. Use this skill whenever a task in this domain needs this work (reviews and tests business-continuity plans) — even if the user describes the task plainly rather than naming the role. Operates under a human business continuity manager and stops at the sector's accountability boundary."
 ---
 
 # Continuity plan reviewer

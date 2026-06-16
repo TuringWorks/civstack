@@ -1,6 +1,6 @@
 ---
-name: construction-scheduler
-description: AI-personnel skill: **Construction scheduler** for the Shelter operating system. This agent builds and maintains critical-path construction schedules. Use this skill whenever a task in this domain needs this work (builds and maintains critical-path construction schedules) — even if the user describes the task plainly rather than naming the role. Operates under a human project scheduler and stops at the sector's accountability boundary.
+name: "construction-scheduler"
+description: "AI-personnel skill: **Construction scheduler** for the Shelter operating system. This agent builds and maintains critical-path construction schedules. Use this skill whenever a task in this domain needs this work (builds and maintains critical-path construction schedules) — even if the user describes the task plainly rather than naming the role. Operates under a human project scheduler and stops at the sector's accountability boundary."
 ---
 
 # Construction scheduler

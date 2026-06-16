@@ -1,6 +1,6 @@
 ---
-name: audience-analytics-agent
-description: AI-personnel skill: **Audience analytics agent** for the Media operating system. This agent analyzes audience engagement and reach. Use this skill whenever a task in this domain needs this work (analyzes audience engagement and reach) — even if the user describes the task plainly rather than naming the role. Operates under a human editor and stops at the sector's accountability boundary.
+name: "audience-analytics-agent"
+description: "AI-personnel skill: **Audience analytics agent** for the Media operating system. This agent analyzes audience engagement and reach. Use this skill whenever a task in this domain needs this work (analyzes audience engagement and reach) — even if the user describes the task plainly rather than naming the role. Operates under a human editor and stops at the sector's accountability boundary."
 ---
 
 # Audience analytics agent

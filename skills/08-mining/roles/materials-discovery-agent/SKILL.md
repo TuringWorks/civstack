@@ -1,6 +1,6 @@
 ---
-name: materials-discovery-agent
-description: AI-personnel skill: **Materials discovery agent** for the Mining operating system. This agent screens and proposes candidate materials and formulations. Use this skill whenever a task in this domain needs this work (screens and proposes candidate materials and formulations) — even if the user describes the task plainly rather than naming the role. Operates under a human materials scientist and stops at the sector's accountability boundary.
+name: "materials-discovery-agent"
+description: "AI-personnel skill: **Materials discovery agent** for the Mining operating system. This agent screens and proposes candidate materials and formulations. Use this skill whenever a task in this domain needs this work (screens and proposes candidate materials and formulations) — even if the user describes the task plainly rather than naming the role. Operates under a human materials scientist and stops at the sector's accountability boundary."
 ---
 
 # Materials discovery agent

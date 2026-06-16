@@ -1,6 +1,6 @@
 ---
-name: machine-03-autonomous-logistics-resupply-vehicle-ugv
-description: Non-humanoid autonomous machine for the Defense operating system: **Autonomous logistics & resupply vehicle (UGV)** — move materiel, fuel, and casualties across austere terrain without a crewed cab. Best in: bases, forward areas, disaster-relief corridors. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-03-autonomous-logistics-resupply-vehicle-ugv"
+description: "Non-humanoid autonomous machine for the Defense operating system: **Autonomous logistics & resupply vehicle (UGV)** — move materiel, fuel, and casualties across austere terrain without a crewed cab. Best in: bases, forward areas, disaster-relief corridors. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Autonomous logistics & resupply vehicle (UGV)

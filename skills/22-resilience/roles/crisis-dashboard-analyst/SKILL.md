@@ -1,6 +1,6 @@
 ---
-name: crisis-dashboard-analyst
-description: AI-personnel skill: **Crisis dashboard analyst** for the Resilience operating system. This agent maintains a live cross-sector situational picture. Use this skill whenever a task in this domain needs this work (maintains a live cross-sector situational picture) — even if the user describes the task plainly rather than naming the role. Operates under a human emergency planner and stops at the sector's accountability boundary.
+name: "crisis-dashboard-analyst"
+description: "AI-personnel skill: **Crisis dashboard analyst** for the Resilience operating system. This agent maintains a live cross-sector situational picture. Use this skill whenever a task in this domain needs this work (maintains a live cross-sector situational picture) — even if the user describes the task plainly rather than naming the role. Operates under a human emergency planner and stops at the sector's accountability boundary."
 ---
 
 # Crisis dashboard analyst

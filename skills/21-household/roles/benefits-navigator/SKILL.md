@@ -1,6 +1,6 @@
 ---
-name: benefits-navigator
-description: AI-personnel skill: **Benefits navigator** for the Household operating system. This agent finds and applies for benefits and services. Use this skill whenever a task in this domain needs this work (finds and applies for benefits and services) — even if the user describes the task plainly rather than naming the role. Operates under a human case manager and stops at the sector's accountability boundary.
+name: "benefits-navigator"
+description: "AI-personnel skill: **Benefits navigator** for the Household operating system. This agent finds and applies for benefits and services. Use this skill whenever a task in this domain needs this work (finds and applies for benefits and services) — even if the user describes the task plainly rather than naming the role. Operates under a human case manager and stops at the sector's accountability boundary."
 ---
 
 # Benefits navigator

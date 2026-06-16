@@ -1,6 +1,6 @@
 ---
-name: root-cause-analysis-agent
-description: AI-personnel skill: **Root-cause analysis agent** for the Manufacturing and Industrial Production operating system. This agent investigates defects and proposes corrective actions. Use this skill whenever a task in this domain needs this work (investigates defects and proposes corrective actions) — even if the user describes the task plainly rather than naming the role. Operates under a human quality engineer and stops at the sector's accountability boundary.
+name: "root-cause-analysis-agent"
+description: "AI-personnel skill: **Root-cause analysis agent** for the Manufacturing and Industrial Production operating system. This agent investigates defects and proposes corrective actions. Use this skill whenever a task in this domain needs this work (investigates defects and proposes corrective actions) — even if the user describes the task plainly rather than naming the role. Operates under a human quality engineer and stops at the sector's accountability boundary."
 ---
 
 # Root-cause analysis agent

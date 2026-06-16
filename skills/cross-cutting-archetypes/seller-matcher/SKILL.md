@@ -1,6 +1,6 @@
 ---
-name: archetype-seller-matcher
-description: Cross-cutting role archetype: **Seller/Matcher** — match needs to offerings and negotiate exchange. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: match needs to offerings and negotiate exchange.
+name: "archetype-seller-matcher"
+description: "Cross-cutting role archetype: **Seller/Matcher** — match needs to offerings and negotiate exchange. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: match needs to offerings and negotiate exchange."
 ---
 
 # Archetype — Seller/Matcher

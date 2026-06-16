@@ -1,6 +1,6 @@
 ---
-name: catalog-drafting-and-documentation-agent
-description: Cross-economy AI-personnel role: **Drafting and documentation agent** — produce first drafts, reports, sops, contracts, tickets, records. A reusable agent pattern that appears across many operating systems under a human domain owner. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need.
+name: "catalog-drafting-and-documentation-agent"
+description: "Cross-economy AI-personnel role: **Drafting and documentation agent** — produce first drafts, reports, sops, contracts, tickets, records. A reusable agent pattern that appears across many operating systems under a human domain owner. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need."
 ---
 
 # AI Personnel Catalog — Drafting and documentation agent

@@ -1,6 +1,6 @@
 ---
-name: fleetops-autonomy-incident-disengagement-analyst
-description: Autonomous-fleet operations role: **Autonomy incident & disengagement analyst** (AI agent) — analyzes disengagements, near-misses, and incidents and feeds fixes back into the stack and the ODD. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a autonomy safety lead.
+name: "fleetops-autonomy-incident-disengagement-analyst"
+description: "Autonomous-fleet operations role: **Autonomy incident & disengagement analyst** (AI agent) — analyzes disengagements, near-misses, and incidents and feeds fixes back into the stack and the ODD. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a autonomy safety lead."
 ---
 
 # Autonomous-Fleet Ops — Autonomy incident & disengagement analyst

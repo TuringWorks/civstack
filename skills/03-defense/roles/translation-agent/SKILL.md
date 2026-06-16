@@ -1,6 +1,6 @@
 ---
-name: translation-agent
-description: AI-personnel skill: **Translation agent** for the Defense operating system. This agent translates and contextualizes multilingual material at speed. Use this skill whenever a task in this domain needs this work (translates and contextualizes multilingual material at speed) — even if the user describes the task plainly rather than naming the role. Operates under a human linguist / analyst and stops at the sector's accountability boundary.
+name: "translation-agent"
+description: "AI-personnel skill: **Translation agent** for the Defense operating system. This agent translates and contextualizes multilingual material at speed. Use this skill whenever a task in this domain needs this work (translates and contextualizes multilingual material at speed) — even if the user describes the task plainly rather than naming the role. Operates under a human linguist / analyst and stops at the sector's accountability boundary."
 ---
 
 # Translation agent

@@ -1,6 +1,6 @@
 ---
-name: robot-facilities-maintainer
-description: Humanoid/mobile robot role: **Facilities maintainer** — clean, restock, check rooms, report repairs. Best deployed in: schools, offices, stations. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments.
+name: "robot-facilities-maintainer"
+description: "Humanoid/mobile robot role: **Facilities maintainer** — clean, restock, check rooms, report repairs. Best deployed in: schools, offices, stations. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments."
 ---
 
 # Humanoid Robot Catalog — Facilities maintainer

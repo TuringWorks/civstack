@@ -1,6 +1,6 @@
 ---
-name: catalog-field-service-planner-agent
-description: Cross-economy AI-personnel role: **Field-service planner agent** — predict failures, schedule crews, prepare parts. A reusable agent pattern that appears across many operating systems under a human maintenance manager. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need.
+name: "catalog-field-service-planner-agent"
+description: "Cross-economy AI-personnel role: **Field-service planner agent** — predict failures, schedule crews, prepare parts. A reusable agent pattern that appears across many operating systems under a human maintenance manager. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need."
 ---
 
 # AI Personnel Catalog — Field-service planner agent

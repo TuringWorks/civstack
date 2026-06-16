@@ -1,6 +1,6 @@
 ---
-name: archetype-scientist
-description: Cross-cutting role archetype: **Scientist** — discover and validate knowledge. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: discover and validate knowledge.
+name: "archetype-scientist"
+description: "Cross-cutting role archetype: **Scientist** — discover and validate knowledge. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: discover and validate knowledge."
 ---
 
 # Archetype — Scientist

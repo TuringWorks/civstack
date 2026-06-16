@@ -1,6 +1,6 @@
 ---
-name: procurement-drafting-agent
-description: AI-personnel skill: **Procurement drafting agent** for the Public Finance operating system. This agent drafts RFPs, evaluates bids against criteria, and tracks obligations. Use this skill whenever a task in this domain needs this work (drafts RFPs, evaluates bids against criteria, and tracks obligations) — even if the user describes the task plainly rather than naming the role. Operates under a human procurement officer and stops at the sector's accountability boundary.
+name: "procurement-drafting-agent"
+description: "AI-personnel skill: **Procurement drafting agent** for the Public Finance operating system. This agent drafts RFPs, evaluates bids against criteria, and tracks obligations. Use this skill whenever a task in this domain needs this work (drafts RFPs, evaluates bids against criteria, and tracks obligations) — even if the user describes the task plainly rather than naming the role. Operates under a human procurement officer and stops at the sector's accountability boundary."
 ---
 
 # Procurement drafting agent

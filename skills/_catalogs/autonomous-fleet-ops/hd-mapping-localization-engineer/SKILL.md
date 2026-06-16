@@ -1,6 +1,6 @@
 ---
-name: fleetops-hd-mapping-localization-engineer
-description: Autonomous-fleet operations role: **HD mapping & localization engineer** (Human engineering role (AI/robotics)) — builds and maintains the high-definition maps and localization the fleet drives against. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a autonomy mapping lead.
+name: "fleetops-hd-mapping-localization-engineer"
+description: "Autonomous-fleet operations role: **HD mapping & localization engineer** (Human engineering role (AI/robotics)) — builds and maintains the high-definition maps and localization the fleet drives against. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a autonomy mapping lead."
 ---
 
 # Autonomous-Fleet Ops — HD mapping & localization engineer

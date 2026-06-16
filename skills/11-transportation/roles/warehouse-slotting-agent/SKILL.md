@@ -1,6 +1,6 @@
 ---
-name: warehouse-slotting-agent
-description: AI-personnel skill: **Warehouse slotting agent** for the Transportation operating system. This agent optimizes storage slotting and pick paths. Use this skill whenever a task in this domain needs this work (optimizes storage slotting and pick paths) — even if the user describes the task plainly rather than naming the role. Operates under a human warehouse manager and stops at the sector's accountability boundary.
+name: "warehouse-slotting-agent"
+description: "AI-personnel skill: **Warehouse slotting agent** for the Transportation operating system. This agent optimizes storage slotting and pick paths. Use this skill whenever a task in this domain needs this work (optimizes storage slotting and pick paths) — even if the user describes the task plainly rather than naming the role. Operates under a human warehouse manager and stops at the sector's accountability boundary."
 ---
 
 # Warehouse slotting agent

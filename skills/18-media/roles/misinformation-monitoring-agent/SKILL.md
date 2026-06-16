@@ -1,6 +1,6 @@
 ---
-name: misinformation-monitoring-agent
-description: AI-personnel skill: **Misinformation monitoring agent** for the Media operating system. This agent detects and contextualizes misinformation. Use this skill whenever a task in this domain needs this work (detects and contextualizes misinformation) — even if the user describes the task plainly rather than naming the role. Operates under a human fact-checker and stops at the sector's accountability boundary.
+name: "misinformation-monitoring-agent"
+description: "AI-personnel skill: **Misinformation monitoring agent** for the Media operating system. This agent detects and contextualizes misinformation. Use this skill whenever a task in this domain needs this work (detects and contextualizes misinformation) — even if the user describes the task plainly rather than naming the role. Operates under a human fact-checker and stops at the sector's accountability boundary."
 ---
 
 # Misinformation monitoring agent

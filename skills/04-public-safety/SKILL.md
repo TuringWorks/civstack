@@ -1,6 +1,6 @@
 ---
-name: os-04-public-safety
-description: Operating-system orchestrator skill for **Public Safety, Justice Operations, and Emergency Response** (national operating system #4). Use this skill whenever work touches this sector's mission — Prevent harm, respond to emergencies, maintain order, and recover from acute incidents — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-04-public-safety"
+description: "Operating-system orchestrator skill for **Public Safety, Justice Operations, and Emergency Response** (national operating system #4). Use this skill whenever work touches this sector's mission — Prevent harm, respond to emergencies, maintain order, and recover from acute incidents — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 04 — Public Safety, Justice Operations, and Emergency Response

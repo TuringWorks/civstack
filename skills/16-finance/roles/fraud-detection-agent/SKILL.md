@@ -1,6 +1,6 @@
 ---
-name: fraud-detection-agent
-description: AI-personnel skill: **Fraud detection agent** for the Finance operating system. This agent detects fraud patterns across transactions. Use this skill whenever a task in this domain needs this work (detects fraud patterns across transactions) — even if the user describes the task plainly rather than naming the role. Operates under a human fraud investigator and stops at the sector's accountability boundary.
+name: "fraud-detection-agent"
+description: "AI-personnel skill: **Fraud detection agent** for the Finance operating system. This agent detects fraud patterns across transactions. Use this skill whenever a task in this domain needs this work (detects fraud patterns across transactions) — even if the user describes the task plainly rather than naming the role. Operates under a human fraud investigator and stops at the sector's accountability boundary."
 ---
 
 # Fraud detection agent

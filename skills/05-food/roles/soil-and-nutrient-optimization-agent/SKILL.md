@@ -1,6 +1,6 @@
 ---
-name: soil-and-nutrient-optimization-agent
-description: AI-personnel skill: **Soil and nutrient optimization agent** for the Food operating system. This agent recommends fertilizer, amendments, and variable-rate inputs from soil, tissue, and yield data. Use this skill whenever a task in this domain needs this work (recommends fertilizer, amendments, and variable-rate inputs from soil, tissue, and yield data) — even if the user describes the task plainly rather than naming the role. Operates under a human agronomist / soil scientist and stops at the sector's accountability boundary.
+name: "soil-and-nutrient-optimization-agent"
+description: "AI-personnel skill: **Soil and nutrient optimization agent** for the Food operating system. This agent recommends fertilizer, amendments, and variable-rate inputs from soil, tissue, and yield data. Use this skill whenever a task in this domain needs this work (recommends fertilizer, amendments, and variable-rate inputs from soil, tissue, and yield data) — even if the user describes the task plainly rather than naming the role. Operates under a human agronomist / soil scientist and stops at the sector's accountability boundary."
 ---
 
 # Soil and nutrient optimization agent

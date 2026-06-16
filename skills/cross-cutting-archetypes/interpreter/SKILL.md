@@ -1,6 +1,6 @@
 ---
-name: archetype-interpreter
-description: Cross-cutting role archetype: **Interpreter** — translate between domains, cultures, languages, and systems. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: translate between domains, cultures, languages, and systems.
+name: "archetype-interpreter"
+description: "Cross-cutting role archetype: **Interpreter** — translate between domains, cultures, languages, and systems. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: translate between domains, cultures, languages, and systems."
 ---
 
 # Archetype — Interpreter

@@ -1,6 +1,6 @@
 ---
-name: interview-scheduling-agent
-description: AI-personnel skill: **Interview scheduling agent** for the Labor operating system. This agent coordinates interviews and logistics. Use this skill whenever a task in this domain needs this work (coordinates interviews and logistics) — even if the user describes the task plainly rather than naming the role. Operates under a human recruiting coordinator and stops at the sector's accountability boundary.
+name: "interview-scheduling-agent"
+description: "AI-personnel skill: **Interview scheduling agent** for the Labor operating system. This agent coordinates interviews and logistics. Use this skill whenever a task in this domain needs this work (coordinates interviews and logistics) — even if the user describes the task plainly rather than naming the role. Operates under a human recruiting coordinator and stops at the sector's accountability boundary."
 ---
 
 # Interview scheduling agent

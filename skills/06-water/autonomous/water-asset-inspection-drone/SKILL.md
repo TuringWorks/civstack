@@ -1,6 +1,6 @@
 ---
-name: machine-06-water-asset-inspection-drone
-description: Non-humanoid autonomous machine for the Water operating system: **Water-asset inspection drone** — inspect tanks, towers, pipelines, and treatment assets from the air. Best in: treatment plants, tank farms, pipeline corridors. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-06-water-asset-inspection-drone"
+description: "Non-humanoid autonomous machine for the Water operating system: **Water-asset inspection drone** — inspect tanks, towers, pipelines, and treatment assets from the air. Best in: treatment plants, tank farms, pipeline corridors. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Water-asset inspection drone

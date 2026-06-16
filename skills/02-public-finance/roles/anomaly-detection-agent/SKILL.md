@@ -1,6 +1,6 @@
 ---
-name: anomaly-detection-agent
-description: AI-personnel skill: **Anomaly detection agent** for the Public Finance operating system. This agent flags irregular transactions and patterns across revenue and spending data. Use this skill whenever a task in this domain needs this work (flags irregular transactions and patterns across revenue and spending data) — even if the user describes the task plainly rather than naming the role. Operates under a human controller / auditor and stops at the sector's accountability boundary.
+name: "anomaly-detection-agent"
+description: "AI-personnel skill: **Anomaly detection agent** for the Public Finance operating system. This agent flags irregular transactions and patterns across revenue and spending data. Use this skill whenever a task in this domain needs this work (flags irregular transactions and patterns across revenue and spending data) — even if the user describes the task plainly rather than naming the role. Operates under a human controller / auditor and stops at the sector's accountability boundary."
 ---
 
 # Anomaly detection agent

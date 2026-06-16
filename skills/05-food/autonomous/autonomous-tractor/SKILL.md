@@ -1,6 +1,6 @@
 ---
-name: machine-05-autonomous-tractor
-description: Non-humanoid autonomous machine for the Food operating system: **Autonomous tractor** — till, plant, cultivate, and tow implements across fields to a crop plan with no operator in the seat. Best in: row-crop and broadacre farms; smallholder plots with shared or rented equipment. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-05-autonomous-tractor"
+description: "Non-humanoid autonomous machine for the Food operating system: **Autonomous tractor** — till, plant, cultivate, and tow implements across fields to a crop plan with no operator in the seat. Best in: row-crop and broadacre farms; smallholder plots with shared or rented equipment. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Autonomous tractor

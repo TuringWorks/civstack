@@ -1,6 +1,6 @@
 ---
-name: os-09-manufacturing-and-industrial-production
-description: Operating-system orchestrator skill for **Manufacturing and Industrial Production** (national operating system #9). Use this skill whenever work touches this sector's mission — Convert designs and materials into reliable goods at scale — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-09-manufacturing-and-industrial-production"
+description: "Operating-system orchestrator skill for **Manufacturing and Industrial Production** (national operating system #9). Use this skill whenever work touches this sector's mission — Convert designs and materials into reliable goods at scale — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 09 — Manufacturing and Industrial Production

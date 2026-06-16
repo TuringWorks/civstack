@@ -1,6 +1,6 @@
 ---
-name: insurance-claims-triage-agent
-description: AI-personnel skill: **Insurance claims triage agent** for the Finance operating system. This agent classifies and routes claims and flags fraud. Use this skill whenever a task in this domain needs this work (classifies and routes claims and flags fraud) — even if the user describes the task plainly rather than naming the role. Operates under a human claims adjuster and stops at the sector's accountability boundary.
+name: "insurance-claims-triage-agent"
+description: "AI-personnel skill: **Insurance claims triage agent** for the Finance operating system. This agent classifies and routes claims and flags fraud. Use this skill whenever a task in this domain needs this work (classifies and routes claims and flags fraud) — even if the user describes the task plainly rather than naming the role. Operates under a human claims adjuster and stops at the sector's accountability boundary."
 ---
 
 # Insurance claims triage agent

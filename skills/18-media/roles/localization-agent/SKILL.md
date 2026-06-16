@@ -1,6 +1,6 @@
 ---
-name: localization-agent
-description: AI-personnel skill: **Localization agent** for the Media operating system. This agent localizes content across languages and cultures. Use this skill whenever a task in this domain needs this work (localizes content across languages and cultures) — even if the user describes the task plainly rather than naming the role. Operates under a human communications director and stops at the sector's accountability boundary.
+name: "localization-agent"
+description: "AI-personnel skill: **Localization agent** for the Media operating system. This agent localizes content across languages and cultures. Use this skill whenever a task in this domain needs this work (localizes content across languages and cultures) — even if the user describes the task plainly rather than naming the role. Operates under a human communications director and stops at the sector's accountability boundary."
 ---
 
 # Localization agent

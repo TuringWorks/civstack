@@ -1,6 +1,6 @@
 ---
-name: disruption-response-coordinator
-description: AI-personnel skill: **Disruption-response coordinator** for the Transportation operating system. This agent re-plans flows during network disruptions. Use this skill whenever a task in this domain needs this work (re-plans flows during network disruptions) — even if the user describes the task plainly rather than naming the role. Operates under a human operations manager and stops at the sector's accountability boundary.
+name: "disruption-response-coordinator"
+description: "AI-personnel skill: **Disruption-response coordinator** for the Transportation operating system. This agent re-plans flows during network disruptions. Use this skill whenever a task in this domain needs this work (re-plans flows during network disruptions) — even if the user describes the task plainly rather than naming the role. Operates under a human operations manager and stops at the sector's accountability boundary."
 ---
 
 # Disruption-response coordinator

@@ -1,6 +1,6 @@
 ---
-name: emergency-call-triage-assistant
-description: AI-personnel skill: **Emergency call triage assistant** for the Public Safety operating system. This agent classifies incoming calls, extracts location and severity, and supports dispatch. Use this skill whenever a task in this domain needs this work (classifies incoming calls, extracts location and severity, and supports dispatch) — even if the user describes the task plainly rather than naming the role. Operates under a human 911 dispatch supervisor and stops at the sector's accountability boundary.
+name: "emergency-call-triage-assistant"
+description: "AI-personnel skill: **Emergency call triage assistant** for the Public Safety operating system. This agent classifies incoming calls, extracts location and severity, and supports dispatch. Use this skill whenever a task in this domain needs this work (classifies incoming calls, extracts location and severity, and supports dispatch) — even if the user describes the task plainly rather than naming the role. Operates under a human 911 dispatch supervisor and stops at the sector's accountability boundary."
 ---
 
 # Emergency call triage assistant

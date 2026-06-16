@@ -1,6 +1,6 @@
 ---
-name: supplier-risk-agent
-description: AI-personnel skill: **Supplier risk agent** for the Manufacturing and Industrial Production operating system. This agent monitors supplier delivery, quality, and continuity risk. Use this skill whenever a task in this domain needs this work (monitors supplier delivery, quality, and continuity risk) — even if the user describes the task plainly rather than naming the role. Operates under a human supply chain manager and stops at the sector's accountability boundary.
+name: "supplier-risk-agent"
+description: "AI-personnel skill: **Supplier risk agent** for the Manufacturing and Industrial Production operating system. This agent monitors supplier delivery, quality, and continuity risk. Use this skill whenever a task in this domain needs this work (monitors supplier delivery, quality, and continuity risk) — even if the user describes the task plainly rather than naming the role. Operates under a human supply chain manager and stops at the sector's accountability boundary."
 ---
 
 # Supplier risk agent

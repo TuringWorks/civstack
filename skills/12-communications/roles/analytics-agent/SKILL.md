@@ -1,6 +1,6 @@
 ---
-name: analytics-agent
-description: AI-personnel skill: **Analytics agent** for the Communications operating system. This agent answers data questions and builds analyses. Use this skill whenever a task in this domain needs this work (answers data questions and builds analyses) — even if the user describes the task plainly rather than naming the role. Operates under a human analytics engineer and stops at the sector's accountability boundary.
+name: "analytics-agent"
+description: "AI-personnel skill: **Analytics agent** for the Communications operating system. This agent answers data questions and builds analyses. Use this skill whenever a task in this domain needs this work (answers data questions and builds analyses) — even if the user describes the task plainly rather than naming the role. Operates under a human analytics engineer and stops at the sector's accountability boundary."
 ---
 
 # Analytics agent

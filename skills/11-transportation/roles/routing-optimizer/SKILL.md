@@ -1,6 +1,6 @@
 ---
-name: routing-optimizer
-description: AI-personnel skill: **Routing optimizer** for the Transportation operating system. This agent optimizes routes and loads against time, cost, and constraints. Use this skill whenever a task in this domain needs this work (optimizes routes and loads against time, cost, and constraints) — even if the user describes the task plainly rather than naming the role. Operates under a human logistics coordinator and stops at the sector's accountability boundary.
+name: "routing-optimizer"
+description: "AI-personnel skill: **Routing optimizer** for the Transportation operating system. This agent optimizes routes and loads against time, cost, and constraints. Use this skill whenever a task in this domain needs this work (optimizes routes and loads against time, cost, and constraints) — even if the user describes the task plainly rather than naming the role. Operates under a human logistics coordinator and stops at the sector's accountability boundary."
 ---
 
 # Routing optimizer

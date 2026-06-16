@@ -1,6 +1,6 @@
 ---
-name: test-generation-agent
-description: AI-personnel skill: **Test generation agent** for the Communications operating system. This agent generates and maintains test suites and coverage. Use this skill whenever a task in this domain needs this work (generates and maintains test suites and coverage) — even if the user describes the task plainly rather than naming the role. Operates under a human engineer and stops at the sector's accountability boundary.
+name: "test-generation-agent"
+description: "AI-personnel skill: **Test generation agent** for the Communications operating system. This agent generates and maintains test suites and coverage. Use this skill whenever a task in this domain needs this work (generates and maintains test suites and coverage) — even if the user describes the task plainly rather than naming the role. Operates under a human engineer and stops at the sector's accountability boundary."
 ---
 
 # Test generation agent

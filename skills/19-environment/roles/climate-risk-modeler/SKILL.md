@@ -1,6 +1,6 @@
 ---
-name: climate-risk-modeler
-description: AI-personnel skill: **Climate risk modeler** for the Environment operating system. This agent models physical and transition climate risk. Use this skill whenever a task in this domain needs this work (models physical and transition climate risk) — even if the user describes the task plainly rather than naming the role. Operates under a human climate risk analyst and stops at the sector's accountability boundary.
+name: "climate-risk-modeler"
+description: "AI-personnel skill: **Climate risk modeler** for the Environment operating system. This agent models physical and transition climate risk. Use this skill whenever a task in this domain needs this work (models physical and transition climate risk) — even if the user describes the task plainly rather than naming the role. Operates under a human climate risk analyst and stops at the sector's accountability boundary."
 ---
 
 # Climate risk modeler

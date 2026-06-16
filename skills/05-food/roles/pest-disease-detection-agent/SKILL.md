@@ -1,6 +1,6 @@
 ---
-name: pest-disease-detection-agent
-description: AI-personnel skill: **Pest/disease detection agent** for the Food operating system. This agent detects pests and disease early from imagery and sensor data. Use this skill whenever a task in this domain needs this work (detects pests and disease early from imagery and sensor data) — even if the user describes the task plainly rather than naming the role. Operates under a human crop advisor and stops at the sector's accountability boundary.
+name: "pest-disease-detection-agent"
+description: "AI-personnel skill: **Pest/disease detection agent** for the Food operating system. This agent detects pests and disease early from imagery and sensor data. Use this skill whenever a task in this domain needs this work (detects pests and disease early from imagery and sensor data) — even if the user describes the task plainly rather than naming the role. Operates under a human crop advisor and stops at the sector's accountability boundary."
 ---
 
 # Pest/disease detection agent

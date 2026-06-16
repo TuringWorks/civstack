@@ -1,6 +1,6 @@
 ---
-name: claims-triage-agent
-description: AI-personnel skill: **Claims triage agent** for the Resilience operating system. This agent triages post-disaster claims and aid requests. Use this skill whenever a task in this domain needs this work (triages post-disaster claims and aid requests) — even if the user describes the task plainly rather than naming the role. Operates under a human recovery program manager and stops at the sector's accountability boundary.
+name: "claims-triage-agent"
+description: "AI-personnel skill: **Claims triage agent** for the Resilience operating system. This agent triages post-disaster claims and aid requests. Use this skill whenever a task in this domain needs this work (triages post-disaster claims and aid requests) — even if the user describes the task plainly rather than naming the role. Operates under a human recovery program manager and stops at the sector's accountability boundary."
 ---
 
 # Claims triage agent

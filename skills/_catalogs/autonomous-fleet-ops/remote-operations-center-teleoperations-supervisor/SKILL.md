@@ -1,6 +1,6 @@
 ---
-name: fleetops-remote-operations-center-teleoperations-supervisor
-description: Autonomous-fleet operations role: **Remote operations center (teleoperations) supervisor** (Human oversight role (accountability boundary)) — runs the remote-operations center that supervises the fleet and authorizes or performs takeovers. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a fleet operations director.
+name: "fleetops-remote-operations-center-teleoperations-supervisor"
+description: "Autonomous-fleet operations role: **Remote operations center (teleoperations) supervisor** (Human oversight role (accountability boundary)) — runs the remote-operations center that supervises the fleet and authorizes or performs takeovers. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a fleet operations director."
 ---
 
 # Autonomous-Fleet Ops — Remote operations center (teleoperations) supervisor

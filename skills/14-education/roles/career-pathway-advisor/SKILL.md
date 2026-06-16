@@ -1,6 +1,6 @@
 ---
-name: career-pathway-advisor
-description: AI-personnel skill: **Career pathway advisor** for the Education operating system. This agent maps skills to pathways and training options. Use this skill whenever a task in this domain needs this work (maps skills to pathways and training options) — even if the user describes the task plainly rather than naming the role. Operates under a human student success manager and stops at the sector's accountability boundary.
+name: "career-pathway-advisor"
+description: "AI-personnel skill: **Career pathway advisor** for the Education operating system. This agent maps skills to pathways and training options. Use this skill whenever a task in this domain needs this work (maps skills to pathways and training options) — even if the user describes the task plainly rather than naming the role. Operates under a human student success manager and stops at the sector's accountability boundary."
 ---
 
 # Career pathway advisor

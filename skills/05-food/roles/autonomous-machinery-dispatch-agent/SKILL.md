@@ -1,6 +1,6 @@
 ---
-name: autonomous-machinery-dispatch-agent
-description: AI-personnel skill: **Autonomous machinery dispatch agent** for the Food operating system. This agent dispatches and coordinates tractors, drones, and field robots safely across fields. Use this skill whenever a task in this domain needs this work (dispatches and coordinates tractors, drones, and field robots safely across fields) — even if the user describes the task plainly rather than naming the role. Operates under a human farm operations manager and stops at the sector's accountability boundary.
+name: "autonomous-machinery-dispatch-agent"
+description: "AI-personnel skill: **Autonomous machinery dispatch agent** for the Food operating system. This agent dispatches and coordinates tractors, drones, and field robots safely across fields. Use this skill whenever a task in this domain needs this work (dispatches and coordinates tractors, drones, and field robots safely across fields) — even if the user describes the task plainly rather than naming the role. Operates under a human farm operations manager and stops at the sector's accountability boundary."
 ---
 
 # Autonomous machinery dispatch agent

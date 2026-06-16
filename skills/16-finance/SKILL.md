@@ -1,6 +1,6 @@
 ---
-name: os-16-finance
-description: Operating-system orchestrator skill for **Finance, Insurance, Payments, and Capital Markets** (national operating system #16). Use this skill whenever work touches this sector's mission — Move money, price risk, allocate capital, protect savings, and enable commerce — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-16-finance"
+description: "Operating-system orchestrator skill for **Finance, Insurance, Payments, and Capital Markets** (national operating system #16). Use this skill whenever work touches this sector's mission — Move money, price risk, allocate capital, protect savings, and enable commerce — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 16 — Finance, Insurance, Payments, and Capital Markets

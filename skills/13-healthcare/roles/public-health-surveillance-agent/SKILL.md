@@ -1,6 +1,6 @@
 ---
-name: public-health-surveillance-agent
-description: AI-personnel skill: **Public health surveillance agent** for the Healthcare operating system. This agent monitors signals for outbreak detection. Use this skill whenever a task in this domain needs this work (monitors signals for outbreak detection) — even if the user describes the task plainly rather than naming the role. Operates under a human epidemiologist and stops at the sector's accountability boundary.
+name: "public-health-surveillance-agent"
+description: "AI-personnel skill: **Public health surveillance agent** for the Healthcare operating system. This agent monitors signals for outbreak detection. Use this skill whenever a task in this domain needs this work (monitors signals for outbreak detection) — even if the user describes the task plainly rather than naming the role. Operates under a human epidemiologist and stops at the sector's accountability boundary."
 ---
 
 # Public health surveillance agent

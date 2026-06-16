@@ -1,6 +1,6 @@
 ---
-name: work-instruction-generator
-description: AI-personnel skill: **Work-instruction generator** for the Manufacturing and Industrial Production operating system. This agent drafts and updates standardized work instructions. Use this skill whenever a task in this domain needs this work (drafts and updates standardized work instructions) — even if the user describes the task plainly rather than naming the role. Operates under a human industrial engineer and stops at the sector's accountability boundary.
+name: "work-instruction-generator"
+description: "AI-personnel skill: **Work-instruction generator** for the Manufacturing and Industrial Production operating system. This agent drafts and updates standardized work instructions. Use this skill whenever a task in this domain needs this work (drafts and updates standardized work instructions) — even if the user describes the task plainly rather than naming the role. Operates under a human industrial engineer and stops at the sector's accountability boundary."
 ---
 
 # Work-instruction generator

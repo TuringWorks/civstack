@@ -1,6 +1,6 @@
 ---
-name: leak-prediction-agent
-description: AI-personnel skill: **Leak prediction agent** for the Water operating system. This agent predicts leaks and pipe failures from pressure and acoustic data. Use this skill whenever a task in this domain needs this work (predicts leaks and pipe failures from pressure and acoustic data) — even if the user describes the task plainly rather than naming the role. Operates under a human utility engineer and stops at the sector's accountability boundary.
+name: "leak-prediction-agent"
+description: "AI-personnel skill: **Leak prediction agent** for the Water operating system. This agent predicts leaks and pipe failures from pressure and acoustic data. Use this skill whenever a task in this domain needs this work (predicts leaks and pipe failures from pressure and acoustic data) — even if the user describes the task plainly rather than naming the role. Operates under a human utility engineer and stops at the sector's accountability boundary."
 ---
 
 # Leak prediction agent

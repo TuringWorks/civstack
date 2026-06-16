@@ -1,6 +1,6 @@
 ---
-name: digital-twin-simulation-agent
-description: AI-personnel skill: **Digital twin simulation agent** for the Manufacturing and Industrial Production operating system. This agent simulates process and line changes before deployment. Use this skill whenever a task in this domain needs this work (simulates process and line changes before deployment) — even if the user describes the task plainly rather than naming the role. Operates under a human process engineer and stops at the sector's accountability boundary.
+name: "digital-twin-simulation-agent"
+description: "AI-personnel skill: **Digital twin simulation agent** for the Manufacturing and Industrial Production operating system. This agent simulates process and line changes before deployment. Use this skill whenever a task in this domain needs this work (simulates process and line changes before deployment) — even if the user describes the task plainly rather than naming the role. Operates under a human process engineer and stops at the sector's accountability boundary."
 ---
 
 # Digital twin simulation agent

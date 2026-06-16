@@ -1,6 +1,6 @@
 ---
-name: machine-autonomous-long-haul-truck
-description: Non-humanoid autonomous machine: **Autonomous long-haul truck** — haul freight over highway corridors hub-to-hub without a driver in the cab. Best in: highways, freight corridors, transfer hubs. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls over a perception-to-control stack (trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform anywhere this physical job is needed, even if the user only describes the underlying need.
+name: "machine-autonomous-long-haul-truck"
+description: "Non-humanoid autonomous machine: **Autonomous long-haul truck** — haul freight over highway corridors hub-to-hub without a driver in the cab. Best in: highways, freight corridors, transfer hubs. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls over a perception-to-control stack (trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform anywhere this physical job is needed, even if the user only describes the underlying need."
 ---
 
 # Autonomous Machine — Autonomous long-haul truck

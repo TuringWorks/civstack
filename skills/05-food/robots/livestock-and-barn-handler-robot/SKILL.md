@@ -1,6 +1,6 @@
 ---
-name: robot-05-livestock-and-barn-handler-robot
-description: Humanoid/embodied robot role for the Food operating system: **Livestock and barn handler robot** — feed, bed, move, and inspect animals and assist milking-prep, weighing, and health checks. Best in: dairies, barns, feedlots, poultry houses, pastures. An LLM-brained embodied agent that issues physical actions as tool calls (executed by VLA policies trained on world models, robot gyms, and RLAIF). Use this skill to plan or operate this physical farm/field role; trigger whenever the task needs this hands-on work, even if the user only describes the underlying need.
+name: "robot-05-livestock-and-barn-handler-robot"
+description: "Humanoid/embodied robot role for the Food operating system: **Livestock and barn handler robot** — feed, bed, move, and inspect animals and assist milking-prep, weighing, and health checks. Best in: dairies, barns, feedlots, poultry houses, pastures. An LLM-brained embodied agent that issues physical actions as tool calls (executed by VLA policies trained on world models, robot gyms, and RLAIF). Use this skill to plan or operate this physical farm/field role; trigger whenever the task needs this hands-on work, even if the user only describes the underlying need."
 ---
 
 # Livestock and barn handler robot

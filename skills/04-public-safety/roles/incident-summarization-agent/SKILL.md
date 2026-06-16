@@ -1,6 +1,6 @@
 ---
-name: incident-summarization-agent
-description: AI-personnel skill: **Incident summarization agent** for the Public Safety operating system. This agent maintains a live common operating picture and after-action logs. Use this skill whenever a task in this domain needs this work (maintains a live common operating picture and after-action logs) — even if the user describes the task plainly rather than naming the role. Operates under a human incident commander and stops at the sector's accountability boundary.
+name: "incident-summarization-agent"
+description: "AI-personnel skill: **Incident summarization agent** for the Public Safety operating system. This agent maintains a live common operating picture and after-action logs. Use this skill whenever a task in this domain needs this work (maintains a live common operating picture and after-action logs) — even if the user describes the task plainly rather than naming the role. Operates under a human incident commander and stops at the sector's accountability boundary."
 ---
 
 # Incident summarization agent

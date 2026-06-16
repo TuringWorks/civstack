@@ -1,6 +1,6 @@
 ---
-name: design-option-generator
-description: AI-personnel skill: **Design option generator** for the Shelter operating system. This agent generates and compares design options against constraints. Use this skill whenever a task in this domain needs this work (generates and compares design options against constraints) — even if the user describes the task plainly rather than naming the role. Operates under a human architect and stops at the sector's accountability boundary.
+name: "design-option-generator"
+description: "AI-personnel skill: **Design option generator** for the Shelter operating system. This agent generates and compares design options against constraints. Use this skill whenever a task in this domain needs this work (generates and compares design options against constraints) — even if the user describes the task plainly rather than naming the role. Operates under a human architect and stops at the sector's accountability boundary."
 ---
 
 # Design option generator

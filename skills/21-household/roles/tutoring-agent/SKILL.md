@@ -1,6 +1,6 @@
 ---
-name: tutoring-agent
-description: AI-personnel skill: **Tutoring agent** for the Household operating system. This agent supports children's learning at home. Use this skill whenever a task in this domain needs this work (supports children's learning at home) — even if the user describes the task plainly rather than naming the role. Operates under a human parent / teacher and stops at the sector's accountability boundary.
+name: "tutoring-agent"
+description: "AI-personnel skill: **Tutoring agent** for the Household operating system. This agent supports children's learning at home. Use this skill whenever a task in this domain needs this work (supports children's learning at home) — even if the user describes the task plainly rather than naming the role. Operates under a human parent / teacher and stops at the sector's accountability boundary."
 ---
 
 # Tutoring agent

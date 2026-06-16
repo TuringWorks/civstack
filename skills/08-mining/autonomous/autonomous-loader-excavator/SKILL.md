@@ -1,6 +1,6 @@
 ---
-name: machine-08-autonomous-loader-excavator
-description: Non-humanoid autonomous machine for the Mining operating system: **Autonomous loader / excavator** — load trucks and dig and move material at the face. Best in: mines, quarries, stockyards. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-08-autonomous-loader-excavator"
+description: "Non-humanoid autonomous machine for the Mining operating system: **Autonomous loader / excavator** — load trucks and dig and move material at the face. Best in: mines, quarries, stockyards. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Autonomous loader / excavator

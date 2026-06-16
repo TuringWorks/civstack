@@ -1,6 +1,6 @@
 ---
-name: archetype-caregiver
-description: Cross-cutting role archetype: **Caregiver** — support bodies, minds, families, and relationships. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: support bodies, minds, families, and relationships.
+name: "archetype-caregiver"
+description: "Cross-cutting role archetype: **Caregiver** — support bodies, minds, families, and relationships. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: support bodies, minds, families, and relationships."
 ---
 
 # Archetype — Caregiver

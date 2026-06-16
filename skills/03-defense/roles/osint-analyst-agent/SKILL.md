@@ -1,6 +1,6 @@
 ---
-name: osint-analyst-agent
-description: AI-personnel skill: **OSINT analyst agent** for the Defense operating system. This agent collects and synthesizes open-source signals into assessed intelligence drafts. Use this skill whenever a task in this domain needs this work (collects and synthesizes open-source signals into assessed intelligence drafts) — even if the user describes the task plainly rather than naming the role. Operates under a human intelligence analyst and stops at the sector's accountability boundary.
+name: "osint-analyst-agent"
+description: "AI-personnel skill: **OSINT analyst agent** for the Defense operating system. This agent collects and synthesizes open-source signals into assessed intelligence drafts. Use this skill whenever a task in this domain needs this work (collects and synthesizes open-source signals into assessed intelligence drafts) — even if the user describes the task plainly rather than naming the role. Operates under a human intelligence analyst and stops at the sector's accountability boundary."
 ---
 
 # OSINT analyst agent

@@ -1,6 +1,6 @@
 ---
-name: environmental-impact-review-assistant
-description: AI-personnel skill: **Environmental impact review assistant** for the Environment operating system. This agent drafts and checks environmental impact assessments. Use this skill whenever a task in this domain needs this work (drafts and checks environmental impact assessments) — even if the user describes the task plainly rather than naming the role. Operates under a human remediation project manager and stops at the sector's accountability boundary.
+name: "environmental-impact-review-assistant"
+description: "AI-personnel skill: **Environmental impact review assistant** for the Environment operating system. This agent drafts and checks environmental impact assessments. Use this skill whenever a task in this domain needs this work (drafts and checks environmental impact assessments) — even if the user describes the task plainly rather than naming the role. Operates under a human remediation project manager and stops at the sector's accountability boundary."
 ---
 
 # Environmental impact review assistant

@@ -1,6 +1,6 @@
 ---
-name: machine-11-self-driving-freight-truck
-description: Non-humanoid autonomous machine for the Transportation operating system: **Self-driving freight truck** — haul freight over highway corridors hub-to-hub without a driver in the cab. Best in: highways, freight corridors, transfer hubs. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-11-self-driving-freight-truck"
+description: "Non-humanoid autonomous machine for the Transportation operating system: **Self-driving freight truck** — haul freight over highway corridors hub-to-hub without a driver in the cab. Best in: highways, freight corridors, transfer hubs. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Self-driving freight truck

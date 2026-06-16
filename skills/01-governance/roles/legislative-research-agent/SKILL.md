@@ -1,6 +1,6 @@
 ---
-name: legislative-research-agent
-description: AI-personnel skill: **Legislative research agent** for the Governance operating system. This agent compares laws across jurisdictions, drafts bill language, summarizes testimony and amendments. Use this skill whenever a task in this domain needs this work (compares laws across jurisdictions, drafts bill language, summarizes testimony and amendments) — even if the user describes the task plainly rather than naming the role. Operates under a human policy analyst / legislative counsel and stops at the sector's accountability boundary.
+name: "legislative-research-agent"
+description: "AI-personnel skill: **Legislative research agent** for the Governance operating system. This agent compares laws across jurisdictions, drafts bill language, summarizes testimony and amendments. Use this skill whenever a task in this domain needs this work (compares laws across jurisdictions, drafts bill language, summarizes testimony and amendments) — even if the user describes the task plainly rather than naming the role. Operates under a human policy analyst / legislative counsel and stops at the sector's accountability boundary."
 ---
 
 # Legislative research agent

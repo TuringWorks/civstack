@@ -1,6 +1,6 @@
 ---
-name: care-coordination-agent
-description: AI-personnel skill: **Care coordination agent** for the Household operating system. This agent coordinates appointments, records, and caregivers. Use this skill whenever a task in this domain needs this work (coordinates appointments, records, and caregivers) — even if the user describes the task plainly rather than naming the role. Operates under a human eldercare coordinator and stops at the sector's accountability boundary.
+name: "care-coordination-agent"
+description: "AI-personnel skill: **Care coordination agent** for the Household operating system. This agent coordinates appointments, records, and caregivers. Use this skill whenever a task in this domain needs this work (coordinates appointments, records, and caregivers) — even if the user describes the task plainly rather than naming the role. Operates under a human eldercare coordinator and stops at the sector's accountability boundary."
 ---
 
 # Care coordination agent

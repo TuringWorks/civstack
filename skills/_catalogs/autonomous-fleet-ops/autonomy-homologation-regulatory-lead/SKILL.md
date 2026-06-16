@@ -1,6 +1,6 @@
 ---
-name: fleetops-autonomy-homologation-regulatory-lead
-description: Autonomous-fleet operations role: **Autonomy homologation & regulatory lead** (Human oversight role (accountability boundary)) — secures and maintains the regulatory authorization for the fleet to operate. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a general counsel / chief safety officer.
+name: "fleetops-autonomy-homologation-regulatory-lead"
+description: "Autonomous-fleet operations role: **Autonomy homologation & regulatory lead** (Human oversight role (accountability boundary)) — secures and maintains the regulatory authorization for the fleet to operate. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a general counsel / chief safety officer."
 ---
 
 # Autonomous-Fleet Ops — Autonomy homologation & regulatory lead

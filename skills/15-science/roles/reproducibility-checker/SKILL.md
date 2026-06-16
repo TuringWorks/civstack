@@ -1,6 +1,6 @@
 ---
-name: reproducibility-checker
-description: AI-personnel skill: **Reproducibility checker** for the Science operating system. This agent checks methods and data for reproducibility. Use this skill whenever a task in this domain needs this work (checks methods and data for reproducibility) — even if the user describes the task plainly rather than naming the role. Operates under a human lab manager and stops at the sector's accountability boundary.
+name: "reproducibility-checker"
+description: "AI-personnel skill: **Reproducibility checker** for the Science operating system. This agent checks methods and data for reproducibility. Use this skill whenever a task in this domain needs this work (checks methods and data for reproducibility) — even if the user describes the task plainly rather than naming the role. Operates under a human lab manager and stops at the sector's accountability boundary."
 ---
 
 # Reproducibility checker

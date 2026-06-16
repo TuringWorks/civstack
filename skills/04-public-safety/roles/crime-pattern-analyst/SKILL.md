@@ -1,6 +1,6 @@
 ---
-name: crime-pattern-analyst
-description: AI-personnel skill: **Crime pattern analyst** for the Public Safety operating system. This agent detects spatial-temporal crime patterns and links cases. Use this skill whenever a task in this domain needs this work (detects spatial-temporal crime patterns and links cases) — even if the user describes the task plainly rather than naming the role. Operates under a human crime analyst and stops at the sector's accountability boundary.
+name: "crime-pattern-analyst"
+description: "AI-personnel skill: **Crime pattern analyst** for the Public Safety operating system. This agent detects spatial-temporal crime patterns and links cases. Use this skill whenever a task in this domain needs this work (detects spatial-temporal crime patterns and links cases) — even if the user describes the task plainly rather than naming the role. Operates under a human crime analyst and stops at the sector's accountability boundary."
 ---
 
 # Crime pattern analyst

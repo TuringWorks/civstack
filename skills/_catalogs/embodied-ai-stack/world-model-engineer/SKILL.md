@@ -1,6 +1,6 @@
 ---
-name: embodied-world-model-engineer
-description: Embodied-AI stack role: **World-model engineer** (Human engineering role (AI/robotics)) — builds and validates the learned predictive simulators (world models) used for planning, imagination, and training. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a embodied-AI research lead.
+name: "embodied-world-model-engineer"
+description: "Embodied-AI stack role: **World-model engineer** (Human engineering role (AI/robotics)) — builds and validates the learned predictive simulators (world models) used for planning, imagination, and training. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a embodied-AI research lead."
 ---
 
 # Embodied-AI Stack — World-model engineer

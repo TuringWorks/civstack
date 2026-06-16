@@ -1,6 +1,6 @@
 ---
-name: capopt-sim-to-real-domain-randomization-engineer
-description: Capability/optimization role: **Sim-to-real & domain-randomization engineer** (Human engineering role (AI/robotics)) — closes the gap between simulation/world-model training and hardware. Part of the layer that decides *how* robot and machine capabilities are built — across model tiers (LLM, SLM, tiny LM, deterministic) and many training methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation, classical control, formal methods). Use this skill when choosing or building how a capability is trained, optimized, or run on-device, even if the user only describes the underlying need. Works under a simulation lead.
+name: "capopt-sim-to-real-domain-randomization-engineer"
+description: "Capability/optimization role: **Sim-to-real & domain-randomization engineer** (Human engineering role (AI/robotics)) — closes the gap between simulation/world-model training and hardware. Part of the layer that decides *how* robot and machine capabilities are built — across model tiers (LLM, SLM, tiny LM, deterministic) and many training methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation, classical control, formal methods). Use this skill when choosing or building how a capability is trained, optimized, or run on-device, even if the user only describes the underlying need. Works under a simulation lead."
 ---
 
 # Capability & Optimization — Sim-to-real & domain-randomization engineer

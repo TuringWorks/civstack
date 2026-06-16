@@ -1,6 +1,6 @@
 ---
-name: supply-disruption-monitor
-description: AI-personnel skill: **Supply disruption monitor** for the Resilience operating system. This agent monitors supply chains for disruption signals. Use this skill whenever a task in this domain needs this work (monitors supply chains for disruption signals) — even if the user describes the task plainly rather than naming the role. Operates under a human supply chain risk manager and stops at the sector's accountability boundary.
+name: "supply-disruption-monitor"
+description: "AI-personnel skill: **Supply disruption monitor** for the Resilience operating system. This agent monitors supply chains for disruption signals. Use this skill whenever a task in this domain needs this work (monitors supply chains for disruption signals) — even if the user describes the task plainly rather than naming the role. Operates under a human supply chain risk manager and stops at the sector's accountability boundary."
 ---
 
 # Supply disruption monitor

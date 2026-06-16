@@ -1,6 +1,6 @@
 ---
-name: emissions-accounting-agent
-description: AI-personnel skill: **Emissions accounting agent** for the Environment operating system. This agent compiles and audits greenhouse-gas inventories. Use this skill whenever a task in this domain needs this work (compiles and audits greenhouse-gas inventories) — even if the user describes the task plainly rather than naming the role. Operates under a human carbon accounting specialist and stops at the sector's accountability boundary.
+name: "emissions-accounting-agent"
+description: "AI-personnel skill: **Emissions accounting agent** for the Environment operating system. This agent compiles and audits greenhouse-gas inventories. Use this skill whenever a task in this domain needs this work (compiles and audits greenhouse-gas inventories) — even if the user describes the task plainly rather than naming the role. Operates under a human carbon accounting specialist and stops at the sector's accountability boundary."
 ---
 
 # Emissions accounting agent

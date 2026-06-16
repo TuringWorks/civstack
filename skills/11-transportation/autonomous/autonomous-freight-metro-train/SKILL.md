@@ -1,6 +1,6 @@
 ---
-name: machine-11-autonomous-freight-metro-train
-description: Non-humanoid autonomous machine for the Transportation operating system: **Autonomous freight & metro train** — run scheduled freight or transit services on guided track with no driver in the cab. Best in: freight corridors, metros, dedicated rail. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-11-autonomous-freight-metro-train"
+description: "Non-humanoid autonomous machine for the Transportation operating system: **Autonomous freight & metro train** — run scheduled freight or transit services on guided track with no driver in the cab. Best in: freight corridors, metros, dedicated rail. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Autonomous freight & metro train

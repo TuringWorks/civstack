@@ -1,6 +1,6 @@
 ---
-name: outbreak-modeler
-description: AI-personnel skill: **Outbreak modeler** for the Healthcare operating system. This agent models disease spread and intervention scenarios. Use this skill whenever a task in this domain needs this work (models disease spread and intervention scenarios) — even if the user describes the task plainly rather than naming the role. Operates under a human epidemiologist and stops at the sector's accountability boundary.
+name: "outbreak-modeler"
+description: "AI-personnel skill: **Outbreak modeler** for the Healthcare operating system. This agent models disease spread and intervention scenarios. Use this skill whenever a task in this domain needs this work (models disease spread and intervention scenarios) — even if the user describes the task plainly rather than naming the role. Operates under a human epidemiologist and stops at the sector's accountability boundary."
 ---
 
 # Outbreak modeler

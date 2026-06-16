@@ -1,6 +1,6 @@
 ---
-name: machine-autonomous-road-vehicle-robotaxi
-description: Non-humanoid autonomous machine: **Autonomous road vehicle (robotaxi)** — carry passengers point-to-point with no human driver. Best in: geofenced urban and suburban roads. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls over a perception-to-control stack (trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform anywhere this physical job is needed, even if the user only describes the underlying need.
+name: "machine-autonomous-road-vehicle-robotaxi"
+description: "Non-humanoid autonomous machine: **Autonomous road vehicle (robotaxi)** — carry passengers point-to-point with no human driver. Best in: geofenced urban and suburban roads. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls over a perception-to-control stack (trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform anywhere this physical job is needed, even if the user only describes the underlying need."
 ---
 
 # Autonomous Machine — Autonomous road vehicle (robotaxi)

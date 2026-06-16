@@ -1,6 +1,6 @@
 ---
-name: kyc-aml-review-agent
-description: AI-personnel skill: **KYC/AML review agent** for the Finance operating system. This agent screens identities and transactions for financial-crime risk. Use this skill whenever a task in this domain needs this work (screens identities and transactions for financial-crime risk) — even if the user describes the task plainly rather than naming the role. Operates under a human AML analyst and stops at the sector's accountability boundary.
+name: "kyc-aml-review-agent"
+description: "AI-personnel skill: **KYC/AML review agent** for the Finance operating system. This agent screens identities and transactions for financial-crime risk. Use this skill whenever a task in this domain needs this work (screens identities and transactions for financial-crime risk) — even if the user describes the task plainly rather than naming the role. Operates under a human AML analyst and stops at the sector's accountability boundary."
 ---
 
 # KYC/AML review agent

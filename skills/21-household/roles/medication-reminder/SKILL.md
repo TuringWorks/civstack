@@ -1,6 +1,6 @@
 ---
-name: medication-reminder
-description: AI-personnel skill: **Medication reminder** for the Household operating system. This agent reminds and tracks medication adherence. Use this skill whenever a task in this domain needs this work (reminds and tracks medication adherence) — even if the user describes the task plainly rather than naming the role. Operates under a human home health aide and stops at the sector's accountability boundary.
+name: "medication-reminder"
+description: "AI-personnel skill: **Medication reminder** for the Household operating system. This agent reminds and tracks medication adherence. Use this skill whenever a task in this domain needs this work (reminds and tracks medication adherence) — even if the user describes the task plainly rather than naming the role. Operates under a human home health aide and stops at the sector's accountability boundary."
 ---
 
 # Medication reminder

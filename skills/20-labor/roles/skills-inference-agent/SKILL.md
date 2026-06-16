@@ -1,6 +1,6 @@
 ---
-name: skills-inference-agent
-description: AI-personnel skill: **Skills inference agent** for the Labor operating system. This agent infers skills and gaps from work and history. Use this skill whenever a task in this domain needs this work (infers skills and gaps from work and history) — even if the user describes the task plainly rather than naming the role. Operates under a human L&D manager and stops at the sector's accountability boundary.
+name: "skills-inference-agent"
+description: "AI-personnel skill: **Skills inference agent** for the Labor operating system. This agent infers skills and gaps from work and history. Use this skill whenever a task in this domain needs this work (infers skills and gaps from work and history) — even if the user describes the task plainly rather than naming the role. Operates under a human L&D manager and stops at the sector's accountability boundary."
 ---
 
 # Skills inference agent

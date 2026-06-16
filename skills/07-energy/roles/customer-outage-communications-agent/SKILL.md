@@ -1,6 +1,6 @@
 ---
-name: customer-outage-communications-agent
-description: AI-personnel skill: **Customer outage communications agent** for the Energy operating system. This agent drafts and targets outage and restoration updates. Use this skill whenever a task in this domain needs this work (drafts and targets outage and restoration updates) — even if the user describes the task plainly rather than naming the role. Operates under a human customer operations manager and stops at the sector's accountability boundary.
+name: "customer-outage-communications-agent"
+description: "AI-personnel skill: **Customer outage communications agent** for the Energy operating system. This agent drafts and targets outage and restoration updates. Use this skill whenever a task in this domain needs this work (drafts and targets outage and restoration updates) — even if the user describes the task plainly rather than naming the role. Operates under a human customer operations manager and stops at the sector's accountability boundary."
 ---
 
 # Customer outage communications agent

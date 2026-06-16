@@ -1,6 +1,6 @@
 ---
-name: robot-05-orchard-and-vineyard-worker-robot
-description: Humanoid/embodied robot role for the Food operating system: **Orchard and vineyard worker robot** — prune, thin, train, and pick tree fruit, vines, and berries on trellises and canopies. Best in: orchards, vineyards, berry farms, agroforestry plots. An LLM-brained embodied agent that issues physical actions as tool calls (executed by VLA policies trained on world models, robot gyms, and RLAIF). Use this skill to plan or operate this physical farm/field role; trigger whenever the task needs this hands-on work, even if the user only describes the underlying need.
+name: "robot-05-orchard-and-vineyard-worker-robot"
+description: "Humanoid/embodied robot role for the Food operating system: **Orchard and vineyard worker robot** — prune, thin, train, and pick tree fruit, vines, and berries on trellises and canopies. Best in: orchards, vineyards, berry farms, agroforestry plots. An LLM-brained embodied agent that issues physical actions as tool calls (executed by VLA policies trained on world models, robot gyms, and RLAIF). Use this skill to plan or operate this physical farm/field role; trigger whenever the task needs this hands-on work, even if the user only describes the underlying need."
 ---
 
 # Orchard and vineyard worker robot

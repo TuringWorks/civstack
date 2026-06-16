@@ -1,6 +1,6 @@
 ---
-name: rights-clearance-assistant
-description: AI-personnel skill: **Rights clearance assistant** for the Media operating system. This agent tracks rights, licenses, and clearances. Use this skill whenever a task in this domain needs this work (tracks rights, licenses, and clearances) — even if the user describes the task plainly rather than naming the role. Operates under a human producer and stops at the sector's accountability boundary.
+name: "rights-clearance-assistant"
+description: "AI-personnel skill: **Rights clearance assistant** for the Media operating system. This agent tracks rights, licenses, and clearances. Use this skill whenever a task in this domain needs this work (tracks rights, licenses, and clearances) — even if the user describes the task plainly rather than naming the role. Operates under a human producer and stops at the sector's accountability boundary."
 ---
 
 # Rights clearance assistant

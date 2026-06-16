@@ -1,6 +1,6 @@
 ---
-name: dependency-mapping-agent
-description: AI-personnel skill: **Dependency mapping agent** for the Resilience operating system. This agent maps cross-system dependencies and single points of failure. Use this skill whenever a task in this domain needs this work (maps cross-system dependencies and single points of failure) — even if the user describes the task plainly rather than naming the role. Operates under a human infrastructure resilience analyst and stops at the sector's accountability boundary.
+name: "dependency-mapping-agent"
+description: "AI-personnel skill: **Dependency mapping agent** for the Resilience operating system. This agent maps cross-system dependencies and single points of failure. Use this skill whenever a task in this domain needs this work (maps cross-system dependencies and single points of failure) — even if the user describes the task plainly rather than naming the role. Operates under a human infrastructure resilience analyst and stops at the sector's accountability boundary."
 ---
 
 # Dependency mapping agent

@@ -1,6 +1,6 @@
 ---
-name: os-03-defense
-description: Operating-system orchestrator skill for **Defense, Intelligence, Border, and Foreign Affairs** (national operating system #3). Use this skill whenever work touches this sector's mission — Protect sovereignty, manage alliances, understand threats, control lawful movement, and negotiate with other polities — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-03-defense"
+description: "Operating-system orchestrator skill for **Defense, Intelligence, Border, and Foreign Affairs** (national operating system #3). Use this skill whenever work touches this sector's mission — Protect sovereignty, manage alliances, understand threats, control lawful movement, and negotiate with other polities — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 03 — Defense, Intelligence, Border, and Foreign Affairs

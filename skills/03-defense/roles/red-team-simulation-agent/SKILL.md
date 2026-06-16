@@ -1,6 +1,6 @@
 ---
-name: red-team-simulation-agent
-description: AI-personnel skill: **Red-team simulation agent** for the Defense operating system. This agent models adversary options and stress-tests plans. Use this skill whenever a task in this domain needs this work (models adversary options and stress-tests plans) — even if the user describes the task plainly rather than naming the role. Operates under a human defense planner and stops at the sector's accountability boundary.
+name: "red-team-simulation-agent"
+description: "AI-personnel skill: **Red-team simulation agent** for the Defense operating system. This agent models adversary options and stress-tests plans. Use this skill whenever a task in this domain needs this work (models adversary options and stress-tests plans) — even if the user describes the task plainly rather than naming the role. Operates under a human defense planner and stops at the sector's accountability boundary."
 ---
 
 # Red-team simulation agent

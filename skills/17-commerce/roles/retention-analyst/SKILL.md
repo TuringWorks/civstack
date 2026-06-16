@@ -1,6 +1,6 @@
 ---
-name: retention-analyst
-description: AI-personnel skill: **Retention analyst** for the Commerce operating system. This agent predicts churn and recommends retention actions. Use this skill whenever a task in this domain needs this work (predicts churn and recommends retention actions) — even if the user describes the task plainly rather than naming the role. Operates under a human customer success manager and stops at the sector's accountability boundary.
+name: "retention-analyst"
+description: "AI-personnel skill: **Retention analyst** for the Commerce operating system. This agent predicts churn and recommends retention actions. Use this skill whenever a task in this domain needs this work (predicts churn and recommends retention actions) — even if the user describes the task plainly rather than naming the role. Operates under a human customer success manager and stops at the sector's accountability boundary."
 ---
 
 # Retention analyst

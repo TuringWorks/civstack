@@ -1,6 +1,6 @@
 ---
-name: asset-maintenance-planner
-description: AI-personnel skill: **Asset maintenance planner** for the Water operating system. This agent schedules inspection and renewal of network assets. Use this skill whenever a task in this domain needs this work (schedules inspection and renewal of network assets) — even if the user describes the task plainly rather than naming the role. Operates under a human asset manager and stops at the sector's accountability boundary.
+name: "asset-maintenance-planner"
+description: "AI-personnel skill: **Asset maintenance planner** for the Water operating system. This agent schedules inspection and renewal of network assets. Use this skill whenever a task in this domain needs this work (schedules inspection and renewal of network assets) — even if the user describes the task plainly rather than naming the role. Operates under a human asset manager and stops at the sector's accountability boundary."
 ---
 
 # Asset maintenance planner

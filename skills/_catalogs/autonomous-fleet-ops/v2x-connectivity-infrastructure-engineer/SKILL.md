@@ -1,6 +1,6 @@
 ---
-name: fleetops-v2x-connectivity-infrastructure-engineer
-description: Autonomous-fleet operations role: **V2X, connectivity & infrastructure engineer** (Human engineering role (AI/robotics)) — provisions the connectivity, V2X signals, and physical infrastructure the fleet depends on. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a infrastructure lead.
+name: "fleetops-v2x-connectivity-infrastructure-engineer"
+description: "Autonomous-fleet operations role: **V2X, connectivity & infrastructure engineer** (Human engineering role (AI/robotics)) — provisions the connectivity, V2X signals, and physical infrastructure the fleet depends on. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a infrastructure lead."
 ---
 
 # Autonomous-Fleet Ops — V2X, connectivity & infrastructure engineer

@@ -1,6 +1,6 @@
 ---
-name: customs-documentation-agent
-description: AI-personnel skill: **Customs documentation agent** for the Transportation operating system. This agent prepares and checks customs and trade documentation. Use this skill whenever a task in this domain needs this work (prepares and checks customs and trade documentation) — even if the user describes the task plainly rather than naming the role. Operates under a human customs broker and stops at the sector's accountability boundary.
+name: "customs-documentation-agent"
+description: "AI-personnel skill: **Customs documentation agent** for the Transportation operating system. This agent prepares and checks customs and trade documentation. Use this skill whenever a task in this domain needs this work (prepares and checks customs and trade documentation) — even if the user describes the task plainly rather than naming the role. Operates under a human customs broker and stops at the sector's accountability boundary."
 ---
 
 # Customs documentation agent

@@ -1,6 +1,6 @@
 ---
-name: proposal-generator
-description: AI-personnel skill: **Proposal generator** for the Commerce operating system. This agent drafts tailored proposals and quotes. Use this skill whenever a task in this domain needs this work (drafts tailored proposals and quotes) — even if the user describes the task plainly rather than naming the role. Operates under a human account executive and stops at the sector's accountability boundary.
+name: "proposal-generator"
+description: "AI-personnel skill: **Proposal generator** for the Commerce operating system. This agent drafts tailored proposals and quotes. Use this skill whenever a task in this domain needs this work (drafts tailored proposals and quotes) — even if the user describes the task plainly rather than naming the role. Operates under a human account executive and stops at the sector's accountability boundary."
 ---
 
 # Proposal generator

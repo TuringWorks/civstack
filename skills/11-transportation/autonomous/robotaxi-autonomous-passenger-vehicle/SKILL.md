@@ -1,6 +1,6 @@
 ---
-name: machine-11-robotaxi-autonomous-passenger-vehicle
-description: Non-humanoid autonomous machine for the Transportation operating system: **Robotaxi / autonomous passenger vehicle** — carry passengers point-to-point with no human driver. Best in: geofenced urban and suburban roads. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-11-robotaxi-autonomous-passenger-vehicle"
+description: "Non-humanoid autonomous machine for the Transportation operating system: **Robotaxi / autonomous passenger vehicle** — carry passengers point-to-point with no human driver. Best in: geofenced urban and suburban roads. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Robotaxi / autonomous passenger vehicle

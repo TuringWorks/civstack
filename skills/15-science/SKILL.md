@@ -1,6 +1,6 @@
 ---
-name: os-15-science
-description: Operating-system orchestrator skill for **Science, Research, Standards, and Innovation** (national operating system #15). Use this skill whenever work touches this sector's mission — Discover truth, invent capabilities, validate claims, and turn knowledge into useful systems — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-15-science"
+description: "Operating-system orchestrator skill for **Science, Research, Standards, and Innovation** (national operating system #15). Use this skill whenever work touches this sector's mission — Discover truth, invent capabilities, validate claims, and turn knowledge into useful systems — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 15 — Science, Research, Standards, and Innovation

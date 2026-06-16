@@ -1,6 +1,6 @@
 ---
-name: marketing-campaign-agent
-description: AI-personnel skill: **Marketing campaign agent** for the Commerce operating system. This agent drafts and targets marketing campaigns. Use this skill whenever a task in this domain needs this work (drafts and targets marketing campaigns) — even if the user describes the task plainly rather than naming the role. Operates under a human growth marketer and stops at the sector's accountability boundary.
+name: "marketing-campaign-agent"
+description: "AI-personnel skill: **Marketing campaign agent** for the Commerce operating system. This agent drafts and targets marketing campaigns. Use this skill whenever a task in this domain needs this work (drafts and targets marketing campaigns) — even if the user describes the task plainly rather than naming the role. Operates under a human growth marketer and stops at the sector's accountability boundary."
 ---
 
 # Marketing campaign agent

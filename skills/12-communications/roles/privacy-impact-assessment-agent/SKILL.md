@@ -1,6 +1,6 @@
 ---
-name: privacy-impact-assessment-agent
-description: AI-personnel skill: **Privacy impact assessment agent** for the Communications operating system. This agent drafts privacy and data-protection assessments. Use this skill whenever a task in this domain needs this work (drafts privacy and data-protection assessments) — even if the user describes the task plainly rather than naming the role. Operates under a human privacy officer and stops at the sector's accountability boundary.
+name: "privacy-impact-assessment-agent"
+description: "AI-personnel skill: **Privacy impact assessment agent** for the Communications operating system. This agent drafts privacy and data-protection assessments. Use this skill whenever a task in this domain needs this work (drafts privacy and data-protection assessments) — even if the user describes the task plainly rather than naming the role. Operates under a human privacy officer and stops at the sector's accountability boundary."
 ---
 
 # Privacy impact assessment agent

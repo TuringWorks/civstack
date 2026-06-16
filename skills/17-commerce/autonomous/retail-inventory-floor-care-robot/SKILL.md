@@ -1,6 +1,6 @@
 ---
-name: machine-17-retail-inventory-floor-care-robot
-description: Non-humanoid autonomous machine for the Commerce operating system: **Retail inventory & floor-care robot** — scan shelves for stock and pricing and clean floors autonomously after hours. Best in: stores, supermarkets, malls. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-17-retail-inventory-floor-care-robot"
+description: "Non-humanoid autonomous machine for the Commerce operating system: **Retail inventory & floor-care robot** — scan shelves for stock and pricing and clean floors autonomously after hours. Best in: stores, supermarkets, malls. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Retail inventory & floor-care robot

@@ -1,6 +1,6 @@
 ---
-name: country-economy-jtbd-index
-description: Index and shared framework for the Country-Economy Jobs-To-Be-Done skill library: 22 national operating systems, their AI-personnel role skills, 12 cross-cutting archetypes, and the AI/robot catalogs. Use this skill first to navigate the library, understand the shared teaming pattern and accountability model, and find the right operating-system or role skill for any economic task.
+name: "country-economy-jtbd-index"
+description: "Index and shared framework for the Country-Economy Jobs-To-Be-Done skill library: 22 national operating systems, their AI-personnel role skills, 12 cross-cutting archetypes, and the AI/robot catalogs. Use this skill first to navigate the library, understand the shared teaming pattern and accountability model, and find the right operating-system or role skill for any economic task."
 ---
 
 # Country-Economy JTBD Skill Library — Framework & Index

@@ -1,6 +1,6 @@
 ---
-name: catalog-finance-operations-agent
-description: Cross-economy AI-personnel role: **Finance operations agent** — reconcile, forecast, detect fraud, summarize risk. A reusable agent pattern that appears across many operating systems under a human controller, CFO. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need.
+name: "catalog-finance-operations-agent"
+description: "Cross-economy AI-personnel role: **Finance operations agent** — reconcile, forecast, detect fraud, summarize risk. A reusable agent pattern that appears across many operating systems under a human controller, CFO. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need."
 ---
 
 # AI Personnel Catalog — Finance operations agent

@@ -1,6 +1,6 @@
 ---
-name: os-13-healthcare
-description: Operating-system orchestrator skill for **Healthcare, Public Health, and Biomedical Systems** (national operating system #13). Use this skill whenever work touches this sector's mission — Prevent disease, diagnose and treat illness, rehabilitate people, and support health across populations — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-13-healthcare"
+description: "Operating-system orchestrator skill for **Healthcare, Public Health, and Biomedical Systems** (national operating system #13). Use this skill whenever work touches this sector's mission — Prevent disease, diagnose and treat illness, rehabilitate people, and support health across populations — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 13 — Healthcare, Public Health, and Biomedical Systems

@@ -1,6 +1,6 @@
 ---
-name: robot-care-support-aide
-description: Humanoid/mobile robot role: **Care support aide** — fetch, remind, lift-assist, monitor. Best deployed in: eldercare, hospitals, homes. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments.
+name: "robot-care-support-aide"
+description: "Humanoid/mobile robot role: **Care support aide** — fetch, remind, lift-assist, monitor. Best deployed in: eldercare, hospitals, homes. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments."
 ---
 
 # Humanoid Robot Catalog — Care support aide

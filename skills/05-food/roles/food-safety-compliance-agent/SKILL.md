@@ -1,6 +1,6 @@
 ---
-name: food-safety-compliance-agent
-description: AI-personnel skill: **Food safety compliance agent** for the Food operating system. This agent checks process, labeling, and HACCP records against rules. Use this skill whenever a task in this domain needs this work (checks process, labeling, and HACCP records against rules) — even if the user describes the task plainly rather than naming the role. Operates under a human food safety inspector and stops at the sector's accountability boundary.
+name: "food-safety-compliance-agent"
+description: "AI-personnel skill: **Food safety compliance agent** for the Food operating system. This agent checks process, labeling, and HACCP records against rules. Use this skill whenever a task in this domain needs this work (checks process, labeling, and HACCP records against rules) — even if the user describes the task plainly rather than naming the role. Operates under a human food safety inspector and stops at the sector's accountability boundary."
 ---
 
 # Food safety compliance agent

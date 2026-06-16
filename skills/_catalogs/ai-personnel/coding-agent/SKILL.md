@@ -1,6 +1,6 @@
 ---
-name: catalog-coding-agent
-description: Cross-economy AI-personnel role: **Coding agent** — build, test, refactor, and document software. A reusable agent pattern that appears across many operating systems under a human engineer, tech lead. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need.
+name: "catalog-coding-agent"
+description: "Cross-economy AI-personnel role: **Coding agent** — build, test, refactor, and document software. A reusable agent pattern that appears across many operating systems under a human engineer, tech lead. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need."
 ---
 
 # AI Personnel Catalog — Coding agent

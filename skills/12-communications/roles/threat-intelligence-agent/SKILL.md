@@ -1,6 +1,6 @@
 ---
-name: threat-intelligence-agent
-description: AI-personnel skill: **Threat intelligence agent** for the Communications operating system. This agent collects and correlates threat intelligence. Use this skill whenever a task in this domain needs this work (collects and correlates threat intelligence) — even if the user describes the task plainly rather than naming the role. Operates under a human threat hunter and stops at the sector's accountability boundary.
+name: "threat-intelligence-agent"
+description: "AI-personnel skill: **Threat intelligence agent** for the Communications operating system. This agent collects and correlates threat intelligence. Use this skill whenever a task in this domain needs this work (collects and correlates threat intelligence) — even if the user describes the task plainly rather than naming the role. Operates under a human threat hunter and stops at the sector's accountability boundary."
 ---
 
 # Threat intelligence agent

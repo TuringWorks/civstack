@@ -1,6 +1,6 @@
 ---
-name: outage-restoration-planner
-description: AI-personnel skill: **Outage restoration planner** for the Energy operating system. This agent sequences crews and switching to restore service safely. Use this skill whenever a task in this domain needs this work (sequences crews and switching to restore service safely) — even if the user describes the task plainly rather than naming the role. Operates under a human distribution operations lead and stops at the sector's accountability boundary.
+name: "outage-restoration-planner"
+description: "AI-personnel skill: **Outage restoration planner** for the Energy operating system. This agent sequences crews and switching to restore service safely. Use this skill whenever a task in this domain needs this work (sequences crews and switching to restore service safely) — even if the user describes the task plainly rather than naming the role. Operates under a human distribution operations lead and stops at the sector's accountability boundary."
 ---
 
 # Outage restoration planner

@@ -1,6 +1,6 @@
 ---
-name: machine-11-harbor-tug-survey-vessel-usv
-description: Non-humanoid autonomous machine for the Transportation operating system: **Harbor tug / survey vessel (USV)** — assist berthing and survey harbors and channels without a crew. Best in: harbors, channels, coastal waters. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-11-harbor-tug-survey-vessel-usv"
+description: "Non-humanoid autonomous machine for the Transportation operating system: **Harbor tug / survey vessel (USV)** — assist berthing and survey harbors and channels without a crew. Best in: harbors, channels, coastal waters. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Harbor tug / survey vessel (USV)

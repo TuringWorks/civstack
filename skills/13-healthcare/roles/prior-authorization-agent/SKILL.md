@@ -1,6 +1,6 @@
 ---
-name: prior-authorization-agent
-description: AI-personnel skill: **Prior authorization agent** for the Healthcare operating system. This agent prepares and submits prior-authorization requests. Use this skill whenever a task in this domain needs this work (prepares and submits prior-authorization requests) — even if the user describes the task plainly rather than naming the role. Operates under a human care coordinator and stops at the sector's accountability boundary.
+name: "prior-authorization-agent"
+description: "AI-personnel skill: **Prior authorization agent** for the Healthcare operating system. This agent prepares and submits prior-authorization requests. Use this skill whenever a task in this domain needs this work (prepares and submits prior-authorization requests) — even if the user describes the task plainly rather than naming the role. Operates under a human care coordinator and stops at the sector's accountability boundary."
 ---
 
 # Prior authorization agent

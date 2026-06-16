@@ -1,6 +1,6 @@
 ---
-name: cad-cam-assistant
-description: AI-personnel skill: **CAD/CAM assistant** for the Manufacturing and Industrial Production operating system. This agent supports design-for-manufacture and toolpath generation. Use this skill whenever a task in this domain needs this work (supports design-for-manufacture and toolpath generation) — even if the user describes the task plainly rather than naming the role. Operates under a human manufacturing engineer and stops at the sector's accountability boundary.
+name: "cad-cam-assistant"
+description: "AI-personnel skill: **CAD/CAM assistant** for the Manufacturing and Industrial Production operating system. This agent supports design-for-manufacture and toolpath generation. Use this skill whenever a task in this domain needs this work (supports design-for-manufacture and toolpath generation) — even if the user describes the task plainly rather than naming the role. Operates under a human manufacturing engineer and stops at the sector's accountability boundary."
 ---
 
 # CAD/CAM assistant

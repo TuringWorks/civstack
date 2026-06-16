@@ -1,6 +1,6 @@
 ---
-name: grid-anomaly-detector
-description: AI-personnel skill: **Grid anomaly detector** for the Energy operating system. This agent detects faults and instability in telemetry. Use this skill whenever a task in this domain needs this work (detects faults and instability in telemetry) — even if the user describes the task plainly rather than naming the role. Operates under a human grid operator and stops at the sector's accountability boundary.
+name: "grid-anomaly-detector"
+description: "AI-personnel skill: **Grid anomaly detector** for the Energy operating system. This agent detects faults and instability in telemetry. Use this skill whenever a task in this domain needs this work (detects faults and instability in telemetry) — even if the user describes the task plainly rather than naming the role. Operates under a human grid operator and stops at the sector's accountability boundary."
 ---
 
 # Grid anomaly detector

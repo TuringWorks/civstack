@@ -1,6 +1,6 @@
 ---
-name: lesson-planner
-description: AI-personnel skill: **Lesson planner** for the Education operating system. This agent drafts standards-aligned lessons and materials. Use this skill whenever a task in this domain needs this work (drafts standards-aligned lessons and materials) — even if the user describes the task plainly rather than naming the role. Operates under a human teacher / curriculum designer and stops at the sector's accountability boundary.
+name: "lesson-planner"
+description: "AI-personnel skill: **Lesson planner** for the Education operating system. This agent drafts standards-aligned lessons and materials. Use this skill whenever a task in this domain needs this work (drafts standards-aligned lessons and materials) — even if the user describes the task plainly rather than naming the role. Operates under a human teacher / curriculum designer and stops at the sector's accountability boundary."
 ---
 
 # Lesson planner

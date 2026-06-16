@@ -1,6 +1,6 @@
 ---
-name: research-assistant
-description: AI-personnel skill: **Research assistant** for the Media operating system. This agent gathers and organizes background for stories and projects. Use this skill whenever a task in this domain needs this work (gathers and organizes background for stories and projects) — even if the user describes the task plainly rather than naming the role. Operates under a human journalist / producer and stops at the sector's accountability boundary.
+name: "research-assistant"
+description: "AI-personnel skill: **Research assistant** for the Media operating system. This agent gathers and organizes background for stories and projects. Use this skill whenever a task in this domain needs this work (gathers and organizes background for stories and projects) — even if the user describes the task plainly rather than naming the role. Operates under a human journalist / producer and stops at the sector's accountability boundary."
 ---
 
 # Research assistant

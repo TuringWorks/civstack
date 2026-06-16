@@ -1,6 +1,6 @@
 ---
-name: embodied-teleoperation-handoff-operator
-description: Embodied-AI stack role: **Teleoperation & handoff operator** (Human-in-the-loop operator) — takes remote control for edge cases the autonomy cannot handle and provides demonstrations that feed back into training. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a fleet operations manager.
+name: "embodied-teleoperation-handoff-operator"
+description: "Embodied-AI stack role: **Teleoperation & handoff operator** (Human-in-the-loop operator) — takes remote control for edge cases the autonomy cannot handle and provides demonstrations that feed back into training. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a fleet operations manager."
 ---
 
 # Embodied-AI Stack — Teleoperation & handoff operator

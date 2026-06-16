@@ -1,6 +1,6 @@
 ---
-name: archetype-judge
-description: Cross-cutting role archetype: **Judge** — make accountable decisions with consequences. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: make accountable decisions with consequences.
+name: "archetype-judge"
+description: "Cross-cutting role archetype: **Judge** — make accountable decisions with consequences. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: make accountable decisions with consequences."
 ---
 
 # Archetype — Judge

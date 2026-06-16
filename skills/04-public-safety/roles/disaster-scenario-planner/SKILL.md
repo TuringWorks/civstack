@@ -1,6 +1,6 @@
 ---
-name: disaster-scenario-planner
-description: AI-personnel skill: **Disaster scenario planner** for the Public Safety operating system. This agent models hazard scenarios and resource needs. Use this skill whenever a task in this domain needs this work (models hazard scenarios and resource needs) — even if the user describes the task plainly rather than naming the role. Operates under a human emergency planner and stops at the sector's accountability boundary.
+name: "disaster-scenario-planner"
+description: "AI-personnel skill: **Disaster scenario planner** for the Public Safety operating system. This agent models hazard scenarios and resource needs. Use this skill whenever a task in this domain needs this work (models hazard scenarios and resource needs) — even if the user describes the task plainly rather than naming the role. Operates under a human emergency planner and stops at the sector's accountability boundary."
 ---
 
 # Disaster scenario planner

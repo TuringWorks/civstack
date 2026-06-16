@@ -1,6 +1,6 @@
 ---
-name: tutor-agent
-description: AI-personnel skill: **Tutor agent** for the Education operating system. This agent diagnoses learner gaps and adapts practice and explanation. Use this skill whenever a task in this domain needs this work (diagnoses learner gaps and adapts practice and explanation) — even if the user describes the task plainly rather than naming the role. Operates under a human teacher and stops at the sector's accountability boundary.
+name: "tutor-agent"
+description: "AI-personnel skill: **Tutor agent** for the Education operating system. This agent diagnoses learner gaps and adapts practice and explanation. Use this skill whenever a task in this domain needs this work (diagnoses learner gaps and adapts practice and explanation) — even if the user describes the task plainly rather than naming the role. Operates under a human teacher and stops at the sector's accountability boundary."
 ---
 
 # Tutor agent

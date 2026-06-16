@@ -1,6 +1,6 @@
 ---
-name: quality-anomaly-detector
-description: AI-personnel skill: **Quality anomaly detector** for the Manufacturing and Industrial Production operating system. This agent detects defects and quality drift from inspection and sensor data. Use this skill whenever a task in this domain needs this work (detects defects and quality drift from inspection and sensor data) — even if the user describes the task plainly rather than naming the role. Operates under a human QA manager and stops at the sector's accountability boundary.
+name: "quality-anomaly-detector"
+description: "AI-personnel skill: **Quality anomaly detector** for the Manufacturing and Industrial Production operating system. This agent detects defects and quality drift from inspection and sensor data. Use this skill whenever a task in this domain needs this work (detects defects and quality drift from inspection and sensor data) — even if the user describes the task plainly rather than naming the role. Operates under a human QA manager and stops at the sector's accountability boundary."
 ---
 
 # Quality anomaly detector

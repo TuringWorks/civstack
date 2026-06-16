@@ -1,6 +1,6 @@
 ---
-name: credit-memo-drafter
-description: AI-personnel skill: **Credit memo drafter** for the Finance operating system. This agent drafts credit analyses and memos from financials. Use this skill whenever a task in this domain needs this work (drafts credit analyses and memos from financials) — even if the user describes the task plainly rather than naming the role. Operates under a human credit analyst and stops at the sector's accountability boundary.
+name: "credit-memo-drafter"
+description: "AI-personnel skill: **Credit memo drafter** for the Finance operating system. This agent drafts credit analyses and memos from financials. Use this skill whenever a task in this domain needs this work (drafts credit analyses and memos from financials) — even if the user describes the task plainly rather than naming the role. Operates under a human credit analyst and stops at the sector's accountability boundary."
 ---
 
 # Credit memo drafter

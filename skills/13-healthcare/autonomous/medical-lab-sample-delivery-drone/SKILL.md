@@ -1,6 +1,6 @@
 ---
-name: machine-13-medical-lab-sample-delivery-drone
-description: Non-humanoid autonomous machine for the Healthcare operating system: **Medical & lab-sample delivery drone** — fly blood, samples, vaccines, and medicines between sites quickly. Best in: hospital networks, rural clinics, lab-logistics routes. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-13-medical-lab-sample-delivery-drone"
+description: "Non-humanoid autonomous machine for the Healthcare operating system: **Medical & lab-sample delivery drone** — fly blood, samples, vaccines, and medicines between sites quickly. Best in: hospital networks, rural clinics, lab-logistics routes. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Medical & lab-sample delivery drone

@@ -1,6 +1,6 @@
 ---
-name: training-recommender
-description: AI-personnel skill: **Training recommender** for the Labor operating system. This agent recommends learning paths to close gaps. Use this skill whenever a task in this domain needs this work (recommends learning paths to close gaps) — even if the user describes the task plainly rather than naming the role. Operates under a human L&D manager and stops at the sector's accountability boundary.
+name: "training-recommender"
+description: "AI-personnel skill: **Training recommender** for the Labor operating system. This agent recommends learning paths to close gaps. Use this skill whenever a task in this domain needs this work (recommends learning paths to close gaps) — even if the user describes the task plainly rather than naming the role. Operates under a human L&D manager and stops at the sector's accountability boundary."
 ---
 
 # Training recommender

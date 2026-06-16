@@ -1,6 +1,6 @@
 ---
-name: creative-drafting-assistant
-description: AI-personnel skill: **Creative drafting assistant** for the Media operating system. This agent drafts and iterates creative copy and concepts under human taste. Use this skill whenever a task in this domain needs this work (drafts and iterates creative copy and concepts under human taste) — even if the user describes the task plainly rather than naming the role. Operates under a human writer / designer and stops at the sector's accountability boundary.
+name: "creative-drafting-assistant"
+description: "AI-personnel skill: **Creative drafting assistant** for the Media operating system. This agent drafts and iterates creative copy and concepts under human taste. Use this skill whenever a task in this domain needs this work (drafts and iterates creative copy and concepts under human taste) — even if the user describes the task plainly rather than naming the role. Operates under a human writer / designer and stops at the sector's accountability boundary."
 ---
 
 # Creative drafting assistant

@@ -1,6 +1,6 @@
 ---
-name: machine-autonomous-mining-haul-truck
-description: Non-humanoid autonomous machine: **Autonomous mining haul truck** — haul ore and overburden on mine haul roads around the clock. Best in: open-pit mines and quarries. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls over a perception-to-control stack (trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform anywhere this physical job is needed, even if the user only describes the underlying need.
+name: "machine-autonomous-mining-haul-truck"
+description: "Non-humanoid autonomous machine: **Autonomous mining haul truck** — haul ore and overburden on mine haul roads around the clock. Best in: open-pit mines and quarries. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls over a perception-to-control stack (trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform anywhere this physical job is needed, even if the user only describes the underlying need."
 ---
 
 # Autonomous Machine — Autonomous mining haul truck

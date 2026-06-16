@@ -1,6 +1,6 @@
 ---
-name: fleet-maintenance-predictor
-description: AI-personnel skill: **Fleet maintenance predictor** for the Transportation operating system. This agent predicts vehicle failures and schedules maintenance. Use this skill whenever a task in this domain needs this work (predicts vehicle failures and schedules maintenance) — even if the user describes the task plainly rather than naming the role. Operates under a human fleet manager and stops at the sector's accountability boundary.
+name: "fleet-maintenance-predictor"
+description: "AI-personnel skill: **Fleet maintenance predictor** for the Transportation operating system. This agent predicts vehicle failures and schedules maintenance. Use this skill whenever a task in this domain needs this work (predicts vehicle failures and schedules maintenance) — even if the user describes the task plainly rather than naming the role. Operates under a human fleet manager and stops at the sector's accountability boundary."
 ---
 
 # Fleet maintenance predictor

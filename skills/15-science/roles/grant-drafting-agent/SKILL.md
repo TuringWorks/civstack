@@ -1,6 +1,6 @@
 ---
-name: grant-drafting-agent
-description: AI-personnel skill: **Grant drafting agent** for the Science operating system. This agent drafts proposals and budgets. Use this skill whenever a task in this domain needs this work (drafts proposals and budgets) — even if the user describes the task plainly rather than naming the role. Operates under a human grant writer and stops at the sector's accountability boundary.
+name: "grant-drafting-agent"
+description: "AI-personnel skill: **Grant drafting agent** for the Science operating system. This agent drafts proposals and budgets. Use this skill whenever a task in this domain needs this work (drafts proposals and budgets) — even if the user describes the task plainly rather than naming the role. Operates under a human grant writer and stops at the sector's accountability boundary."
 ---
 
 # Grant drafting agent

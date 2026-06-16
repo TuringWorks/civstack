@@ -1,6 +1,6 @@
 ---
-name: robot-05-irrigation-and-field-infrastructure-robot
-description: Humanoid/embodied robot role for the Food operating system: **Irrigation and field-infrastructure robot** — install, inspect, and repair irrigation, fencing, and field sensors and take soil and tissue samples. Best in: fields, pastures, irrigation networks, remote plots. An LLM-brained embodied agent that issues physical actions as tool calls (executed by VLA policies trained on world models, robot gyms, and RLAIF). Use this skill to plan or operate this physical farm/field role; trigger whenever the task needs this hands-on work, even if the user only describes the underlying need.
+name: "robot-05-irrigation-and-field-infrastructure-robot"
+description: "Humanoid/embodied robot role for the Food operating system: **Irrigation and field-infrastructure robot** — install, inspect, and repair irrigation, fencing, and field sensors and take soil and tissue samples. Best in: fields, pastures, irrigation networks, remote plots. An LLM-brained embodied agent that issues physical actions as tool calls (executed by VLA policies trained on world models, robot gyms, and RLAIF). Use this skill to plan or operate this physical farm/field role; trigger whenever the task needs this hands-on work, even if the user only describes the underlying need."
 ---
 
 # Irrigation and field-infrastructure robot

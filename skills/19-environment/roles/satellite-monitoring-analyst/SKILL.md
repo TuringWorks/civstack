@@ -1,6 +1,6 @@
 ---
-name: satellite-monitoring-analyst
-description: AI-personnel skill: **Satellite monitoring analyst** for the Environment operating system. This agent monitors land, water, and emissions from remote sensing. Use this skill whenever a task in this domain needs this work (monitors land, water, and emissions from remote sensing) — even if the user describes the task plainly rather than naming the role. Operates under a human environmental scientist and stops at the sector's accountability boundary.
+name: "satellite-monitoring-analyst"
+description: "AI-personnel skill: **Satellite monitoring analyst** for the Environment operating system. This agent monitors land, water, and emissions from remote sensing. Use this skill whenever a task in this domain needs this work (monitors land, water, and emissions from remote sensing) — even if the user describes the task plainly rather than naming the role. Operates under a human environmental scientist and stops at the sector's accountability boundary."
 ---
 
 # Satellite monitoring analyst

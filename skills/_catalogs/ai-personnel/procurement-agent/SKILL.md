@@ -1,6 +1,6 @@
 ---
-name: catalog-procurement-agent
-description: Cross-economy AI-personnel role: **Procurement agent** — compare suppliers, draft rfps, track contract obligations. A reusable agent pattern that appears across many operating systems under a human procurement officer. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need.
+name: "catalog-procurement-agent"
+description: "Cross-economy AI-personnel role: **Procurement agent** — compare suppliers, draft rfps, track contract obligations. A reusable agent pattern that appears across many operating systems under a human procurement officer. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need."
 ---
 
 # AI Personnel Catalog — Procurement agent

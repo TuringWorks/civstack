@@ -1,6 +1,6 @@
 ---
-name: quantity-takeoff-estimator
-description: AI-personnel skill: **Quantity takeoff estimator** for the Shelter operating system. This agent produces material and cost takeoffs from drawings. Use this skill whenever a task in this domain needs this work (produces material and cost takeoffs from drawings) — even if the user describes the task plainly rather than naming the role. Operates under a human estimator and stops at the sector's accountability boundary.
+name: "quantity-takeoff-estimator"
+description: "AI-personnel skill: **Quantity takeoff estimator** for the Shelter operating system. This agent produces material and cost takeoffs from drawings. Use this skill whenever a task in this domain needs this work (produces material and cost takeoffs from drawings) — even if the user describes the task plainly rather than naming the role. Operates under a human estimator and stops at the sector's accountability boundary."
 ---
 
 # Quantity takeoff estimator

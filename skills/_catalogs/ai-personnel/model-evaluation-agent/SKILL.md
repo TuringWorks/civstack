@@ -1,6 +1,6 @@
 ---
-name: catalog-model-evaluation-agent
-description: Cross-economy AI-personnel role: **Model evaluation agent** — test ai outputs for quality, safety, bias, drift. A reusable agent pattern that appears across many operating systems under a human AI governance lead. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need.
+name: "catalog-model-evaluation-agent"
+description: "Cross-economy AI-personnel role: **Model evaluation agent** — test ai outputs for quality, safety, bias, drift. A reusable agent pattern that appears across many operating systems under a human AI governance lead. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need."
 ---
 
 # AI Personnel Catalog — Model evaluation agent

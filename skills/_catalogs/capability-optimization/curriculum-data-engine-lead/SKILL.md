@@ -1,6 +1,6 @@
 ---
-name: capopt-curriculum-data-engine-lead
-description: Capability/optimization role: **Curriculum & data-engine lead** (Human engineering role (AI/robotics)) — designs the training curriculum and the data flywheel across methods. Part of the layer that decides *how* robot and machine capabilities are built — across model tiers (LLM, SLM, tiny LM, deterministic) and many training methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation, classical control, formal methods). Use this skill when choosing or building how a capability is trained, optimized, or run on-device, even if the user only describes the underlying need. Works under a data / ML platform lead.
+name: "capopt-curriculum-data-engine-lead"
+description: "Capability/optimization role: **Curriculum & data-engine lead** (Human engineering role (AI/robotics)) — designs the training curriculum and the data flywheel across methods. Part of the layer that decides *how* robot and machine capabilities are built — across model tiers (LLM, SLM, tiny LM, deterministic) and many training methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation, classical control, formal methods). Use this skill when choosing or building how a capability is trained, optimized, or run on-device, even if the user only describes the underlying need. Works under a data / ML platform lead."
 ---
 
 # Capability & Optimization — Curriculum & data-engine lead

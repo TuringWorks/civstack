@@ -1,6 +1,6 @@
 ---
-name: os-14-education
-description: Operating-system orchestrator skill for **Education, Training, Libraries, and Human Capital** (national operating system #14). Use this skill whenever work touches this sector's mission — Form capable people, transmit knowledge, cultivate judgment, and reskill the workforce — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-14-education"
+description: "Operating-system orchestrator skill for **Education, Training, Libraries, and Human Capital** (national operating system #14). Use this skill whenever work touches this sector's mission — Form capable people, transmit knowledge, cultivate judgment, and reskill the workforce — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 14 — Education, Training, Libraries, and Human Capital

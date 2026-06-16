@@ -1,6 +1,6 @@
 ---
-name: sales-research-agent
-description: AI-personnel skill: **Sales research agent** for the Commerce operating system. This agent researches accounts and prospects and qualifies leads. Use this skill whenever a task in this domain needs this work (researches accounts and prospects and qualifies leads) — even if the user describes the task plainly rather than naming the role. Operates under a human account executive and stops at the sector's accountability boundary.
+name: "sales-research-agent"
+description: "AI-personnel skill: **Sales research agent** for the Commerce operating system. This agent researches accounts and prospects and qualifies leads. Use this skill whenever a task in this domain needs this work (researches accounts and prospects and qualifies leads) — even if the user describes the task plainly rather than naming the role. Operates under a human account executive and stops at the sector's accountability boundary."
 ---
 
 # Sales research agent

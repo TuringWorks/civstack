@@ -1,6 +1,6 @@
 ---
-name: os-17-commerce
-description: Operating-system orchestrator skill for **Commerce, Retail, Hospitality, and Customer Operations** (national operating system #17). Use this skill whenever work touches this sector's mission — Match demand to goods and services, create satisfying experiences, and keep commercial operations profitable — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-17-commerce"
+description: "Operating-system orchestrator skill for **Commerce, Retail, Hospitality, and Customer Operations** (national operating system #17). Use this skill whenever work touches this sector's mission — Match demand to goods and services, create satisfying experiences, and keep commercial operations profitable — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 17 — Commerce, Retail, Hospitality, and Customer Operations

@@ -1,6 +1,6 @@
 ---
-name: machine-03-isr-reconnaissance-drone-uas
-description: Non-humanoid autonomous machine for the Defense operating system: **ISR reconnaissance drone (UAS)** — conduct intelligence, surveillance, and reconnaissance from the air under human command. Best in: borders, maritime approaches, contested and disaster areas. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-03-isr-reconnaissance-drone-uas"
+description: "Non-humanoid autonomous machine for the Defense operating system: **ISR reconnaissance drone (UAS)** — conduct intelligence, surveillance, and reconnaissance from the air under human command. Best in: borders, maritime approaches, contested and disaster areas. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # ISR reconnaissance drone (UAS)

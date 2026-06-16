@@ -1,6 +1,6 @@
 ---
-name: demand-forecast-agent
-description: AI-personnel skill: **Demand forecast agent** for the Transportation operating system. This agent forecasts shipment and travel demand for planning. Use this skill whenever a task in this domain needs this work (forecasts shipment and travel demand for planning) — even if the user describes the task plainly rather than naming the role. Operates under a human supply chain manager and stops at the sector's accountability boundary.
+name: "demand-forecast-agent"
+description: "AI-personnel skill: **Demand forecast agent** for the Transportation operating system. This agent forecasts shipment and travel demand for planning. Use this skill whenever a task in this domain needs this work (forecasts shipment and travel demand for planning) — even if the user describes the task plainly rather than naming the role. Operates under a human supply chain manager and stops at the sector's accountability boundary."
 ---
 
 # Demand forecast agent

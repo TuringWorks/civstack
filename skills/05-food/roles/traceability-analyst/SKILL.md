@@ -1,6 +1,6 @@
 ---
-name: traceability-analyst
-description: AI-personnel skill: **Traceability analyst** for the Food operating system. This agent tracks lots through the supply chain and supports recalls. Use this skill whenever a task in this domain needs this work (tracks lots through the supply chain and supports recalls) — even if the user describes the task plainly rather than naming the role. Operates under a human QA manager and stops at the sector's accountability boundary.
+name: "traceability-analyst"
+description: "AI-personnel skill: **Traceability analyst** for the Food operating system. This agent tracks lots through the supply chain and supports recalls. Use this skill whenever a task in this domain needs this work (tracks lots through the supply chain and supports recalls) — even if the user describes the task plainly rather than naming the role. Operates under a human QA manager and stops at the sector's accountability boundary."
 ---
 
 # Traceability analyst

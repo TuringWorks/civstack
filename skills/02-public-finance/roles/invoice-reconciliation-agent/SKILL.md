@@ -1,6 +1,6 @@
 ---
-name: invoice-reconciliation-agent
-description: AI-personnel skill: **Invoice reconciliation agent** for the Public Finance operating system. This agent matches invoices, POs, and receipts and resolves exceptions. Use this skill whenever a task in this domain needs this work (matches invoices, POs, and receipts and resolves exceptions) — even if the user describes the task plainly rather than naming the role. Operates under a human accounts-payable lead and stops at the sector's accountability boundary.
+name: "invoice-reconciliation-agent"
+description: "AI-personnel skill: **Invoice reconciliation agent** for the Public Finance operating system. This agent matches invoices, POs, and receipts and resolves exceptions. Use this skill whenever a task in this domain needs this work (matches invoices, POs, and receipts and resolves exceptions) — even if the user describes the task plainly rather than naming the role. Operates under a human accounts-payable lead and stops at the sector's accountability boundary."
 ---
 
 # Invoice reconciliation agent

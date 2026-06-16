@@ -1,6 +1,6 @@
 ---
-name: dispatch-optimizer
-description: AI-personnel skill: **Dispatch optimizer** for the Public Safety operating system. This agent allocates and routes responders against live demand. Use this skill whenever a task in this domain needs this work (allocates and routes responders against live demand) — even if the user describes the task plainly rather than naming the role. Operates under a human emergency manager and stops at the sector's accountability boundary.
+name: "dispatch-optimizer"
+description: "AI-personnel skill: **Dispatch optimizer** for the Public Safety operating system. This agent allocates and routes responders against live demand. Use this skill whenever a task in this domain needs this work (allocates and routes responders against live demand) — even if the user describes the task plainly rather than naming the role. Operates under a human emergency manager and stops at the sector's accountability boundary."
 ---
 
 # Dispatch optimizer

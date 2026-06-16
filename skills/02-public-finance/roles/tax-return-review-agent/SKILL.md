@@ -1,6 +1,6 @@
 ---
-name: tax-return-review-agent
-description: AI-personnel skill: **Tax return review agent** for the Public Finance operating system. This agent screens returns for errors and anomalies and prepares examiner work files. Use this skill whenever a task in this domain needs this work (screens returns for errors and anomalies and prepares examiner work files) — even if the user describes the task plainly rather than naming the role. Operates under a human tax examiner / revenue agent and stops at the sector's accountability boundary.
+name: "tax-return-review-agent"
+description: "AI-personnel skill: **Tax return review agent** for the Public Finance operating system. This agent screens returns for errors and anomalies and prepares examiner work files. Use this skill whenever a task in this domain needs this work (screens returns for errors and anomalies and prepares examiner work files) — even if the user describes the task plainly rather than naming the role. Operates under a human tax examiner / revenue agent and stops at the sector's accountability boundary."
 ---
 
 # Tax return review agent

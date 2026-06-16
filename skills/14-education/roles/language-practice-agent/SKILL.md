@@ -1,6 +1,6 @@
 ---
-name: language-practice-agent
-description: AI-personnel skill: **Language practice agent** for the Education operating system. This agent provides conversational language practice and correction. Use this skill whenever a task in this domain needs this work (provides conversational language practice and correction) — even if the user describes the task plainly rather than naming the role. Operates under a human language teacher and stops at the sector's accountability boundary.
+name: "language-practice-agent"
+description: "AI-personnel skill: **Language practice agent** for the Education operating system. This agent provides conversational language practice and correction. Use this skill whenever a task in this domain needs this work (provides conversational language practice and correction) — even if the user describes the task plainly rather than naming the role. Operates under a human language teacher and stops at the sector's accountability boundary."
 ---
 
 # Language practice agent

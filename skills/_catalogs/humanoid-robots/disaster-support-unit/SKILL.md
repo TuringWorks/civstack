@@ -1,6 +1,6 @@
 ---
-name: robot-disaster-support-unit
-description: Humanoid/mobile robot role: **Disaster support unit** — enter risky areas, carry supplies, assess damage. Best deployed in: fires, floods, industrial accidents. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments.
+name: "robot-disaster-support-unit"
+description: "Humanoid/mobile robot role: **Disaster support unit** — enter risky areas, carry supplies, assess damage. Best deployed in: fires, floods, industrial accidents. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments."
 ---
 
 # Humanoid Robot Catalog — Disaster support unit

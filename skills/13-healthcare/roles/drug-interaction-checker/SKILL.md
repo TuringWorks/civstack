@@ -1,6 +1,6 @@
 ---
-name: drug-interaction-checker
-description: AI-personnel skill: **Drug interaction checker** for the Healthcare operating system. This agent checks medication safety and interactions. Use this skill whenever a task in this domain needs this work (checks medication safety and interactions) — even if the user describes the task plainly rather than naming the role. Operates under a human pharmacist and stops at the sector's accountability boundary.
+name: "drug-interaction-checker"
+description: "AI-personnel skill: **Drug interaction checker** for the Healthcare operating system. This agent checks medication safety and interactions. Use this skill whenever a task in this domain needs this work (checks medication safety and interactions) — even if the user describes the task plainly rather than naming the role. Operates under a human pharmacist and stops at the sector's accountability boundary."
 ---
 
 # Drug interaction checker

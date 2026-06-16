@@ -1,6 +1,6 @@
 ---
-name: permit-compliance-agent
-description: AI-personnel skill: **Permit compliance agent** for the Environment operating system. This agent tracks environmental permit obligations. Use this skill whenever a task in this domain needs this work (tracks environmental permit obligations) — even if the user describes the task plainly rather than naming the role. Operates under a human environmental compliance specialist and stops at the sector's accountability boundary.
+name: "permit-compliance-agent"
+description: "AI-personnel skill: **Permit compliance agent** for the Environment operating system. This agent tracks environmental permit obligations. Use this skill whenever a task in this domain needs this work (tracks environmental permit obligations) — even if the user describes the task plainly rather than naming the role. Operates under a human environmental compliance specialist and stops at the sector's accountability boundary."
 ---
 
 # Permit compliance agent

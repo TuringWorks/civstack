@@ -1,6 +1,6 @@
 ---
-name: reconciliation-agent
-description: AI-personnel skill: **Reconciliation agent** for the Finance operating system. This agent reconciles ledgers, accounts, and statements. Use this skill whenever a task in this domain needs this work (reconciles ledgers, accounts, and statements) — even if the user describes the task plainly rather than naming the role. Operates under a human controller and stops at the sector's accountability boundary.
+name: "reconciliation-agent"
+description: "AI-personnel skill: **Reconciliation agent** for the Finance operating system. This agent reconciles ledgers, accounts, and statements. Use this skill whenever a task in this domain needs this work (reconciles ledgers, accounts, and statements) — even if the user describes the task plainly rather than naming the role. Operates under a human controller and stops at the sector's accountability boundary."
 ---
 
 # Reconciliation agent

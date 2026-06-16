@@ -1,6 +1,6 @@
 ---
-name: machine-10-autonomous-earthmover-dozer-excavator-loader
-description: Non-humanoid autonomous machine for the Shelter operating system: **Autonomous earthmover (dozer/excavator/loader)** — grade, excavate, load, and move material to a site model. Best in: construction sites, road projects, earthworks. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-10-autonomous-earthmover-dozer-excavator-loader"
+description: "Non-humanoid autonomous machine for the Shelter operating system: **Autonomous earthmover (dozer/excavator/loader)** — grade, excavate, load, and move material to a site model. Best in: construction sites, road projects, earthworks. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Autonomous earthmover (dozer/excavator/loader)

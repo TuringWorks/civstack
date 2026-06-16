@@ -1,6 +1,6 @@
 ---
-name: catalog-operations-coordinator-agent
-description: Cross-economy AI-personnel role: **Operations coordinator agent** — watch queues, route work, schedule resources, flag exceptions. A reusable agent pattern that appears across many operating systems under a human operations manager. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need.
+name: "catalog-operations-coordinator-agent"
+description: "Cross-economy AI-personnel role: **Operations coordinator agent** — watch queues, route work, schedule resources, flag exceptions. A reusable agent pattern that appears across many operating systems under a human operations manager. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need."
 ---
 
 # AI Personnel Catalog — Operations coordinator agent

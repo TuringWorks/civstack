@@ -1,6 +1,6 @@
 ---
-name: catalog-compliance-review-agent
-description: Cross-economy AI-personnel role: **Compliance review agent** — check evidence against rules and prepare audit trails. A reusable agent pattern that appears across many operating systems under a human compliance officer, regulator. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need.
+name: "catalog-compliance-review-agent"
+description: "Cross-economy AI-personnel role: **Compliance review agent** — check evidence against rules and prepare audit trails. A reusable agent pattern that appears across many operating systems under a human compliance officer, regulator. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need."
 ---
 
 # AI Personnel Catalog — Compliance review agent

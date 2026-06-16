@@ -1,6 +1,6 @@
 ---
-name: embodied-robot-gym-sim-to-real-engineer
-description: Embodied-AI stack role: **Robot-gym & sim-to-real engineer** (Human engineering role (AI/robotics)) — operates massively parallel physics simulation (robot gyms) and manages transfer of learned skills from sim to hardware. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a simulation platform lead.
+name: "embodied-robot-gym-sim-to-real-engineer"
+description: "Embodied-AI stack role: **Robot-gym & sim-to-real engineer** (Human engineering role (AI/robotics)) — operates massively parallel physics simulation (robot gyms) and manages transfer of learned skills from sim to hardware. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a simulation platform lead."
 ---
 
 # Embodied-AI Stack — Robot-gym & sim-to-real engineer

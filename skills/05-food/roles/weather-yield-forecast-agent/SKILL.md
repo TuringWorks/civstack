@@ -1,6 +1,6 @@
 ---
-name: weather-yield-forecast-agent
-description: AI-personnel skill: **Weather/yield forecast agent** for the Food operating system. This agent forecasts yield and weather risk for planning and hedging. Use this skill whenever a task in this domain needs this work (forecasts yield and weather risk for planning and hedging) — even if the user describes the task plainly rather than naming the role. Operates under a human farm manager and stops at the sector's accountability boundary.
+name: "weather-yield-forecast-agent"
+description: "AI-personnel skill: **Weather/yield forecast agent** for the Food operating system. This agent forecasts yield and weather risk for planning and hedging. Use this skill whenever a task in this domain needs this work (forecasts yield and weather risk for planning and hedging) — even if the user describes the task plainly rather than naming the role. Operates under a human farm manager and stops at the sector's accountability boundary."
 ---
 
 # Weather/yield forecast agent

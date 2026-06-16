@@ -1,6 +1,6 @@
 ---
-name: maintenance-prediction-agent
-description: AI-personnel skill: **Maintenance prediction agent** for the Energy operating system. This agent predicts asset failures and schedules maintenance. Use this skill whenever a task in this domain needs this work (predicts asset failures and schedules maintenance) — even if the user describes the task plainly rather than naming the role. Operates under a human reliability engineer and stops at the sector's accountability boundary.
+name: "maintenance-prediction-agent"
+description: "AI-personnel skill: **Maintenance prediction agent** for the Energy operating system. This agent predicts asset failures and schedules maintenance. Use this skill whenever a task in this domain needs this work (predicts asset failures and schedules maintenance) — even if the user describes the task plainly rather than naming the role. Operates under a human reliability engineer and stops at the sector's accountability boundary."
 ---
 
 # Maintenance prediction agent

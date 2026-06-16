@@ -1,6 +1,6 @@
 ---
-name: os-22-resilience
-description: Operating-system orchestrator skill for **Resilience, Continuity, and Strategic Foresight** (national operating system #22). Use this skill whenever work touches this sector's mission — Keep the country functioning through shocks and long-range change — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-22-resilience"
+description: "Operating-system orchestrator skill for **Resilience, Continuity, and Strategic Foresight** (national operating system #22). Use this skill whenever work touches this sector's mission — Keep the country functioning through shocks and long-range change — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 22 — Resilience, Continuity, and Strategic Foresight

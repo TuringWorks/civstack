@@ -1,6 +1,6 @@
 ---
-name: machine-10-site-survey-progress-drone
-description: Non-humanoid autonomous machine for the Shelter operating system: **Site survey & progress drone** — map the site, track earthwork volumes, and monitor progress and safety from the air. Best in: active construction sites. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-10-site-survey-progress-drone"
+description: "Non-humanoid autonomous machine for the Shelter operating system: **Site survey & progress drone** — map the site, track earthwork volumes, and monitor progress and safety from the air. Best in: active construction sites. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Site survey & progress drone

@@ -1,6 +1,6 @@
 ---
-name: autonomous-farm-operations-agent
-description: AI-personnel skill: **Autonomous farm operations agent** for the Food operating system. This agent orchestrates the whole farm cycle — plans field tasks, sequences machinery and robots, and tracks progress against the crop plan. Use this skill whenever a task in this domain needs this work (orchestrates the whole farm cycle — plans field tasks, sequences machinery and robots, and tracks progress against the crop plan) — even if the user describes the task plainly rather than naming the role. Operates under a human farmer / ranch manager and stops at the sector's accountability boundary.
+name: "autonomous-farm-operations-agent"
+description: "AI-personnel skill: **Autonomous farm operations agent** for the Food operating system. This agent orchestrates the whole farm cycle — plans field tasks, sequences machinery and robots, and tracks progress against the crop plan. Use this skill whenever a task in this domain needs this work (orchestrates the whole farm cycle — plans field tasks, sequences machinery and robots, and tracks progress against the crop plan) — even if the user describes the task plainly rather than naming the role. Operates under a human farmer / ranch manager and stops at the sector's accountability boundary."
 ---
 
 # Autonomous farm operations agent

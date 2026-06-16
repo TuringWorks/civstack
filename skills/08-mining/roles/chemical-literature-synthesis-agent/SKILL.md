@@ -1,6 +1,6 @@
 ---
-name: chemical-literature-synthesis-agent
-description: AI-personnel skill: **Chemical literature synthesis agent** for the Mining operating system. This agent synthesizes chemistry literature and patents for R&D. Use this skill whenever a task in this domain needs this work (synthesizes chemistry literature and patents for R&D) — even if the user describes the task plainly rather than naming the role. Operates under a human chemical engineer and stops at the sector's accountability boundary.
+name: "chemical-literature-synthesis-agent"
+description: "AI-personnel skill: **Chemical literature synthesis agent** for the Mining operating system. This agent synthesizes chemistry literature and patents for R&D. Use this skill whenever a task in this domain needs this work (synthesizes chemistry literature and patents for R&D) — even if the user describes the task plainly rather than naming the role. Operates under a human chemical engineer and stops at the sector's accountability boundary."
 ---
 
 # Chemical literature synthesis agent

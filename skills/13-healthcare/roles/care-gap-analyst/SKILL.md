@@ -1,6 +1,6 @@
 ---
-name: care-gap-analyst
-description: AI-personnel skill: **Care gap analyst** for the Healthcare operating system. This agent identifies overdue screenings and care gaps in panels. Use this skill whenever a task in this domain needs this work (identifies overdue screenings and care gaps in panels) — even if the user describes the task plainly rather than naming the role. Operates under a human population health lead and stops at the sector's accountability boundary.
+name: "care-gap-analyst"
+description: "AI-personnel skill: **Care gap analyst** for the Healthcare operating system. This agent identifies overdue screenings and care gaps in panels. Use this skill whenever a task in this domain needs this work (identifies overdue screenings and care gaps in panels) — even if the user describes the task plainly rather than naming the role. Operates under a human population health lead and stops at the sector's accountability boundary."
 ---
 
 # Care gap analyst

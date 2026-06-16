@@ -1,6 +1,6 @@
 ---
-name: machine-05-crop-scouting-drone
-description: Non-humanoid autonomous machine for the Food operating system: **Crop-scouting drone** — fly fields to scout stand, weeds, pests, disease, and irrigation from the air. Best in: fields, orchards, vineyards. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-05-crop-scouting-drone"
+description: "Non-humanoid autonomous machine for the Food operating system: **Crop-scouting drone** — fly fields to scout stand, weeds, pests, disease, and irrigation from the air. Best in: fields, orchards, vineyards. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Crop-scouting drone

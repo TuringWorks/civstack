@@ -1,6 +1,6 @@
 ---
-name: exploration-data-analyst
-description: AI-personnel skill: **Exploration data analyst** for the Mining operating system. This agent interprets geological and geophysical data to locate resources. Use this skill whenever a task in this domain needs this work (interprets geological and geophysical data to locate resources) — even if the user describes the task plainly rather than naming the role. Operates under a human geologist and stops at the sector's accountability boundary.
+name: "exploration-data-analyst"
+description: "AI-personnel skill: **Exploration data analyst** for the Mining operating system. This agent interprets geological and geophysical data to locate resources. Use this skill whenever a task in this domain needs this work (interprets geological and geophysical data to locate resources) — even if the user describes the task plainly rather than naming the role. Operates under a human geologist and stops at the sector's accountability boundary."
 ---
 
 # Exploration data analyst

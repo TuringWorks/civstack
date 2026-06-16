@@ -1,6 +1,6 @@
 ---
-name: archetype-steward
-description: Cross-cutting role archetype: **Steward** — preserve assets for future use. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: preserve assets for future use.
+name: "archetype-steward"
+description: "Cross-cutting role archetype: **Steward** — preserve assets for future use. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: preserve assets for future use."
 ---
 
 # Archetype — Steward

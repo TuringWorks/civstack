@@ -33,7 +33,34 @@ def slug(s):
     return s.strip("-")
 
 
+def _yaml_q(v):
+    """Double-quote a YAML scalar so values containing ': ', '#', etc. parse correctly."""
+    return '"' + v.replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+
+def _fix_frontmatter(content):
+    """Quote name/description values in the leading YAML frontmatter block."""
+    if not content.startswith("---\n"):
+        return content
+    lines = content.split("\n")
+    end = None
+    for i in range(1, len(lines)):
+        if lines[i].strip() == "---":
+            end = i
+            break
+    if end is None:
+        return content
+    for i in range(1, end):
+        m = re.match(r"^(name|description):\s+(.*)$", lines[i])
+        if m:
+            key, val = m.group(1), m.group(2)
+            if not (len(val) >= 2 and val[0] == '"' and val[-1] == '"'):
+                lines[i] = key + ": " + _yaml_q(val)
+    return "\n".join(lines)
+
+
 def write(path, content):
+    content = _fix_frontmatter(content)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         f.write(content.rstrip() + "\n")

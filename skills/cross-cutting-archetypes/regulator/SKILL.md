@@ -1,6 +1,6 @@
 ---
-name: archetype-regulator
-description: Cross-cutting role archetype: **Regulator** — define, enforce, and audit rules. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: define, enforce, and audit rules.
+name: "archetype-regulator"
+description: "Cross-cutting role archetype: **Regulator** — define, enforce, and audit rules. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: define, enforce, and audit rules."
 ---
 
 # Archetype — Regulator

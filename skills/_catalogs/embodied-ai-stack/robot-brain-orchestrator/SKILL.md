@@ -1,6 +1,6 @@
 ---
-name: embodied-robot-brain-orchestrator
-description: Embodied-AI stack role: **Robot brain orchestrator** (AI agent) — perceives, plans, decomposes tasks, and issues motor-primitive tool calls to the body as the high-level multimodal LLM brain. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a robotics autonomy lead.
+name: "embodied-robot-brain-orchestrator"
+description: "Embodied-AI stack role: **Robot brain orchestrator** (AI agent) — perceives, plans, decomposes tasks, and issues motor-primitive tool calls to the body as the high-level multimodal LLM brain. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a robotics autonomy lead."
 ---
 
 # Embodied-AI Stack — Robot brain orchestrator

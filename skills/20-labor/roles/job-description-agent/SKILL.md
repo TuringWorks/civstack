@@ -1,6 +1,6 @@
 ---
-name: job-description-agent
-description: AI-personnel skill: **Job description agent** for the Labor operating system. This agent drafts and calibrates job descriptions and scorecards. Use this skill whenever a task in this domain needs this work (drafts and calibrates job descriptions and scorecards) — even if the user describes the task plainly rather than naming the role. Operates under a human HR business partner and stops at the sector's accountability boundary.
+name: "job-description-agent"
+description: "AI-personnel skill: **Job description agent** for the Labor operating system. This agent drafts and calibrates job descriptions and scorecards. Use this skill whenever a task in this domain needs this work (drafts and calibrates job descriptions and scorecards) — even if the user describes the task plainly rather than naming the role. Operates under a human HR business partner and stops at the sector's accountability boundary."
 ---
 
 # Job description agent

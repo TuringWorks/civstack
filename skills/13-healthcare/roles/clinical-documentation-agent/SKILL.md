@@ -1,6 +1,6 @@
 ---
-name: clinical-documentation-agent
-description: AI-personnel skill: **Clinical documentation agent** for the Healthcare operating system. This agent drafts notes and structured records from encounters. Use this skill whenever a task in this domain needs this work (drafts notes and structured records from encounters) — even if the user describes the task plainly rather than naming the role. Operates under a human physician / nurse and stops at the sector's accountability boundary.
+name: "clinical-documentation-agent"
+description: "AI-personnel skill: **Clinical documentation agent** for the Healthcare operating system. This agent drafts notes and structured records from encounters. Use this skill whenever a task in this domain needs this work (drafts notes and structured records from encounters) — even if the user describes the task plainly rather than naming the role. Operates under a human physician / nurse and stops at the sector's accountability boundary."
 ---
 
 # Clinical documentation agent

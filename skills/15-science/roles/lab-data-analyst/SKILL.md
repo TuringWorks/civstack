@@ -1,6 +1,6 @@
 ---
-name: lab-data-analyst
-description: AI-personnel skill: **Lab data analyst** for the Science operating system. This agent analyzes instrument and assay data. Use this skill whenever a task in this domain needs this work (analyzes instrument and assay data) — even if the user describes the task plainly rather than naming the role. Operates under a human research associate and stops at the sector's accountability boundary.
+name: "lab-data-analyst"
+description: "AI-personnel skill: **Lab data analyst** for the Science operating system. This agent analyzes instrument and assay data. Use this skill whenever a task in this domain needs this work (analyzes instrument and assay data) — even if the user describes the task plainly rather than naming the role. Operates under a human research associate and stops at the sector's accountability boundary."
 ---
 
 # Lab data analyst

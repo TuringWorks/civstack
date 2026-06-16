@@ -1,6 +1,6 @@
 ---
-name: standards-comparison-agent
-description: AI-personnel skill: **Standards comparison agent** for the Science operating system. This agent compares methods and results against standards. Use this skill whenever a task in this domain needs this work (compares methods and results against standards) — even if the user describes the task plainly rather than naming the role. Operates under a human standards engineer and stops at the sector's accountability boundary.
+name: "standards-comparison-agent"
+description: "AI-personnel skill: **Standards comparison agent** for the Science operating system. This agent compares methods and results against standards. Use this skill whenever a task in this domain needs this work (compares methods and results against standards) — even if the user describes the task plainly rather than naming the role. Operates under a human standards engineer and stops at the sector's accountability boundary."
 ---
 
 # Standards comparison agent

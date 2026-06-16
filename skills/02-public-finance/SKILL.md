@@ -1,6 +1,6 @@
 ---
-name: os-02-public-finance
-description: Operating-system orchestrator skill for **Public Finance, Tax, Treasury, and Procurement** (national operating system #2). Use this skill whenever work touches this sector's mission — Collect revenue, allocate budgets, buy public goods, manage debt, and protect public money — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-02-public-finance"
+description: "Operating-system orchestrator skill for **Public Finance, Tax, Treasury, and Procurement** (national operating system #2). Use this skill whenever work touches this sector's mission — Collect revenue, allocate budgets, buy public goods, manage debt, and protect public money — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 02 — Public Finance, Tax, Treasury, and Procurement

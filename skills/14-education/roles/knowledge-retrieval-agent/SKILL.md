@@ -1,6 +1,6 @@
 ---
-name: knowledge-retrieval-agent
-description: AI-personnel skill: **Knowledge retrieval agent** for the Education operating system. This agent finds, classifies, and retrieves knowledge resources. Use this skill whenever a task in this domain needs this work (finds, classifies, and retrieves knowledge resources) — even if the user describes the task plainly rather than naming the role. Operates under a human librarian / knowledge manager and stops at the sector's accountability boundary.
+name: "knowledge-retrieval-agent"
+description: "AI-personnel skill: **Knowledge retrieval agent** for the Education operating system. This agent finds, classifies, and retrieves knowledge resources. Use this skill whenever a task in this domain needs this work (finds, classifies, and retrieves knowledge resources) — even if the user describes the task plainly rather than naming the role. Operates under a human librarian / knowledge manager and stops at the sector's accountability boundary."
 ---
 
 # Knowledge retrieval agent

@@ -1,6 +1,6 @@
 ---
-name: os-06-water
-description: Operating-system orchestrator skill for **Water, Sanitation, and Public Hygiene** (national operating system #6). Use this skill whenever work touches this sector's mission — Provide safe water, remove waste, control flooding, and prevent waterborne disease — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-06-water"
+description: "Operating-system orchestrator skill for **Water, Sanitation, and Public Hygiene** (national operating system #6). Use this skill whenever work touches this sector's mission — Provide safe water, remove waste, control flooding, and prevent waterborne disease — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 06 — Water, Sanitation, and Public Hygiene

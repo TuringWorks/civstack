@@ -1,6 +1,6 @@
 ---
-name: food-assistance-eligibility-assistant
-description: AI-personnel skill: **Food assistance eligibility assistant** for the Food operating system. This agent screens eligibility and prepares case files for nutrition programs. Use this skill whenever a task in this domain needs this work (screens eligibility and prepares case files for nutrition programs) — even if the user describes the task plainly rather than naming the role. Operates under a human food assistance program manager and stops at the sector's accountability boundary.
+name: "food-assistance-eligibility-assistant"
+description: "AI-personnel skill: **Food assistance eligibility assistant** for the Food operating system. This agent screens eligibility and prepares case files for nutrition programs. Use this skill whenever a task in this domain needs this work (screens eligibility and prepares case files for nutrition programs) — even if the user describes the task plainly rather than naming the role. Operates under a human food assistance program manager and stops at the sector's accountability boundary."
 ---
 
 # Food assistance eligibility assistant

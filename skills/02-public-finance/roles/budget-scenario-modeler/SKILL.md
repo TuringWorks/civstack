@@ -1,6 +1,6 @@
 ---
-name: budget-scenario-modeler
-description: AI-personnel skill: **Budget scenario modeler** for the Public Finance operating system. This agent models budget tradeoffs, distributional impacts, and multi-year scenarios. Use this skill whenever a task in this domain needs this work (models budget tradeoffs, distributional impacts, and multi-year scenarios) — even if the user describes the task plainly rather than naming the role. Operates under a human budget analyst and stops at the sector's accountability boundary.
+name: "budget-scenario-modeler"
+description: "AI-personnel skill: **Budget scenario modeler** for the Public Finance operating system. This agent models budget tradeoffs, distributional impacts, and multi-year scenarios. Use this skill whenever a task in this domain needs this work (models budget tradeoffs, distributional impacts, and multi-year scenarios) — even if the user describes the task plainly rather than naming the role. Operates under a human budget analyst and stops at the sector's accountability boundary."
 ---
 
 # Budget scenario modeler

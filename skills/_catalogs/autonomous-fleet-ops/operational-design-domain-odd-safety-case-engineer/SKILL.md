@@ -1,6 +1,6 @@
 ---
-name: fleetops-operational-design-domain-odd-safety-case-engineer
-description: Autonomous-fleet operations role: **Operational Design Domain (ODD) & safety-case engineer** (Human engineering role (AI/robotics)) — defines the Operational Design Domain and assembles the safety case that gates where and how an autonomous fleet may operate. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a autonomy safety lead.
+name: "fleetops-operational-design-domain-odd-safety-case-engineer"
+description: "Autonomous-fleet operations role: **Operational Design Domain (ODD) & safety-case engineer** (Human engineering role (AI/robotics)) — defines the Operational Design Domain and assembles the safety case that gates where and how an autonomous fleet may operate. Part of the operations layer that runs non-humanoid autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. Works under a autonomy safety lead."
 ---
 
 # Autonomous-Fleet Ops — Operational Design Domain (ODD) & safety-case engineer

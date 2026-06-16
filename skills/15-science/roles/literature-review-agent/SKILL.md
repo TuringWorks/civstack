@@ -1,6 +1,6 @@
 ---
-name: literature-review-agent
-description: AI-personnel skill: **Literature review agent** for the Science operating system. This agent surveys, synthesizes, and cites the literature. Use this skill whenever a task in this domain needs this work (surveys, synthesizes, and cites the literature) — even if the user describes the task plainly rather than naming the role. Operates under a human principal investigator and stops at the sector's accountability boundary.
+name: "literature-review-agent"
+description: "AI-personnel skill: **Literature review agent** for the Science operating system. This agent surveys, synthesizes, and cites the literature. Use this skill whenever a task in this domain needs this work (surveys, synthesizes, and cites the literature) — even if the user describes the task plainly rather than naming the role. Operates under a human principal investigator and stops at the sector's accountability boundary."
 ---
 
 # Literature review agent

@@ -1,6 +1,6 @@
 ---
-name: evidence-chain-of-custody-assistant
-description: AI-personnel skill: **Evidence chain-of-custody assistant** for the Public Safety operating system. This agent tracks evidence handling and flags integrity gaps. Use this skill whenever a task in this domain needs this work (tracks evidence handling and flags integrity gaps) — even if the user describes the task plainly rather than naming the role. Operates under a human forensic technician and stops at the sector's accountability boundary.
+name: "evidence-chain-of-custody-assistant"
+description: "AI-personnel skill: **Evidence chain-of-custody assistant** for the Public Safety operating system. This agent tracks evidence handling and flags integrity gaps. Use this skill whenever a task in this domain needs this work (tracks evidence handling and flags integrity gaps) — even if the user describes the task plainly rather than naming the role. Operates under a human forensic technician and stops at the sector's accountability boundary."
 ---
 
 # Evidence chain-of-custody assistant

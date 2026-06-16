@@ -1,6 +1,6 @@
 ---
-name: os-07-energy
-description: Operating-system orchestrator skill for **Energy, Utilities, and Grid Operations** (national operating system #7). Use this skill whenever work touches this sector's mission — Produce, store, transmit, distribute, and balance energy safely and affordably — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-07-energy"
+description: "Operating-system orchestrator skill for **Energy, Utilities, and Grid Operations** (national operating system #7). Use this skill whenever work touches this sector's mission — Produce, store, transmit, distribute, and balance energy safely and affordably — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 07 — Energy, Utilities, and Grid Operations

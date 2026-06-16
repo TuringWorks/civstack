@@ -1,6 +1,6 @@
 ---
-name: catalog-cyber-triage-agent
-description: Cross-economy AI-personnel role: **Cyber triage agent** — classify alerts, enrich incidents, propose response. A reusable agent pattern that appears across many operating systems under a human security analyst. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need.
+name: "catalog-cyber-triage-agent"
+description: "Cross-economy AI-personnel role: **Cyber triage agent** — classify alerts, enrich incidents, propose response. A reusable agent pattern that appears across many operating systems under a human security analyst. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need."
 ---
 
 # AI Personnel Catalog — Cyber triage agent

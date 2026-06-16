@@ -1,6 +1,6 @@
 ---
-name: catalog-data-quality-agent
-description: Cross-economy AI-personnel role: **Data quality agent** — detect anomalies, reconcile records, maintain pipelines. A reusable agent pattern that appears across many operating systems under a human data steward. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need.
+name: "catalog-data-quality-agent"
+description: "Cross-economy AI-personnel role: **Data quality agent** — detect anomalies, reconcile records, maintain pipelines. A reusable agent pattern that appears across many operating systems under a human data steward. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need."
 ---
 
 # AI Personnel Catalog — Data quality agent

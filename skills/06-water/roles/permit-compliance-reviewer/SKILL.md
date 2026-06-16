@@ -1,6 +1,6 @@
 ---
-name: permit-compliance-reviewer
-description: AI-personnel skill: **Permit compliance reviewer** for the Water operating system. This agent checks discharge and abstraction against permit limits. Use this skill whenever a task in this domain needs this work (checks discharge and abstraction against permit limits) — even if the user describes the task plainly rather than naming the role. Operates under a human environmental compliance specialist and stops at the sector's accountability boundary.
+name: "permit-compliance-reviewer"
+description: "AI-personnel skill: **Permit compliance reviewer** for the Water operating system. This agent checks discharge and abstraction against permit limits. Use this skill whenever a task in this domain needs this work (checks discharge and abstraction against permit limits) — even if the user describes the task plainly rather than naming the role. Operates under a human environmental compliance specialist and stops at the sector's accountability boundary."
 ---
 
 # Permit compliance reviewer

@@ -1,6 +1,6 @@
 ---
-name: resource-allocation-agent
-description: AI-personnel skill: **Resource allocation agent** for the Public Safety operating system. This agent matches shelters, supplies, and crews to needs. Use this skill whenever a task in this domain needs this work (matches shelters, supplies, and crews to needs) — even if the user describes the task plainly rather than naming the role. Operates under a human logistics chief and stops at the sector's accountability boundary.
+name: "resource-allocation-agent"
+description: "AI-personnel skill: **Resource allocation agent** for the Public Safety operating system. This agent matches shelters, supplies, and crews to needs. Use this skill whenever a task in this domain needs this work (matches shelters, supplies, and crews to needs) — even if the user describes the task plainly rather than naming the role. Operates under a human logistics chief and stops at the sector's accountability boundary."
 ---
 
 # Resource allocation agent

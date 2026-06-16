@@ -1,6 +1,6 @@
 ---
-name: robot-farm-greenhouse-helper
-description: Humanoid/mobile robot role: **Farm/greenhouse helper** — harvest, sort, pack, inspect. Best deployed in: greenhouses, controlled farms. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments.
+name: "robot-farm-greenhouse-helper"
+description: "Humanoid/mobile robot role: **Farm/greenhouse helper** — harvest, sort, pack, inspect. Best deployed in: greenhouses, controlled farms. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments."
 ---
 
 # Humanoid Robot Catalog — Farm/greenhouse helper

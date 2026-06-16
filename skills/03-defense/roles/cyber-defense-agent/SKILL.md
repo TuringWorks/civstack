@@ -1,6 +1,6 @@
 ---
-name: cyber-defense-agent
-description: AI-personnel skill: **Cyber defense agent** for the Defense operating system. This agent performs continuous monitoring and incident-response assistance. Use this skill whenever a task in this domain needs this work (performs continuous monitoring and incident-response assistance) — even if the user describes the task plainly rather than naming the role. Operates under a human cyber operator and stops at the sector's accountability boundary.
+name: "cyber-defense-agent"
+description: "AI-personnel skill: **Cyber defense agent** for the Defense operating system. This agent performs continuous monitoring and incident-response assistance. Use this skill whenever a task in this domain needs this work (performs continuous monitoring and incident-response assistance) — even if the user describes the task plainly rather than naming the role. Operates under a human cyber operator and stops at the sector's accountability boundary."
 ---
 
 # Cyber defense agent

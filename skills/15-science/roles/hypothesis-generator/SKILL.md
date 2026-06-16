@@ -1,6 +1,6 @@
 ---
-name: hypothesis-generator
-description: AI-personnel skill: **Hypothesis generator** for the Science operating system. This agent proposes testable hypotheses from evidence. Use this skill whenever a task in this domain needs this work (proposes testable hypotheses from evidence) — even if the user describes the task plainly rather than naming the role. Operates under a human research scientist and stops at the sector's accountability boundary.
+name: "hypothesis-generator"
+description: "AI-personnel skill: **Hypothesis generator** for the Science operating system. This agent proposes testable hypotheses from evidence. Use this skill whenever a task in this domain needs this work (proposes testable hypotheses from evidence) — even if the user describes the task plainly rather than naming the role. Operates under a human research scientist and stops at the sector's accountability boundary."
 ---
 
 # Hypothesis generator

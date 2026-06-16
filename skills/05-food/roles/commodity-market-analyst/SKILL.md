@@ -1,6 +1,6 @@
 ---
-name: commodity-market-analyst
-description: AI-personnel skill: **Commodity market analyst** for the Food operating system. This agent analyzes prices, basis, and supply-demand for merchandising. Use this skill whenever a task in this domain needs this work (analyzes prices, basis, and supply-demand for merchandising) — even if the user describes the task plainly rather than naming the role. Operates under a human grain merchandiser and stops at the sector's accountability boundary.
+name: "commodity-market-analyst"
+description: "AI-personnel skill: **Commodity market analyst** for the Food operating system. This agent analyzes prices, basis, and supply-demand for merchandising. Use this skill whenever a task in this domain needs this work (analyzes prices, basis, and supply-demand for merchandising) — even if the user describes the task plainly rather than naming the role. Operates under a human grain merchandiser and stops at the sector's accountability boundary."
 ---
 
 # Commodity market analyst

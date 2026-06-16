@@ -1,6 +1,6 @@
 ---
-name: compliance-agent
-description: AI-personnel skill: **Compliance agent** for the Mining operating system. This agent tracks environmental and safety compliance obligations. Use this skill whenever a task in this domain needs this work (tracks environmental and safety compliance obligations) — even if the user describes the task plainly rather than naming the role. Operates under a human EHS manager and stops at the sector's accountability boundary.
+name: "compliance-agent"
+description: "AI-personnel skill: **Compliance agent** for the Mining operating system. This agent tracks environmental and safety compliance obligations. Use this skill whenever a task in this domain needs this work (tracks environmental and safety compliance obligations) — even if the user describes the task plainly rather than naming the role. Operates under a human EHS manager and stops at the sector's accountability boundary."
 ---
 
 # Compliance agent

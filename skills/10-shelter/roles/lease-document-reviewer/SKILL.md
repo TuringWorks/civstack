@@ -1,6 +1,6 @@
 ---
-name: lease-document-reviewer
-description: AI-personnel skill: **Lease/document reviewer** for the Shelter operating system. This agent reviews leases and property documents for terms and risk. Use this skill whenever a task in this domain needs this work (reviews leases and property documents for terms and risk) — even if the user describes the task plainly rather than naming the role. Operates under a human property manager and stops at the sector's accountability boundary.
+name: "lease-document-reviewer"
+description: "AI-personnel skill: **Lease/document reviewer** for the Shelter operating system. This agent reviews leases and property documents for terms and risk. Use this skill whenever a task in this domain needs this work (reviews leases and property documents for terms and risk) — even if the user describes the task plainly rather than naming the role. Operates under a human property manager and stops at the sector's accountability boundary."
 ---
 
 # Lease/document reviewer

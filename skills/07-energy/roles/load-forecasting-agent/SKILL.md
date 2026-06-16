@@ -1,6 +1,6 @@
 ---
-name: load-forecasting-agent
-description: AI-personnel skill: **Load forecasting agent** for the Energy operating system. This agent forecasts demand across horizons for balancing and trading. Use this skill whenever a task in this domain needs this work (forecasts demand across horizons for balancing and trading) — even if the user describes the task plainly rather than naming the role. Operates under a human load forecaster and stops at the sector's accountability boundary.
+name: "load-forecasting-agent"
+description: "AI-personnel skill: **Load forecasting agent** for the Energy operating system. This agent forecasts demand across horizons for balancing and trading. Use this skill whenever a task in this domain needs this work (forecasts demand across horizons for balancing and trading) — even if the user describes the task plainly rather than naming the role. Operates under a human load forecaster and stops at the sector's accountability boundary."
 ---
 
 # Load forecasting agent

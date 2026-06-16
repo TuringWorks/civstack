@@ -1,6 +1,6 @@
 ---
-name: robot-retail-hospitality-helper
-description: Humanoid/mobile robot role: **Retail/hospitality helper** — retrieve items, deliver orders, guide visitors. Best deployed in: stores, hotels, restaurants. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments.
+name: "robot-retail-hospitality-helper"
+description: "Humanoid/mobile robot role: **Retail/hospitality helper** — retrieve items, deliver orders, guide visitors. Best deployed in: stores, hotels, restaurants. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments."
 ---
 
 # Humanoid Robot Catalog — Retail/hospitality helper

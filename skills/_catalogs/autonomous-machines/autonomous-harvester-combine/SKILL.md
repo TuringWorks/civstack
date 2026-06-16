@@ -1,6 +1,6 @@
 ---
-name: machine-autonomous-harvester-combine
-description: Non-humanoid autonomous machine: **Autonomous harvester / combine** — harvest grain, forage, or specialty crops and map yield as it goes. Best in: broadacre and specialty farms. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls over a perception-to-control stack (trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform anywhere this physical job is needed, even if the user only describes the underlying need.
+name: "machine-autonomous-harvester-combine"
+description: "Non-humanoid autonomous machine: **Autonomous harvester / combine** — harvest grain, forage, or specialty crops and map yield as it goes. Best in: broadacre and specialty farms. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls over a perception-to-control stack (trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform anywhere this physical job is needed, even if the user only describes the underlying need."
 ---
 
 # Autonomous Machine — Autonomous harvester / combine

@@ -1,6 +1,6 @@
 ---
-name: os-05-food
-description: Operating-system orchestrator skill for **Food, Agriculture, Fisheries, and Nutrition** (national operating system #5). Use this skill whenever work touches this sector's mission — Produce, inspect, distribute, and stabilize safe food — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-05-food"
+description: "Operating-system orchestrator skill for **Food, Agriculture, Fisheries, and Nutrition** (national operating system #5). Use this skill whenever work touches this sector's mission — Produce, inspect, distribute, and stabilize safe food — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 05 — Food, Agriculture, Fisheries, and Nutrition

@@ -1,6 +1,6 @@
 ---
-name: scenario-generation-agent
-description: AI-personnel skill: **Scenario generation agent** for the Resilience operating system. This agent generates and stress-tests future scenarios. Use this skill whenever a task in this domain needs this work (generates and stress-tests future scenarios) — even if the user describes the task plainly rather than naming the role. Operates under a human scenario planner and stops at the sector's accountability boundary.
+name: "scenario-generation-agent"
+description: "AI-personnel skill: **Scenario generation agent** for the Resilience operating system. This agent generates and stress-tests future scenarios. Use this skill whenever a task in this domain needs this work (generates and stress-tests future scenarios) — even if the user describes the task plainly rather than naming the role. Operates under a human scenario planner and stops at the sector's accountability boundary."
 ---
 
 # Scenario generation agent

@@ -1,6 +1,6 @@
 ---
-name: os-11-transportation
-description: Operating-system orchestrator skill for **Transportation, Logistics, Postal, and Mobility** (national operating system #11). Use this skill whenever work touches this sector's mission — Move people and goods through networks safely, predictably, and economically — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-11-transportation"
+description: "Operating-system orchestrator skill for **Transportation, Logistics, Postal, and Mobility** (national operating system #11). Use this skill whenever work touches this sector's mission — Move people and goods through networks safely, predictably, and economically — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 11 — Transportation, Logistics, Postal, and Mobility

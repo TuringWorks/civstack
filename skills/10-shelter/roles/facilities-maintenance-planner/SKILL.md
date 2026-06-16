@@ -1,6 +1,6 @@
 ---
-name: facilities-maintenance-planner
-description: AI-personnel skill: **Facilities maintenance planner** for the Shelter operating system. This agent plans preventive maintenance across a building portfolio. Use this skill whenever a task in this domain needs this work (plans preventive maintenance across a building portfolio) — even if the user describes the task plainly rather than naming the role. Operates under a human facilities manager and stops at the sector's accountability boundary.
+name: "facilities-maintenance-planner"
+description: "AI-personnel skill: **Facilities maintenance planner** for the Shelter operating system. This agent plans preventive maintenance across a building portfolio. Use this skill whenever a task in this domain needs this work (plans preventive maintenance across a building portfolio) — even if the user describes the task plainly rather than naming the role. Operates under a human facilities manager and stops at the sector's accountability boundary."
 ---
 
 # Facilities maintenance planner

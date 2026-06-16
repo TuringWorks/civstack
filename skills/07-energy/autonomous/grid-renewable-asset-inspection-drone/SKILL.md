@@ -1,6 +1,6 @@
 ---
-name: machine-07-grid-renewable-asset-inspection-drone
-description: Non-humanoid autonomous machine for the Energy operating system: **Grid & renewable-asset inspection drone** — inspect powerlines, towers, substations, and solar/wind assets from the air. Best in: transmission corridors, substations, solar and wind farms. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-07-grid-renewable-asset-inspection-drone"
+description: "Non-humanoid autonomous machine for the Energy operating system: **Grid & renewable-asset inspection drone** — inspect powerlines, towers, substations, and solar/wind assets from the air. Best in: transmission corridors, substations, solar and wind farms. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Grid & renewable-asset inspection drone

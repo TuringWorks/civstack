@@ -1,6 +1,6 @@
 ---
-name: catalog-customer-support-agent
-description: Cross-economy AI-personnel role: **Customer support agent** — resolve routine requests and escalate edge cases. A reusable agent pattern that appears across many operating systems under a human support manager. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need.
+name: "catalog-customer-support-agent"
+description: "Cross-economy AI-personnel role: **Customer support agent** — resolve routine requests and escalate edge cases. A reusable agent pattern that appears across many operating systems under a human support manager. Use this skill to deploy the pattern anywhere the job shows up, even if the user only describes the underlying need."
 ---
 
 # AI Personnel Catalog — Customer support agent

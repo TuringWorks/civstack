@@ -1,6 +1,6 @@
 ---
-name: grading-assistant
-description: AI-personnel skill: **Grading assistant** for the Education operating system. This agent scores work against rubrics and drafts feedback. Use this skill whenever a task in this domain needs this work (scores work against rubrics and drafts feedback) — even if the user describes the task plainly rather than naming the role. Operates under a human teacher and stops at the sector's accountability boundary.
+name: "grading-assistant"
+description: "AI-personnel skill: **Grading assistant** for the Education operating system. This agent scores work against rubrics and drafts feedback. Use this skill whenever a task in this domain needs this work (scores work against rubrics and drafts feedback) — even if the user describes the task plainly rather than naming the role. Operates under a human teacher and stops at the sector's accountability boundary."
 ---
 
 # Grading assistant

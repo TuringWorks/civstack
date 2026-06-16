@@ -1,6 +1,6 @@
 ---
-name: inventory-planning-agent
-description: AI-personnel skill: **Inventory planning agent** for the Commerce operating system. This agent forecasts demand and plans replenishment. Use this skill whenever a task in this domain needs this work (forecasts demand and plans replenishment) — even if the user describes the task plainly rather than naming the role. Operates under a human buyer / merchandiser and stops at the sector's accountability boundary.
+name: "inventory-planning-agent"
+description: "AI-personnel skill: **Inventory planning agent** for the Commerce operating system. This agent forecasts demand and plans replenishment. Use this skill whenever a task in this domain needs this work (forecasts demand and plans replenishment) — even if the user describes the task plainly rather than naming the role. Operates under a human buyer / merchandiser and stops at the sector's accountability boundary."
 ---
 
 # Inventory planning agent

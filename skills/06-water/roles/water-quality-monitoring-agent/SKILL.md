@@ -1,6 +1,6 @@
 ---
-name: water-quality-monitoring-agent
-description: AI-personnel skill: **Water quality monitoring agent** for the Water operating system. This agent monitors sensor and lab data and flags contamination signals. Use this skill whenever a task in this domain needs this work (monitors sensor and lab data and flags contamination signals) — even if the user describes the task plainly rather than naming the role. Operates under a human treatment operator and stops at the sector's accountability boundary.
+name: "water-quality-monitoring-agent"
+description: "AI-personnel skill: **Water quality monitoring agent** for the Water operating system. This agent monitors sensor and lab data and flags contamination signals. Use this skill whenever a task in this domain needs this work (monitors sensor and lab data and flags contamination signals) — even if the user describes the task plainly rather than naming the role. Operates under a human treatment operator and stops at the sector's accountability boundary."
 ---
 
 # Water quality monitoring agent

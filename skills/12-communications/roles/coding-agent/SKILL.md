@@ -1,6 +1,6 @@
 ---
-name: coding-agent
-description: AI-personnel skill: **Coding agent** for the Communications operating system. This agent builds, tests, refactors, and documents software under review. Use this skill whenever a task in this domain needs this work (builds, tests, refactors, and documents software under review) — even if the user describes the task plainly rather than naming the role. Operates under a human engineer / tech lead and stops at the sector's accountability boundary.
+name: "coding-agent"
+description: "AI-personnel skill: **Coding agent** for the Communications operating system. This agent builds, tests, refactors, and documents software under review. Use this skill whenever a task in this domain needs this work (builds, tests, refactors, and documents software under review) — even if the user describes the task plainly rather than naming the role. Operates under a human engineer / tech lead and stops at the sector's accountability boundary."
 ---
 
 # Coding agent

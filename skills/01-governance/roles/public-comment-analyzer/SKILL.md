@@ -1,6 +1,6 @@
 ---
-name: public-comment-analyzer
-description: AI-personnel skill: **Public comment analyzer** for the Governance operating system. This agent clusters citizen comments, extracts concerns, and surfaces representative quotes. Use this skill whenever a task in this domain needs this work (clusters citizen comments, extracts concerns, and surfaces representative quotes) — even if the user describes the task plainly rather than naming the role. Operates under a human rulemaking officer and stops at the sector's accountability boundary.
+name: "public-comment-analyzer"
+description: "AI-personnel skill: **Public comment analyzer** for the Governance operating system. This agent clusters citizen comments, extracts concerns, and surfaces representative quotes. Use this skill whenever a task in this domain needs this work (clusters citizen comments, extracts concerns, and surfaces representative quotes) — even if the user describes the task plainly rather than naming the role. Operates under a human rulemaking officer and stops at the sector's accountability boundary."
 ---
 
 # Public comment analyzer

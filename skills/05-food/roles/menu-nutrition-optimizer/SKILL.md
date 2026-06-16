@@ -1,6 +1,6 @@
 ---
-name: menu-nutrition-optimizer
-description: AI-personnel skill: **Menu nutrition optimizer** for the Food operating system. This agent optimizes menus for nutrition, cost, and dietary needs. Use this skill whenever a task in this domain needs this work (optimizes menus for nutrition, cost, and dietary needs) — even if the user describes the task plainly rather than naming the role. Operates under a human dietitian and stops at the sector's accountability boundary.
+name: "menu-nutrition-optimizer"
+description: "AI-personnel skill: **Menu nutrition optimizer** for the Food operating system. This agent optimizes menus for nutrition, cost, and dietary needs. Use this skill whenever a task in this domain needs this work (optimizes menus for nutrition, cost, and dietary needs) — even if the user describes the task plainly rather than naming the role. Operates under a human dietitian and stops at the sector's accountability boundary."
 ---
 
 # Menu nutrition optimizer

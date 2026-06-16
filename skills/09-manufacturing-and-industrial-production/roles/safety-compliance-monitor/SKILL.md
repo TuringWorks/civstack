@@ -1,6 +1,6 @@
 ---
-name: safety-compliance-monitor
-description: AI-personnel skill: **Safety compliance monitor** for the Manufacturing and Industrial Production operating system. This agent monitors machine-safety and lockout compliance. Use this skill whenever a task in this domain needs this work (monitors machine-safety and lockout compliance) — even if the user describes the task plainly rather than naming the role. Operates under a human plant safety manager and stops at the sector's accountability boundary.
+name: "safety-compliance-monitor"
+description: "AI-personnel skill: **Safety compliance monitor** for the Manufacturing and Industrial Production operating system. This agent monitors machine-safety and lockout compliance. Use this skill whenever a task in this domain needs this work (monitors machine-safety and lockout compliance) — even if the user describes the task plainly rather than naming the role. Operates under a human plant safety manager and stops at the sector's accountability boundary."
 ---
 
 # Safety compliance monitor

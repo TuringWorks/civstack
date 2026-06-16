@@ -1,6 +1,6 @@
 ---
-name: financial-planning-copilot
-description: AI-personnel skill: **Financial planning copilot** for the Finance operating system. This agent models plans within suitability constraints. Use this skill whenever a task in this domain needs this work (models plans within suitability constraints) — even if the user describes the task plainly rather than naming the role. Operates under a human wealth advisor and stops at the sector's accountability boundary.
+name: "financial-planning-copilot"
+description: "AI-personnel skill: **Financial planning copilot** for the Finance operating system. This agent models plans within suitability constraints. Use this skill whenever a task in this domain needs this work (models plans within suitability constraints) — even if the user describes the task plainly rather than naming the role. Operates under a human wealth advisor and stops at the sector's accountability boundary."
 ---
 
 # Financial planning copilot

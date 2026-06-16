@@ -1,6 +1,6 @@
 ---
-name: machine-08-autonomous-blast-hole-drill
-description: Non-humanoid autonomous machine for the Mining operating system: **Autonomous blast-hole drill** — drill blast-holes to a pattern precisely and repeatably. Best in: open-pit benches. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-08-autonomous-blast-hole-drill"
+description: "Non-humanoid autonomous machine for the Mining operating system: **Autonomous blast-hole drill** — drill blast-holes to a pattern precisely and repeatably. Best in: open-pit benches. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Autonomous blast-hole drill

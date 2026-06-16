@@ -1,6 +1,6 @@
 ---
-name: archetype-builder
-description: Cross-cutting role archetype: **Builder** — create systems, assets, products, facilities, software. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: create systems, assets, products, facilities, software.
+name: "archetype-builder"
+description: "Cross-cutting role archetype: **Builder** — create systems, assets, products, facilities, software. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: create systems, assets, products, facilities, software."
 ---
 
 # Archetype — Builder

@@ -1,6 +1,6 @@
 ---
-name: audit-sampling-agent
-description: AI-personnel skill: **Audit sampling agent** for the Public Finance operating system. This agent selects statistically defensible samples and assembles evidence. Use this skill whenever a task in this domain needs this work (selects statistically defensible samples and assembles evidence) — even if the user describes the task plainly rather than naming the role. Operates under a human auditor and stops at the sector's accountability boundary.
+name: "audit-sampling-agent"
+description: "AI-personnel skill: **Audit sampling agent** for the Public Finance operating system. This agent selects statistically defensible samples and assembles evidence. Use this skill whenever a task in this domain needs this work (selects statistically defensible samples and assembles evidence) — even if the user describes the task plainly rather than naming the role. Operates under a human auditor and stops at the sector's accountability boundary."
 ---
 
 # Audit sampling agent

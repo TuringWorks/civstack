@@ -1,6 +1,6 @@
 ---
-name: sanctions-screening-agent
-description: AI-personnel skill: **Sanctions-screening agent** for the Defense operating system. This agent screens parties and shipments against sanctions and export-control lists. Use this skill whenever a task in this domain needs this work (screens parties and shipments against sanctions and export-control lists) — even if the user describes the task plainly rather than naming the role. Operates under a human export-control analyst and stops at the sector's accountability boundary.
+name: "sanctions-screening-agent"
+description: "AI-personnel skill: **Sanctions-screening agent** for the Defense operating system. This agent screens parties and shipments against sanctions and export-control lists. Use this skill whenever a task in this domain needs this work (screens parties and shipments against sanctions and export-control lists) — even if the user describes the task plainly rather than naming the role. Operates under a human export-control analyst and stops at the sector's accountability boundary."
 ---
 
 # Sanctions-screening agent

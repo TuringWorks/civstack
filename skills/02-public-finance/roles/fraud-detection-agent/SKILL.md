@@ -1,6 +1,6 @@
 ---
-name: fraud-detection-agent
-description: AI-personnel skill: **Fraud detection agent** for the Public Finance operating system. This agent detects procurement and benefits fraud signals for investigation. Use this skill whenever a task in this domain needs this work (detects procurement and benefits fraud signals for investigation) — even if the user describes the task plainly rather than naming the role. Operates under a human inspector general investigator and stops at the sector's accountability boundary.
+name: "fraud-detection-agent"
+description: "AI-personnel skill: **Fraud detection agent** for the Public Finance operating system. This agent detects procurement and benefits fraud signals for investigation. Use this skill whenever a task in this domain needs this work (detects procurement and benefits fraud signals for investigation) — even if the user describes the task plainly rather than naming the role. Operates under a human inspector general investigator and stops at the sector's accountability boundary."
 ---
 
 # Fraud detection agent

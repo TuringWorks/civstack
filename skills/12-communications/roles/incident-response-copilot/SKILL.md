@@ -1,6 +1,6 @@
 ---
-name: incident-response-copilot
-description: AI-personnel skill: **Incident response copilot** for the Communications operating system. This agent assembles incident context and proposes response steps. Use this skill whenever a task in this domain needs this work (assembles incident context and proposes response steps) — even if the user describes the task plainly rather than naming the role. Operates under a human incident responder and stops at the sector's accountability boundary.
+name: "incident-response-copilot"
+description: "AI-personnel skill: **Incident response copilot** for the Communications operating system. This agent assembles incident context and proposes response steps. Use this skill whenever a task in this domain needs this work (assembles incident context and proposes response steps) — even if the user describes the task plainly rather than naming the role. Operates under a human incident responder and stops at the sector's accountability boundary."
 ---
 
 # Incident response copilot

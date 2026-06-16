@@ -1,6 +1,6 @@
 ---
-name: family-scheduler
-description: AI-personnel skill: **Family scheduler** for the Household operating system. This agent coordinates household calendars, forms, and logistics. Use this skill whenever a task in this domain needs this work (coordinates household calendars, forms, and logistics) — even if the user describes the task plainly rather than naming the role. Operates under a human individual / family and stops at the sector's accountability boundary.
+name: "family-scheduler"
+description: "AI-personnel skill: **Family scheduler** for the Household operating system. This agent coordinates household calendars, forms, and logistics. Use this skill whenever a task in this domain needs this work (coordinates household calendars, forms, and logistics) — even if the user describes the task plainly rather than naming the role. Operates under a human individual / family and stops at the sector's accountability boundary."
 ---
 
 # Family scheduler

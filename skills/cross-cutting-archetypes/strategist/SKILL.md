@@ -1,6 +1,6 @@
 ---
-name: archetype-strategist
-description: Cross-cutting role archetype: **Strategist** — set direction under uncertainty. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: set direction under uncertainty.
+name: "archetype-strategist"
+description: "Cross-cutting role archetype: **Strategist** — set direction under uncertainty. This pattern recurs in nearly every operating system. Use this skill to understand the shape of the role, its human/AI/robot division of labor, and how to instantiate it inside any sector. Trigger whenever a task fits the archetype's job: set direction under uncertainty."
 ---
 
 # Archetype — Strategist

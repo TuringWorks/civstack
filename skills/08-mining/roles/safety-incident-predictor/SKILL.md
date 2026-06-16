@@ -1,6 +1,6 @@
 ---
-name: safety-incident-predictor
-description: AI-personnel skill: **Safety incident predictor** for the Mining operating system. This agent predicts safety incidents from operations and near-miss data. Use this skill whenever a task in this domain needs this work (predicts safety incidents from operations and near-miss data) — even if the user describes the task plainly rather than naming the role. Operates under a human mine/EHS safety manager and stops at the sector's accountability boundary.
+name: "safety-incident-predictor"
+description: "AI-personnel skill: **Safety incident predictor** for the Mining operating system. This agent predicts safety incidents from operations and near-miss data. Use this skill whenever a task in this domain needs this work (predicts safety incidents from operations and near-miss data) — even if the user describes the task plainly rather than naming the role. Operates under a human mine/EHS safety manager and stops at the sector's accountability boundary."
 ---
 
 # Safety incident predictor

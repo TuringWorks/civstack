@@ -1,6 +1,6 @@
 ---
-name: robot-05-field-crop-worker-robot
-description: Humanoid/embodied robot role for the Food operating system: **Field crop worker robot** — plant, transplant, weed, thin, scout, and selectively hand-harvest row and field crops. Best in: open fields, row crops, smallholder and market-garden farms. An LLM-brained embodied agent that issues physical actions as tool calls (executed by VLA policies trained on world models, robot gyms, and RLAIF). Use this skill to plan or operate this physical farm/field role; trigger whenever the task needs this hands-on work, even if the user only describes the underlying need.
+name: "robot-05-field-crop-worker-robot"
+description: "Humanoid/embodied robot role for the Food operating system: **Field crop worker robot** — plant, transplant, weed, thin, scout, and selectively hand-harvest row and field crops. Best in: open fields, row crops, smallholder and market-garden farms. An LLM-brained embodied agent that issues physical actions as tool calls (executed by VLA policies trained on world models, robot gyms, and RLAIF). Use this skill to plan or operate this physical farm/field role; trigger whenever the task needs this hands-on work, even if the user only describes the underlying need."
 ---
 
 # Field crop worker robot

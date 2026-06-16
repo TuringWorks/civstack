@@ -1,6 +1,6 @@
 ---
-name: robot-lab-assistant
-description: Humanoid/mobile robot role: **Lab assistant** — move samples, load instruments, sanitize benches. Best deployed in: labs, pharma, hospitals. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments.
+name: "robot-lab-assistant"
+description: "Humanoid/mobile robot role: **Lab assistant** — move samples, load instruments, sanitize benches. Best deployed in: labs, pharma, hospitals. Use this skill to plan or operate this physical role anywhere the world is already built for human bodies. Trigger when a task needs physical fetch/carry/inspect/assemble work in those environments."
 ---
 
 # Humanoid Robot Catalog — Lab assistant

@@ -1,6 +1,6 @@
 ---
-name: patent-landscape-analyst
-description: AI-personnel skill: **Patent landscape analyst** for the Science operating system. This agent maps prior art and patent landscapes. Use this skill whenever a task in this domain needs this work (maps prior art and patent landscapes) — even if the user describes the task plainly rather than naming the role. Operates under a human technology transfer officer and stops at the sector's accountability boundary.
+name: "patent-landscape-analyst"
+description: "AI-personnel skill: **Patent landscape analyst** for the Science operating system. This agent maps prior art and patent landscapes. Use this skill whenever a task in this domain needs this work (maps prior art and patent landscapes) — even if the user describes the task plainly rather than naming the role. Operates under a human technology transfer officer and stops at the sector's accountability boundary."
 ---
 
 # Patent landscape analyst

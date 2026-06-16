@@ -1,6 +1,6 @@
 ---
-name: embodied-robot-fleet-safety-officer
-description: Embodied-AI stack role: **Robot fleet safety officer** (Human oversight role (accountability boundary)) — owns the verified low-level safety envelope, the override authority, and the deployment gates for the fleet. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a site / operations leadership (accountable human).
+name: "embodied-robot-fleet-safety-officer"
+description: "Embodied-AI stack role: **Robot fleet safety officer** (Human oversight role (accountability boundary)) — owns the verified low-level safety envelope, the override authority, and the deployment gates for the fleet. Part of the LLM-brained robot control stack (brain → tool calls → VLA policies → world models / robot gyms / RLAIF → verified safety layer). Use this skill when building, training, operating, or governing humanoid/mobile robots, even if the user only describes the underlying need. Works under a site / operations leadership (accountable human)."
 ---
 
 # Embodied-AI Stack — Robot fleet safety officer

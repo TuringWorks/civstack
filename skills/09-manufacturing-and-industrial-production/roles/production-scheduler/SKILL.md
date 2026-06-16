@@ -1,6 +1,6 @@
 ---
-name: production-scheduler
-description: AI-personnel skill: **Production scheduler** for the Manufacturing and Industrial Production operating system. This agent schedules production against demand, capacity, and materials. Use this skill whenever a task in this domain needs this work (schedules production against demand, capacity, and materials) — even if the user describes the task plainly rather than naming the role. Operates under a human production supervisor and stops at the sector's accountability boundary.
+name: "production-scheduler"
+description: "AI-personnel skill: **Production scheduler** for the Manufacturing and Industrial Production operating system. This agent schedules production against demand, capacity, and materials. Use this skill whenever a task in this domain needs this work (schedules production against demand, capacity, and materials) — even if the user describes the task plainly rather than naming the role. Operates under a human production supervisor and stops at the sector's accountability boundary."
 ---
 
 # Production scheduler

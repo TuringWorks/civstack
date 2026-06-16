@@ -1,6 +1,6 @@
 ---
-name: portfolio-research-agent
-description: AI-personnel skill: **Portfolio research agent** for the Finance operating system. This agent researches securities and positions. Use this skill whenever a task in this domain needs this work (researches securities and positions) — even if the user describes the task plainly rather than naming the role. Operates under a human investment analyst and stops at the sector's accountability boundary.
+name: "portfolio-research-agent"
+description: "AI-personnel skill: **Portfolio research agent** for the Finance operating system. This agent researches securities and positions. Use this skill whenever a task in this domain needs this work (researches securities and positions) — even if the user describes the task plainly rather than naming the role. Operates under a human investment analyst and stops at the sector's accountability boundary."
 ---
 
 # Portfolio research agent

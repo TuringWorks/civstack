@@ -1,6 +1,6 @@
 ---
-name: employee-sentiment-analyst
-description: AI-personnel skill: **Employee sentiment analyst** for the Labor operating system. This agent analyzes engagement and sentiment signals. Use this skill whenever a task in this domain needs this work (analyzes engagement and sentiment signals) — even if the user describes the task plainly rather than naming the role. Operates under a human people analytics lead and stops at the sector's accountability boundary.
+name: "employee-sentiment-analyst"
+description: "AI-personnel skill: **Employee sentiment analyst** for the Labor operating system. This agent analyzes engagement and sentiment signals. Use this skill whenever a task in this domain needs this work (analyzes engagement and sentiment signals) — even if the user describes the task plainly rather than naming the role. Operates under a human people analytics lead and stops at the sector's accountability boundary."
 ---
 
 # Employee sentiment analyst

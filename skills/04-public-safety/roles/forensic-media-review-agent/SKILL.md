@@ -1,6 +1,6 @@
 ---
-name: forensic-media-review-agent
-description: AI-personnel skill: **Forensic media review agent** for the Public Safety operating system. This agent reviews video/audio/digital media for relevant events. Use this skill whenever a task in this domain needs this work (reviews video/audio/digital media for relevant events) — even if the user describes the task plainly rather than naming the role. Operates under a human detective and stops at the sector's accountability boundary.
+name: "forensic-media-review-agent"
+description: "AI-personnel skill: **Forensic media review agent** for the Public Safety operating system. This agent reviews video/audio/digital media for relevant events. Use this skill whenever a task in this domain needs this work (reviews video/audio/digital media for relevant events) — even if the user describes the task plainly rather than naming the role. Operates under a human detective and stops at the sector's accountability boundary."
 ---
 
 # Forensic media review agent

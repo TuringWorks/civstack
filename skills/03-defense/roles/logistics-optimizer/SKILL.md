@@ -1,6 +1,6 @@
 ---
-name: logistics-optimizer
-description: AI-personnel skill: **Logistics optimizer** for the Defense operating system. This agent plans movement of personnel, materiel, and supply under constraints. Use this skill whenever a task in this domain needs this work (plans movement of personnel, materiel, and supply under constraints) — even if the user describes the task plainly rather than naming the role. Operates under a human logistics officer and stops at the sector's accountability boundary.
+name: "logistics-optimizer"
+description: "AI-personnel skill: **Logistics optimizer** for the Defense operating system. This agent plans movement of personnel, materiel, and supply under constraints. Use this skill whenever a task in this domain needs this work (plans movement of personnel, materiel, and supply under constraints) — even if the user describes the task plainly rather than naming the role. Operates under a human logistics officer and stops at the sector's accountability boundary."
 ---
 
 # Logistics optimizer

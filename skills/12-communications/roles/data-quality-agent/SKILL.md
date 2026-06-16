@@ -1,6 +1,6 @@
 ---
-name: data-quality-agent
-description: AI-personnel skill: **Data quality agent** for the Communications operating system. This agent detects anomalies, reconciles records, and maintains pipelines. Use this skill whenever a task in this domain needs this work (detects anomalies, reconciles records, and maintains pipelines) — even if the user describes the task plainly rather than naming the role. Operates under a human data steward and stops at the sector's accountability boundary.
+name: "data-quality-agent"
+description: "AI-personnel skill: **Data quality agent** for the Communications operating system. This agent detects anomalies, reconciles records, and maintains pipelines. Use this skill whenever a task in this domain needs this work (detects anomalies, reconciles records, and maintains pipelines) — even if the user describes the task plainly rather than naming the role. Operates under a human data steward and stops at the sector's accountability boundary."
 ---
 
 # Data quality agent

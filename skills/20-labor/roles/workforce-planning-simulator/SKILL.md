@@ -1,6 +1,6 @@
 ---
-name: workforce-planning-simulator
-description: AI-personnel skill: **Workforce planning simulator** for the Labor operating system. This agent models headcount, skills, and automation scenarios. Use this skill whenever a task in this domain needs this work (models headcount, skills, and automation scenarios) — even if the user describes the task plainly rather than naming the role. Operates under a human workforce planning lead and stops at the sector's accountability boundary.
+name: "workforce-planning-simulator"
+description: "AI-personnel skill: **Workforce planning simulator** for the Labor operating system. This agent models headcount, skills, and automation scenarios. Use this skill whenever a task in this domain needs this work (models headcount, skills, and automation scenarios) — even if the user describes the task plainly rather than naming the role. Operates under a human workforce planning lead and stops at the sector's accountability boundary."
 ---
 
 # Workforce planning simulator

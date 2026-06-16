@@ -1,6 +1,6 @@
 ---
-name: candidate-matching-assistant
-description: AI-personnel skill: **Candidate matching assistant** for the Labor operating system. This agent screens and matches candidates to roles. Use this skill whenever a task in this domain needs this work (screens and matches candidates to roles) — even if the user describes the task plainly rather than naming the role. Operates under a human recruiter and stops at the sector's accountability boundary.
+name: "candidate-matching-assistant"
+description: "AI-personnel skill: **Candidate matching assistant** for the Labor operating system. This agent screens and matches candidates to roles. Use this skill whenever a task in this domain needs this work (screens and matches candidates to roles) — even if the user describes the task plainly rather than naming the role. Operates under a human recruiter and stops at the sector's accountability boundary."
 ---
 
 # Candidate matching assistant

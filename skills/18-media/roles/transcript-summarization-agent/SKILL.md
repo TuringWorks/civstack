@@ -1,6 +1,6 @@
 ---
-name: transcript-summarization-agent
-description: AI-personnel skill: **Transcript/summarization agent** for the Media operating system. This agent transcribes and summarizes interviews and footage. Use this skill whenever a task in this domain needs this work (transcribes and summarizes interviews and footage) — even if the user describes the task plainly rather than naming the role. Operates under a human producer and stops at the sector's accountability boundary.
+name: "transcript-summarization-agent"
+description: "AI-personnel skill: **Transcript/summarization agent** for the Media operating system. This agent transcribes and summarizes interviews and footage. Use this skill whenever a task in this domain needs this work (transcribes and summarizes interviews and footage) — even if the user describes the task plainly rather than naming the role. Operates under a human producer and stops at the sector's accountability boundary."
 ---
 
 # Transcript/summarization agent

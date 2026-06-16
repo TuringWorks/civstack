@@ -1,6 +1,6 @@
 ---
-name: social-services-referral-agent
-description: AI-personnel skill: **Social services referral agent** for the Household operating system. This agent connects people to housing, food, and legal aid. Use this skill whenever a task in this domain needs this work (connects people to housing, food, and legal aid) — even if the user describes the task plainly rather than naming the role. Operates under a human social worker and stops at the sector's accountability boundary.
+name: "social-services-referral-agent"
+description: "AI-personnel skill: **Social services referral agent** for the Household operating system. This agent connects people to housing, food, and legal aid. Use this skill whenever a task in this domain needs this work (connects people to housing, food, and legal aid) — even if the user describes the task plainly rather than naming the role. Operates under a human social worker and stops at the sector's accountability boundary."
 ---
 
 # Social services referral agent

@@ -1,6 +1,6 @@
 ---
-name: os-10-shelter
-description: Operating-system orchestrator skill for **Shelter, Construction, Land, and the Built Environment** (national operating system #10). Use this skill whenever work touches this sector's mission — Create and maintain places for living, working, mobility, commerce, and public life — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself.
+name: "os-10-shelter"
+description: "Operating-system orchestrator skill for **Shelter, Construction, Land, and the Built Environment** (national operating system #10). Use this skill whenever work touches this sector's mission — Create and maintain places for living, working, mobility, commerce, and public life — to understand the jobs to be done, the human/AI/robot division of labor, the accountable human boundaries, and which specialized role skills to deploy. Trigger this even when the user names a specific task in the domain rather than the sector itself."
 ---
 
 # Operating System 10 — Shelter, Construction, Land, and the Built Environment

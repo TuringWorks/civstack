@@ -1,6 +1,6 @@
 ---
-name: machine-06-reservoir-survey-sampling-vessel-usv
-description: Non-humanoid autonomous machine for the Water operating system: **Reservoir survey & sampling vessel (USV)** — survey reservoirs and waterways and collect water-quality samples autonomously. Best in: reservoirs, intakes, rivers, coastal outfalls. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described.
+name: "machine-06-reservoir-survey-sampling-vessel-usv"
+description: "Non-humanoid autonomous machine for the Water operating system: **Reservoir survey & sampling vessel (USV)** — survey reservoirs and waterways and collect water-quality samples autonomously. Best in: reservoirs, intakes, rivers, coastal outfalls. A self-driving/self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
 ---
 
 # Reservoir survey & sampling vessel (USV)

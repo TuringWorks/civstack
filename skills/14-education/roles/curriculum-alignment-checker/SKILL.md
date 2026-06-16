@@ -1,6 +1,6 @@
 ---
-name: curriculum-alignment-checker
-description: AI-personnel skill: **Curriculum alignment checker** for the Education operating system. This agent checks materials against standards and outcomes. Use this skill whenever a task in this domain needs this work (checks materials against standards and outcomes) — even if the user describes the task plainly rather than naming the role. Operates under a human curriculum designer and stops at the sector's accountability boundary.
+name: "curriculum-alignment-checker"
+description: "AI-personnel skill: **Curriculum alignment checker** for the Education operating system. This agent checks materials against standards and outcomes. Use this skill whenever a task in this domain needs this work (checks materials against standards and outcomes) — even if the user describes the task plainly rather than naming the role. Operates under a human curriculum designer and stops at the sector's accountability boundary."
 ---
 
 # Curriculum alignment checker
