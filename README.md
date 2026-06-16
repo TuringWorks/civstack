@@ -2,7 +2,7 @@
 
 **The operating systems of an economy — staffed by humans, AI agents, and robots.**
 
-CivStack is an open library of **248 agent skills** that maps everything a modern country and economy must reliably do — from governance and energy to farming and eldercare — and assigns each job to the right mix of a human owner, AI personnel, and embodied robots, with hard accountability boundaries baked in.
+CivStack is an open library of **307 agent skills** that maps everything a modern country and economy must reliably do — from governance and energy to farming and eldercare — and assigns each job to the right mix of a human owner, AI personnel, embodied robots, and non-humanoid autonomous machines (self-driving vehicles, farm equipment, drones), with hard accountability boundaries baked in.
 
 It turns a strategy document (["Country-Economy Core Jobs To Be Done"](docs/country-economy-core-jtbd.md)) into machine-usable [Agent Skills](https://www.anthropic.com/news/skills): every role ships as a `SKILL.md` an LLM or agent can load to get the full context for *who does what, how, and where a human must stay in charge.*
 
@@ -32,6 +32,18 @@ CivStack assumes robots are **LLM-brained embodied agents**, not hard-coded auto
 
 The roles that *build and operate* this stack are themselves skills (see `skills/_catalogs/embodied-ai-stack/`).
 
+The **same brain-and-tool-calls model extends to non-humanoid autonomous machines** — self-driving cars, trucks and shuttles, autonomous tractors and harvesters, loaders and earthmovers, mining haul trucks, rail, port/maritime equipment, warehouse robots, and drones. For mobility they add an **Operational Design Domain (ODD)**, the **SAE levels of automation**, a verified minimal-risk safe-stop, and a **teleoperation fallback** (see `skills/_catalogs/autonomous-machines/`, `skills/_catalogs/autonomous-fleet-ops/`, and each sector's `autonomous/` folder).
+
+### Capability is right-sized — RLAIF is one method among many
+
+The "brain" need not be a single large model trained one way. CivStack assumes a **heterogeneous capability stack** and a **spectrum of optimization methods**, each chosen per task:
+
+- **Model tiers:** LLM (deliberation) → SLM (on-device reasoning) → tiny LM / specialized nets (reactive control) → **deterministic controllers** (PID, MPC, state machines, convex/MILP) for hard-real-time, verifiable, safety-critical loops. A capability runs on the *smallest, most deterministic* tier that meets its accuracy, latency, and safety bar; the large model is called only when needed.
+- **Optimization methods:** imitation / behavior cloning, model-based & offline RL, **RLHF/RLAIF**, sim-to-real, self-supervised pretraining, supervised fine-tuning, **distillation & compression** (LLM → SLM → tiny LM), search & planning (MCTS, MPC), classical optimization & control, **formal verification**, and evolutionary search.
+- **Selection rubric:** exhaustiveness vs efficiency, determinism and verifiability, latency and power, data availability, and consequence — with a verified deterministic safety layer beneath anything learned.
+
+The roles that design and run this spectrum live in `skills/_catalogs/capability-optimization/`. This is a deliberately productizable layer: a **method/model router** that picks the cheapest, safest way to deliver each capability is the commercial core of an embodied-AI platform.
+
 ---
 
 ## What's in the box
@@ -42,11 +54,15 @@ The roles that *build and operate* this stack are themselves skills (see `skills
 | National operating systems (sector orchestrators) | 22 | `skills/01-…` … `skills/22-…` |
 | AI-personnel role skills | 174 | `skills/NN-…/roles/` |
 | Embodied robot role skills (sector-nested) | 4 | `skills/05-food/robots/` |
+| Autonomous machine skills (sector-nested) | 27 | `skills/<sector>/autonomous/` |
 | Cross-cutting role archetypes | 12 | `skills/cross-cutting-archetypes/` |
 | AI-personnel catalog patterns | 15 | `skills/_catalogs/ai-personnel/` |
 | Humanoid-robot catalog patterns | 10 | `skills/_catalogs/humanoid-robots/` |
-| Embodied-AI stack roles (build & operate the robots) | 10 | `skills/_catalogs/embodied-ai-stack/` |
-| **Total `SKILL.md` packages** | **248** | |
+| Autonomous-machine catalog patterns | 13 | `skills/_catalogs/autonomous-machines/` |
+| Embodied-AI stack roles (build & operate robots + machines) | 10 | `skills/_catalogs/embodied-ai-stack/` |
+| Autonomous-fleet operations roles | 8 | `skills/_catalogs/autonomous-fleet-ops/` |
+| Capability & optimization roles (model tiers + training methods) | 11 | `skills/_catalogs/capability-optimization/` |
+| **Total `SKILL.md` packages** | **307** | |
 
 ### The 22 national operating systems
 
@@ -70,13 +86,17 @@ civstack/
 │   ├── 05-food/
 │   │   ├── SKILL.md
 │   │   ├── roles/<role>/SKILL.md
-│   │   └── robots/<robot>/SKILL.md        # LLM-brained embodied roles
+│   │   ├── robots/<robot>/SKILL.md         # LLM-brained humanoid/embodied roles
+│   │   └── autonomous/<machine>/SKILL.md   # non-humanoid autonomous machines
 │   ├── … (02–22)
 │   ├── cross-cutting-archetypes/<archetype>/SKILL.md
 │   └── _catalogs/
 │       ├── ai-personnel/<role>/SKILL.md
 │       ├── humanoid-robots/<role>/SKILL.md
-│       └── embodied-ai-stack/<role>/SKILL.md
+│       ├── autonomous-machines/<machine>/SKILL.md
+│       ├── embodied-ai-stack/<role>/SKILL.md
+│       ├── autonomous-fleet-ops/<role>/SKILL.md
+│       └── capability-optimization/<role>/SKILL.md
 └── tools/
     └── generate_skills.py                 # regenerates the whole library
 ```
@@ -98,13 +118,25 @@ The skills are tool-agnostic plain Markdown. They work as drop-in context for Cl
 
 ## Regenerating / extending
 
-The library is generated, so it stays consistent. Edit the data or templates in `tools/generate_skills.py` and run:
+> **`skills/` is generated. Treat it as a build artifact — edit `tools/generate_skills.py`, not individual `SKILL.md` files.** Hand-editing a skill will be overwritten on the next regeneration and makes diffs noisy. All content (sector data, role rosters, the LLM-brained robot architecture, labor-market grounding, and the shared templates) lives in the generator, so a change there propagates consistently to every skill and produces a clean, reviewable `git diff`.
+
+The library is generated so it stays consistent. Edit the data or templates in `tools/generate_skills.py` and run:
 
 ```bash
 SKILLS_ROOT=./skills python3 tools/generate_skills.py
 ```
 
-The generator encodes each sector's mission, jobs-to-be-done, role roster, AI personnel, robot roles, and accountability boundary, then emits every `SKILL.md` from shared templates. Adding a role, a sector-nested robot, or a whole pattern is a few lines of data.
+The generator encodes each sector's mission, jobs-to-be-done, role roster, AI personnel, robot roles, accountability boundary, and labor-market grounding, then emits every `SKILL.md` from shared templates. Adding a role, a sector-nested robot, deeper job-description grounding, or a whole new pattern is a few lines of data.
+
+Recommended workflow for a change:
+
+```bash
+# 1. edit tools/generate_skills.py
+# 2. regenerate
+SKILLS_ROOT=./skills python3 tools/generate_skills.py
+# 3. review the propagated change, then commit both the generator and skills/
+git add -A && git diff --cached --stat
+```
 
 ## Provenance
 

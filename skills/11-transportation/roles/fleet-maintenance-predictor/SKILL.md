@@ -107,6 +107,12 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 ## Labor-market grounding
 
+**In the job market, this agent maps to:** Fleet Manager, Maintenance Planner, Diesel/Heavy-Equipment Technician (support).
+
+Employers typically list — **tools:** Fleet-maintenance systems, telematics, parts/inventory. **Qualifications/certs:** ASE certification (technicians); DOT compliance knowledge.
+
+Predicts failures and schedules service; measured on uptime and DOT compliance.
+
 This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
 
 - **Advertised titles & ladder:** Driver/warehouse associate → lead/dispatcher → operations supervisor → terminal/DC manager → director of logistics; pilot and ATC tracks; mechanic apprentice → A&P/journeyman.

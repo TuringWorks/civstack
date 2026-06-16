@@ -79,6 +79,20 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 
 > **How these robots work (assumed architecture):** each is an **LLM-brained embodied agent** — a multimodal LLM brain plans and issues physical **actions as tool calls** (e.g. `grasp`, `navigate_to`, `place`), executed by Vision-Language-Action policies trained on world models, robot gyms, and **RLAIF**. Fleets may share one brain model or mix specialized ones. A verified low-level safety layer can override unsafe actions independently of the brain. Full detail in `00-framework/` and `_catalogs/humanoid-robots/`.
 
+## Non-humanoid autonomous machines
+
+Self-driving vehicles, equipment, and drones for this sector (LLM-planned; physical actions as tool calls; ODD + teleoperation fallback):
+
+- **Self-driving freight truck** — haul freight over highway corridors hub-to-hub without a driver in the cab. *(autonomous machine skill: `autonomous/self-driving-freight-truck/`)*
+- **Robotaxi / autonomous passenger vehicle** — carry passengers point-to-point with no human driver. *(autonomous machine skill: `autonomous/robotaxi-autonomous-passenger-vehicle/`)*
+- **Last-mile delivery vehicle** — deliver parcels and groceries on local streets and sidewalks. *(autonomous machine skill: `autonomous/last-mile-delivery-vehicle/`)*
+- **Autonomous yard / terminal mover** — shuttle trailers and containers within yards, ports, and terminals. *(autonomous machine skill: `autonomous/autonomous-yard-terminal-mover/`)*
+- **Autonomous freight & metro train** — run scheduled freight or transit services on guided track with no driver in the cab. *(autonomous machine skill: `autonomous/autonomous-freight-metro-train/`)*
+- **Autonomous port straddle carrier & ship-to-shore crane** — stack, move, and load containers at the quay and yard. *(autonomous machine skill: `autonomous/autonomous-port-straddle-carrier-ship-to-shore-crane/`)*
+- **Harbor tug / survey vessel (USV)** — assist berthing and survey harbors and channels without a crew. *(autonomous machine skill: `autonomous/harbor-tug-survey-vessel-usv/`)*
+
+> **How these machines work (assumed architecture):** each is a **non-humanoid autonomous machine** — a foundation/LLM planning brain issues **actions as tool calls** (`follow_route`, `dump_bucket`, `take_off`, `spray_zone`, …) over a perception → prediction → planning → control stack trained on world models, driving/field simulation, and **RLAIF**. Each runs inside a defined **Operational Design Domain (ODD)** with a verified safe-stop and **teleoperation** fallback. Full detail in `_catalogs/autonomous-machines/` and `00-framework/`.
+
 ## Human accountability boundary (must stay human-led)
 
 Safety-critical vehicle operation, air-traffic-control authority, hazardous-goods approval, labor safety, and public-transport policy remain human-accountable.

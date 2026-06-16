@@ -107,6 +107,12 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 ## Labor-market grounding
 
+**In the job market, this agent maps to:** Logistics/Route Optimization Analyst, Dispatch Planner, Supply Chain Analyst.
+
+Employers typically list — **tools:** TMS, route-optimization engines, ELD/telematics, EDI. **Qualifications/certs:** APICS CSCP/CLTD a plus.
+
+Measured on cost-per-mile and on-time delivery; posted on iHireTransportation and LinkedIn.
+
 This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
 
 - **Advertised titles & ladder:** Driver/warehouse associate → lead/dispatcher → operations supervisor → terminal/DC manager → director of logistics; pilot and ATC tracks; mechanic apprentice → A&P/journeyman.

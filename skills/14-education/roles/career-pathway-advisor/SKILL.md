@@ -107,6 +107,12 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 ## Labor-market grounding
 
+**In the job market, this agent maps to:** Academic/Career Advisor, Student Success Manager, Workforce Development Specialist.
+
+Employers typically list — **tools:** SIS, labor-market data, advising/CRM platforms. **Qualifications/certs:** GCDF (Global Career Development Facilitator) a plus.
+
+Maps skills to pathways; advertised on HigherEdJobs and GovernmentJobs.
+
 This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
 
 - **Advertised titles & ladder:** Aide/TA → teacher → instructional coach/lead → assistant principal → principal → superintendent; higher ed: adjunct → assistant/associate/full professor; L&D specialist → manager → CLO.

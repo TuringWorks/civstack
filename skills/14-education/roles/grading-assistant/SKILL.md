@@ -107,6 +107,12 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 ## Labor-market grounding
 
+**In the job market, this agent maps to:** Teacher, Teaching Assistant, Assessment Specialist (support).
+
+Employers typically list — **tools:** LMS gradebook, rubric tools, SIS (PowerSchool). **Qualifications/certs:** State teaching license (supervising teacher).
+
+Scores against rubrics and drafts feedback; the teacher owns the grade of record.
+
 This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
 
 - **Advertised titles & ladder:** Aide/TA → teacher → instructional coach/lead → assistant principal → principal → superintendent; higher ed: adjunct → assistant/associate/full professor; L&D specialist → manager → CLO.

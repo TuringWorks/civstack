@@ -107,6 +107,12 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 ## Labor-market grounding
 
+**In the job market, this agent maps to:** Quality Engineer, QC Inspector, Quality Analyst.
+
+Employers typically list — **tools:** SPC (Minitab), MES quality modules, machine-vision inspection data. **Qualifications/certs:** ASQ CQE/CQA; Six Sigma.
+
+Detects drift/defects for the quality engineer; measured on PPM and escape rate.
+
 This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
 
 - **Advertised titles & ladder:** Operator/assembler → technician/setup → process/quality engineer → production supervisor → plant manager; maintenance apprentice → journeyman → reliability engineer.

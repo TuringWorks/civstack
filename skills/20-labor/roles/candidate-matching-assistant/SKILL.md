@@ -107,6 +107,12 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 ## Labor-market grounding
 
+**In the job market, this agent maps to:** Recruiter, Talent Acquisition Partner, Sourcer.
+
+Employers typically list — **tools:** ATS (Workday, Greenhouse), LinkedIn Recruiter, sourcing tools. **Qualifications/certs:** SHRM-CP or aPHR a plus.
+
+Screens and shortlists; the hiring decision stays human; measured on time-to-fill and quality of hire.
+
 This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
 
 - **Advertised titles & ladder:** HR coordinator → HR generalist/recruiter → HR manager/HRBP → director → CHRO; comp, L&D, and employee-relations tracks.

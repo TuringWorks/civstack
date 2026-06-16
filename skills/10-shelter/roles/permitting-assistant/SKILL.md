@@ -107,6 +107,12 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 ## Labor-market grounding
 
+**In the job market, this agent maps to:** Permit Technician, Planner, Plan Reviewer.
+
+Employers typically list — **tools:** Permitting/e-plan-review systems, GIS, code references. **Qualifications/certs:** ICC Permit Technician certification.
+
+Pre-checks applications against code; advertised on GovernmentJobs.
+
 This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
 
 - **Advertised titles & ladder:** Laborer/apprentice → journeyman tradesperson → foreman/superintendent → project manager; design: intern architect/EIT → licensed architect/PE → principal; planner → senior planner → director.

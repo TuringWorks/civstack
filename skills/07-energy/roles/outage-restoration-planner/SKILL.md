@@ -107,6 +107,12 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 ## Labor-market grounding
 
+**In the job market, this agent maps to:** Distribution Operations Lead, Outage Coordinator.
+
+Employers typically list — **tools:** OMS, ADMS, crew-dispatch systems, GIS. **Qualifications/certs:** NERC certification plus switching/clearance qualification.
+
+Sequences switching and crews; the operator authorizes energized work.
+
 This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
 
 - **Advertised titles & ladder:** Apprentice lineworker/technician → journeyman → foreman; system-operator trainee → certified system operator → shift supervisor → control-center manager; EIT → PE → engineering manager; energy trader.

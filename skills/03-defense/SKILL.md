@@ -80,6 +80,15 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 
 > **How these robots work (assumed architecture):** each is an **LLM-brained embodied agent** — a multimodal LLM brain plans and issues physical **actions as tool calls** (e.g. `grasp`, `navigate_to`, `place`), executed by Vision-Language-Action policies trained on world models, robot gyms, and **RLAIF**. Fleets may share one brain model or mix specialized ones. A verified low-level safety layer can override unsafe actions independently of the brain. Full detail in `00-framework/` and `_catalogs/humanoid-robots/`.
 
+## Non-humanoid autonomous machines
+
+Self-driving vehicles, equipment, and drones for this sector (LLM-planned; physical actions as tool calls; ODD + teleoperation fallback):
+
+- **ISR reconnaissance drone (UAS)** — conduct intelligence, surveillance, and reconnaissance from the air under human command. *(autonomous machine skill: `autonomous/isr-reconnaissance-drone-uas/`)*
+- **Autonomous logistics & resupply vehicle (UGV)** — move materiel, fuel, and casualties across austere terrain without a crewed cab. *(autonomous machine skill: `autonomous/autonomous-logistics-resupply-vehicle-ugv/`)*
+
+> **How these machines work (assumed architecture):** each is a **non-humanoid autonomous machine** — a foundation/LLM planning brain issues **actions as tool calls** (`follow_route`, `dump_bucket`, `take_off`, `spray_zone`, …) over a perception → prediction → planning → control stack trained on world models, driving/field simulation, and **RLAIF**. Each runs inside a defined **Operational Design Domain (ODD)** with a verified safe-stop and **teleoperation** fallback. Full detail in `_catalogs/autonomous-machines/` and `00-framework/`.
+
 ## Human accountability boundary (must stay human-led)
 
 Use of force, detention, asylum determinations, diplomacy, intelligence conclusions, and escalation decisions require human command authority.

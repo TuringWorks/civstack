@@ -107,6 +107,12 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 ## Labor-market grounding
 
+**In the job market, this agent maps to:** Water/Wastewater Operator, Water Quality Analyst, Lab Technician.
+
+Employers typically list — **tools:** SCADA, LIMS, online analyzers. **Qualifications/certs:** State operator certification (Grades I–IV).
+
+Flags excursions for the certified operator, who issues notices or shutoffs.
+
 This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
 
 - **Advertised titles & ladder:** Operator trainee → certified operator (Grade I–IV) → chief operator/superintendent → utility director; engineering: EIT → PE.

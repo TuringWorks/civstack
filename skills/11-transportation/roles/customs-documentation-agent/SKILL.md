@@ -107,6 +107,12 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 ## Labor-market grounding
 
+**In the job market, this agent maps to:** Customs Broker, Trade Compliance Specialist, Freight Forwarder.
+
+Employers typically list — **tools:** Customs/ABI filing systems, HTS classification, trade-management software. **Qualifications/certs:** Licensed Customs Broker (CBP exam); Certified Customs Specialist.
+
+Prepares filings; the licensed broker signs and is accountable.
+
 This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
 
 - **Advertised titles & ladder:** Driver/warehouse associate → lead/dispatcher → operations supervisor → terminal/DC manager → director of logistics; pilot and ATC tracks; mechanic apprentice → A&P/journeyman.

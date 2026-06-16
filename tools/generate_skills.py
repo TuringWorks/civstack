@@ -76,8 +76,11 @@ ROBOT_STACK_FULL = (
     "- **Trained on world models + robot gyms.** Planners and policies are trained against **world models** (learned predictive simulators of "
     "physics and outcomes, used to imagine consequences before acting) and **robot gyms** (massively parallel physics simulation for "
     "sim-to-real skill learning), then transferred to hardware.\n"
-    "- **RLAIF (RL from AI Feedback).** Skills and judgment are refined with reinforcement learning where an **AI critic** supplies reward and "
-    "preference signals at scale, supplementing scarce human feedback to align behavior with goals and safety constraints.\n\n"
+    "- **RLAIF (RL from AI Feedback) — one method among many.** Skills can be refined with reinforcement learning where an **AI critic** "
+    "supplies reward and preference signals at scale, but RLAIF is only one option: imitation/behavior cloning, model-based and offline RL, "
+    "sim-to-real, supervised fine-tuning, and **distillation/compression** into SLMs and tiny LMs all contribute, with **deterministic "
+    "controllers** for hard-real-time, safety-critical loops. The brain is right-sized per task — LLM ↔ SLM ↔ tiny LM ↔ deterministic. "
+    "See `_catalogs/capability-optimization/`.\n\n"
     "**Operating implication:** the brain's LLM failure modes now have physical consequences, so the **safety envelope must be a verified "
     "low-level layer that can validate, refuse, or override any tool call independently of the LLM brain.**"
 )
@@ -99,6 +102,91 @@ ROBOT_ARCH_FAILURE_MODES = (
     "- **Physical-world prompt injection** — adversarial signs, audio, or objects manipulate the brain. Mitigation: treat perceived instructions as "
     "untrusted; require authenticated commands for high-consequence actions.\n"
     "- **Fleet model-monoculture** — a shared brain fails in lockstep across many robots. Mitigation: model diversity, staged rollouts, manual fallback."
+)
+
+# Assumed architecture for NON-HUMANOID autonomous machines (self-driving vehicles,
+# farm equipment, harvesters, loaders/earthmovers, mining haul trucks, drones).
+AUTONOMY_STACK_FULL = (
+    "These are **non-humanoid autonomous machines** — vehicles and equipment that drive, fly, or operate themselves. "
+    "They share the project's brain-and-tool-calls model, adapted for mobility and heavy equipment:\n\n"
+    "- **Cognitive core (the autonomy \"brain\").** A foundation/LLM-based planner handles mission-level reasoning, "
+    "natural-language tasking, and long-tail edge cases, sitting over a perception → prediction → planning → control "
+    "autonomy stack. The brain decides *what and where*; learned and classical controllers execute *how* at high frequency. "
+    "A fleet may share one model or specialize by platform.\n"
+    "- **Actions are tool calls.** The machine exposes actuation primitives as tools — e.g. `follow_route`, `set_speed`, "
+    "`change_lane`, `lower_header`, `dump_bucket`, `take_off`, `survey_area`, `spray_zone`, `return_to_base` — which the "
+    "brain invokes and low-level controllers carry out.\n"
+    "- **Trained on world models + simulation.** Planners and policies are trained against **world models** (learned "
+    "simulators that predict vehicle dynamics, terrain, weather, and the behavior of other agents) and large-scale "
+    "**driving/field simulation (robot gyms)**, then transferred to hardware with fleet data and imitation learning.\n"
+    "- **Many training paths (RLAIF is one).** Behavior is learned through imitation from human driving, model-based and offline RL, "
+    "sim-to-real, and RLHF/RLAIF, then distilled into the SLMs and tiny models that run on-vehicle — with deterministic planners and "
+    "controllers (MPC, search) for the safety-critical loop. The autonomy brain is right-sized per function; see `_catalogs/capability-optimization/`.\n"
+    "- **ODD + safety case.** Each machine operates inside a defined **Operational Design Domain** (the geography, weather, "
+    "speed, crop, or site it is certified for) and a documented safety case, rated on the **SAE levels of automation** "
+    "(L0–L5) for road vehicles or equivalent for off-road and aerial platforms. A **verified safety layer** can trigger a "
+    "**minimal-risk maneuver** (controlled safe-stop / return-to-base / hover) independently of the planning brain.\n"
+    "- **Teleoperation fallback.** A remote operator supervises and takes over for situations outside the ODD or below a "
+    "confidence threshold.\n\n"
+    "**Operating implication:** physical-world failures are high-consequence, so the safety layer, ODD boundary, and teleop "
+    "fallback are mandatory and independent of the planning brain. Public-road and airspace operation additionally require "
+    "regulatory authorization (e.g. SAE-level / FMVSS treatment for road vehicles; FAA Part 107 and BVLOS waivers for drones)."
+)
+
+AUTONOMY_STACK_SHORT = (
+    "> **How these machines work (assumed architecture):** each is a **non-humanoid autonomous machine** — a foundation/LLM "
+    "planning brain issues **actions as tool calls** (`follow_route`, `dump_bucket`, `take_off`, `spray_zone`, …) over a "
+    "perception → prediction → planning → control stack trained on world models, driving/field simulation, and **RLAIF**. "
+    "Each runs inside a defined **Operational Design Domain (ODD)** with a verified safe-stop and **teleoperation** fallback. "
+    "Full detail in `_catalogs/autonomous-machines/` and `00-framework/`."
+)
+
+AUTONOMY_FAILURE_MODES = (
+    "- **Long-tail / edge cases** — rare scenarios the planner mishandles. Mitigation: conservative ODD, teleop fallback, "
+    "continuous scenario mining.\n"
+    "- **ODD exit** — conditions drift outside the certified domain (weather, dust, lighting, unmapped area). Mitigation: "
+    "detect-and-degrade to a minimal-risk maneuver.\n"
+    "- **Sensor degradation / spoofing** — rain, dust, glare, GPS jamming, adversarial markings. Mitigation: sensor fusion, "
+    "redundancy, anti-spoofing, conservative fallback.\n"
+    "- **Sim-to-real gap** — world-model/simulation training diverges from reality. Mitigation: shadow mode, staged "
+    "deployment, real-world validation.\n"
+    "- **Mixed-traffic / human interaction** — misreading pedestrians, livestock, ground crew, or other drivers. Mitigation: "
+    "predictable behavior, low-speed zones, explicit right-of-way rules.\n"
+    "- **Teleop latency / link loss** — remote takeover delayed or lost. Mitigation: onboard safe-stop, bounded autonomy, "
+    "comms redundancy.\n"
+    "- **Fleet model-monoculture** — a shared brain fails in lockstep. Mitigation: model diversity, staged rollout, geofencing."
+)
+
+# Capability is right-sized per task, not delivered by one big model trained one way.
+CAPABILITY_SPECTRUM_FULL = (
+    "Capability is **right-sized per task**, not delivered by one big model trained one way. CivStack assumes a "
+    "heterogeneous capability stack and a spectrum of optimization methods:\n\n"
+    "**Model tiers (right-sized compute).**\n"
+    "- **LLM / large multimodal models** — deliberation, language tasking, long-tail reasoning, and planning (cloud or high-end edge).\n"
+    "- **SLMs (small language / vision-language models)** — on-device reasoning and perception at lower cost and latency.\n"
+    "- **Tiny LMs / specialized nets** — fast reactive perception and control within tight power and latency budgets.\n"
+    "- **Deterministic controllers** — PID, MPC, state machines, planners, and convex/MILP optimization for hard-real-time, "
+    "verifiable, safety-critical loops.\n"
+    "A capability is assigned to the *smallest, most deterministic* tier that meets its accuracy, latency, and safety needs; "
+    "the large model is invoked only when needed (cascade / routing).\n\n"
+    "**Optimization methods (exhaustive ↔ efficient).**\n"
+    "- **Imitation / behavior cloning** (BC, DAgger, inverse RL) — data-efficient bootstrap from demonstrations.\n"
+    "- **Model-based RL & world models** — learn a simulator and plan/imagine in it; sample-efficient.\n"
+    "- **Offline RL** — learn from logged data without risky online exploration.\n"
+    "- **RLHF / RLAIF / rule-based & constitutional rewards** — preference and reward shaping; **RLAIF is one option, not the only one**.\n"
+    "- **Sim-to-real** — massively parallel simulation, domain randomization, and system identification.\n"
+    "- **Self-supervised & representation learning** — pretrain from unlabeled data.\n"
+    "- **Supervised fine-tuning & distillation** — specialize and shrink (LLM → SLM → tiny LM).\n"
+    "- **Quantization / pruning / sparsity** — compress for the edge.\n"
+    "- **Search & planning** (MCTS, MPC, graph/sampling planners) — deterministic, verifiable run-time decisions.\n"
+    "- **Classical optimization & control** (convex, MILP, optimal control) and **formal methods / verification** — guarantees "
+    "that statistical learning cannot give.\n"
+    "- **Evolutionary / black-box search** — when gradients are unavailable.\n\n"
+    "**Selection rubric.** Choose by exhaustiveness vs efficiency (compute and data budget), determinism and verifiability "
+    "(safety-criticality), latency and power (on-device vs offloaded), data availability (demos vs logs vs sim), and "
+    "reversibility/consequence. Safety-critical and hard-real-time loops favor deterministic, verifiable methods; open-ended "
+    "judgment favors large learned models; **most real systems are hybrids** with a verified deterministic safety layer beneath "
+    "learned policies. The roles that design and run this spectrum are in `_catalogs/capability-optimization/`."
 )
 
 
@@ -818,6 +906,247 @@ EMBODIED_AI_ROLES = [
      "Owns the data flywheel: logging, labeling, privacy, and the pipelines that turn real-world operation into better world models, policies, and critics."),
 ]
 
+# Operations layer specific to NON-HUMANOID autonomous vehicle/machine fleets.
+# kind ∈ {agent, engineer, oversight, hitl}.  (name, kind, jtbd, supervisor, detail)
+FLEET_OPS_ROLES = [
+    ("Operational Design Domain (ODD) & safety-case engineer", "engineer",
+     "defines the Operational Design Domain and assembles the safety case that gates where and how an autonomous fleet may operate",
+     "autonomy safety lead",
+     "Specifies the geography, weather, speed, and scenario envelope the machines are certified for, and the evidence — testing, simulation, field data — behind the safety case. Owns the detect-and-degrade rules at the ODD boundary."),
+    ("Remote operations center (teleoperations) supervisor", "oversight",
+     "runs the remote-operations center that supervises the fleet and authorizes or performs takeovers",
+     "fleet operations director",
+     "Human oversight of many machines at once: monitors health and confidence, triages escalations, supervises teleoperators, and holds stop authority over the fleet. A human-accountable role."),
+    ("HD mapping & localization engineer", "engineer",
+     "builds and maintains the high-definition maps and localization the fleet drives against",
+     "autonomy mapping lead",
+     "Owns map freshness, change detection, and localization quality; stale or wrong maps are a safety issue, so this role gates map releases with the safety engineer."),
+    ("V2X, connectivity & infrastructure engineer", "engineer",
+     "provisions the connectivity, V2X signals, and physical infrastructure the fleet depends on",
+     "infrastructure lead",
+     "Owns comms redundancy, vehicle-to-everything messaging, geofences, and depot/charging/fueling infrastructure, plus graceful behavior on link loss."),
+    ("Autonomy homologation & regulatory lead", "oversight",
+     "secures and maintains the regulatory authorization for the fleet to operate",
+     "general counsel / chief safety officer",
+     "Owns road approval and SAE-level treatment, FAA Part 107 / BVLOS waivers, and mine/site/airspace permits, plus incident reporting to regulators. A human-accountable role on the boundary."),
+    ("Fleet maintenance & depot operations lead", "engineer",
+     "keeps the fleet serviced, charged or fueled, calibrated, and depot-ready",
+     "depot operations manager",
+     "Owns sensor calibration, preventive maintenance, charging/fueling, and turnaround; sensor miscalibration directly degrades autonomy, so calibration is a safety task."),
+    ("Vehicle safety operator (in-field)", "hitl",
+     "rides in or shadows the machine during validation and takes manual control when needed",
+     "operations supervisor",
+     "The in-vehicle/in-field human fallback during testing and early deployment; every disengagement becomes data that improves the stack."),
+    ("Autonomy incident & disengagement analyst", "agent",
+     "analyzes disengagements, near-misses, and incidents and feeds fixes back into the stack and the ODD",
+     "autonomy safety lead",
+     "Mines every takeover and incident for root cause and produces the evidence that expands or contracts the Operational Design Domain."),
+]
+
+# Roles that design and run the CAPABILITY / OPTIMIZATION spectrum — many training
+# methods and model tiers (LLM/SLM/tiny/deterministic), not just RLAIF.
+# kind ∈ {agent, engineer, oversight, hitl}.  (name, kind, jtbd, supervisor, detail)
+CAPABILITY_OPT_ROLES = [
+    ("Capability & method architect", "engineer",
+     "chooses the right model tier and optimization method for each capability — balancing exhaustiveness, efficiency, determinism, latency, cost, and verifiability",
+     "head of autonomy / ML",
+     "Decides LLM vs SLM vs tiny LM vs deterministic controller per task and which training method fits. This routing/selection discipline is the productizable core of the stack."),
+    ("Imitation & behavior-cloning engineer", "engineer",
+     "teaches skills from human and expert demonstrations (behavior cloning, DAgger, inverse RL)",
+     "robot/autonomy learning lead",
+     "Usually the most data-efficient route to a working policy before any RL; produces the base policies later refined by RL or search."),
+    ("Model-based & offline RL engineer", "engineer",
+     "trains policies against learned world models and from logged data without risky online exploration",
+     "RL lead",
+     "Model-based and offline RL are often far more sample-efficient and safer than online RLAIF; plan and imagine in a world model rather than exploring on hardware."),
+    ("Reward & preference modeling engineer", "engineer",
+     "builds the reward, preference, and constitutional signals that shape behavior (RLHF, RLAIF, rule-based rewards)",
+     "alignment lead",
+     "Picks and combines RLHF, RLAIF, programmatic/rule-based rewards, and constitutional methods — RLAIF is one tool here — and guards against reward hacking."),
+    ("Sim-to-real & domain-randomization engineer", "engineer",
+     "closes the gap between simulation/world-model training and hardware",
+     "simulation lead",
+     "Domain randomization, system identification, and real-world fine-tuning; an exhaustive simulation regime can pre-train most behavior cheaply before any field data."),
+    ("Model distillation & compression engineer", "engineer",
+     "distills large models into SLMs and tiny LMs and compresses them (quantization, pruning, sparsity) for on-device inference",
+     "edge-AI lead",
+     "Turns an exhaustive but expensive LLM brain into efficient on-device models — the key to running capability within power and latency budgets."),
+    ("On-device & edge inference engineer", "engineer",
+     "runs models within the machine's compute, power, latency, and thermal budget",
+     "edge-AI lead",
+     "Owns the real-time inference path; decides what runs on-device (tiny LM, deterministic) versus offloaded (SLM/LLM), and the fallback when offload is unavailable."),
+    ("Deterministic control & classical-optimization engineer", "engineer",
+     "implements the non-learned controllers and optimizers — PID, MPC, state machines, planners, convex/MILP — for hard-real-time and safety-critical loops",
+     "controls lead",
+     "Not everything should be learned: deterministic controllers are verifiable, cheap, and reliable, and form the safety backbone beneath the learned brain."),
+    ("Formal verification & assurance engineer", "oversight",
+     "proves and assures safety-critical behavior with formal methods, runtime monitors, and certified envelopes",
+     "safety lead",
+     "Provides guarantees statistical learning cannot; defines the verified safety layer that can override any learned action. A human-accountable role."),
+    ("Curriculum & data-engine lead", "engineer",
+     "designs the training curriculum and the data flywheel across methods",
+     "data / ML platform lead",
+     "Sequences easy-to-hard learning and runs the loop that turns real operation into better demonstrations, rewards, simulations, and models across the whole spectrum."),
+    ("Capability evaluation & benchmarking agent", "agent",
+     "measures capability, robustness, and regression across methods and model tiers and finds the efficient frontier",
+     "evaluation lead",
+     "Compares LLM vs SLM vs tiny vs deterministic on the same task to pick the smallest tier that meets the bar; feeds the method architect."),
+]
+
+# ---------------------------------------------------------------------------
+# NON-HUMANOID AUTONOMOUS MACHINES
+# Cross-economy catalog of self-driving vehicles, farm equipment, harvesters,
+# loaders/earthmovers, mining haul trucks, and drones. Tuple: (name, jtbd, environments, detail)
+# ---------------------------------------------------------------------------
+AUTONOMOUS_MACHINES = [
+    ("Autonomous road vehicle (robotaxi)", "carry passengers point-to-point with no human driver",
+     "geofenced urban and suburban roads",
+     "An SAE L4 self-driving car operating within a mapped ODD; supervised by remote operators with a verified safe-stop."),
+    ("Autonomous long-haul truck", "haul freight over highway corridors hub-to-hub without a driver in the cab",
+     "highways, freight corridors, transfer hubs",
+     "A Class 8 autonomous truck, often a hub-to-hub model with human drivers handling the first and last mile."),
+    ("Autonomous last-mile delivery vehicle", "deliver parcels and groceries on local streets and sidewalks",
+     "neighborhoods, campuses, sidewalks",
+     "A low-speed sidewalk/road delivery robot; teleop-assisted at crossings and exceptions."),
+    ("Autonomous shuttle / bus", "move passengers on fixed or flexible low-speed routes",
+     "campuses, downtowns, transit feeders",
+     "A low-speed L4 shuttle with an onboard or remote attendant."),
+    ("Autonomous tractor", "till, plant, cultivate, and tow implements across fields with no operator in the seat",
+     "row-crop and broadacre farms",
+     "A GPS/RTK-guided autonomous tractor running implements to a field plan, supervised remotely."),
+    ("Autonomous harvester / combine", "harvest grain, forage, or specialty crops and map yield as it goes",
+     "broadacre and specialty farms",
+     "A self-driving harvester coordinating with grain carts and unloading on the move."),
+    ("Autonomous loader / earthmover", "load, dig, grade, and move material on sites",
+     "construction sites, quarries, ports, yards",
+     "An autonomous wheel loader, excavator, or dozer executing earthmoving tasks within a geofenced site."),
+    ("Autonomous mining haul truck", "haul ore and overburden on mine haul roads around the clock",
+     "open-pit mines and quarries",
+     "A driverless ultra-class haul truck on a managed haul-road network — one of the most mature autonomy deployments."),
+    ("Aerial survey & inspection drone (UAV)", "map, survey, and inspect assets from the air",
+     "fields, infrastructure, sites, disaster zones",
+     "A fixed-wing or multirotor UAV flying autonomous missions; its data feeds the sector's analytics agents."),
+    ("Agricultural spraying & seeding drone", "apply inputs and seed precisely from the air",
+     "fields, orchards, vineyards, paddies",
+     "A spray/seed UAV doing variable-rate, zone-targeted application from a prescription map."),
+    ("Delivery drone", "carry small packages or medical payloads by air",
+     "suburban, rural, and medical-logistics routes",
+     "A BVLOS delivery UAV for parcels, lab samples, and medicines; requires airspace authorization."),
+    ("Autonomous warehouse mover (AMR)", "transport pallets, totes, and racks inside facilities",
+     "warehouses, distribution centers, factories, ports",
+     "An autonomous mobile robot or driverless forklift moving goods and feeding picking — complements the humanoid warehouse associate."),
+    ("Autonomous surface vessel (USV)", "survey, monitor, and transport on water without a crew",
+     "harbors, coastal waters, inland waterways",
+     "An uncrewed surface vessel for hydrographic survey, environmental monitoring, and short-haul transport."),
+]
+
+# Sector-nested autonomous machines. num -> [(name, jtbd, environments, detail)]
+SECTOR_MACHINES = {
+ 5: [
+   ("Autonomous tractor", "till, plant, cultivate, and tow implements across fields to a crop plan with no operator in the seat",
+    "row-crop and broadacre farms; smallholder plots with shared or rented equipment",
+    "GPS/RTK-guided; runs seeders, cultivators, and sprayers and takes its task list from the autonomous-farm-operations agent."),
+   ("Autonomous harvester / combine", "harvest grain, forage, fruit, or specialty crops and map yield as it goes",
+    "broadacre grain, forage, and specialty farms",
+    "Self-driving harvester coordinating with grain carts and trucks; unloads on the move; yield data flows to the agronomy agents."),
+   ("Crop-scouting drone", "fly fields to scout stand, weeds, pests, disease, and irrigation from the air",
+    "fields, orchards, vineyards",
+    "Autonomous UAV running scouting missions; imagery feeds the pest/disease-detection and crop-planning agents."),
+   ("Spraying & seeding drone", "apply crop inputs and seed precisely from the air on a prescription map",
+    "fields, orchards, vineyards, paddies, and steep or wet ground machines can't reach",
+    "Variable-rate spray/seed UAV that covers terrain ground equipment cannot; pesticide decisions stay with the human."),
+ ],
+ 11: [
+   ("Self-driving freight truck", "haul freight over highway corridors hub-to-hub without a driver in the cab",
+    "highways, freight corridors, transfer hubs",
+    "Class 8 autonomous truck within a defined ODD; humans often handle first/last mile; remote operators supervise."),
+   ("Robotaxi / autonomous passenger vehicle", "carry passengers point-to-point with no human driver",
+    "geofenced urban and suburban roads",
+    "SAE L4 ride-hailing vehicle; remote operators supervise; minimal-risk safe-stop on ODD exit."),
+   ("Last-mile delivery vehicle", "deliver parcels and groceries on local streets and sidewalks",
+    "neighborhoods, campuses, sidewalks",
+    "Low-speed sidewalk/road delivery robot; teleop-assisted at crossings and exceptions."),
+   ("Autonomous yard / terminal mover", "shuttle trailers and containers within yards, ports, and terminals",
+    "distribution yards, ports, intermodal terminals",
+    "Driverless yard truck / terminal tractor operating in a controlled, geofenced facility."),
+   ("Autonomous freight & metro train", "run scheduled freight or transit services on guided track with no driver in the cab",
+    "freight corridors, metros, dedicated rail",
+    "Grade-of-automation GoA3/GoA4 train on a signaled, geofenced network — a mature autonomy domain (driverless metros run today)."),
+   ("Autonomous port straddle carrier & ship-to-shore crane", "stack, move, and load containers at the quay and yard",
+    "container ports and intermodal terminals",
+    "Automated straddle carriers, AGVs, and cranes coordinated by a terminal operating system in a fenced, people-restricted zone."),
+   ("Harbor tug / survey vessel (USV)", "assist berthing and survey harbors and channels without a crew",
+    "harbors, channels, coastal waters",
+    "Uncrewed/autonomous surface vessel for harbor assist, hydrographic survey, and patrol under VTS coordination."),
+ ],
+ 17: [
+   ("Warehouse AMR & autonomous forklift fleet", "move pallets, totes, and racks and feed picking across the facility",
+    "warehouses, distribution centers, fulfillment, retail backrooms",
+    "A fleet of autonomous mobile robots and driverless forklifts coordinated by a fleet manager — complements human pickers and the humanoid warehouse associate."),
+   ("Retail inventory & floor-care robot", "scan shelves for stock and pricing and clean floors autonomously after hours",
+    "stores, supermarkets, malls",
+    "Autonomous floor robot running inventory/planogram scans and floor care; data feeds the inventory-planning and pricing agents."),
+ ],
+ 8: [
+   ("Autonomous haul truck", "haul ore and overburden on mine haul roads around the clock",
+    "open-pit mines and quarries",
+    "Driverless ultra-class haul truck on a managed haul-road network — among the most mature autonomy deployments."),
+   ("Autonomous loader / excavator", "load trucks and dig and move material at the face",
+    "mines, quarries, stockyards",
+    "Autonomous loading unit working with the haul fleet under a site traffic-management system."),
+   ("Autonomous blast-hole drill", "drill blast-holes to a pattern precisely and repeatably",
+    "open-pit benches",
+    "Autonomous drill executing patterns and keeping people away from the bench edge."),
+ ],
+ 10: [
+   ("Autonomous earthmover (dozer/excavator/loader)", "grade, excavate, load, and move material to a site model",
+    "construction sites, road projects, earthworks",
+    "Geofenced autonomous earthmoving equipment executing tasks against a 3D site/BIM model under a site safety system."),
+   ("Site survey & progress drone", "map the site, track earthwork volumes, and monitor progress and safety from the air",
+    "active construction sites",
+    "UAV flying autonomous mapping missions; outputs feed the construction-scheduler and quantity-takeoff agents."),
+ ],
+ 7: [
+   ("Grid & renewable-asset inspection drone", "inspect powerlines, towers, substations, and solar/wind assets from the air",
+    "transmission corridors, substations, solar and wind farms",
+    "Autonomous UAV running thermal/RGB/LiDAR inspection missions; imagery feeds the maintenance-prediction agent and keeps crews off energized structures."),
+ ],
+ 19: [
+   ("Environmental survey & monitoring drone", "map habitats, measure emissions and effluent, and monitor land, water, and wildlife from the air",
+    "watersheds, forests, coastlines, remediation sites",
+    "Autonomous UAV/USV collecting environmental data for the satellite-monitoring and emissions-accounting agents."),
+ ],
+ 4: [
+   ("Search & response drone", "search for people, map incidents, and deliver overhead situational awareness in emergencies",
+    "disaster zones, wildland fires, search areas",
+    "Autonomous UAV providing search and a live overhead picture for incident command; it does not make life-safety decisions."),
+ ],
+ 3: [
+   ("ISR reconnaissance drone (UAS)", "conduct intelligence, surveillance, and reconnaissance from the air under human command",
+    "borders, maritime approaches, contested and disaster areas",
+    "Autonomous UAS flying ISR missions and feeding the OSINT/intelligence-triage agents; sensing only — targeting and use of force remain human command decisions."),
+   ("Autonomous logistics & resupply vehicle (UGV)", "move materiel, fuel, and casualties across austere terrain without a crewed cab",
+    "bases, forward areas, disaster-relief corridors",
+    "Uncrewed ground vehicle for resupply and casualty evacuation under human command; keeps people out of dangerous transit."),
+ ],
+ 13: [
+   ("Medical & lab-sample delivery drone", "fly blood, samples, vaccines, and medicines between sites quickly",
+    "hospital networks, rural clinics, lab-logistics routes",
+    "BVLOS medical-delivery UAV (a mature use case in several countries); requires airspace authorization; cold-chain and chain-of-custody preserved."),
+   ("Autonomous supply & pharmacy transport vehicle", "move supplies, meds, linens, and lab samples through a hospital",
+    "hospitals, health-system campuses",
+    "Autonomous mobile robot / AGV moving goods on hospital floors and to the pharmacy and lab, complementing the care-support robot."),
+ ],
+ 6: [
+   ("Water-asset inspection drone", "inspect tanks, towers, pipelines, and treatment assets from the air",
+    "treatment plants, tank farms, pipeline corridors",
+    "Autonomous UAV running thermal/RGB/LiDAR inspection; imagery feeds the asset-maintenance-planner and leak-prediction agents."),
+   ("Reservoir survey & sampling vessel (USV)", "survey reservoirs and waterways and collect water-quality samples autonomously",
+    "reservoirs, intakes, rivers, coastal outfalls",
+    "Uncrewed surface vessel mapping bathymetry and pulling samples for the water-quality-monitoring agent and the lab."),
+ ],
+}
+
 # ---------------------------------------------------------------------------
 # LABOR-MARKET / JOB-DESCRIPTION GROUNDING  (per sector)
 # Grounded in 2026 posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter,
@@ -1041,6 +1370,88 @@ ROLE_JD = {
    tools="Bill-tracking (LegiScan), legislative databases, statute/redline tooling.",
    certs="Civil-service assessment; public-policy background common.",
    note="Advertised on USAJOBS and GovernmentJobs; drafts and compares, members and counsel decide."),
+ # Sector 7 — Energy & Grid
+ "load-forecasting-agent": dict(
+   titles="Load Forecaster, Demand/Resource Forecast Analyst, Energy Analyst.",
+   tools="EMS and ISO/RTO data feeds, Python/R, weather inputs, forecasting platforms.",
+   certs="Engineering or quantitative background; NERC familiarity a plus.",
+   note="Supports balancing-authority and trading desks; measured on forecast error (MAPE)."),
+ "grid-anomaly-detector": dict(
+   titles="Transmission/Distribution System Operator, Grid Operations Analyst.",
+   tools="EMS/SCADA, alarm management, PI historian.",
+   certs="NERC System Operator certification (RC/BA/TO).",
+   note="Flags faults for the certified operator, who holds switching authority."),
+ "outage-restoration-planner": dict(
+   titles="Distribution Operations Lead, Outage Coordinator.",
+   tools="OMS, ADMS, crew-dispatch systems, GIS.",
+   certs="NERC certification plus switching/clearance qualification.",
+   note="Sequences switching and crews; the operator authorizes energized work."),
+ # Sector 11 — Transportation & Logistics
+ "routing-optimizer": dict(
+   titles="Logistics/Route Optimization Analyst, Dispatch Planner, Supply Chain Analyst.",
+   tools="TMS, route-optimization engines, ELD/telematics, EDI.",
+   certs="APICS CSCP/CLTD a plus.",
+   note="Measured on cost-per-mile and on-time delivery; posted on iHireTransportation and LinkedIn."),
+ "customs-documentation-agent": dict(
+   titles="Customs Broker, Trade Compliance Specialist, Freight Forwarder.",
+   tools="Customs/ABI filing systems, HTS classification, trade-management software.",
+   certs="Licensed Customs Broker (CBP exam); Certified Customs Specialist.",
+   note="Prepares filings; the licensed broker signs and is accountable."),
+ "fleet-maintenance-predictor": dict(
+   titles="Fleet Manager, Maintenance Planner, Diesel/Heavy-Equipment Technician (support).",
+   tools="Fleet-maintenance systems, telematics, parts/inventory.",
+   certs="ASE certification (technicians); DOT compliance knowledge.",
+   note="Predicts failures and schedules service; measured on uptime and DOT compliance."),
+ # Sector 14 — Education
+ "tutor-agent": dict(
+   titles="Tutor, Teaching Assistant, Intervention Specialist (supports Teacher).",
+   tools="LMS (Canvas), adaptive-practice platforms, assessment data.",
+   certs="Supervising teacher holds the state license; subject proficiency expected.",
+   note="Adapts practice under the teacher; never assigns grades of record."),
+ "grading-assistant": dict(
+   titles="Teacher, Teaching Assistant, Assessment Specialist (support).",
+   tools="LMS gradebook, rubric tools, SIS (PowerSchool).",
+   certs="State teaching license (supervising teacher).",
+   note="Scores against rubrics and drafts feedback; the teacher owns the grade of record."),
+ "career-pathway-advisor": dict(
+   titles="Academic/Career Advisor, Student Success Manager, Workforce Development Specialist.",
+   tools="SIS, labor-market data, advising/CRM platforms.",
+   certs="GCDF (Global Career Development Facilitator) a plus.",
+   note="Maps skills to pathways; advertised on HigherEdJobs and GovernmentJobs."),
+ # Sector 9 — Manufacturing
+ "production-scheduler": dict(
+   titles="Production Scheduler/Planner, Master Scheduler.",
+   tools="ERP/MES, advanced planning & scheduling (APS), Excel.",
+   certs="APICS CPIM; Lean/Six Sigma.",
+   note="Measured on on-time delivery and changeover efficiency; posted on Indeed/LinkedIn."),
+ "quality-anomaly-detector": dict(
+   titles="Quality Engineer, QC Inspector, Quality Analyst.",
+   tools="SPC (Minitab), MES quality modules, machine-vision inspection data.",
+   certs="ASQ CQE/CQA; Six Sigma.",
+   note="Detects drift/defects for the quality engineer; measured on PPM and escape rate."),
+ # Sector 6 — Water
+ "water-quality-monitoring-agent": dict(
+   titles="Water/Wastewater Operator, Water Quality Analyst, Lab Technician.",
+   tools="SCADA, LIMS, online analyzers.",
+   certs="State operator certification (Grades I–IV).",
+   note="Flags excursions for the certified operator, who issues notices or shutoffs."),
+ # Sector 10 — Shelter & Built Environment
+ "code-compliance-checker": dict(
+   titles="Building Inspector, Plans Examiner, Code Official.",
+   tools="Permitting systems, BIM/plan-review tools, code databases.",
+   certs="ICC certifications (Building Inspector, Plans Examiner).",
+   note="Checks plans against code; the code official signs occupancy."),
+ "permitting-assistant": dict(
+   titles="Permit Technician, Planner, Plan Reviewer.",
+   tools="Permitting/e-plan-review systems, GIS, code references.",
+   certs="ICC Permit Technician certification.",
+   note="Pre-checks applications against code; advertised on GovernmentJobs."),
+ # Sector 20 — Labor & Workforce
+ "candidate-matching-assistant": dict(
+   titles="Recruiter, Talent Acquisition Partner, Sourcer.",
+   tools="ATS (Workday, Greenhouse), LinkedIn Recruiter, sourcing tools.",
+   certs="SHRM-CP or aPHR a plus.",
+   note="Screens and shortlists; the hiring decision stays human; measured on time-to-fill and quality of hire."),
 }
 
 print("Data loaded:", len(SECTORS), "sectors")
@@ -1081,6 +1492,16 @@ def render_sector(sec):
                          "actions as tool calls via VLA policies):\n\n" + nested + "\n")
     else:
         nested_robots = ""
+    if sec["num"] in SECTOR_MACHINES:
+        ml = "\n".join(
+            "- **%s** — %s. *(autonomous machine skill: `autonomous/%s/`)*" % (m[0], m[1], slug(m[0]))
+            for m in SECTOR_MACHINES[sec["num"]])
+        nested_machines = ("\n## Non-humanoid autonomous machines\n\n"
+                           "Self-driving vehicles, equipment, and drones for this sector (LLM-planned; physical "
+                           "actions as tool calls; ODD + teleoperation fallback):\n\n" + ml + "\n\n"
+                           + AUTONOMY_STACK_SHORT + "\n")
+    else:
+        nested_machines = ""
 
     desc = ("Operating-system orchestrator skill for **%s** (national operating system #%d). "
             "Use this skill whenever work touches this sector's mission — %s — to understand the jobs to "
@@ -1137,7 +1558,7 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 {robots}
 {nested_robots}
 {robot_stack_short}
-
+{nested_machines}
 ## Human accountability boundary (must stay human-led)
 
 {accountability}
@@ -1189,7 +1610,8 @@ The jobs above are universal; how they are staffed is not. Re-read this sector t
         name=name, desc=desc, num=sec["num"], title=title, title_lower=title.lower(),
         mission=sec["mission"], jtbd=jtbd, lifecycle=lifecycle_block("sector", title),
         families=families, role_list=role_list, robots=robots, nested_robots=nested_robots,
-        robot_stack_short=ROBOT_STACK_SHORT, jd_block=jd_sector_block(sec["num"]),
+        robot_stack_short=ROBOT_STACK_SHORT, nested_machines=nested_machines,
+        jd_block=jd_sector_block(sec["num"]),
         accountability=sec["accountability"], collabs=collabs, context=CONTEXT_MODIFIERS)
     return sslug, body
 
@@ -1632,6 +2054,134 @@ In smallholder and informal-sector agriculture, this role may be shared equipmen
     return rslug, body
 
 
+def render_machine_catalog(machine):
+    mname, jtbd, envs, detail = machine
+    mslug = slug(mname)
+    name = "machine-%s" % mslug
+    desc = ("Non-humanoid autonomous machine: **%s** — %s. Best in: %s. A self-driving/self-operating platform whose "
+            "planning brain issues physical actions as tool calls over a perception-to-control stack (trained on world "
+            "models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this skill to plan or "
+            "operate the platform anywhere this physical job is needed, even if the user only describes the underlying need."
+            ) % (mname, jtbd, envs)
+    body = """---
+name: {name}
+description: {desc}
+---
+
+# Autonomous Machine — {mname}
+
+> **Layer:** Non-humanoid autonomous machine (cross-economy) · **Best environments:** {envs}
+> **Operated by:** `../../embodied-ai-stack/` roles (autonomy, fleet ops, teleoperation, safety) · **Shared concepts:** `../../../00-framework/SKILL.md`
+
+## Primary job to be done
+
+{jtbd_cap}.
+
+## What it is
+
+{detail}
+
+## When to use this skill
+
+When a task needs the physical job "{jtbd}" in environments such as {envs}. Pair with the relevant operating-system skill (01–22) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
+
+## Cognitive and control architecture (assumed)
+
+{stack_full}
+
+## Division of labor and safety
+
+- **Human owner / fleet operator** — owns the safety case, the ODD, and stop authority; accountable for incidents.
+- **Autonomy brain** — perceives, predicts, plans, and issues actuation as tool calls within the ODD.
+- **Low-level controllers** — execute motion/actuation at high frequency.
+- **Verified safety layer** — triggers a minimal-risk maneuver (safe-stop / return-to-base / hover) independently of the brain.
+- **Remote operator (teleop)** — supervises and takes over beyond the ODD or below a confidence threshold.
+
+## Architecture-specific failure modes
+
+{fail}
+
+## Adapting to any nation (context modifiers)
+
+Ownership ranges from fleet-as-a-service to cooperatively shared or rented machines; regulation (road approval, airspace/BVLOS, mine/site rules) and infrastructure (maps, connectivity, GPS/RTK) gate where it can run. In low-connectivity settings, on-board autonomy and safe-stop matter more than teleop. Re-read through:
+
+{context}
+""".format(name=name, desc=desc, mname=mname, jtbd=jtbd, jtbd_cap=jtbd[0].upper() + jtbd[1:],
+           envs=envs, detail=detail, stack_full=AUTONOMY_STACK_FULL, fail=AUTONOMY_FAILURE_MODES,
+           context=CONTEXT_MODIFIERS)
+    return mslug, body
+
+
+def render_sector_machine(sec, machine):
+    mname, jtbd, envs, detail = machine
+    mslug = slug(mname)
+    name = "machine-%02d-%s" % (sec["num"], mslug)
+    sshort = sec["title"].split(",")[0]
+    desc = ("Non-humanoid autonomous machine for the %s operating system: **%s** — %s. Best in: %s. A self-driving/"
+            "self-operating platform whose planning brain issues physical actions as tool calls (perception-to-control "
+            "trained on world models, simulation, and RLAIF) inside a defined ODD with teleoperation fallback. Use this "
+            "skill to plan or operate the platform; trigger whenever this physical work is needed, even if only described."
+            ) % (sshort, mname, jtbd, envs)
+    body = """---
+name: {name}
+description: {desc}
+---
+
+# {mname}
+
+> **Operating system:** {num:02d}. {sname} · **Personnel type:** Non-humanoid autonomous machine
+> **Best environments:** {envs}
+> **Sector skill:** `../../SKILL.md` · **Operators:** `../../../_catalogs/embodied-ai-stack/` · **Shared concepts:** `../../../00-framework/SKILL.md`
+
+## What this machine is
+
+The **{mname}** is a non-humanoid autonomous machine whose job is to {jtbd}. {detail}
+
+## Operating-system context
+
+This platform serves the *{sshort}* operating system, whose mission is to {mission_lower} It takes mobile and heavy-equipment work so people and the sector's AI agents can focus on planning, judgment, and exceptions.
+
+## When to use this skill
+
+When a task needs the physical job "{jtbd}" in environments such as {envs}. Pair with the sector skill (`../../SKILL.md`) for domain rules and the human accountability boundary, the AI agents under `../roles/` that plan and direct this work, and `_catalogs/embodied-ai-stack/` for the autonomy, fleet-ops, teleoperation, and safety roles that run it.
+
+## Cognitive and control architecture (assumed)
+
+{stack_full}
+
+## Division of labor and safety
+
+- **Human owner ({owner})** — owns the safety case, the ODD, land/site/airspace rules, and stop authority; accountable for incidents.
+- **Autonomy brain** — perceives, predicts, plans, and issues actuation as tool calls within the ODD.
+- **Verified safety layer** — triggers a minimal-risk maneuver (safe-stop / return-to-base / hover) independently of the brain.
+- **AI agents** — the sector's planning/monitoring agents direct and schedule the machine's missions.
+- **Remote operator (teleop)** — supervises and takes over beyond the ODD.
+
+## Accountability boundary
+
+{accountability}
+
+These remain human-owned. The machine operates within its ODD and engineered safety envelope and routes anything outside it to the accountable human.
+
+## Architecture-specific failure modes
+
+{fail}
+
+{jd_block}
+## Adapting to any nation (context modifiers)
+
+Ownership ranges from fleet-as-a-service to cooperatively shared or rented machines; affordability, repairability, connectivity (maps, GPS/RTK, comms), and regulation (road approval, airspace/BVLOS, mine/site rules) decide where it runs. In low-connectivity settings, on-board autonomy and safe-stop matter more than teleop. Re-read through:
+
+{context}
+""".format(name=name, desc=desc, mname=mname, num=sec["num"], sname=sec["title"], sshort=sshort,
+           jtbd=jtbd, detail=detail, envs=envs,
+           mission_lower=sec["mission"][0].lower() + sec["mission"][1:],
+           owner="farmer / ranch manager" if sec["num"] == 5 else "fleet operator / site or operations manager",
+           stack_full=AUTONOMY_STACK_FULL, accountability=sec["accountability"],
+           fail=AUTONOMY_FAILURE_MODES, jd_block=jd_sector_block(sec["num"]), context=CONTEXT_MODIFIERS)
+    return mslug, body
+
+
 STACK_KIND_LABEL = {
     "agent": "AI agent",
     "engineer": "Human engineering role (AI/robotics)",
@@ -1736,6 +2286,169 @@ Use this skill when a task calls for this work: {jtbd}. Pair with `_catalogs/hum
     return rslug, body
 
 
+def render_fleet_ops_role(role):
+    rname, kind, jtbd, supervisor, detail = role
+    rslug = slug(rname)
+    name = "fleetops-%s" % rslug
+    kind_label = STACK_KIND_LABEL[kind]
+    if kind == "oversight":
+        rights = ("- **Owns and is accountable for** the safety case, ODD boundary, regulatory authorization, and stop authority.\n"
+                  "- **Cannot delegate** these to the autonomy brain; the safety layer and ODD are independent of it.\n"
+                  "- **Escalates** unresolved safety or compliance risk and can ground or halt the fleet.")
+    elif kind == "hitl":
+        rights = ("- **Acts** when the machine escalates a low-confidence or out-of-ODD situation.\n"
+                  "- **Provides** disengagement and demonstration data that improves the stack.\n"
+                  "- **Escalates** recurring takeovers to safety and engineering.")
+    elif kind == "agent":
+        rights = ("- **May act autonomously** on routine, reversible, in-policy analysis and monitoring.\n"
+                  "- **Must defer** to the safety layer and human owners for safety-relevant calls.\n"
+                  "- **Must escalate** ODD changes and incident findings to the safety lead.")
+    else:  # engineer
+        rights = ("- **Owns** the technical quality and safety of this layer of the fleet.\n"
+                  "- **Gates** releases (maps, ODD changes, infrastructure) with the safety engineer.\n"
+                  "- **Escalates** capability/safety tradeoffs to safety and regulatory leads.")
+    desc = ("Autonomous-fleet operations role: **%s** (%s) — %s. Part of the operations layer that runs non-humanoid "
+            "autonomous machines (self-driving vehicles, farm equipment, loaders, drones). Use this skill when deploying, "
+            "supervising, certifying, or scaling an autonomous fleet, even if the user only describes the underlying need. "
+            "Works under a %s."
+            ) % (rname, kind_label, jtbd, supervisor)
+    body = """---
+name: {name}
+description: {desc}
+---
+
+# Autonomous-Fleet Ops — {rname}
+
+> **Layer:** Autonomous-fleet operations (runs non-humanoid autonomous machines) · **Type:** {kind_label}
+> **Human supervisor:** {supervisor} · **Machines:** `../../autonomous-machines/` · **Shared concepts:** `../../../00-framework/SKILL.md`
+
+## What this role is
+
+The **{rname}** {jtbd}. {detail}
+
+## Where it sits
+
+The assumed machine architecture is: a foundation/LLM **planning brain** issuing **actions as tool calls** over a perception → prediction → planning → control stack trained on **world models**, **simulation**, and **RLAIF**, running inside a defined **Operational Design Domain (ODD)** with a verified safe-stop and **teleoperation** fallback. This role owns the part of *operating* that fleet described above. It complements the build-side roles in `_catalogs/embodied-ai-stack/`.
+
+## When to use this skill
+
+Use it when a task calls for this work: {jtbd}. Pair with `_catalogs/autonomous-machines/` (the platforms) and any operating-system skill (01–22) whose fleet this supports.
+
+## Assumed architecture (recap)
+
+{stack_full}
+
+## Responsibilities
+
+- Deliver this role's core job: {jtbd}.
+- Keep the fleet inside its ODD and safety case; treat the safety layer as authoritative over the brain.
+- Maintain auditable evidence (maps, calibration, disengagements, approvals) for regulators and incident review.
+
+## Decision rights & accountability
+
+{rights}
+
+## Failure modes and safeguards
+
+{fail}
+
+## Adapting to any nation (context modifiers)
+
+Fleet ownership, road/airspace regulation, connectivity, and mapping coverage vary widely; in low-infrastructure settings on-board autonomy and safe-stop matter more than teleoperation and V2X. Re-read through:
+
+{context}
+
+## Operating procedure
+
+1. Confirm the ODD, safety case, and regulatory authorization for the work.
+2. Run the role's core job, keeping the safety layer and ODD authoritative over the brain.
+3. Monitor health, confidence, and disengagements; escalate ODD or safety changes to humans.
+4. Maintain the audit trail; feed incidents and disengagements back into the stack.
+""".format(name=name, desc=desc, rname=rname, kind_label=kind_label, supervisor=supervisor,
+           jtbd=jtbd, detail=detail, stack_full=AUTONOMY_STACK_FULL, rights=rights,
+           fail=AUTONOMY_FAILURE_MODES, context=CONTEXT_MODIFIERS)
+    return rslug, body
+
+
+def render_capability_role(role):
+    rname, kind, jtbd, supervisor, detail = role
+    rslug = slug(rname)
+    name = "capopt-%s" % rslug
+    kind_label = STACK_KIND_LABEL[kind]
+    if kind == "oversight":
+        rights = ("- **Owns and is accountable for** the guarantees and safety assurance this layer provides.\n"
+                  "- **Cannot delegate** safety-critical verification to a learned model; the verified layer overrides learned actions.\n"
+                  "- **Escalates** unproven or unsafe capability and can block release.")
+    elif kind == "agent":
+        rights = ("- **May act autonomously** on routine evaluation, benchmarking, and analysis within policy.\n"
+                  "- **Must defer** to human leads for method selection that affects safety.\n"
+                  "- **Must escalate** regressions and capability gaps with evidence.")
+    else:  # engineer
+        rights = ("- **Owns** the technical quality, efficiency, and robustness of this method/layer.\n"
+                  "- **Justifies** the method and model-tier choice against the selection rubric (exhaustiveness vs efficiency, determinism, latency, verifiability).\n"
+                  "- **Gates** promotion to production with the safety and evaluation leads.")
+    desc = ("Capability/optimization role: **%s** (%s) — %s. Part of the layer that decides *how* robot and machine "
+            "capabilities are built — across model tiers (LLM, SLM, tiny LM, deterministic) and many training methods "
+            "(imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation, classical control, formal methods). "
+            "Use this skill when choosing or building how a capability is trained, optimized, or run on-device, even if the "
+            "user only describes the underlying need. Works under a %s."
+            ) % (rname, kind_label, jtbd, supervisor)
+    body = """---
+name: {name}
+description: {desc}
+---
+
+# Capability & Optimization — {rname}
+
+> **Layer:** Capability / optimization spectrum (how robots and machines are made capable) · **Type:** {kind_label}
+> **Human supervisor:** {supervisor} · **Used by:** `../embodied-ai-stack/`, `../autonomous-fleet-ops/`, robot & machine skills · **Shared concepts:** `../../00-framework/SKILL.md`
+
+## What this role is
+
+The **{rname}** {jtbd}. {detail}
+
+## Why this layer exists
+
+RLAIF is **one** way to make an embodied system capable — not the only or always the best one. Capability is **right-sized per task** across a heterogeneous stack and a spectrum of methods. This role owns the part of that spectrum described above, and works with the build-side roles in `_catalogs/embodied-ai-stack/` and the operations roles in `_catalogs/autonomous-fleet-ops/`.
+
+## The capability/optimization spectrum (shared model)
+
+{spectrum}
+
+## When to use this skill
+
+Use it when a task calls for this work: {jtbd}. Pair with the robot skills (`_catalogs/humanoid-robots/`, `<sector>/robots/`) and machine skills (`_catalogs/autonomous-machines/`, `<sector>/autonomous/`) whose capabilities are being trained, optimized, or deployed.
+
+## Decision rights & accountability
+
+{rights}
+
+## How this role chooses (selection discipline)
+
+1. State the capability, its accuracy bar, latency/power budget, and safety-criticality.
+2. Pick the **smallest, most deterministic** model tier that can meet it (deterministic → tiny LM → SLM → LLM).
+3. Pick the **most efficient** optimization method that reaches the bar with available data (demos → sim → logs → online).
+4. Reserve large learned models for open-ended judgment; reserve deterministic/verified methods for safety-critical loops.
+5. Measure on the real task, compare tiers/methods, and keep a verified safety layer beneath anything learned.
+
+## Failure modes and safeguards
+
+- **Over-reach** — using a large learned model where a verifiable controller would be safer and cheaper. Mitigation: the selection rubric and a verified safety layer.
+- **Reward hacking / spec gaming** — learned objectives gamed. Mitigation: diverse signals, human spot-checks, outcome-based evaluation.
+- **Sim-to-real and distribution shift** — training diverges from deployment. Mitigation: shadow mode, staged rollout, monitoring.
+- **Efficiency/quality regressions** — compression or routing degrades behavior silently. Mitigation: continuous benchmarking across tiers.
+
+## Adapting to any nation (context modifiers)
+
+Compute, data, and connectivity budgets vary enormously; lower-resource settings push capability toward **smaller, on-device, and deterministic** methods, and toward distillation of expensive models into cheap ones. Re-read through:
+
+{context}
+""".format(name=name, desc=desc, rname=rname, kind_label=kind_label, supervisor=supervisor,
+           jtbd=jtbd, detail=detail, spectrum=CAPABILITY_SPECTRUM_FULL, rights=rights,
+           context=CONTEXT_MODIFIERS)
+    return rslug, body
+
+
 def render_framework_index():
     sector_rows = "\n".join(
         "| %02d | [%s](%s/) | %d AI roles |" % (
@@ -1761,7 +2474,10 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 - `01-…` through `22-…` — one folder per **national operating system**. Each has a sector `SKILL.md` (orchestrator) and a `roles/` subfolder of **AI-personnel role skills**.
 - `cross-cutting-archetypes/` — the 12 role patterns (Strategist, Operator, Builder, …) that recur in every sector.
 - `_catalogs/ai-personnel/` and `_catalogs/humanoid-robots/` — reusable cross-economy role patterns.
-- `_catalogs/embodied-ai-stack/` — the roles that **build and operate** the LLM-brained robots: brain orchestrator, VLA policy engineer, world-model engineer, robot-gym/sim-to-real engineer, RLAIF pipeline engineer, evaluation/red-team agent, fleet safety officer, teleoperation operator, fleet operations agent, and data/telemetry engineer.
+- `_catalogs/autonomous-machines/` — **non-humanoid** autonomous platforms: self-driving cars/trucks/shuttles, autonomous tractors and harvesters, loaders and earthmovers, mining haul trucks, drones (survey, spray, delivery), warehouse movers, and surface vessels. Several sectors also nest domain-specific machines under `<sector>/autonomous/` (e.g. `05-food/autonomous/`, `11-transportation/autonomous/`, `08-mining/autonomous/`).
+- `_catalogs/embodied-ai-stack/` — the roles that **build and operate** both the LLM-brained robots and the autonomous machines: brain/autonomy orchestrator, VLA policy engineer, world-model engineer, robot-gym/sim-to-real engineer, RLAIF pipeline engineer, evaluation/red-team agent, fleet safety officer, teleoperation operator, fleet operations agent, and data/telemetry engineer.
+- `_catalogs/autonomous-fleet-ops/` — the **operations layer for autonomous vehicle/machine fleets**: ODD & safety-case engineer, remote-operations (teleop) center supervisor, HD mapping & localization engineer, V2X/connectivity & infrastructure engineer, homologation & regulatory lead, depot/maintenance lead, in-field safety operator, and incident/disengagement analyst.
+- `_catalogs/capability-optimization/` — the **how-it's-built layer**: the model tiers (LLM, SLM, tiny LM, deterministic) and the spectrum of optimization methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation/compression, classical control, search, formal methods) with the roles that select and run them. **RLAIF is one option among many.**
 
 ## The shared model every skill assumes
 
@@ -1779,7 +2495,9 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 - **Control layer** — permissions, audit logs, escalation thresholds, incident reporting, evaluation.
 - **Public trust layer** — explainability, appeal, privacy, bias testing, safety certification, labor impact.
 
-**How robot personnel are built (assumed architecture).** Robot roles in this library are **LLM-brained embodied agents**: a multimodal LLM *brain* perceives, plans, and issues physical **actions as tool calls** (e.g. `grasp`, `navigate_to`, `place`), which are executed by **Vision-Language-Action (VLA) policies** trained on **world models** (learned physics simulators), **robot gyms** (massively parallel sim-to-real), and **RLAIF** (reinforcement learning from AI feedback). Fleets may share one brain model or mix specialized ones (a deliberative orchestrator over fast reactive controllers). A **verified low-level safety layer** can refuse or override unsafe tool calls independently of the brain. The roles that build and operate this stack live in `_catalogs/embodied-ai-stack/`.
+**How robot personnel are built (assumed architecture).** Robot roles in this library are **LLM-brained embodied agents**: a multimodal LLM *brain* perceives, plans, and issues physical **actions as tool calls** (e.g. `grasp`, `navigate_to`, `place`), which are executed by **Vision-Language-Action (VLA) policies** trained on **world models** (learned physics simulators), **robot gyms** (massively parallel sim-to-real), and **RLAIF** (reinforcement learning from AI feedback). Fleets may share one brain model or mix specialized ones (a deliberative orchestrator over fast reactive controllers). A **verified low-level safety layer** can refuse or override unsafe tool calls independently of the brain. The roles that build and operate this stack live in `_catalogs/embodied-ai-stack/`. The **same brain-and-tool-calls model extends to non-humanoid autonomous machines** (vehicles, farm equipment, loaders, drones), which add an Operational Design Domain, SAE levels, a verified safe-stop, and a teleoperation fallback (`_catalogs/autonomous-machines/`, `_catalogs/autonomous-fleet-ops/`).
+
+**Capability is right-sized, not one-size — and RLAIF is one method among many.** The brain need not be a single large model trained one way. Capabilities are spread across **model tiers** — LLM, SLM, tiny LM, and **deterministic controllers** — and built with a **spectrum of methods**: imitation/behavior cloning, model-based and offline RL, RLHF/RLAIF, sim-to-real, self-supervised pretraining, supervised fine-tuning, **distillation and compression**, search/planning, classical optimization and control, and **formal verification**. Each capability is assigned to the *smallest, most deterministic* tier and the *most efficient* method that meets its accuracy, latency, and safety bar — with a verified deterministic safety layer beneath anything learned. The roles that select and run this spectrum live in `_catalogs/capability-optimization/`.
 
 **Universal, not US-specific.** The jobs are invariant across nations; *ownership, formality, and capacity* are local variables. Every skill carries a "context modifiers" section so it can be adapted to any nation — any size, geography, income level, or political system.
 
@@ -1820,7 +2538,9 @@ Coercive state power; rights-impacting decisions; intimate human care; democrati
 # EMIT
 # ---------------------------------------------------------------------------
 def main():
-    counts = dict(sectors=0, roles=0, sector_robots=0, archetypes=0, catalog_ai=0, catalog_robot=0, embodied_stack=0)
+    counts = dict(sectors=0, roles=0, sector_robots=0, sector_machines=0, archetypes=0,
+                  catalog_ai=0, catalog_robot=0, catalog_machine=0, embodied_stack=0, fleet_ops=0,
+                  capability_opt=0)
 
     # Framework index
     write(os.path.join(ROOT, "00-framework", "SKILL.md"), render_framework_index())
@@ -1838,6 +2558,10 @@ def main():
             rslug, rbody = render_sector_robot(sec, robot)
             write(os.path.join(ROOT, sslug, "robots", rslug, "SKILL.md"), rbody)
             counts["sector_robots"] += 1
+        for machine in SECTOR_MACHINES.get(sec["num"], []):
+            mslug, mbody = render_sector_machine(sec, machine)
+            write(os.path.join(ROOT, sslug, "autonomous", mslug, "SKILL.md"), mbody)
+            counts["sector_machines"] += 1
 
     # Archetypes
     for a in ARCHETYPES:
@@ -1854,10 +2578,22 @@ def main():
         rslug, body = render_catalog_robot(r)
         write(os.path.join(ROOT, "_catalogs", "humanoid-robots", rslug, "SKILL.md"), body)
         counts["catalog_robot"] += 1
+    for m in AUTONOMOUS_MACHINES:
+        mslug, body = render_machine_catalog(m)
+        write(os.path.join(ROOT, "_catalogs", "autonomous-machines", mslug, "SKILL.md"), body)
+        counts["catalog_machine"] += 1
     for r in EMBODIED_AI_ROLES:
         rslug, body = render_stack_role(r)
         write(os.path.join(ROOT, "_catalogs", "embodied-ai-stack", rslug, "SKILL.md"), body)
         counts["embodied_stack"] += 1
+    for r in FLEET_OPS_ROLES:
+        rslug, body = render_fleet_ops_role(r)
+        write(os.path.join(ROOT, "_catalogs", "autonomous-fleet-ops", rslug, "SKILL.md"), body)
+        counts["fleet_ops"] += 1
+    for r in CAPABILITY_OPT_ROLES:
+        rslug, body = render_capability_role(r)
+        write(os.path.join(ROOT, "_catalogs", "capability-optimization", rslug, "SKILL.md"), body)
+        counts["capability_opt"] += 1
 
     total = sum(counts.values()) + 1  # + framework index
     print("Wrote skills to:", ROOT)

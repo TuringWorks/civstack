@@ -107,6 +107,12 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 ## Labor-market grounding
 
+**In the job market, this agent maps to:** Transmission/Distribution System Operator, Grid Operations Analyst.
+
+Employers typically list — **tools:** EMS/SCADA, alarm management, PI historian. **Qualifications/certs:** NERC System Operator certification (RC/BA/TO).
+
+Flags faults for the certified operator, who holds switching authority.
+
 This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
 
 - **Advertised titles & ladder:** Apprentice lineworker/technician → journeyman → foreman; system-operator trainee → certified system operator → shift supervisor → control-center manager; EIT → PE → engineering manager; energy trader.

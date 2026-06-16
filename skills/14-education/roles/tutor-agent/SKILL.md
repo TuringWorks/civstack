@@ -107,6 +107,12 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 ## Labor-market grounding
 
+**In the job market, this agent maps to:** Tutor, Teaching Assistant, Intervention Specialist (supports Teacher).
+
+Employers typically list — **tools:** LMS (Canvas), adaptive-practice platforms, assessment data. **Qualifications/certs:** Supervising teacher holds the state license; subject proficiency expected.
+
+Adapts practice under the teacher; never assigns grades of record.
+
 This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
 
 - **Advertised titles & ladder:** Aide/TA → teacher → instructional coach/lead → assistant principal → principal → superintendent; higher ed: adjunct → assistant/associate/full professor; L&D specialist → manager → CLO.

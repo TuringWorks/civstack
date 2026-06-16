@@ -107,6 +107,12 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 ## Labor-market grounding
 
+**In the job market, this agent maps to:** Building Inspector, Plans Examiner, Code Official.
+
+Employers typically list — **tools:** Permitting systems, BIM/plan-review tools, code databases. **Qualifications/certs:** ICC certifications (Building Inspector, Plans Examiner).
+
+Checks plans against code; the code official signs occupancy.
+
 This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
 
 - **Advertised titles & ladder:** Laborer/apprentice → journeyman tradesperson → foreman/superintendent → project manager; design: intern architect/EIT → licensed architect/PE → principal; planner → senior planner → director.

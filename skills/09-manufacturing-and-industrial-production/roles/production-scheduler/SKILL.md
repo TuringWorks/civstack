@@ -107,6 +107,12 @@ Other role skills in this operating system (see `../`), and across these neighbo
 
 ## Labor-market grounding
 
+**In the job market, this agent maps to:** Production Scheduler/Planner, Master Scheduler.
+
+Employers typically list — **tools:** ERP/MES, advanced planning & scheduling (APS), Excel. **Qualifications/certs:** APICS CPIM; Lean/Six Sigma.
+
+Measured on on-time delivery and changeover efficiency; posted on Indeed/LinkedIn.
+
 This agent supports human roles advertised with concrete requirements (full detail in the sector skill):
 
 - **Advertised titles & ladder:** Operator/assembler → technician/setup → process/quality engineer → production supervisor → plant manager; maintenance apprentice → journeyman → reliability engineer.
