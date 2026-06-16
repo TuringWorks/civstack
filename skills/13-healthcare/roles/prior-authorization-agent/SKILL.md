@@ -117,6 +117,15 @@ This agent supports human roles advertised with concrete requirements (full deta
 
 > Grounding reflects 2026 job-posting conventions across LinkedIn, Indeed, Dice, ZipRecruiter, Glassdoor, USAJOBS, GovernmentJobs, and specialized boards, spot-verified against public listings and O\*NET/BLS. Re-verify specifics — especially pay, certifications, and licenses — against live postings before operational use.
 
+## Deskilling watch & keep-warm
+
+Automating routine work erodes the human fallback bench, tacit judgment, and the learning ladder over time.
+
+- **Risk:** Clinicians lose exam and diagnostic skill; radiologists deskill on routine reads; juniors under-train.
+- **Role/job simulators (keep-warm):** Standardized-patient and procedure simulators; unaided-read sessions; code-blue and rare-presentation sims.
+
+> **Dual-use simulators:** the world models and simulation built to *train the machines* in this sector double as the **keep-warm simulators** that keep humans current and rebuild the learning ladder. Owned cross-sector by OS 22 (Resilience) and the `_catalogs/simulation-training/` roles; the verified deterministic fallback in `_catalogs/capability-optimization/` is its technical complement.
+
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.

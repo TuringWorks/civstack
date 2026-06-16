@@ -1020,6 +1020,36 @@ CAPABILITY_OPT_ROLES = [
      "Compares LLM vs SLM vs tiny vs deterministic on the same task to pick the smallest tier that meets the bar; feeds the method architect."),
 ]
 
+# Anti-deskilling / keep-warm layer: job and role simulators that keep humans current,
+# rebuild the learning ladder, and capture tacit knowledge — reusing the machine-training
+# world models and simulators. kind ∈ {agent, engineer, oversight, hitl}.
+SIM_TRAINING_ROLES = [
+    ("Human-skill simulation & curriculum designer", "engineer",
+     "designs the keep-warm simulators, drill scenarios, and learning-ladder curricula that prevent deskilling",
+     "workforce capability / training lead",
+     "Builds the regimen: what to drill, how often, at what fidelity, and how it maps to certification — reusing the sector's machine-training world models and simulators for human practice."),
+    ("Scenario-generation agent", "agent",
+     "mines real incidents, logs, and near-misses into drill scenarios and adversarial edge cases, including simulated AI failures for oversight training",
+     "simulation designer",
+     "Turns operational data into a stream of varied, progressively harder scenarios, and deliberately injects automation failures (hallucinated actions, sensor spoofing, drift) so humans practice detecting and overriding them."),
+    ("Competency assessment & certification agent", "agent",
+     "runs gradeable competency checks and tracks fallback-readiness and bench depth",
+     "certification / safety lead",
+     "Provides objective, repeatable assessment and the metrics — time-to-manual, drill pass rates, recertification status, bench depth — that make deskilling visible and managed."),
+    ("Drill & exercise coordinator", "oversight",
+     "schedules and runs manual-reversion drills and full-scale 'automation-off' exercises",
+     "resilience / operations lead",
+     "The human-accountable owner of keep-warm cadence; ensures the fallback is actually rehearsed under realistic, degraded conditions. Works with OS 22 (Resilience)."),
+    ("Dual-use world-model & sim-fidelity engineer", "engineer",
+     "exposes the machine-training world models and simulators as human-training environments and manages fidelity and transfer",
+     "simulation platform lead",
+     "Owns the shared substrate so one simulation layer serves both robot/agent policy learning and human skill maintenance; quantifies and guards against sim-to-real (and sim-to-human) transfer gaps."),
+    ("Tacit-knowledge capture agent", "agent",
+     "captures expert decisions and demonstrations and turns them into curricula and training demonstrations",
+     "knowledge / training lead",
+     "Records the reasoning behind expert judgment before the cohort retires; the same demonstrations feed imitation learning for machines and case-based learning for humans (a dual-use data engine)."),
+]
+
 # ---------------------------------------------------------------------------
 # NON-HUMANOID AUTONOMOUS MACHINES
 # Cross-economy catalog of self-driving vehicles, farm equipment, harvesters,
@@ -1313,6 +1343,76 @@ SECTOR_JD = {
    certs="CBCP/MBCP (DRI), CEM, PMP, FRM, ISO 22301 lead auditor, CISSP (cyber-resilience).",
    kpis="RTO/RPO achievement, exercise/test pass rate, time-to-recover, single-point-of-failure coverage, claims throughput.",
    venues="LinkedIn, Indeed, DRI/continuity boards, USAJOBS/GovernmentJobs (emergency management), ClearanceJobs."),
+}
+
+# Per-sector deskilling watch & keep-warm regime. num -> {risk, counter, sim}
+SECTOR_DESKILLING = {
+ 1: dict(risk="Adjudicators rubber-stamp AI eligibility decisions; judges and analysts lose fact-analysis and legal-reasoning practice.",
+   counter="Require human reasoning on a sampled share of cases; rotate caseworkers; preserve legal-reasoning training and redress capacity.",
+   sim="Case-adjudication and hearing simulators on synthetic case files; drill manual eligibility determination and appeal reasoning."),
+ 2: dict(risk="Auditors lose forensic judgment; budget and procurement analysts cannot model or evaluate bids unaided.",
+   counter="Manual audit-sampling exercises; build-from-scratch modeling practice; fraud red-teams.",
+   sim="Audit and fraud-investigation simulators on synthetic ledgers; manual budget-model and bid-evaluation builds."),
+ 3: dict(risk="Over-trust of automated assessments; loss of manual control, analog navigation, and field craft.",
+   counter="Degraded-comms and manual-reversion drills; maintain analog nav/comms skills; red-teaming.",
+   sim="Wargaming and mission simulators; GPS/comms-denied and analog-fallback exercises."),
+ 4: dict(risk="Dispatch and response depend on CAD; incident commanders lose improvisation under protocolized tools.",
+   counter="Manual-dispatch drills; full-scale exercises with technology disabled; sim-based skills currency.",
+   sim="Incident-command and dispatch simulators; tech-down field exercises; EMS code-blue sims."),
+ 5: dict(risk="Loss of agronomic and animal-husbandry tacit knowledge; operators cannot farm without precision-ag.",
+   counter="Extension services; preserve traditional and local knowledge; manual scouting; repairable equipment.",
+   sim="Field-scouting and agronomy decision simulators; manual-operation drills on equipment (dual-use with the sector's field world models)."),
+ 6: dict(risk="Operators cannot run the plant manually during a SCADA failure; process intuition fades.",
+   counter="Manual-operation drills; operator recertification; contamination tabletops.",
+   sim="Plant-operation simulators (SCADA-down); contamination-response and manual-valving drills."),
+ 7: dict(risk="System operators lose manual switching and restoration skill; black-start expertise becomes rare.",
+   counter="NERC recertification plus simulator training; black-start drills; manual-restoration practice.",
+   sim="Control-room and black-start simulators; manual switching and restoration scenarios (already mature practice)."),
+ 8: dict(risk="Hazardous-process operators lose hands-on control; geological and metallurgical intuition fades.",
+   counter="Manual-control drills; hazard simulations; retain deep process knowledge.",
+   sim="Process-control and emergency-shutdown simulators; hazard and release-response drills."),
+ 9: dict(risk="Skilled trades lose craft and cannot troubleshoot when automation fails; quality intuition erodes.",
+   counter="Cross-training; periodic manual line runs; protect apprenticeships; Andon empowerment.",
+   sim="Line-down troubleshooting and changeover simulators; hardware-in-the-loop rigs for manual skills."),
+ 10: dict(risk="Trades deskilled by prefab and robotics; inspectors over-rely on AI for structural judgment.",
+   counter="Apprenticeship protection; manual-inspection competency; retain structural judgment.",
+   sim="Inspection and structural-judgment simulators; VR/AR trade-skill rigs; manual quantity-takeoff practice."),
+ 11: dict(risk="Pilots and drivers lose manual skill (well-documented automation dependency); dispatchers depend on optimizers.",
+   counter="Mandated manual-flying and recurrent training; degraded-ops drills; keep manual driving/CDL skills.",
+   sim="Full-mission flight and drive simulators; automation-failure and manual-reversion scenarios (mature practice)."),
+ 12: dict(risk="Engineers cannot debug without copilots; juniors never learn because entry-level coding is automated.",
+   counter="Protect junior learning paths; periodic 'no-AI' practice; incident game-days; code-review discipline.",
+   sim="Cyber ranges and incident game-days; no-copilot debugging exercises; simulated AI failures (injection, drift) for oversight training."),
+ 13: dict(risk="Clinicians lose exam and diagnostic skill; radiologists deskill on routine reads; juniors under-train.",
+   counter="Periodic unaided diagnosis and reads; simulation; keep clinical reasoning central to training.",
+   sim="Standardized-patient and procedure simulators; unaided-read sessions; code-blue and rare-presentation sims."),
+ 14: dict(risk="Teachers lean on AI tutors and lose pedagogy; students offload thinking and lose it too.",
+   counter="AI as augmentation not replacement; teacher development; assess the process, not just the output.",
+   sim="Teaching-practice and classroom-management simulators; lesson-delivery rehearsals; assessment-design drills."),
+ 15: dict(risk="Loss of experimental and statistical craft; over-trust of automated analysis pipelines.",
+   counter="Reproducibility discipline; manual-analysis competency; train experimental design.",
+   sim="Experiment-design and bench-skill simulators; manual analysis and replication exercises; instrument rigs."),
+ 16: dict(risk="Underwriting and credit judgment and manual modeling erode; traders depend on algorithms.",
+   counter="Manual underwriting exercises; independent model-risk review; keep judgment in credit and conduct decisions.",
+   sim="Underwriting and trading/stress-scenario simulators; manual credit-memo and model builds."),
+ 17: dict(risk="Service staff lose customer-recovery craft; managers lose operational intuition.",
+   counter="Preserve human service and escalation skills; scenario training.",
+   sim="Service-recovery and difficult-customer role-play simulators; operations-scenario drills."),
+ 18: dict(risk="Journalists lose reporting and verification craft; editorial judgment fades.",
+   counter="Protect reporting fundamentals; verification training; human editorial sign-off.",
+   sim="Reporting and verification simulators; misinformation-spotting and editorial-judgment scenarios."),
+ 19: dict(risk="Field scientists lose taxonomic and naturalist skill as remote sensing and AI ID take over.",
+   counter="Maintain field competency; ground-truthing; train naturalists.",
+   sim="Field-identification and survey simulators; ground-truthing exercises; specimen/identification drills."),
+ 20: dict(risk="Recruiters and managers lose interviewing and people-judgment skills.",
+   counter="Keep human judgment in hiring and reviews; manager development.",
+   sim="Interview and difficult-conversation role-play simulators; calibration exercises."),
+ 21: dict(risk="Caregivers and parents over-rely on monitoring and AI; relational care skills atrophy.",
+   counter="AI as support not substitute; preserve relational presence; community knowledge-sharing.",
+   sim="Caregiving-scenario and de-escalation role-play; standardized-care sims (note: relational skill transfers only partly)."),
+ 22: dict(risk="The meta-owner — continuity planning and the fallback bench themselves can deskill.",
+   counter="Owns the cross-cutting program: fallback-readiness drills and metrics across all 21 other operating systems.",
+   sim="Cross-sector tabletop and full-scale continuity exercises; runs the keep-warm program and bench-readiness metrics for every OS."),
 }
 
 # Deep per-role JD grounding for flagship sectors. slug -> {titles, tools, certs, note}
@@ -1620,6 +1720,7 @@ This sector regularly depends on and feeds: {collabs}. Coordinate handoffs expli
 - **Agent-specific failure** — fabrication, prompt injection, reward hacking, silent drift; keep the control layer independent.
 - **Speed mismatch** — automated action outrunning human oversight; install circuit breakers for high-consequence steps.
 
+{deskilling_block}
 ## Adapting to any nation (context modifiers)
 
 The jobs above are universal; how they are staffed is not. Re-read this sector through:
@@ -1638,7 +1739,7 @@ The jobs above are universal; how they are staffed is not. Re-read this sector t
         mission=sec["mission"], jtbd=jtbd, lifecycle=lifecycle_block("sector", title),
         families=families, role_list=role_list, robots=robots, nested_robots=nested_robots,
         robot_stack_short=ROBOT_STACK_SHORT, nested_machines=nested_machines,
-        jd_block=jd_sector_block(sec["num"]),
+        jd_block=jd_sector_block(sec["num"]), deskilling_block=deskilling_block(sec["num"]),
         accountability=sec["accountability"], collabs=collabs, context=CONTEXT_MODIFIERS)
     return sslug, body
 
@@ -1749,6 +1850,7 @@ Other role skills in this operating system (see `../`), and across these neighbo
 {context}
 
 {jd_block}
+{deskilling_block}
 ## Operating procedure
 
 1. **Sense** — gather the relevant inputs and confirm scope, constraints, and the accountable human.
@@ -1771,7 +1873,8 @@ Other role skills in this operating system (see `../`), and across these neighbo
         jtbd_short="\n".join("- %s" % j for j in sec["jtbd"][:3]),
         lifecycle=lifecycle_block("role", rname),
         accountability=sec["accountability"], collabs=", ".join(sec["collaborators"]),
-        context=CONTEXT_MODIFIERS, jd_block=jd_role_block(sec["num"], rslug))
+        context=CONTEXT_MODIFIERS, jd_block=jd_role_block(sec["num"], rslug),
+        deskilling_block=deskilling_block(sec["num"], condensed=True))
     return rslug, body
 
 
@@ -2000,6 +2103,38 @@ def jd_role_block(num, rslug):
         "- **KPIs in postings:** %s\n"
         "- **Posting venues:** %s\n\n"
         "%s\n" % (lead, jd["ladder"], jd["tools"], jd["certs"], jd["kpis"], jd["venues"], JD_SOURCE_NOTE)
+    )
+
+
+DESKILL_DUALUSE = (
+    "> **Dual-use simulators:** the world models and simulation built to *train the machines* in this sector double as the "
+    "**keep-warm simulators** that keep humans current and rebuild the learning ladder. Owned cross-sector by OS 22 (Resilience) "
+    "and the `_catalogs/simulation-training/` roles; the verified deterministic fallback in `_catalogs/capability-optimization/` "
+    "is its technical complement."
+)
+
+
+def deskilling_block(num, condensed=False):
+    d = SECTOR_DESKILLING.get(num)
+    if not d:
+        return ""
+    if condensed:
+        return (
+            "## Deskilling watch & keep-warm\n\n"
+            "Automating routine work erodes the human fallback bench, tacit judgment, and the learning ladder over time.\n\n"
+            "- **Risk:** %s\n"
+            "- **Role/job simulators (keep-warm):** %s\n\n"
+            "%s\n" % (d["risk"], d["sim"], DESKILL_DUALUSE)
+        )
+    return (
+        "## Deskilling watch & keep-warm regime\n\n"
+        "Automating routine cases erodes three things over time: the **human fallback bench** (who runs this when automation "
+        "fails), **tacit / craft judgment** (lost as the experienced cohort retires), and the **learning ladder** (juniors never "
+        "get the cases they used to learn on). Job and role simulators are the primary countermeasure.\n\n"
+        "- **Risk here:** %s\n"
+        "- **Countermeasures:** %s\n"
+        "- **Role/job simulators (keep-warm):** %s\n\n"
+        "%s\n" % (d["risk"], d["counter"], d["sim"], DESKILL_DUALUSE)
     )
 
 
@@ -2478,6 +2613,83 @@ Compute, data, and connectivity budgets vary enormously; lower-resource settings
     return rslug, body
 
 
+def render_sim_role(role):
+    rname, kind, jtbd, supervisor, detail = role
+    rslug = slug(rname)
+    name = "simtrain-%s" % rslug
+    kind_label = STACK_KIND_LABEL[kind]
+    if kind == "oversight":
+        rights = ("- **Owns and is accountable for** the keep-warm cadence and that the fallback is genuinely rehearsed.\n"
+                  "- **Escalates** thin benches and failed drills as a safety/continuity risk.\n"
+                  "- **Cannot** let throughput pressure quietly cancel the practice that prevents deskilling.")
+    elif kind == "agent":
+        rights = ("- **May act autonomously** on routine scenario generation, assessment, and capture within policy.\n"
+                  "- **Must defer** to human trainers/safety leads on what counts as competent and on certification.\n"
+                  "- **Must escalate** detected skill gaps and recurring failure patterns.")
+    else:  # engineer
+        rights = ("- **Owns** the fidelity, coverage, and transfer of the simulators and curricula.\n"
+                  "- **Gates** what is realistic enough to train on with the safety and training leads.\n"
+                  "- **Escalates** sim-to-real (and sim-to-human) transfer gaps.")
+    desc = ("Anti-deskilling / keep-warm role: **%s** (%s) — %s. Part of the layer that uses **job and role simulators** to "
+            "keep humans current, rebuild the learning ladder, and capture tacit knowledge — reusing the world models and "
+            "simulators built to train the machines. Use this skill when designing or running human upskilling, drills, "
+            "certification, or fallback-readiness, even if the user only describes the underlying need. Works under a %s."
+            ) % (rname, kind_label, jtbd, supervisor)
+    body = """---
+name: {name}
+description: {desc}
+---
+
+# Simulation & Keep-Warm — {rname}
+
+> **Layer:** Anti-deskilling / keep-warm (job & role simulators for humans) · **Type:** {kind_label}
+> **Human supervisor:** {supervisor} · **Reuses:** `../embodied-ai-stack/` and `../capability-optimization/` sim infrastructure · **Reference:** `docs/role-simulation-and-keepwarm.md`
+
+## What this role is
+
+The **{rname}** {jtbd}. {detail}
+
+## Why this layer exists
+
+Automating routine cases erodes three things: the **human fallback bench**, **tacit / craft judgment**, and the **learning ladder**. Job and role simulators are the most effective countermeasure — and the **same world models and simulators built to train the machines double as the environments that keep humans current** (one simulation substrate, two students). This role owns the part of that program described above.
+
+## When to use this skill
+
+Use it when a task calls for this work: {jtbd}. Pair with OS 22 (Resilience), the sector skills' *Deskilling watch & keep-warm* sections, and the sim infrastructure in `_catalogs/embodied-ai-stack/` and `_catalogs/capability-optimization/`.
+
+## Decision rights & accountability
+
+{rights}
+
+## Fit by domain (where simulators transfer well — and don't)
+
+- **High fit:** procedural, high-consequence domains (aviation, grid, nuclear, water/chemical, emergency, defense, acute medicine). Sim transfer is well-proven.
+- **Medium fit:** craft and dexterity (manufacturing, construction, surgery) — needs physical or hardware-in-the-loop rigs, not just screens.
+- **Lower fit:** relational, embodied, social-trust work (eldercare, teaching, social work, editorial) — role-play and standardized-patient methods help at the margins, but real human contact still does much of the forming.
+
+## Failure modes and safeguards
+
+- **Sim-to-real (and sim-to-human) gap** — training people to be good at the simulator, not the world. Mitigation: anchor with periodic real practice; measure transfer.
+- **Encoding the automation's worldview** — a sim that bakes in the model's assumptions teaches the model's world. Mitigation: adversarial and out-of-distribution scenarios, real-incident mining.
+- **Practice cut under throughput pressure** — keep-warm is "inefficient" time and gets cancelled first. Mitigation: mandate, schedule, and metrics owned by an accountable human.
+
+## Adapting to any nation (context modifiers)
+
+Simulators are cheaper and more scalable than real practice, which makes them a leapfrog opportunity for lower-resource settings; fidelity and access still vary. Re-read through:
+
+{context}
+
+## Operating procedure
+
+1. Identify the skill at risk of erosion and the scenario that exercises it (especially the rare, degraded, manual-reversion case).
+2. Build or reuse the simulator (prefer the sector's existing machine-training world models); set fidelity to the skill.
+3. Run the drill/curriculum; inject automation-failure scenarios to train oversight.
+4. Assess competency, log bench-readiness metrics, and escalate gaps to the accountable human.
+""".format(name=name, desc=desc, rname=rname, kind_label=kind_label, supervisor=supervisor,
+           jtbd=jtbd, detail=detail, rights=rights, context=CONTEXT_MODIFIERS)
+    return rslug, body
+
+
 def render_framework_index():
     sector_rows = "\n".join(
         "| %02d | [%s](%s/) | %d AI roles |" % (
@@ -2507,6 +2719,7 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 - `_catalogs/embodied-ai-stack/` — the roles that **build and operate** both the LLM-brained robots and the autonomous machines: brain/autonomy orchestrator, VLA policy engineer, world-model engineer, robot-gym/sim-to-real engineer, RLAIF pipeline engineer, evaluation/red-team agent, fleet safety officer, teleoperation operator, fleet operations agent, and data/telemetry engineer.
 - `_catalogs/autonomous-fleet-ops/` — the **operations layer for autonomous vehicle/machine fleets**: ODD & safety-case engineer, remote-operations (teleop) center supervisor, HD mapping & localization engineer, V2X/connectivity & infrastructure engineer, homologation & regulatory lead, depot/maintenance lead, in-field safety operator, and incident/disengagement analyst.
 - `_catalogs/capability-optimization/` — the **how-it's-built layer**: the model tiers (LLM, SLM, tiny LM, deterministic) and the spectrum of optimization methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation/compression, classical control, search, formal methods) with the roles that select and run them. **RLAIF is one option among many.**
+- `_catalogs/simulation-training/` — the **anti-deskilling / keep-warm layer**: job and role simulators that keep humans current, rebuild the learning ladder, and capture tacit knowledge — reusing the machine-training world models. Curriculum designer, scenario-generation agent, competency/certification agent, drill & exercise coordinator, dual-use world-model/fidelity engineer, and tacit-knowledge capture agent. See `docs/role-simulation-and-keepwarm.md`.
 
 ## The shared model every skill assumes
 
@@ -2527,6 +2740,8 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 **How robot personnel are built (assumed architecture).** Robot roles in this library are **LLM-brained embodied agents**: a multimodal LLM *brain* perceives, plans, and issues physical **actions as tool calls** (e.g. `grasp`, `navigate_to`, `place`), which are executed by **Vision-Language-Action (VLA) policies** trained on **world models** (learned physics simulators), **robot gyms** (massively parallel sim-to-real), and **RLAIF** (reinforcement learning from AI feedback). Fleets may share one brain model or mix specialized ones (a deliberative orchestrator over fast reactive controllers). A **verified low-level safety layer** can refuse or override unsafe tool calls independently of the brain. The roles that build and operate this stack live in `_catalogs/embodied-ai-stack/`. The **same brain-and-tool-calls model extends to non-humanoid autonomous machines** (vehicles, farm equipment, loaders, drones), which add an Operational Design Domain, SAE levels, a verified safe-stop, and a teleoperation fallback (`_catalogs/autonomous-machines/`, `_catalogs/autonomous-fleet-ops/`).
 
 **Capability is right-sized, not one-size — and RLAIF is one method among many.** The brain need not be a single large model trained one way. Capabilities are spread across **model tiers** — LLM, SLM, tiny LM, and **deterministic controllers** — and built with a **spectrum of methods**: imitation/behavior cloning, model-based and offline RL, RLHF/RLAIF, sim-to-real, self-supervised pretraining, supervised fine-tuning, **distillation and compression**, search/planning, classical optimization and control, and **formal verification**. Each capability is assigned to the *smallest, most deterministic* tier and the *most efficient* method that meets its accuracy, latency, and safety bar — with a verified deterministic safety layer beneath anything learned. The roles that select and run this spectrum live in `_catalogs/capability-optimization/`.
+
+**Guarding against deskilling.** Automating routine work erodes the human fallback bench, tacit judgment, and the learning ladder. Every sector skill carries a *Deskilling watch & keep-warm* section (its specific risk, countermeasures, and a job/role-simulator regime), OS 22 (Resilience) owns the cross-sector drill program, and `_catalogs/simulation-training/` holds the roles that run it. The key idea: the **world models and simulators built to train the machines double as the keep-warm simulators that keep humans current and rebuild the learning ladder** — one simulation substrate, two students. See `docs/role-simulation-and-keepwarm.md`.
 
 **Universal, not US-specific.** The jobs are invariant across nations; *ownership, formality, and capacity* are local variables. Every skill carries a "context modifiers" section so it can be adapted to any nation — any size, geography, income level, or political system.
 
@@ -2569,7 +2784,7 @@ Coercive state power; rights-impacting decisions; intimate human care; democrati
 def main():
     counts = dict(sectors=0, roles=0, sector_robots=0, sector_machines=0, archetypes=0,
                   catalog_ai=0, catalog_robot=0, catalog_machine=0, embodied_stack=0, fleet_ops=0,
-                  capability_opt=0)
+                  capability_opt=0, sim_training=0)
 
     # Framework index
     write(os.path.join(ROOT, "00-framework", "SKILL.md"), render_framework_index())
@@ -2623,6 +2838,10 @@ def main():
         rslug, body = render_capability_role(r)
         write(os.path.join(ROOT, "_catalogs", "capability-optimization", rslug, "SKILL.md"), body)
         counts["capability_opt"] += 1
+    for r in SIM_TRAINING_ROLES:
+        rslug, body = render_sim_role(r)
+        write(os.path.join(ROOT, "_catalogs", "simulation-training", rslug, "SKILL.md"), body)
+        counts["sim_training"] += 1
 
     total = sum(counts.values()) + 1  # + framework index
     print("Wrote skills to:", ROOT)

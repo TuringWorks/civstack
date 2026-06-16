@@ -2,7 +2,7 @@
 
 **The operating systems of an economy — staffed by humans, AI agents, and robots.**
 
-CivStack is an open library of **307 agent skills** that maps everything a modern country and economy must reliably do — from governance and energy to farming and eldercare — and assigns each job to the right mix of a human owner, AI personnel, embodied robots, and non-humanoid autonomous machines (self-driving vehicles, farm equipment, drones), with hard accountability boundaries baked in.
+CivStack is an open library of **313 agent skills** that maps everything a modern country and economy must reliably do — from governance and energy to farming and eldercare — and assigns each job to the right mix of a human owner, AI personnel, embodied robots, and non-humanoid autonomous machines (self-driving vehicles, farm equipment, drones), with hard accountability boundaries baked in.
 
 It turns a strategy document (["Country-Economy Core Jobs To Be Done"](docs/country-economy-core-jtbd.md)) into machine-usable [Agent Skills](https://www.anthropic.com/news/skills): every role ships as a `SKILL.md` an LLM or agent can load to get the full context for *who does what, how, and where a human must stay in charge.*
 
@@ -47,6 +47,16 @@ The roles that design and run this spectrum live in `skills/_catalogs/capability
 - **[`docs/capability-routing-matrix.md`](docs/capability-routing-matrix.md)** — the routing matrix: decision inputs, a capability-archetype lookup table, ordered decision rules, and worked examples.
 - **[`tools/capability-router.html`](tools/capability-router.html)** — an interactive selector: choose a capability's safety, latency, verifiability, task type, data, compute, and connectivity, and it recommends a model tier, optimization method(s), and a safe fallback with the rationale.
 
+### Guarding against deskilling (job & role simulators)
+
+Automating routine work erodes three things over time: the **human fallback bench** (who runs the system when automation fails), **tacit/craft judgment** (lost as the experienced cohort retires), and the **learning ladder** (juniors never get the cases they used to learn on). Job and role simulators are the primary countermeasure, and CivStack treats them as first-class:
+
+- Every sector skill carries a **Deskilling watch & keep-warm** section — its specific risk, countermeasures, and a simulator regime.
+- **OS 22 (Resilience)** owns the standing cross-sector drill and bench-readiness program.
+- **[`skills/_catalogs/simulation-training/`](skills/_catalogs/simulation-training/)** holds the roles that run it, and **[`docs/role-simulation-and-keepwarm.md`](docs/role-simulation-and-keepwarm.md)** is the reference.
+
+The key idea: the **world models and simulators built to train the machines double as the keep-warm simulators that keep humans current** — one simulation substrate, two students (the model and the human). The *verified deterministic fallback beneath anything learned* (capability layer) is its technical complement.
+
 ---
 
 ## What's in the box
@@ -65,7 +75,8 @@ The roles that design and run this spectrum live in `skills/_catalogs/capability
 | Embodied-AI stack roles (build & operate robots + machines) | 10 | `skills/_catalogs/embodied-ai-stack/` |
 | Autonomous-fleet operations roles | 8 | `skills/_catalogs/autonomous-fleet-ops/` |
 | Capability & optimization roles (model tiers + training methods) | 11 | `skills/_catalogs/capability-optimization/` |
-| **Total `SKILL.md` packages** | **307** | |
+| Simulation & keep-warm roles (anti-deskilling) | 6 | `skills/_catalogs/simulation-training/` |
+| **Total `SKILL.md` packages** | **313** | |
 
 ### The 22 national operating systems
 
@@ -81,7 +92,8 @@ civstack/
 ├── LICENSE
 ├── docs/
 │   ├── country-economy-core-jtbd.md      # the source strategy map
-│   └── capability-routing-matrix.md      # how to route capabilities to tier + method
+│   ├── capability-routing-matrix.md      # how to route capabilities to tier + method
+│   └── role-simulation-and-keepwarm.md   # job/role simulators to address deskilling
 ├── skills/
 │   ├── 00-framework/SKILL.md             # start here: shared model + index
 │   ├── 01-governance/

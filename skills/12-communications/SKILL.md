@@ -119,6 +119,16 @@ This sector regularly depends on and feeds: Governance & Law, Finance & Markets,
 - **Agent-specific failure** — fabrication, prompt injection, reward hacking, silent drift; keep the control layer independent.
 - **Speed mismatch** — automated action outrunning human oversight; install circuit breakers for high-consequence steps.
 
+## Deskilling watch & keep-warm regime
+
+Automating routine cases erodes three things over time: the **human fallback bench** (who runs this when automation fails), **tacit / craft judgment** (lost as the experienced cohort retires), and the **learning ladder** (juniors never get the cases they used to learn on). Job and role simulators are the primary countermeasure.
+
+- **Risk here:** Engineers cannot debug without copilots; juniors never learn because entry-level coding is automated.
+- **Countermeasures:** Protect junior learning paths; periodic 'no-AI' practice; incident game-days; code-review discipline.
+- **Role/job simulators (keep-warm):** Cyber ranges and incident game-days; no-copilot debugging exercises; simulated AI failures (injection, drift) for oversight training.
+
+> **Dual-use simulators:** the world models and simulation built to *train the machines* in this sector double as the **keep-warm simulators** that keep humans current and rebuild the learning ladder. Owned cross-sector by OS 22 (Resilience) and the `_catalogs/simulation-training/` roles; the verified deterministic fallback in `_catalogs/capability-optimization/` is its technical complement.
+
 ## Adapting to any nation (context modifiers)
 
 The jobs above are universal; how they are staffed is not. Re-read this sector through:
