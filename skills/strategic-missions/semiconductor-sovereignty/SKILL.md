@@ -1,0 +1,108 @@
+---
+name: "mission-semiconductor-sovereignty"
+description: "Strategic mission (cross-cutting national capability): **Semiconductor Sovereignty** — Ensure access to critical chips and semiconductor capabilities for AI, defense, telecom, energy, automotive, healthcare, and industry. Unlike the 22 sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns semiconductor sovereignty, even if the user only names a piece of it."
+---
+
+# Strategic Mission — Semiconductor Sovereignty
+
+> **Layer:** Strategic mission (cross-cutting capability that composes multiple operating systems)
+> **Shared concepts:** `../../00-framework/SKILL.md` · **Imported/adapted from the Agentic-Workforce operating models**
+
+## Purpose
+
+Coordinate chip design, fabrication, packaging, equipment, materials, workforce, security, and strategic demand.
+
+## Mission
+
+Ensure access to critical chips and semiconductor capabilities for AI, defense, telecom, energy, automotive, healthcare, and industry.
+
+## Operating systems this mission composes
+
+A strategic mission is an *orthogonal* axis to the 22 sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
+
+- [08. Mining, Materials, Chemicals, and Industrial Inputs](../../08-mining/)
+- [09. Manufacturing and Industrial Production](../../09-manufacturing-and-industrial-production/)
+- [15. Science, Research, Standards, and Innovation](../../15-science/)
+- [12. Communications, Software, Cybersecurity, and Digital Infrastructure](../../12-communications/)
+- [03. Defense, Intelligence, Border, and Foreign Affairs](../../03-defense/)
+- [11. Transportation, Logistics, Postal, and Mobility](../../11-transportation/)
+
+Deploy the relevant sector and role skills under those operating systems as the building blocks; this skill coordinates them toward the mission.
+
+## Core capabilities
+
+- Chip architecture and EDA.
+- Process technology and wafer fabrication.
+- Advanced packaging.
+- Equipment maintenance and spare parts.
+- Specialty gases, chemicals, wafers, masks, materials.
+- Yield engineering and quality.
+- Trusted supply chain and export-control compliance.
+- Workforce training and cleanroom operations.
+
+## Human command roles
+
+- Semiconductor fab director.
+- Chip architecture lead.
+- Yield engineering lead.
+- Process integration lead.
+- Advanced packaging lead.
+- Semiconductor supply-chain lead.
+- Fab EHS/security lead.
+- Workforce training lead.
+
+These hold accountability for the mission. Strategic prioritization, public legitimacy, security, and ethical tradeoffs stay human-owned.
+
+## AI personnel
+
+- EDA copilot.
+- Design rule checker.
+- Yield analysis agent.
+- Process anomaly detector.
+- Equipment maintenance predictor.
+- Supplier risk agent.
+- Production scheduler.
+- Export-control screening agent.
+
+Many of these map to existing role skills in the composed operating systems (e.g. `_catalogs/ai-personnel/` and the sectors' `roles/`). Reuse them rather than rebuilding.
+
+## Robot / machine personnel
+
+- Cleanroom logistics robot.
+- Wafer-handling robot.
+- Equipment inspection robot.
+- Material runner.
+
+See `_catalogs/humanoid-robots/`, `_catalogs/autonomous-machines/`, and the sectors' `robots/` and `autonomous/` folders.
+
+## Operating loop
+
+1. Set strategic chip demand and trusted sources.
+2. Design chips with EDA and design-rule checks.
+3. Fabricate with process control and yield engineering.
+4. Package, test, and qualify.
+5. Secure materials, equipment, and export compliance.
+6. Scale capacity and train workforce.
+7. Update roadmap from geopolitics and demand.
+
+## Human accountability boundary
+
+Strategic prioritization, public legitimacy, national-security judgment, scarce-resource allocation, export-control and safety decisions, and final signoff on irreversible commitments remain human-accountable. AI personnel and robots accelerate the work up to that line.
+
+## How to use this skill
+
+1. Read the mission and the operating systems it composes.
+2. Pull the specific sector and role skills you need from those OSs.
+3. Run the operating loop, coordinating across sectors at the seams.
+4. Apply the command & cadence model (`00-framework/`) and stop at the accountability boundary.
+
+## Adapting to any nation (context modifiers)
+
+Whether a nation pursues this mission at all — and how (sovereign build, ally-and-buy, or import) — depends heavily on scale, income, resource endowment, and geopolitics. Re-read through:
+
+- **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
+- **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.
+- **Income level** (low → high): affordability of automation and the balance of subsistence vs. wage work.
+- **Formality** (informal → formal): whether the people and assets this role acts on appear in any registry at all.
+- **Resource & geography**: which hazards and dependencies dominate (water-scarce, flood-prone, landlocked, trade-dependent).
+- **Political system & legitimacy**: where the human-accountability boundary actually binds and who may hold power to account.

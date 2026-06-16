@@ -11,6 +11,7 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 
 - `00-framework/` — this index plus the shared concepts every skill assumes (you are here).
 - `01-…` through `22-…` — one folder per **national operating system**. Each has a sector `SKILL.md` (orchestrator) and a `roles/` subfolder of **AI-personnel role skills**.
+- `strategic-missions/` — **cross-cutting national missions** (energy abundance, semiconductor sovereignty, bioeconomy, frontier-AI production, quantum & space, strategic supply chain, science-to-industry, talent formation, public procurement, cyber defense, advanced manufacturing, digital infrastructure). A mission is an *orthogonal axis* to the 22 sectors: it composes several of them toward one objective.
 - `cross-cutting-archetypes/` — the 12 role patterns (Strategist, Operator, Builder, …) that recur in every sector.
 - `_catalogs/ai-personnel/` and `_catalogs/humanoid-robots/` — reusable cross-economy role patterns.
 - `_catalogs/autonomous-machines/` — **non-humanoid** autonomous platforms: self-driving cars/trucks/shuttles, autonomous tractors and harvesters, loaders and earthmovers, mining haul trucks, drones (survey, spray, delivery), warehouse movers, and surface vessels. Several sectors also nest domain-specific machines under `<sector>/autonomous/` (e.g. `05-food/autonomous/`, `11-transportation/autonomous/`, `08-mining/autonomous/`).
@@ -46,6 +47,30 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 **Capability is right-sized, not one-size — and RLAIF is one method among many.** The brain need not be a single large model trained one way. Capabilities are spread across **model tiers** — LLM, SLM, tiny LM, and **deterministic controllers** — and built with a **spectrum of methods**: imitation/behavior cloning, model-based and offline RL, RLHF/RLAIF, sim-to-real, self-supervised pretraining, supervised fine-tuning, **distillation and compression**, search/planning, classical optimization and control, and **formal verification**. Each capability is assigned to the *smallest, most deterministic* tier and the *most efficient* method that meets its accuracy, latency, and safety bar — with a verified deterministic safety layer beneath anything learned. The roles that select and run this spectrum live in `_catalogs/capability-optimization/`.
 
 **Guarding against deskilling.** Automating routine work erodes the human fallback bench, tacit judgment, and the learning ladder. Every sector skill carries a *Deskilling watch & keep-warm* section (its specific risk, countermeasures, and a job/role-simulator regime), OS 22 (Resilience) owns the cross-sector drill program, and `_catalogs/simulation-training/` holds the roles that run it. The key idea: the **world models and simulators built to train the machines double as the keep-warm simulators that keep humans current and rebuild the learning ladder** — one simulation substrate, two students. See `docs/role-simulation-and-keepwarm.md`.
+
+## The command & cadence model (how delegation actually runs)
+
+The five-layer pattern says *who* is on the team; this says *how they run together* without losing accountability. Every role and mission assumes it.
+
+**Three-layer workforce.** Human command owns accountable judgment, authority, trust, ethics, and signoff (and must never lose ownership, legitimacy, escalation, redress). AI personnel own research, drafting, coding, monitoring, simulation, and coordination (and must never lose evidence, uncertainty, constraints, logs). Robot/machine personnel own bounded physical execution (and must never lose the safety envelope, human override, physical proof).
+
+**The operating loop** (run it for any delegated work):
+
+1. **Mission assignment** — the human owner sets objective, constraints, success criteria, and risk tier.
+2. **Context loading** — agents load approved data, policies, tools, maps, and current state.
+3. **Task decomposition** — separate research, planning, execution, monitoring, verification.
+4. **Delegation** — AI does cognitive work; robots/machines do approved physical work; humans hold judgment and exceptions.
+5. **Verification** — check outputs against metrics, evidence, tests, inspections, and human-review thresholds.
+6. **Escalation** — uncertainty, rights impact, safety risk, conflict, or policy ambiguity triggers human command.
+7. **Learning** — incidents, failures, and successful patterns update SOPs, evals, prompts, maps, and training.
+
+**Delegation rules.** Delegate to **AI** when the work is text, code, data, classification, monitoring, forecasting, simulation, routing, or first-draft synthesis. Delegate to **robots/machines** when it is fetch, carry, inspect, clean, sort, stage, load, unload, scan, guide, or repeatable manipulation in a bounded environment. **Keep with humans** when it involves force, rights, consent, accountability, public legitimacy, final professional signoff, scarce-resource triage, or unresolved ethical tradeoffs.
+
+**Required control surfaces:** role charter, context pack, tool permissions, evidence log, evaluation, incident path, review cadence.
+
+**Command cadence:** real-time (safety, incidents, outages, cyber, public-safety escalations); daily (queues, uptime, throughput, exceptions); weekly (metrics, quality drift, cost, adoption, workforce impact); monthly (risk register, eval results, audits, policy); quarterly (role redesign, procurement, capacity, training, public trust, resilience).
+
+**Three failure modes to design against:** automation without an accountable owner; AI output treated as a final decision; a robot's task envelope expanding informally. *(See `checklists/` for the deployment gates and `templates/` for role/agent/robot briefs.)*
 
 **Universal, not US-specific.** The jobs are invariant across nations; *ownership, formality, and capacity* are local variables. Every skill carries a "context modifiers" section so it can be adapted to any nation — any size, geography, income level, or political system.
 

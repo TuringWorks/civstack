@@ -2,7 +2,7 @@
 
 **The operating systems of an economy — staffed by humans, AI agents, and robots.**
 
-CivStack is an open library of **313 agent skills** that maps everything a modern country and economy must reliably do — from governance and energy to farming and eldercare — and assigns each job to the right mix of a human owner, AI personnel, embodied robots, and non-humanoid autonomous machines (self-driving vehicles, farm equipment, drones), with hard accountability boundaries baked in.
+CivStack is an open library of **330 agent skills** that maps everything a modern country and economy must reliably do — from governance and energy to farming and eldercare — and assigns each job to the right mix of a human owner, AI personnel, embodied robots, and non-humanoid autonomous machines (self-driving vehicles, farm equipment, drones), with hard accountability boundaries baked in. It is navigable along two axes: by **sector** (the 22 operating systems) and by **strategic mission** (cross-cutting national capabilities like energy abundance or semiconductor sovereignty that compose several sectors).
 
 It turns a strategy document (["Country-Economy Core Jobs To Be Done"](docs/country-economy-core-jtbd.md)) into machine-usable [Agent Skills](https://www.anthropic.com/news/skills): every role ships as a `SKILL.md` an LLM or agent can load to get the full context for *who does what, how, and where a human must stay in charge.*
 
@@ -65,18 +65,21 @@ The key idea: the **world models and simulators built to train the machines doub
 |---|---|---|
 | Framework & index | 1 | `skills/00-framework/` |
 | National operating systems (sector orchestrators) | 22 | `skills/01-…` … `skills/22-…` |
+| Strategic missions (cross-cutting national capabilities) | 12 | `skills/strategic-missions/` |
 | AI-personnel role skills | 174 | `skills/NN-…/roles/` |
 | Embodied robot role skills (sector-nested) | 4 | `skills/05-food/robots/` |
 | Autonomous machine skills (sector-nested) | 27 | `skills/<sector>/autonomous/` |
 | Cross-cutting role archetypes | 12 | `skills/cross-cutting-archetypes/` |
 | AI-personnel catalog patterns | 15 | `skills/_catalogs/ai-personnel/` |
 | Humanoid-robot catalog patterns | 10 | `skills/_catalogs/humanoid-robots/` |
-| Autonomous-machine catalog patterns | 13 | `skills/_catalogs/autonomous-machines/` |
+| Autonomous-machine catalog patterns | 15 | `skills/_catalogs/autonomous-machines/` |
 | Embodied-AI stack roles (build & operate robots + machines) | 10 | `skills/_catalogs/embodied-ai-stack/` |
-| Autonomous-fleet operations roles | 8 | `skills/_catalogs/autonomous-fleet-ops/` |
+| Autonomous-fleet operations roles | 11 | `skills/_catalogs/autonomous-fleet-ops/` |
 | Capability & optimization roles (model tiers + training methods) | 11 | `skills/_catalogs/capability-optimization/` |
 | Simulation & keep-warm roles (anti-deskilling) | 6 | `skills/_catalogs/simulation-training/` |
-| **Total `SKILL.md` packages** | **313** | |
+| **Total `SKILL.md` packages** | **330** | |
+
+Plus non-skill assets: **2 deployment checklists** (`checklists/`), **3 authoring templates** (`templates/`), and reference docs (`docs/`) including the capability routing matrix, the keep-warm/deskilling guide, and the coverage matrix.
 
 ### The 22 national operating systems
 
@@ -93,9 +96,17 @@ civstack/
 ├── docs/
 │   ├── country-economy-core-jtbd.md      # the source strategy map
 │   ├── capability-routing-matrix.md      # how to route capabilities to tier + method
-│   └── role-simulation-and-keepwarm.md   # job/role simulators to address deskilling
+│   ├── role-simulation-and-keepwarm.md   # job/role simulators to address deskilling
+│   └── coverage-matrix.md                # request -> where to look in the library
+├── checklists/                           # deployment-readiness gates
+│   ├── ai-robot-role-readiness-checklist.md
+│   └── autonomous-machine-deployment-checklist.md
+├── templates/                            # blank authoring templates
+│   ├── role-card.md
+│   ├── ai-agent-brief.md
+│   └── robot-role-brief.md
 ├── skills/
-│   ├── 00-framework/SKILL.md             # start here: shared model + index
+│   ├── 00-framework/SKILL.md             # start here: shared model, command & cadence, index
 │   ├── 01-governance/
 │   │   ├── SKILL.md                       # sector orchestrator
 │   │   └── roles/<role>/SKILL.md          # AI-personnel role skills
@@ -105,6 +116,7 @@ civstack/
 │   │   ├── robots/<robot>/SKILL.md         # LLM-brained humanoid/embodied roles
 │   │   └── autonomous/<machine>/SKILL.md   # non-humanoid autonomous machines
 │   ├── … (02–22)
+│   ├── strategic-missions/<mission>/SKILL.md  # cross-cutting national capabilities
 │   ├── cross-cutting-archetypes/<archetype>/SKILL.md
 │   └── _catalogs/
 │       ├── ai-personnel/<role>/SKILL.md
@@ -112,9 +124,12 @@ civstack/
 │       ├── autonomous-machines/<machine>/SKILL.md
 │       ├── embodied-ai-stack/<role>/SKILL.md
 │       ├── autonomous-fleet-ops/<role>/SKILL.md
-│       └── capability-optimization/<role>/SKILL.md
+│       ├── capability-optimization/<role>/SKILL.md
+│       └── simulation-training/<role>/SKILL.md
 └── tools/
-    └── generate_skills.py                 # regenerates the whole library
+    ├── generate_skills.py                # regenerates the whole library
+    ├── build.sh                          # regenerate master + mirror to the vault
+    └── sync-vault.sh                     # mirror skills/ to the Obsidian vault
 ```
 
 ## Anatomy of a skill

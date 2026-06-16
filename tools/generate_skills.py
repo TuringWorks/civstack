@@ -968,6 +968,18 @@ FLEET_OPS_ROLES = [
      "analyzes disengagements, near-misses, and incidents and feeds fixes back into the stack and the ODD",
      "autonomy safety lead",
      "Mines every takeover and incident for root cause and produces the evidence that expands or contracts the Operational Design Domain."),
+    ("Perception-failure analyst", "agent",
+     "detects and diagnoses perception failures (missed, mislabeled, or hallucinated objects) and triages them by safety impact",
+     "autonomy safety lead",
+     "The early-warning system for the most dangerous autonomy failures; turns perception errors into scenario data for retraining and ODD limits."),
+    ("Safety-zone monitor", "agent",
+     "monitors exclusion zones and the proximity of people, animals, and vehicles to operating machines and triggers slow-downs or stops",
+     "site safety officer",
+     "Watches the human/machine boundary in real time; a fast, conservative guard that can demand a stop independently of the planning brain."),
+    ("Route & geofence risk analyst", "agent",
+     "assesses routes, maps, and geofences for hazards and ODD violations before and during missions",
+     "operations / autonomy lead",
+     "Gates missions against the certified Operational Design Domain and flags map staleness, new hazards, and out-of-ODD segments."),
 ]
 
 # Roles that design and run the CAPABILITY / OPTIMIZATION spectrum — many training
@@ -1051,6 +1063,185 @@ SIM_TRAINING_ROLES = [
 ]
 
 # ---------------------------------------------------------------------------
+# STRATEGIC MISSIONS (cross-cutting national capabilities that compose many OSs)
+# Imported and adapted from the Agentic-Workforce "operating models".
+# dict: name, purpose, mission, capabilities[], human_command[], ai[], robots[], loop[], composes[OS nums]
+# ---------------------------------------------------------------------------
+def M(name, purpose, mission, capabilities, human_command, ai, robots, loop, composes):
+    return dict(name=name, purpose=purpose, mission=mission, capabilities=capabilities,
+                human_command=human_command, ai=ai, robots=robots, loop=loop, composes=composes)
+
+STRATEGIC_MISSIONS = [
+ M("Energy Abundance",
+   "Ensure frontier technology, industry, households, and public systems have enough reliable, affordable, resilient energy.",
+   "Make power availability a national advantage rather than a constraint.",
+   ["Load forecasting", "Generation planning", "Transmission and distribution", "Storage and demand response",
+    "Industrial power procurement", "Grid reliability and restoration", "Permitting and siting",
+    "Nuclear/renewable/hydro/geothermal/fuel operations", "Energy market and rate design"],
+   ["Energy abundance architect", "Grid operations lead", "Utility restoration commander", "Industrial power procurement lead",
+    "Generation portfolio lead", "Transmission planning lead", "Energy permitting lead", "Critical-load prioritization authority"],
+   ["Load forecast agent", "Grid simulation agent", "Interconnection analyst", "Outage restoration planner",
+    "Energy market analyst", "Maintenance prediction agent", "Permitting assistant", "Customer communications agent"],
+   ["Plant/substation inspection robot", "Solar/wind maintenance support robot", "Material runner", "Emergency logistics robot"],
+   ["Forecast demand from compute, factories, homes, transport, public systems", "Plan generation, storage, transmission, flexible load",
+    "Approve and finance projects with permitting and public engagement", "Operate grid with forecasting, dispatch, monitoring",
+    "Restore outages and prioritize critical loads", "Inspect and maintain assets with AI/robot support", "Update plans as conditions shift"],
+   [7, 16, 10, 11, 8, 22]),
+ M("Semiconductor Sovereignty",
+   "Coordinate chip design, fabrication, packaging, equipment, materials, workforce, security, and strategic demand.",
+   "Ensure access to critical chips and semiconductor capabilities for AI, defense, telecom, energy, automotive, healthcare, and industry.",
+   ["Chip architecture and EDA", "Process technology and wafer fabrication", "Advanced packaging",
+    "Equipment maintenance and spare parts", "Specialty gases, chemicals, wafers, masks, materials", "Yield engineering and quality",
+    "Trusted supply chain and export-control compliance", "Workforce training and cleanroom operations"],
+   ["Semiconductor fab director", "Chip architecture lead", "Yield engineering lead", "Process integration lead",
+    "Advanced packaging lead", "Semiconductor supply-chain lead", "Fab EHS/security lead", "Workforce training lead"],
+   ["EDA copilot", "Design rule checker", "Yield analysis agent", "Process anomaly detector",
+    "Equipment maintenance predictor", "Supplier risk agent", "Production scheduler", "Export-control screening agent"],
+   ["Cleanroom logistics robot", "Wafer-handling robot", "Equipment inspection robot", "Material runner"],
+   ["Set strategic chip demand and trusted sources", "Design chips with EDA and design-rule checks", "Fabricate with process control and yield engineering",
+    "Package, test, and qualify", "Secure materials, equipment, and export compliance", "Scale capacity and train workforce", "Update roadmap from geopolitics and demand"],
+   [8, 9, 15, 12, 3, 11]),
+ M("Bioeconomy",
+   "Coordinate biotechnology, bio-manufacturing, public health, agriculture, medicine, safety, and biosecurity as a strategic capability.",
+   "Use biological systems to improve health, food, materials, environment, and industry while preventing biological harm.",
+   ["Synthetic biology and biological design", "Wet-lab automation", "Bio-manufacturing and scale-up",
+    "Clinical and agricultural translation", "Biosecurity and biosafety", "Public health surveillance", "Regulatory science", "Data and sequence governance"],
+   ["Bioeconomy strategy lead", "Biotech lab director", "Biosecurity officer", "Bio-manufacturing lead",
+    "Clinical translation lead", "Agricultural biotech lead", "Regulatory science lead"],
+   ["Protein/design agent", "Literature review agent", "Protocol review agent", "Sequence screening agent",
+    "Trial matching agent", "Outbreak surveillance agent", "Bio-manufacturing process optimizer"],
+   ["Lab assistant robot", "Wet-lab automation robot", "Sample logistics robot", "Decontamination support robot"],
+   ["Define health, food, materials, or environmental mission", "Design biological candidates with AI and expert review",
+    "Screen for safety, misuse, and regulatory constraints", "Run lab experiments and validate", "Scale through bio-manufacturing pilots",
+    "Deploy via clinical, agricultural, industrial, or public-health channels", "Monitor outcomes, safety, and biosecurity"],
+   [13, 5, 15, 8, 19, 3]),
+ M("Frontier AI Production",
+   "Define the work system for building, evaluating, deploying, governing, and improving frontier AI models and AI-native products.",
+   "Create AI systems that are capable, reliable, secure, useful, economically productive, and governable.",
+   ["Data planning and lineage", "Architecture and training", "Evaluation and benchmarking", "Red-teaming and safety",
+    "ML platform and inference", "Model and supply-chain security", "Governance, risk tiering, and approval gates", "Product fit and adoption"],
+   ["AI lab lead", "Model training lead", "Model evaluation lead", "AI governance lead", "AI product lead",
+    "ML platform lead", "Security lead", "Data steward"],
+   ["Literature/research agent", "Experiment planning agent", "Data curation agent", "Synthetic data agent",
+    "Training run monitor", "Evaluation agent", "Red-team agent", "Documentation/model-card agent", "Incident analysis agent"],
+   ["Data center inspection robot", "Hardware logistics robot", "Lab robot for embodied-AI testing"],
+   ["Define model mission, users, prohibited uses, risk tier", "Build a data plan (provenance, rights, privacy, contamination controls)",
+    "Select architecture, training strategy, compute, eval gates", "Run versioned experiments", "Evaluate capability, safety, robustness, bias, cost",
+    "Red-team before release", "Stage deployment with monitoring and rollback", "Analyze incidents and economics", "Retrain, fine-tune, or deprecate on evidence"],
+   [12, 15, 7, 8, 20]),
+ M("Quantum and Space Systems",
+   "Coordinate two high-leverage frontier domains that depend on deep science, hardware, software, manufacturing, security, and mission alignment.",
+   "Develop quantum and space capabilities that improve sensing, communications, computation, navigation, science, defense, and competitiveness.",
+   ["Quantum computing, sensing, networking, cryptography", "Cryogenic, photonic, vacuum, RF, precision instrumentation",
+    "Space launch, satellites, ground systems, mission operations, remote sensing", "Aerospace manufacturing and testing",
+    "Secure communications and timing", "Standards, export control, mission assurance"],
+   ["Quantum program director", "Quantum engineering lead", "Cryptography transition lead", "Space mission director",
+    "Aerospace systems engineering lead", "Ground systems lead", "Mission assurance lead"],
+   ["Quantum algorithm assistant", "Error-analysis agent", "Instrumentation data analyst", "Mission planning agent",
+    "Trajectory optimization agent", "Remote sensing analyst", "Anomaly detection agent"],
+   ["Cryo-lab support robot", "Precision lab assistant robot", "Aerospace manufacturing inspection robot", "Cleanroom logistics robot"],
+   ["Define national mission and capability gap", "Build research and engineering roadmap", "Develop hardware/software prototypes",
+    "Test under realistic operating conditions", "Secure supply chain, facilities, and data", "Transition to operational systems or standards", "Monitor and update architecture"],
+   [15, 8, 9, 3, 12]),
+ M("Strategic Supply Chain",
+   "Keep critical inputs flowing through disruption while building domestic or trusted-allied capacity for strategic sectors.",
+   "Make supply chains visible, resilient, compliant, and aligned with national technology priorities.",
+   ["Supplier-tier mapping", "Import/export compliance", "Customs and tariff classification", "Inventory and reserve planning",
+    "Logistics routing", "Port and warehouse operations", "Supplier qualification", "Demand forecasting", "Crisis rerouting and prioritization"],
+   ["Strategic supply chain commander", "Import/export compliance lead", "Customs brokerage lead", "Supplier resilience lead",
+    "Critical inventory manager", "Port/logistics operations lead", "Trade finance/risk lead", "Emergency distribution lead"],
+   ["Supply-chain dependency agent", "Customs documentation agent", "Supplier risk agent", "Inventory positioning agent",
+    "Routing optimizer", "Sanctions/export-control screening agent", "Demand forecast agent", "Crisis dashboard analyst"],
+   ["Warehouse associate robot", "Port/cross-dock material movement robot", "Inventory scanning robot", "Emergency distribution robot", "Inspection walker"],
+   ["Identify critical goods and priority users", "Map BOMs, supplier tiers, routes, jurisdictions, choke points",
+    "Monitor disruptions, compliance, capacity, demand", "Build buffers, alternates, domestic capacity, allied agreements",
+    "During disruption: prioritize, reroute, substitute, communicate", "Validate customs/export compliance and financial flows", "Update resilience investments from lessons"],
+   [11, 8, 16, 3, 17, 22]),
+ M("Science-to-Industry",
+   "Move frontier science from discovery to validated technology, pilot production, standards, procurement, and exports.",
+   "Shorten the path from research insight to national capability.",
+   ["Frontier research programs", "Reproducibility and metrology", "Prototype engineering", "Testbeds and pilot lines",
+    "Standards development", "Technology transfer and IP", "Procurement pathways", "Venture and growth capital", "Workforce training"],
+   ["Frontier lab director", "Principal investigator", "Prototype engineering lead", "Standards diplomat",
+    "Technology transfer officer", "Procurement innovation lead", "Industrialization lead", "Research ethics and safety officer"],
+   ["Literature review agent", "Hypothesis generator", "Experiment planner", "Simulation agent", "Lab data analyst",
+    "Patent landscape analyst", "Standards comparison agent", "Grant/proposal drafting agent"],
+   ["Lab assistant robot", "Field measurement robot", "Prototype assembly robot", "Hazardous-material support robot"],
+   ["Define frontier problem and success criteria", "Review evidence and generate hypotheses", "Run reproducible experiments",
+    "Build prototypes and testbeds", "Validate performance, safety, economic feasibility", "Protect IP and contribute to standards",
+    "Use procurement, pilots, capital to scale", "Feed deployment learning back into research"],
+   [15, 9, 2, 14, 16]),
+ M("Frontier Talent Formation",
+   "Build the human talent system needed to lead frontier technology using AI tutors, simulation, labs, apprenticeships, and robot-enabled facilities.",
+   "Continuously produce, reskill, and retain people capable of leading, supervising, and improving AI- and robot-augmented systems.",
+   ["Foundational education", "Technical pathways for AI, robotics, chips, energy, biotech, quantum, cyber, manufacturing, logistics",
+    "Apprenticeships and lab/factory training", "AI tutoring and personalized practice", "Credentialing and skills verification",
+    "Worker transition and job redesign", "Immigration and talent attraction where applicable"],
+   ["National talent formation lead", "Curriculum architect", "Apprenticeship director", "Frontier university/lab partnership lead",
+    "Workforce transition lead", "Credentialing and assessment lead", "AI tutor governance lead"],
+   ["AI tutor", "Curriculum alignment agent", "Skills inference agent", "Career pathway advisor",
+    "Assessment generation agent", "Labor-market demand analyst", "Training simulator agent"],
+   ["Classroom/lab assistant robot", "Vocational demonstration robot", "Facilities maintainer robot"],
+   ["Forecast strategic workforce demand by sector and skill", "Map current education and labor supply", "Design modular curricula and credentials",
+    "Deploy AI tutors and simulation practice", "Connect learners to labs, factories, apprenticeships", "Verify skills via performance assessment", "Place workers and update training from job data"],
+   [14, 20, 15]),
+ M("Public Procurement for Frontier Technology",
+   "Use public demand to accelerate strategic technology deployment while preserving competition, transparency, safety, and accountability.",
+   "Turn national needs into early markets for high-value technologies.",
+   ["Mission-driven requirements", "Challenge procurement", "Testbeds and pilots", "Outcome-based contracts",
+    "Safety and evaluation gates", "Vendor risk management", "Domestic/allied supply-chain requirements", "Scale-up pathways after pilots"],
+   ["Procurement innovation lead", "Technical buyer", "Mission owner", "Evaluation lead", "Vendor risk lead",
+    "Contracting officer", "Public accountability officer"],
+   ["Procurement agent", "Market intelligence agent", "RFP drafting agent", "Vendor risk agent",
+    "Evaluation evidence agent", "Contract obligation tracker", "Cost-benefit simulator"],
+   ["Receiving/inventory robot", "Testbed support robot", "Inspection robot for physical pilots"],
+   ["Define mission outcome and constraints", "Survey market and technology readiness", "Draft outcome-based requirements with evaluation evidence",
+    "Run transparent competition or challenge", "Pilot with safety, privacy, performance gates", "Scale strong vendors, terminate weak pilots", "Feed lessons into standards and budgets"],
+   [2, 1, 15]),
+ M("Cyber Defense",
+   "Defend national, industrial, and institutional digital systems in an AI-accelerated threat environment.",
+   "Detect, prevent, respond to, and recover from cyber threats across public, private, critical, and strategic technology systems.",
+   ["Asset inventory", "Identity and access management", "Security monitoring and detection", "Incident response",
+    "Threat intelligence", "Vulnerability management", "Secure software supply chain", "AI system security", "Resilience and disaster recovery"],
+   ["Cyber commander", "CISO", "SOC lead", "Incident commander", "Threat intelligence lead",
+    "Vulnerability management lead", "Secure software supply-chain lead", "AI security lead"],
+   ["Cyber triage agent", "Threat intelligence agent", "Vulnerability prioritization agent", "Incident response copilot",
+    "Malware/reverse-engineering assistant", "Identity anomaly detector", "Software supply-chain risk agent", "Red-team agent"],
+   ["Data center technician robot", "Facilities/security patrol robot", "Hardware chain-of-custody robot"],
+   ["Maintain asset, identity, service, data, dependency inventories", "Monitor signals and enrich alerts", "Triage incidents and assign severity",
+    "Contain, eradicate, recover, communicate", "Patch vulnerabilities and harden controls", "Run exercises, red teams, postmortems", "Feed lessons into architecture and procurement"],
+   [12, 3, 22, 4]),
+ M("Advanced Manufacturing",
+   "Convert inventions into scalable production using AI, robotics, digital twins, automation, quality systems, and resilient supply chains.",
+   "Produce strategic goods reliably, safely, affordably, and at scale.",
+   ["Design for manufacturing", "Process engineering", "Industrial automation and robotics", "Digital twin simulation",
+    "Quality management", "Supplier integration", "Maintenance and reliability", "Workforce training", "Safety and labor governance"],
+   ["Advanced manufacturing architect", "Plant manager", "Industrial engineering lead", "Quality systems lead",
+    "Robotics automation lead", "Maintenance/reliability lead", "Supplier industrialization lead", "Workforce transition lead"],
+   ["CAD/CAM assistant", "Production scheduler", "Digital twin simulation agent", "Quality anomaly detector",
+    "Work-instruction generator", "Supplier risk agent", "Maintenance prediction agent", "Safety compliance agent"],
+   ["Manufacturing cell worker", "Machine tending robot", "Inspection walker", "Warehouse associate robot", "Facilities maintainer robot"],
+   ["Translate product requirements into manufacturing requirements", "Simulate process, layout, bottlenecks, quality, automation",
+    "Build pilot line and validate safety, quality, cost, throughput", "Scale with AI scheduling and robot execution",
+    "Monitor quality drift, machine health, supplier variation, labor impact", "Improve via controlled change management", "Feed learning back to design and supply chain"],
+   [9, 8, 11, 20, 15]),
+ M("Digital Infrastructure",
+   "Coordinate software, cloud, telecom, data centers, cybersecurity, data platforms, and AI platforms as strategic national infrastructure.",
+   "Keep digital systems available, secure, interoperable, scalable, and trusted.",
+   ["Software engineering", "Cloud and platform engineering", "Data engineering and governance", "Telecom and network operations",
+    "Data center operations", "Cyber defense and resilience", "AI/ML platform operations", "Digital identity and access", "Digital public infrastructure"],
+   ["Chief digital infrastructure officer", "Platform engineering director", "Cloud/data center director", "CISO/cyber commander",
+    "Data governance lead", "AI platform lead", "Product/service owner", "Privacy and trust lead"],
+   ["Coding agent", "Test generation agent", "Incident response copilot", "SOC triage agent", "Data quality agent",
+    "Capacity planner", "Documentation agent", "Compliance review agent", "Model evaluation agent"],
+   ["Data center technician robot", "Facilities maintainer robot", "Inspection walker", "Secure document/hardware logistics robot"],
+   ["Service owner defines need, reliability target, security tier, data class", "Build with AI coding/test/documentation support",
+    "Deploy with CI/CD, observability, access control, rollback", "Cyber teams monitor with AI triage and human incident command",
+    "Data teams monitor lineage, quality, privacy, retention", "Maintain physical infra with robot inspection", "Governance reviews incidents, risks, audits, public impact"],
+   [12, 7, 16, 1]),
+]
+
+# ---------------------------------------------------------------------------
 # NON-HUMANOID AUTONOMOUS MACHINES
 # Cross-economy catalog of self-driving vehicles, farm equipment, harvesters,
 # loaders/earthmovers, mining haul trucks, and drones. Tuple: (name, jtbd, environments, detail)
@@ -1095,6 +1286,12 @@ AUTONOMOUS_MACHINES = [
     ("Autonomous surface vessel (USV)", "survey, monitor, and transport on water without a crew",
      "harbors, coastal waters, inland waterways",
      "An uncrewed surface vessel for hydrographic survey, environmental monitoring, and short-haul transport."),
+    ("Underwater inspection robot (ROV/AUV)", "inspect, survey, and map submerged assets and environments",
+     "ports, offshore energy, pipelines, dams, reservoirs, hulls",
+     "A remotely operated or autonomous underwater vehicle for inspecting pipelines, hulls, dams, and offshore structures where human diving is slow or dangerous."),
+    ("Fixed industrial robotic cell", "weld, assemble, pick-and-place, machine-tend, and inspect at a fixed station",
+     "factories, labs, fabrication shops",
+     "A stationary (non-mobile) robotic cell — the workhorse of automated production; not humanoid and not mobile, but an LLM-planned, tool-call-driven physical agent within a guarded, fixed envelope."),
 ]
 
 # Sector-nested autonomous machines. num -> [(name, jtbd, environments, detail)]
@@ -2690,6 +2887,96 @@ Simulators are cheaper and more scalable than real practice, which makes them a 
     return rslug, body
 
 
+def render_strategic_mission(m):
+    mslug = slug(m["name"])
+    name = "mission-%s" % mslug
+    sec_by_num = {s["num"]: s for s in SECTORS}
+    composes = "\n".join(
+        "- [%02d. %s](../../%s/)" % (n, sec_by_num[n]["title"], sector_slug(sec_by_num[n]))
+        for n in m["composes"] if n in sec_by_num)
+    caps = "\n".join("- %s." % c for c in m["capabilities"])
+    hc = "\n".join("- %s." % h for h in m["human_command"])
+    ai = "\n".join("- %s." % a for a in m["ai"])
+    robots = "\n".join("- %s." % r for r in m["robots"])
+    loop = "\n".join("%d. %s." % (i + 1, s) for i, s in enumerate(m["loop"]))
+    desc = ("Strategic mission (cross-cutting national capability): **%s** — %s. Unlike the 22 sector operating "
+            "systems, a mission composes several of them toward one strategic objective. Use this skill to plan or "
+            "coordinate this mission end-to-end; trigger whenever work concerns %s, even if the user only names a "
+            "piece of it."
+            ) % (m["name"], m["mission"].rstrip("."), m["name"].lower())
+    body = """---
+name: {name}
+description: {desc}
+---
+
+# Strategic Mission — {title}
+
+> **Layer:** Strategic mission (cross-cutting capability that composes multiple operating systems)
+> **Shared concepts:** `../../00-framework/SKILL.md` · **Imported/adapted from the Agentic-Workforce operating models**
+
+## Purpose
+
+{purpose}
+
+## Mission
+
+{mission}
+
+## Operating systems this mission composes
+
+A strategic mission is an *orthogonal* axis to the 22 sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
+
+{composes}
+
+Deploy the relevant sector and role skills under those operating systems as the building blocks; this skill coordinates them toward the mission.
+
+## Core capabilities
+
+{caps}
+
+## Human command roles
+
+{hc}
+
+These hold accountability for the mission. Strategic prioritization, public legitimacy, security, and ethical tradeoffs stay human-owned.
+
+## AI personnel
+
+{ai}
+
+Many of these map to existing role skills in the composed operating systems (e.g. `_catalogs/ai-personnel/` and the sectors' `roles/`). Reuse them rather than rebuilding.
+
+## Robot / machine personnel
+
+{robots}
+
+See `_catalogs/humanoid-robots/`, `_catalogs/autonomous-machines/`, and the sectors' `robots/` and `autonomous/` folders.
+
+## Operating loop
+
+{loop}
+
+## Human accountability boundary
+
+Strategic prioritization, public legitimacy, national-security judgment, scarce-resource allocation, export-control and safety decisions, and final signoff on irreversible commitments remain human-accountable. AI personnel and robots accelerate the work up to that line.
+
+## How to use this skill
+
+1. Read the mission and the operating systems it composes.
+2. Pull the specific sector and role skills you need from those OSs.
+3. Run the operating loop, coordinating across sectors at the seams.
+4. Apply the command & cadence model (`00-framework/`) and stop at the accountability boundary.
+
+## Adapting to any nation (context modifiers)
+
+Whether a nation pursues this mission at all — and how (sovereign build, ally-and-buy, or import) — depends heavily on scale, income, resource endowment, and geopolitics. Re-read through:
+
+{context}
+""".format(name=name, desc=desc, title=m["name"], purpose=m["purpose"], mission=m["mission"],
+           composes=composes, caps=caps, hc=hc, ai=ai, robots=robots, loop=loop, context=CONTEXT_MODIFIERS)
+    return mslug, body
+
+
 def render_framework_index():
     sector_rows = "\n".join(
         "| %02d | [%s](%s/) | %d AI roles |" % (
@@ -2713,6 +3000,7 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 
 - `00-framework/` — this index plus the shared concepts every skill assumes (you are here).
 - `01-…` through `22-…` — one folder per **national operating system**. Each has a sector `SKILL.md` (orchestrator) and a `roles/` subfolder of **AI-personnel role skills**.
+- `strategic-missions/` — **cross-cutting national missions** (energy abundance, semiconductor sovereignty, bioeconomy, frontier-AI production, quantum & space, strategic supply chain, science-to-industry, talent formation, public procurement, cyber defense, advanced manufacturing, digital infrastructure). A mission is an *orthogonal axis* to the 22 sectors: it composes several of them toward one objective.
 - `cross-cutting-archetypes/` — the 12 role patterns (Strategist, Operator, Builder, …) that recur in every sector.
 - `_catalogs/ai-personnel/` and `_catalogs/humanoid-robots/` — reusable cross-economy role patterns.
 - `_catalogs/autonomous-machines/` — **non-humanoid** autonomous platforms: self-driving cars/trucks/shuttles, autonomous tractors and harvesters, loaders and earthmovers, mining haul trucks, drones (survey, spray, delivery), warehouse movers, and surface vessels. Several sectors also nest domain-specific machines under `<sector>/autonomous/` (e.g. `05-food/autonomous/`, `11-transportation/autonomous/`, `08-mining/autonomous/`).
@@ -2742,6 +3030,30 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 **Capability is right-sized, not one-size — and RLAIF is one method among many.** The brain need not be a single large model trained one way. Capabilities are spread across **model tiers** — LLM, SLM, tiny LM, and **deterministic controllers** — and built with a **spectrum of methods**: imitation/behavior cloning, model-based and offline RL, RLHF/RLAIF, sim-to-real, self-supervised pretraining, supervised fine-tuning, **distillation and compression**, search/planning, classical optimization and control, and **formal verification**. Each capability is assigned to the *smallest, most deterministic* tier and the *most efficient* method that meets its accuracy, latency, and safety bar — with a verified deterministic safety layer beneath anything learned. The roles that select and run this spectrum live in `_catalogs/capability-optimization/`.
 
 **Guarding against deskilling.** Automating routine work erodes the human fallback bench, tacit judgment, and the learning ladder. Every sector skill carries a *Deskilling watch & keep-warm* section (its specific risk, countermeasures, and a job/role-simulator regime), OS 22 (Resilience) owns the cross-sector drill program, and `_catalogs/simulation-training/` holds the roles that run it. The key idea: the **world models and simulators built to train the machines double as the keep-warm simulators that keep humans current and rebuild the learning ladder** — one simulation substrate, two students. See `docs/role-simulation-and-keepwarm.md`.
+
+## The command & cadence model (how delegation actually runs)
+
+The five-layer pattern says *who* is on the team; this says *how they run together* without losing accountability. Every role and mission assumes it.
+
+**Three-layer workforce.** Human command owns accountable judgment, authority, trust, ethics, and signoff (and must never lose ownership, legitimacy, escalation, redress). AI personnel own research, drafting, coding, monitoring, simulation, and coordination (and must never lose evidence, uncertainty, constraints, logs). Robot/machine personnel own bounded physical execution (and must never lose the safety envelope, human override, physical proof).
+
+**The operating loop** (run it for any delegated work):
+
+1. **Mission assignment** — the human owner sets objective, constraints, success criteria, and risk tier.
+2. **Context loading** — agents load approved data, policies, tools, maps, and current state.
+3. **Task decomposition** — separate research, planning, execution, monitoring, verification.
+4. **Delegation** — AI does cognitive work; robots/machines do approved physical work; humans hold judgment and exceptions.
+5. **Verification** — check outputs against metrics, evidence, tests, inspections, and human-review thresholds.
+6. **Escalation** — uncertainty, rights impact, safety risk, conflict, or policy ambiguity triggers human command.
+7. **Learning** — incidents, failures, and successful patterns update SOPs, evals, prompts, maps, and training.
+
+**Delegation rules.** Delegate to **AI** when the work is text, code, data, classification, monitoring, forecasting, simulation, routing, or first-draft synthesis. Delegate to **robots/machines** when it is fetch, carry, inspect, clean, sort, stage, load, unload, scan, guide, or repeatable manipulation in a bounded environment. **Keep with humans** when it involves force, rights, consent, accountability, public legitimacy, final professional signoff, scarce-resource triage, or unresolved ethical tradeoffs.
+
+**Required control surfaces:** role charter, context pack, tool permissions, evidence log, evaluation, incident path, review cadence.
+
+**Command cadence:** real-time (safety, incidents, outages, cyber, public-safety escalations); daily (queues, uptime, throughput, exceptions); weekly (metrics, quality drift, cost, adoption, workforce impact); monthly (risk register, eval results, audits, policy); quarterly (role redesign, procurement, capacity, training, public trust, resilience).
+
+**Three failure modes to design against:** automation without an accountable owner; AI output treated as a final decision; a robot's task envelope expanding informally. *(See `checklists/` for the deployment gates and `templates/` for role/agent/robot briefs.)*
 
 **Universal, not US-specific.** The jobs are invariant across nations; *ownership, formality, and capacity* are local variables. Every skill carries a "context modifiers" section so it can be adapted to any nation — any size, geography, income level, or political system.
 
@@ -2784,7 +3096,7 @@ Coercive state power; rights-impacting decisions; intimate human care; democrati
 def main():
     counts = dict(sectors=0, roles=0, sector_robots=0, sector_machines=0, archetypes=0,
                   catalog_ai=0, catalog_robot=0, catalog_machine=0, embodied_stack=0, fleet_ops=0,
-                  capability_opt=0, sim_training=0)
+                  capability_opt=0, sim_training=0, strategic_missions=0)
 
     # Framework index
     write(os.path.join(ROOT, "00-framework", "SKILL.md"), render_framework_index())
@@ -2842,6 +3154,10 @@ def main():
         rslug, body = render_sim_role(r)
         write(os.path.join(ROOT, "_catalogs", "simulation-training", rslug, "SKILL.md"), body)
         counts["sim_training"] += 1
+    for m in STRATEGIC_MISSIONS:
+        mslug, body = render_strategic_mission(m)
+        write(os.path.join(ROOT, "strategic-missions", mslug, "SKILL.md"), body)
+        counts["strategic_missions"] += 1
 
     total = sum(counts.values()) + 1  # + framework index
     print("Wrote skills to:", ROOT)
