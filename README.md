@@ -102,7 +102,10 @@ civstack/
 │   ├── coverage-matrix.md                # request -> where to look in the library
 │   ├── non-humanoid-platform-taxonomy.md # which physical form for the job
 │   ├── physical-ai-safety-boundaries.md  # safety controls / stop conditions / human-only calls
-│   └── frontier-technology-strategy.md   # the thesis behind the strategic missions
+│   ├── frontier-technology-strategy.md   # the thesis behind the strategic missions
+│   └── viewpoints-comparison.md          # CivStack vs the Agentic-Workforce viewpoint
+├── perspectives/                         # alternative, intact viewpoints (not regenerated)
+│   └── agentic-workforce/                # a parallel hand-authored take on the same problem
 ├── checklists/                           # deployment-readiness gates
 │   ├── ai-robot-role-readiness-checklist.md
 │   └── autonomous-machine-deployment-checklist.md
@@ -179,6 +182,15 @@ git add -A && git diff --cached --stat
 ## Provenance
 
 Built from the strategy map in [`docs/country-economy-core-jtbd.md`](docs/country-economy-core-jtbd.md), which draws on public occupational and industrial taxonomies (BLS SOC, O\*NET, NAICS), the U.S. CISA critical-infrastructure model, international cross-walks (ILO ISCO-08, UN ISIC), informal-economy research (ILO, World Bank), and AI/robotics-governance frames (NIST AI RMF, OECD.AI). See the source document's notes for the full list.
+
+## Alternative viewpoints
+
+A single taxonomy hides its own assumptions, so CivStack keeps a second, intact take on
+the same problem in [`perspectives/agentic-workforce/`](perspectives/) — a hand-authored,
+strategy-forward library (domains, strategic operating-models, a focused physical-AI
+library, readiness checklists). It is preserved whole as a standing second opinion, not
+dissolved into the generated library. The full cross-walk — what maps to what, and when to
+use which — is in [`docs/viewpoints-comparison.md`](docs/viewpoints-comparison.md).
 
 ## License
 
