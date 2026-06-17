@@ -980,6 +980,30 @@ FLEET_OPS_ROLES = [
      "assesses routes, maps, and geofences for hazards and ODD violations before and during missions",
      "operations / autonomy lead",
      "Gates missions against the certified Operational Design Domain and flags map staleness, new hazards, and out-of-ODD segments."),
+    ("Physical AI fleet director", "oversight",
+     "owns strategy, safety, economics, and operations for a mixed fleet of non-humanoid autonomous machines across deployment and accountability",
+     "operations / executive leadership",
+     "The accountable owner of a fleet spanning vehicles, drones, farm equipment, loaders, AMRs, rail/marine, and fixed cells; sets the common safety, maintenance, data, and remote-operations standards and holds deployment and incident accountability."),
+    ("Freight autonomy lead", "oversight",
+     "coordinates autonomous trucks, yard tractors, delivery vehicles, warehouse AMRs, forklifts, and port equipment across autonomous logistics networks",
+     "fleet operations director",
+     "Owns the autonomy program for freight and logistics; balances throughput, cost, safety, and labor, and owns the safety case for public-road and facility operation."),
+    ("Farm autonomy manager", "oversight",
+     "operates autonomous tractors, sprayers, seeders, harvesters, and field drones under agronomic, safety, food-safety, animal-welfare, and environmental constraints",
+     "farm / ranch owner",
+     "The accountable owner of agricultural autonomy; pesticide, animal-welfare, land-stewardship, and food-safety decisions stay with this human."),
+    ("Heavy-equipment autonomy lead", "oversight",
+     "deploys autonomous loaders, haul trucks, excavators, dozers, graders, and quarry/construction/port machines",
+     "site / mine operations leadership",
+     "Owns the safety case for autonomous earthmoving and bulk-material handling in geofenced, people-restricted sites; holds stop authority and incident accountability."),
+    ("Warehouse automation lead", "oversight",
+     "operates AMRs, autonomous forklifts, sortation, inventory robots, fixed cells, and warehouse orchestration",
+     "site operations manager",
+     "Owns mixed human/robot facility operations; balances throughput and worker safety and owns the exclusion-zone and override design."),
+    ("Drone operations lead", "oversight",
+     "plans, approves, operates, and governs drone fleets for agriculture, inspection, delivery, disaster response, public safety, mapping, and monitoring",
+     "operations / airspace authority",
+     "The accountable owner of UAS operations; airspace authorization (Part 107 / BVLOS), flight safety, and overflight-of-people decisions stay with this human."),
 ]
 
 # Roles that design and run the CAPABILITY / OPTIMIZATION spectrum — many training
@@ -1239,6 +1263,27 @@ STRATEGIC_MISSIONS = [
     "Deploy with CI/CD, observability, access control, rollback", "Cyber teams monitor with AI triage and human incident command",
     "Data teams monitor lineage, quality, privacy, retention", "Maintain physical infra with robot inspection", "Governance reviews incidents, risks, audits, public impact"],
    [12, 7, 16, 1]),
+]
+
+# Human-command roles: the accountable human owners for strategic missions and
+# cross-cutting authority. dict via tuple: (name, jtbd, supervisor, detail)
+HUMAN_COMMAND_ROLES = [
+    ("National technology strategist",
+     "set national technology direction across frontier AI, compute, chips, energy, robotics, manufacturing, bio, quantum, space, cyber, standards, talent, capital, and public trust",
+     "head of government / executive authority",
+     "Coordinates national technology preeminence and the strategic missions; identifies national bets, aligns public/private/university/defense/standards systems, and owns the public legitimacy of the strategy."),
+    ("AI governance lead",
+     "govern AI inventories, model risk, evaluation gates, responsible AI, privacy, bias, safety, audit, incident response, and the approval boundaries for AI systems",
+     "executive / board",
+     "The accountable owner of whether and how AI systems are deployed; sets risk tiers, approval gates, and redress, and holds final accountability for AI incidents."),
+    ("Import/export compliance lead",
+     "own customs, tariffs, trade documentation, export controls, sanctions screening, restricted parties, dual-use goods, technology transfer, and cross-border movement of goods, data, and services",
+     "general counsel / trade authority",
+     "The accountable owner of trade-compliance decisions; agents screen and prepare, but restricted-party, export-license, and technology-transfer calls stay human."),
+    ("Procurement innovation lead",
+     "use mission-driven public or enterprise procurement to accelerate frontier technology through challenge procurement, pilots, testbeds, vendor evaluation, scale-up decisions, and accountable contracting",
+     "procurement executive / mission owner",
+     "Turns national needs into early markets while preserving competition, transparency, and accountability; owns award and scale/terminate decisions."),
 ]
 
 # ---------------------------------------------------------------------------
@@ -1901,6 +1946,7 @@ Treat this boundary as a hard constraint. Agents in this sector may sense, inter
 
 This sector regularly depends on and feeds: {collabs}. Coordinate handoffs explicitly; most systemic failures happen at the seams between operating systems.
 
+{missions_block}
 ## Sector success metrics (illustrative)
 
 - Coverage / reliability: the share of the population or demand reliably served.
@@ -1937,6 +1983,7 @@ The jobs above are universal; how they are staffed is not. Re-read this sector t
         families=families, role_list=role_list, robots=robots, nested_robots=nested_robots,
         robot_stack_short=ROBOT_STACK_SHORT, nested_machines=nested_machines,
         jd_block=jd_sector_block(sec["num"]), deskilling_block=deskilling_block(sec["num"]),
+        missions_block=missions_for_sector(sec["num"]),
         accountability=sec["accountability"], collabs=collabs, context=CONTEXT_MODIFIERS)
     return sslug, body
 
@@ -2333,6 +2380,17 @@ def deskilling_block(num, condensed=False):
         "- **Role/job simulators (keep-warm):** %s\n\n"
         "%s\n" % (d["risk"], d["counter"], d["sim"], DESKILL_DUALUSE)
     )
+
+
+def missions_for_sector(num):
+    ms = [m for m in STRATEGIC_MISSIONS if num in m["composes"]]
+    if not ms:
+        return ""
+    items = "\n".join("- [%s](../strategic-missions/%s/)" % (m["name"], slug(m["name"])) for m in ms)
+    return ("## Strategic missions that draw on this sector\n\n"
+            "Beyond its own mandate, this operating system is composed by these cross-cutting "
+            "[strategic missions](../strategic-missions/) (the orthogonal mission axis — a mission pulls roles from "
+            "several sectors toward one national objective):\n\n" + items + "\n")
 
 
 def render_sector_robot(sec, robot):
@@ -2887,6 +2945,70 @@ Simulators are cheaper and more scalable than real practice, which makes them a 
     return rslug, body
 
 
+def render_human_command_role(role):
+    rname, jtbd, supervisor, detail = role
+    rslug = slug(rname)
+    name = "human-command-%s" % rslug
+    desc = ("Human-command role: **%s**. The accountable human owner for this domain. Use when the work is to %s. "
+            "AI personnel and robots accelerate the work, but the judgment, legitimacy, and final signoff stay with this "
+            "human."
+            ) % (rname, jtbd)
+    body = """---
+name: {name}
+description: {desc}
+---
+
+# Human Command — {rname}
+
+> **Layer:** Human command (accountable owner) · **Reports to:** {supervisor}
+> **Shared concepts & command model:** `../../00-framework/SKILL.md` · **Strategic missions:** `../../strategic-missions/`
+
+## What this role is
+
+The **{rname}** is an accountable human owner whose job is to {jtbd}. {detail}
+
+## When this role is needed
+
+Whenever an institution or nation must {jtbd} — especially where strategy spans several operating systems and missions, and where legitimacy, accountability, and public trust are at stake.
+
+## Core jobs to be done
+
+- Set direction and priorities under uncertainty.
+- Align institutions, resources, and incentives toward the objective.
+- Decide the irreversible, rights-, safety-, and legitimacy-bearing calls.
+- Hold accountability for outcomes, incidents, and redress.
+
+## AI personnel delegation
+
+Delegate research, drafting, analysis, monitoring, simulation, and coordination to AI personnel (see `../ai-personnel/` and the relevant sectors' `roles/`). They supply evidence, options, and uncertainty; they do not make this role's accountable decisions.
+
+## Robot / machine delegation
+
+Delegate physical execution and inspection to robots and autonomous machines (see `../humanoid-robots/`, `../autonomous-machines/`) under an engineered safety envelope with human override.
+
+## Human accountability boundary
+
+Strategic prioritization, public legitimacy, rights- and safety-bearing decisions, scarce-resource allocation, and final signoff on irreversible commitments remain with this role. This is the line AI and robots support up to but never cross.
+
+## How this role runs (command & cadence)
+
+Apply the operating loop and command cadence from `../../00-framework/SKILL.md`: assign mission → load context → decompose → delegate to AI/robots → verify → escalate → learn, with real-time / daily / weekly / monthly / quarterly review.
+
+## Metrics
+
+- Strategic progress against the mission and milestones.
+- Decision quality and timeliness under uncertainty.
+- Trust, legitimacy, and accountability (audits, redress, public confidence).
+- Resilience and risk posture.
+
+## Adapting to any nation (context modifiers)
+
+{context}
+""".format(name=name, desc=desc, rname=rname, jtbd=jtbd, supervisor=supervisor, detail=detail,
+           context=CONTEXT_MODIFIERS)
+    return rslug, body
+
+
 def render_strategic_mission(m):
     mslug = slug(m["name"])
     name = "mission-%s" % mslug
@@ -2982,6 +3104,10 @@ def render_framework_index():
         "| %02d | [%s](%s/) | %d AI roles |" % (
             s["num"], s["title"], sector_slug(s), len(s["ai"]))
         for s in SECTORS)
+    mission_rows = "\n".join(
+        "| [%s](strategic-missions/%s/) | %s |" % (
+            m["name"], slug(m["name"]), ", ".join("%02d" % n for n in m["composes"]))
+        for m in STRATEGIC_MISSIONS)
     name = "country-economy-jtbd-index"
     desc = ("Index and shared framework for the Country-Economy Jobs-To-Be-Done skill library: 22 national "
             "operating systems, their AI-personnel role skills, 12 cross-cutting archetypes, and the AI/robot "
@@ -3002,6 +3128,7 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 - `01-…` through `22-…` — one folder per **national operating system**. Each has a sector `SKILL.md` (orchestrator) and a `roles/` subfolder of **AI-personnel role skills**.
 - `strategic-missions/` — **cross-cutting national missions** (energy abundance, semiconductor sovereignty, bioeconomy, frontier-AI production, quantum & space, strategic supply chain, science-to-industry, talent formation, public procurement, cyber defense, advanced manufacturing, digital infrastructure). A mission is an *orthogonal axis* to the 22 sectors: it composes several of them toward one objective.
 - `cross-cutting-archetypes/` — the 12 role patterns (Strategist, Operator, Builder, …) that recur in every sector.
+- `_catalogs/human-command/` — **accountable human owners** for the strategic missions and cross-cutting authority (national technology strategist, AI governance lead, import/export compliance lead, procurement innovation lead).
 - `_catalogs/ai-personnel/` and `_catalogs/humanoid-robots/` — reusable cross-economy role patterns.
 - `_catalogs/autonomous-machines/` — **non-humanoid** autonomous platforms: self-driving cars/trucks/shuttles, autonomous tractors and harvesters, loaders and earthmovers, mining haul trucks, drones (survey, spray, delivery), warehouse movers, and surface vessels. Several sectors also nest domain-specific machines under `<sector>/autonomous/` (e.g. `05-food/autonomous/`, `11-transportation/autonomous/`, `08-mining/autonomous/`).
 - `_catalogs/embodied-ai-stack/` — the roles that **build and operate** both the LLM-brained robots and the autonomous machines: brain/autonomy orchestrator, VLA policy engineer, world-model engineer, robot-gym/sim-to-real engineer, RLAIF pipeline engineer, evaluation/red-team agent, fleet safety officer, teleoperation operator, fleet operations agent, and data/telemetry engineer.
@@ -3063,6 +3190,14 @@ The five-layer pattern says *who* is on the team; this says *how they run togeth
 |---|---|---|
 {sector_rows}
 
+## The 12 strategic missions (the other axis)
+
+Missions are cross-cutting national capabilities that compose several sectors toward one objective. Use them when the goal is a capability rather than a sector.
+
+| Strategic mission | Composes operating systems |
+|---|---|
+{mission_rows}
+
 ## How to use this library
 
 1. **Start here** to orient.
@@ -3086,7 +3221,7 @@ The five-layer pattern says *who* is on the team; this says *how they run togeth
 
 Coercive state power; rights-impacting decisions; intimate human care; democratic legitimacy; high-consequence safety; ethical and social tradeoffs; and final accountability for AI deployment, model-risk acceptance, incident response, and redress.
 """.format(name=name, desc=desc, lifecycle="\n".join("- **%s** — %s." % (s, g) for s, g in LIFECYCLE),
-           sector_rows=sector_rows)
+           sector_rows=sector_rows, mission_rows=mission_rows)
     return body
 
 
@@ -3096,7 +3231,7 @@ Coercive state power; rights-impacting decisions; intimate human care; democrati
 def main():
     counts = dict(sectors=0, roles=0, sector_robots=0, sector_machines=0, archetypes=0,
                   catalog_ai=0, catalog_robot=0, catalog_machine=0, embodied_stack=0, fleet_ops=0,
-                  capability_opt=0, sim_training=0, strategic_missions=0)
+                  capability_opt=0, sim_training=0, strategic_missions=0, human_command=0)
 
     # Framework index
     write(os.path.join(ROOT, "00-framework", "SKILL.md"), render_framework_index())
@@ -3158,6 +3293,10 @@ def main():
         mslug, body = render_strategic_mission(m)
         write(os.path.join(ROOT, "strategic-missions", mslug, "SKILL.md"), body)
         counts["strategic_missions"] += 1
+    for r in HUMAN_COMMAND_ROLES:
+        rslug, body = render_human_command_role(r)
+        write(os.path.join(ROOT, "_catalogs", "human-command", rslug, "SKILL.md"), body)
+        counts["human_command"] += 1
 
     total = sum(counts.values()) + 1  # + framework index
     print("Wrote skills to:", ROOT)

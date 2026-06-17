@@ -107,6 +107,12 @@ Treat this boundary as a hard constraint. Agents in this sector may sense, inter
 
 This sector regularly depends on and feeds: Defense & Intelligence, Health & Care, Resilience & Continuity, Water & Sanitation. Coordinate handoffs explicitly; most systemic failures happen at the seams between operating systems.
 
+## Strategic missions that draw on this sector
+
+Beyond its own mandate, this operating system is composed by these cross-cutting [strategic missions](../strategic-missions/) (the orthogonal mission axis — a mission pulls roles from several sectors toward one national objective):
+
+- [Cyber Defense](../strategic-missions/cyber-defense/)
+
 ## Sector success metrics (illustrative)
 
 - Coverage / reliability: the share of the population or demand reliably served.

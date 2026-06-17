@@ -100,6 +100,13 @@ Treat this boundary as a hard constraint. Agents in this sector may sense, inter
 
 This sector regularly depends on and feeds: Labor & Workforce, Science & Innovation, Culture & Civic Life, Household & Care. Coordinate handoffs explicitly; most systemic failures happen at the seams between operating systems.
 
+## Strategic missions that draw on this sector
+
+Beyond its own mandate, this operating system is composed by these cross-cutting [strategic missions](../strategic-missions/) (the orthogonal mission axis — a mission pulls roles from several sectors toward one national objective):
+
+- [Science-to-Industry](../strategic-missions/science-to-industry/)
+- [Frontier Talent Formation](../strategic-missions/frontier-talent-formation/)
+
 ## Sector success metrics (illustrative)
 
 - Coverage / reliability: the share of the population or demand reliably served.

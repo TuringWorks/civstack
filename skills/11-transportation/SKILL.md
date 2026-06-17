@@ -111,6 +111,15 @@ Treat this boundary as a hard constraint. Agents in this sector may sense, inter
 
 This sector regularly depends on and feeds: Materials & Manufacturing, Commerce & Services, Energy & Utilities, Resilience & Continuity. Coordinate handoffs explicitly; most systemic failures happen at the seams between operating systems.
 
+## Strategic missions that draw on this sector
+
+Beyond its own mandate, this operating system is composed by these cross-cutting [strategic missions](../strategic-missions/) (the orthogonal mission axis — a mission pulls roles from several sectors toward one national objective):
+
+- [Energy Abundance](../strategic-missions/energy-abundance/)
+- [Semiconductor Sovereignty](../strategic-missions/semiconductor-sovereignty/)
+- [Strategic Supply Chain](../strategic-missions/strategic-supply-chain/)
+- [Advanced Manufacturing](../strategic-missions/advanced-manufacturing/)
+
 ## Sector success metrics (illustrative)
 
 - Coverage / reliability: the share of the population or demand reliably served.

@@ -97,6 +97,14 @@ Treat this boundary as a hard constraint. Agents in this sector may sense, inter
 
 This sector regularly depends on and feeds: Education & Knowledge, Governance & Law, Commerce & Services, Manufacturing. Coordinate handoffs explicitly; most systemic failures happen at the seams between operating systems.
 
+## Strategic missions that draw on this sector
+
+Beyond its own mandate, this operating system is composed by these cross-cutting [strategic missions](../strategic-missions/) (the orthogonal mission axis — a mission pulls roles from several sectors toward one national objective):
+
+- [Frontier AI Production](../strategic-missions/frontier-ai-production/)
+- [Frontier Talent Formation](../strategic-missions/frontier-talent-formation/)
+- [Advanced Manufacturing](../strategic-missions/advanced-manufacturing/)
+
 ## Sector success metrics (illustrative)
 
 - Coverage / reliability: the share of the population or demand reliably served.

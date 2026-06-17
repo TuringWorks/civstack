@@ -13,6 +13,7 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 - `01-…` through `22-…` — one folder per **national operating system**. Each has a sector `SKILL.md` (orchestrator) and a `roles/` subfolder of **AI-personnel role skills**.
 - `strategic-missions/` — **cross-cutting national missions** (energy abundance, semiconductor sovereignty, bioeconomy, frontier-AI production, quantum & space, strategic supply chain, science-to-industry, talent formation, public procurement, cyber defense, advanced manufacturing, digital infrastructure). A mission is an *orthogonal axis* to the 22 sectors: it composes several of them toward one objective.
 - `cross-cutting-archetypes/` — the 12 role patterns (Strategist, Operator, Builder, …) that recur in every sector.
+- `_catalogs/human-command/` — **accountable human owners** for the strategic missions and cross-cutting authority (national technology strategist, AI governance lead, import/export compliance lead, procurement innovation lead).
 - `_catalogs/ai-personnel/` and `_catalogs/humanoid-robots/` — reusable cross-economy role patterns.
 - `_catalogs/autonomous-machines/` — **non-humanoid** autonomous platforms: self-driving cars/trucks/shuttles, autonomous tractors and harvesters, loaders and earthmovers, mining haul trucks, drones (survey, spray, delivery), warehouse movers, and surface vessels. Several sectors also nest domain-specific machines under `<sector>/autonomous/` (e.g. `05-food/autonomous/`, `11-transportation/autonomous/`, `08-mining/autonomous/`).
 - `_catalogs/embodied-ai-stack/` — the roles that **build and operate** both the LLM-brained robots and the autonomous machines: brain/autonomy orchestrator, VLA policy engineer, world-model engineer, robot-gym/sim-to-real engineer, RLAIF pipeline engineer, evaluation/red-team agent, fleet safety officer, teleoperation operator, fleet operations agent, and data/telemetry engineer.
@@ -100,6 +101,25 @@ The five-layer pattern says *who* is on the team; this says *how they run togeth
 | 20 | [Labor, Workforce Systems, and Organizational Life](20-labor/) | 8 AI roles |
 | 21 | [Household, Childcare, Eldercare, and Community Support](21-household/) | 7 AI roles |
 | 22 | [Resilience, Continuity, and Strategic Foresight](22-resilience/) | 6 AI roles |
+
+## The 12 strategic missions (the other axis)
+
+Missions are cross-cutting national capabilities that compose several sectors toward one objective. Use them when the goal is a capability rather than a sector.
+
+| Strategic mission | Composes operating systems |
+|---|---|
+| [Energy Abundance](strategic-missions/energy-abundance/) | 07, 16, 10, 11, 08, 22 |
+| [Semiconductor Sovereignty](strategic-missions/semiconductor-sovereignty/) | 08, 09, 15, 12, 03, 11 |
+| [Bioeconomy](strategic-missions/bioeconomy/) | 13, 05, 15, 08, 19, 03 |
+| [Frontier AI Production](strategic-missions/frontier-ai-production/) | 12, 15, 07, 08, 20 |
+| [Quantum and Space Systems](strategic-missions/quantum-and-space-systems/) | 15, 08, 09, 03, 12 |
+| [Strategic Supply Chain](strategic-missions/strategic-supply-chain/) | 11, 08, 16, 03, 17, 22 |
+| [Science-to-Industry](strategic-missions/science-to-industry/) | 15, 09, 02, 14, 16 |
+| [Frontier Talent Formation](strategic-missions/frontier-talent-formation/) | 14, 20, 15 |
+| [Public Procurement for Frontier Technology](strategic-missions/public-procurement-for-frontier-technology/) | 02, 01, 15 |
+| [Cyber Defense](strategic-missions/cyber-defense/) | 12, 03, 22, 04 |
+| [Advanced Manufacturing](strategic-missions/advanced-manufacturing/) | 09, 08, 11, 20, 15 |
+| [Digital Infrastructure](strategic-missions/digital-infrastructure/) | 12, 07, 16, 01 |
 
 ## How to use this library
 

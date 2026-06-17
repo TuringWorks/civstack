@@ -96,6 +96,7 @@ Treat this boundary as a hard constraint. Agents in this sector may sense, inter
 
 This sector regularly depends on and feeds: Health & Care, Education & Knowledge, Culture & Civic Life, Governance & Law. Coordinate handoffs explicitly; most systemic failures happen at the seams between operating systems.
 
+
 ## Sector success metrics (illustrative)
 
 - Coverage / reliability: the share of the population or demand reliably served.
