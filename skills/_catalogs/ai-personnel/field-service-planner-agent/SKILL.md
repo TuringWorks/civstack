@@ -14,7 +14,7 @@ Predict failures, schedule crews, prepare parts.
 
 ## When to use this skill
 
-Whenever the job "predict failures, schedule crews, prepare parts" appears in any sector. Pair with the relevant operating-system skill (01–22) for domain rules, data, and accountability boundary. Many sector role skills are specializations of this pattern.
+Whenever the job "predict failures, schedule crews, prepare parts" appears in any sector. Pair with the relevant operating-system skill (01–23) for domain rules, data, and accountability boundary. Many sector role skills are specializations of this pattern.
 
 ## Lifecycle
 

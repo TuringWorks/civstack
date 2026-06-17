@@ -14,7 +14,7 @@ Match needs to offerings and negotiate exchange.
 
 ## When to use this skill
 
-Use it whenever you need to instantiate a **Seller/Matcher** in any sector — to set up the role, divide the work across human/AI/robot, and wire in the right accountability. Combine with the relevant operating-system skill (01–22) for domain specifics.
+Use it whenever you need to instantiate a **Seller/Matcher** in any sector — to set up the role, divide the work across human/AI/robot, and wire in the right accountability. Combine with the relevant operating-system skill (01–23) for domain specifics.
 
 ## Job-board-style titles
 
@@ -38,7 +38,7 @@ sales rep, account executive, buyer, broker, recruiter.
 
 ## How to instantiate in a sector
 
-1. Pick the operating system (01–22) and read its mission and accountability boundary.
+1. Pick the operating system (01–23) and read its mission and accountability boundary.
 2. Map this archetype's job onto that sector's Core JTBD.
 3. Assign the AI-personnel and robot support indicated above.
 4. Name the accountable human and the escalation threshold.

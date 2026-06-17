@@ -1,6 +1,6 @@
 ---
 name: "mission-frontier-ai-production"
-description: "Strategic mission (cross-cutting national capability): **Frontier AI Production** — Create AI systems that are capable, reliable, secure, useful, economically productive, and governable. Unlike the 22 sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns frontier ai production, even if the user only names a piece of it."
+description: "Strategic mission (cross-cutting national capability): **Frontier AI Production** — Create AI systems that are capable, reliable, secure, useful, economically productive, and governable. Unlike the sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns frontier ai production, even if the user only names a piece of it."
 ---
 
 # Strategic Mission — Frontier AI Production
@@ -18,7 +18,7 @@ Create AI systems that are capable, reliable, secure, useful, economically produ
 
 ## Operating systems this mission composes
 
-A strategic mission is an *orthogonal* axis to the 22 sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
+A strategic mission is an *orthogonal* axis to the sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
 
 - [12. Communications, Software, Cybersecurity, and Digital Infrastructure](../../12-communications/)
 - [15. Science, Research, Standards, and Innovation](../../15-science/)

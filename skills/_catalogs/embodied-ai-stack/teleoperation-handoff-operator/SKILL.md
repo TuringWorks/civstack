@@ -18,7 +18,7 @@ The assumed robot architecture is: **LLM brain** (plans, issues actions as tool 
 
 ## When to use this skill
 
-Use this skill when a task calls for this work: takes remote control for edge cases the autonomy cannot handle and provides demonstrations that feed back into training. Pair with `_catalogs/humanoid-robots/` (the physical roles this stack powers) and any operating-system skill (01–22) whose robots this stack will run.
+Use this skill when a task calls for this work: takes remote control for edge cases the autonomy cannot handle and provides demonstrations that feed back into training. Pair with `_catalogs/humanoid-robots/` (the physical roles this stack powers) and any operating-system skill (01–23) whose robots this stack will run.
 
 ## Assumed architecture (recap)
 

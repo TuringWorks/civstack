@@ -5,7 +5,7 @@ description: "Operating-system orchestrator skill for **Finance, Insurance, Paym
 
 # Operating System 16 — Finance, Insurance, Payments, and Capital Markets
 
-> **Layer:** National operating system (1 of 22) · **Personnel model:** human-owned, AI- and robot-augmented
+> **Layer:** National operating system (#16 of 23) · **Personnel model:** human-owned, AI- and robot-augmented
 > **Cross-references:** `00-framework/` (shared concepts, teaming pattern, accountability), source map `Country-Economy Core Jobs To Be Done.md`
 
 ## Mission

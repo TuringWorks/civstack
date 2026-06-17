@@ -1,6 +1,6 @@
 ---
 name: "mission-quantum-and-space-systems"
-description: "Strategic mission (cross-cutting national capability): **Quantum and Space Systems** — Develop quantum and space capabilities that improve sensing, communications, computation, navigation, science, defense, and competitiveness. Unlike the 22 sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns quantum and space systems, even if the user only names a piece of it."
+description: "Strategic mission (cross-cutting national capability): **Quantum and Space Systems** — Develop quantum and space capabilities that improve sensing, communications, computation, navigation, science, defense, and competitiveness. Unlike the sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns quantum and space systems, even if the user only names a piece of it."
 ---
 
 # Strategic Mission — Quantum and Space Systems
@@ -18,7 +18,7 @@ Develop quantum and space capabilities that improve sensing, communications, com
 
 ## Operating systems this mission composes
 
-A strategic mission is an *orthogonal* axis to the 22 sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
+A strategic mission is an *orthogonal* axis to the sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
 
 - [15. Science, Research, Standards, and Innovation](../../15-science/)
 - [08. Mining, Materials, Chemicals, and Industrial Inputs](../../08-mining/)

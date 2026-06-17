@@ -14,7 +14,7 @@ Test AI outputs for quality, safety, bias, drift.
 
 ## When to use this skill
 
-Whenever the job "test ai outputs for quality, safety, bias, drift" appears in any sector. Pair with the relevant operating-system skill (01–22) for domain rules, data, and accountability boundary. Many sector role skills are specializations of this pattern.
+Whenever the job "test ai outputs for quality, safety, bias, drift" appears in any sector. Pair with the relevant operating-system skill (01–23) for domain rules, data, and accountability boundary. Many sector role skills are specializations of this pattern.
 
 ## Lifecycle
 

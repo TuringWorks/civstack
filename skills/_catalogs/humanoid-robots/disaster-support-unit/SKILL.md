@@ -30,7 +30,7 @@ These robot roles are assumed to be **LLM-brained embodied agents**, not hard-co
 
 ## When to use this skill
 
-When a task needs the physical job "enter risky areas, carry supplies, assess damage" in environments such as fires, floods, industrial accidents. Pair with the relevant operating-system skill (01–22) for domain safety rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build and operate the brain, policies, and safety layer.
+When a task needs the physical job "enter risky areas, carry supplies, assess damage" in environments such as fires, floods, industrial accidents. Pair with the relevant operating-system skill (01–23) for domain safety rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build and operate the brain, policies, and safety layer.
 
 ## Division of labor and safety
 

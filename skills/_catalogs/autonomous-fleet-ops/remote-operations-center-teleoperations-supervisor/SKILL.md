@@ -18,7 +18,7 @@ The assumed machine architecture is: a foundation/LLM **planning brain** issuing
 
 ## When to use this skill
 
-Use it when a task calls for this work: runs the remote-operations center that supervises the fleet and authorizes or performs takeovers. Pair with `_catalogs/autonomous-machines/` (the platforms) and any operating-system skill (01–22) whose fleet this supports.
+Use it when a task calls for this work: runs the remote-operations center that supervises the fleet and authorizes or performs takeovers. Pair with `_catalogs/autonomous-machines/` (the platforms) and any operating-system skill (01–23) whose fleet this supports.
 
 ## Assumed architecture (recap)
 

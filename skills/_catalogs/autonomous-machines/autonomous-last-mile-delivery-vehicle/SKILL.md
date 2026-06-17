@@ -18,7 +18,7 @@ A low-speed sidewalk/road delivery robot; teleop-assisted at crossings and excep
 
 ## When to use this skill
 
-When a task needs the physical job "deliver parcels and groceries on local streets and sidewalks" in environments such as neighborhoods, campuses, sidewalks. Pair with the relevant operating-system skill (01–22) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
+When a task needs the physical job "deliver parcels and groceries on local streets and sidewalks" in environments such as neighborhoods, campuses, sidewalks. Pair with the relevant operating-system skill (01–23) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
 
 ## Cognitive and control architecture (assumed)
 

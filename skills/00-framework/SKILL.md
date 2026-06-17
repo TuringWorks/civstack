@@ -1,6 +1,6 @@
 ---
 name: "country-economy-jtbd-index"
-description: "Index and shared framework for the Country-Economy Jobs-To-Be-Done skill library: 22 national operating systems, their AI-personnel role skills, 12 cross-cutting archetypes, and the AI/robot catalogs. Use this skill first to navigate the library, understand the shared teaming pattern and accountability model, and find the right operating-system or role skill for any economic task."
+description: "Index and shared framework for the Country-Economy Jobs-To-Be-Done skill library: national operating systems, their AI-personnel role skills, 12 cross-cutting archetypes, and the AI/robot catalogs. Use this skill first to navigate the library, understand the shared teaming pattern and accountability model, and find the right operating-system or role skill for any economic task."
 ---
 
 # Country-Economy JTBD Skill Library — Framework & Index
@@ -11,9 +11,10 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 
 - `00-framework/` — this index plus the shared concepts every skill assumes (you are here).
 - `01-…` through `22-…` — one folder per **national operating system**. Each has a sector `SKILL.md` (orchestrator) and a `roles/` subfolder of **AI-personnel role skills**.
-- `strategic-missions/` — **cross-cutting national missions** (energy abundance, semiconductor sovereignty, bioeconomy, frontier-AI production, quantum & space, strategic supply chain, science-to-industry, talent formation, public procurement, cyber defense, advanced manufacturing, digital infrastructure). A mission is an *orthogonal axis* to the 22 sectors: it composes several of them toward one objective.
+- `strategic-missions/` — **cross-cutting national missions** (energy abundance, semiconductor sovereignty, bioeconomy, frontier-AI production, quantum & space, strategic supply chain, science-to-industry, talent formation, public procurement, cyber defense, advanced manufacturing, digital infrastructure). A mission is an *orthogonal axis* to the sectors: it composes several of them toward one objective.
 - `cross-cutting-archetypes/` — the 12 role patterns (Strategist, Operator, Builder, …) that recur in every sector.
 - `_catalogs/human-command/` — **accountable human owners** for the strategic missions and cross-cutting authority (national technology strategist, AI governance lead, import/export compliance lead, procurement innovation lead).
+- `_catalogs/informal-economy/` — support roles for the **informal and subsistence sector** (the majority of employment in much of the world): vendor support, gig/platform coordination, informal transport, waste-picker cooperatives, smallholder advisory, savings groups, mutual aid, and formalization navigation — designed to strengthen, not surveil, informal workers.
 - `_catalogs/ai-personnel/` and `_catalogs/humanoid-robots/` — reusable cross-economy role patterns.
 - `_catalogs/autonomous-machines/` — **non-humanoid** autonomous platforms: self-driving cars/trucks/shuttles, autonomous tractors and harvesters, loaders and earthmovers, mining haul trucks, drones (survey, spray, delivery), warehouse movers, and surface vessels. Several sectors also nest domain-specific machines under `<sector>/autonomous/` (e.g. `05-food/autonomous/`, `11-transportation/autonomous/`, `08-mining/autonomous/`).
 - `_catalogs/embodied-ai-stack/` — the roles that **build and operate** both the LLM-brained robots and the autonomous machines: brain/autonomy orchestrator, VLA policy engineer, world-model engineer, robot-gym/sim-to-real engineer, RLAIF pipeline engineer, evaluation/red-team agent, fleet safety officer, teleoperation operator, fleet operations agent, and data/telemetry engineer.
@@ -75,7 +76,7 @@ The five-layer pattern says *who* is on the team; this says *how they run togeth
 
 **Universal, not US-specific.** The jobs are invariant across nations; *ownership, formality, and capacity* are local variables. Every skill carries a "context modifiers" section so it can be adapted to any nation — any size, geography, income level, or political system.
 
-## The 22 operating systems
+## The national operating systems
 
 | # | Operating system | Role skills |
 |---|---|---|
@@ -101,6 +102,7 @@ The five-layer pattern says *who* is on the team; this says *how they run togeth
 | 20 | [Labor, Workforce Systems, and Organizational Life](20-labor/) | 8 AI roles |
 | 21 | [Household, Childcare, Eldercare, and Community Support](21-household/) | 7 AI roles |
 | 22 | [Resilience, Continuity, and Strategic Foresight](22-resilience/) | 6 AI roles |
+| 23 | [Identity, Civil Registration, and Digital Public Infrastructure](23-identity/) | 8 AI roles |
 
 ## The 12 strategic missions (the other axis)
 
@@ -119,7 +121,7 @@ Missions are cross-cutting national capabilities that compose several sectors to
 | [Public Procurement for Frontier Technology](strategic-missions/public-procurement-for-frontier-technology/) | 02, 01, 15 |
 | [Cyber Defense](strategic-missions/cyber-defense/) | 12, 03, 22, 04 |
 | [Advanced Manufacturing](strategic-missions/advanced-manufacturing/) | 09, 08, 11, 20, 15 |
-| [Digital Infrastructure](strategic-missions/digital-infrastructure/) | 12, 07, 16, 01 |
+| [Digital Infrastructure](strategic-missions/digital-infrastructure/) | 12, 07, 16, 01, 23 |
 
 ## How to use this library
 

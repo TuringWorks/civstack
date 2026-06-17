@@ -1,6 +1,6 @@
 ---
 name: "mission-semiconductor-sovereignty"
-description: "Strategic mission (cross-cutting national capability): **Semiconductor Sovereignty** — Ensure access to critical chips and semiconductor capabilities for AI, defense, telecom, energy, automotive, healthcare, and industry. Unlike the 22 sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns semiconductor sovereignty, even if the user only names a piece of it."
+description: "Strategic mission (cross-cutting national capability): **Semiconductor Sovereignty** — Ensure access to critical chips and semiconductor capabilities for AI, defense, telecom, energy, automotive, healthcare, and industry. Unlike the sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns semiconductor sovereignty, even if the user only names a piece of it."
 ---
 
 # Strategic Mission — Semiconductor Sovereignty
@@ -18,7 +18,7 @@ Ensure access to critical chips and semiconductor capabilities for AI, defense, 
 
 ## Operating systems this mission composes
 
-A strategic mission is an *orthogonal* axis to the 22 sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
+A strategic mission is an *orthogonal* axis to the sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
 
 - [08. Mining, Materials, Chemicals, and Industrial Inputs](../../08-mining/)
 - [09. Manufacturing and Industrial Production](../../09-manufacturing-and-industrial-production/)

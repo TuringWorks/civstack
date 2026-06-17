@@ -14,7 +14,7 @@ Detect anomalies, reconcile records, maintain pipelines.
 
 ## When to use this skill
 
-Whenever the job "detect anomalies, reconcile records, maintain pipelines" appears in any sector. Pair with the relevant operating-system skill (01–22) for domain rules, data, and accountability boundary. Many sector role skills are specializations of this pattern.
+Whenever the job "detect anomalies, reconcile records, maintain pipelines" appears in any sector. Pair with the relevant operating-system skill (01–23) for domain rules, data, and accountability boundary. Many sector role skills are specializations of this pattern.
 
 ## Lifecycle
 

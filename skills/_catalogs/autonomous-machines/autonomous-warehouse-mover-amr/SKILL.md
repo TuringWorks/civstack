@@ -18,7 +18,7 @@ An autonomous mobile robot or driverless forklift moving goods and feeding picki
 
 ## When to use this skill
 
-When a task needs the physical job "transport pallets, totes, and racks inside facilities" in environments such as warehouses, distribution centers, factories, ports. Pair with the relevant operating-system skill (01–22) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
+When a task needs the physical job "transport pallets, totes, and racks inside facilities" in environments such as warehouses, distribution centers, factories, ports. Pair with the relevant operating-system skill (01–23) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
 
 ## Cognitive and control architecture (assumed)
 

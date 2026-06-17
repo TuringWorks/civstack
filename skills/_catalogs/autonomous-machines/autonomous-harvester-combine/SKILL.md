@@ -18,7 +18,7 @@ A self-driving harvester coordinating with grain carts and unloading on the move
 
 ## When to use this skill
 
-When a task needs the physical job "harvest grain, forage, or specialty crops and map yield as it goes" in environments such as broadacre and specialty farms. Pair with the relevant operating-system skill (01–22) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
+When a task needs the physical job "harvest grain, forage, or specialty crops and map yield as it goes" in environments such as broadacre and specialty farms. Pair with the relevant operating-system skill (01–23) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
 
 ## Cognitive and control architecture (assumed)
 

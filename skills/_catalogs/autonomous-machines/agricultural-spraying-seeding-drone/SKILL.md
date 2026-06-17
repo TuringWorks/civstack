@@ -18,7 +18,7 @@ A spray/seed UAV doing variable-rate, zone-targeted application from a prescript
 
 ## When to use this skill
 
-When a task needs the physical job "apply inputs and seed precisely from the air" in environments such as fields, orchards, vineyards, paddies. Pair with the relevant operating-system skill (01–22) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
+When a task needs the physical job "apply inputs and seed precisely from the air" in environments such as fields, orchards, vineyards, paddies. Pair with the relevant operating-system skill (01–23) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
 
 ## Cognitive and control architecture (assumed)
 

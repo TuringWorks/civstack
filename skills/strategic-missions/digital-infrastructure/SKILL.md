@@ -1,6 +1,6 @@
 ---
 name: "mission-digital-infrastructure"
-description: "Strategic mission (cross-cutting national capability): **Digital Infrastructure** — Keep digital systems available, secure, interoperable, scalable, and trusted. Unlike the 22 sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns digital infrastructure, even if the user only names a piece of it."
+description: "Strategic mission (cross-cutting national capability): **Digital Infrastructure** — Keep digital systems available, secure, interoperable, scalable, and trusted. Unlike the sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns digital infrastructure, even if the user only names a piece of it."
 ---
 
 # Strategic Mission — Digital Infrastructure
@@ -18,12 +18,13 @@ Keep digital systems available, secure, interoperable, scalable, and trusted.
 
 ## Operating systems this mission composes
 
-A strategic mission is an *orthogonal* axis to the 22 sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
+A strategic mission is an *orthogonal* axis to the sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
 
 - [12. Communications, Software, Cybersecurity, and Digital Infrastructure](../../12-communications/)
 - [07. Energy, Utilities, and Grid Operations](../../07-energy/)
 - [16. Finance, Insurance, Payments, and Capital Markets](../../16-finance/)
 - [01. Governance, Law, and Public Administration](../../01-governance/)
+- [23. Identity, Civil Registration, and Digital Public Infrastructure](../../23-identity/)
 
 Deploy the relevant sector and role skills under those operating systems as the building blocks; this skill coordinates them toward the mission.
 

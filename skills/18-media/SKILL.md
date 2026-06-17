@@ -5,7 +5,7 @@ description: "Operating-system orchestrator skill for **Media, Culture, Arts, Sp
 
 # Operating System 18 — Media, Culture, Arts, Sports, Religion, and Civic Life
 
-> **Layer:** National operating system (1 of 22) · **Personnel model:** human-owned, AI- and robot-augmented
+> **Layer:** National operating system (#18 of 23) · **Personnel model:** human-owned, AI- and robot-augmented
 > **Cross-references:** `00-framework/` (shared concepts, teaming pattern, accountability), source map `Country-Economy Core Jobs To Be Done.md`
 
 ## Mission

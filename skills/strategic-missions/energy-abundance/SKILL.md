@@ -1,6 +1,6 @@
 ---
 name: "mission-energy-abundance"
-description: "Strategic mission (cross-cutting national capability): **Energy Abundance** — Make power availability a national advantage rather than a constraint. Unlike the 22 sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns energy abundance, even if the user only names a piece of it."
+description: "Strategic mission (cross-cutting national capability): **Energy Abundance** — Make power availability a national advantage rather than a constraint. Unlike the sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns energy abundance, even if the user only names a piece of it."
 ---
 
 # Strategic Mission — Energy Abundance
@@ -18,7 +18,7 @@ Make power availability a national advantage rather than a constraint.
 
 ## Operating systems this mission composes
 
-A strategic mission is an *orthogonal* axis to the 22 sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
+A strategic mission is an *orthogonal* axis to the sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
 
 - [07. Energy, Utilities, and Grid Operations](../../07-energy/)
 - [16. Finance, Insurance, Payments, and Capital Markets](../../16-finance/)

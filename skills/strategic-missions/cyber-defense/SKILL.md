@@ -1,6 +1,6 @@
 ---
 name: "mission-cyber-defense"
-description: "Strategic mission (cross-cutting national capability): **Cyber Defense** — Detect, prevent, respond to, and recover from cyber threats across public, private, critical, and strategic technology systems. Unlike the 22 sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns cyber defense, even if the user only names a piece of it."
+description: "Strategic mission (cross-cutting national capability): **Cyber Defense** — Detect, prevent, respond to, and recover from cyber threats across public, private, critical, and strategic technology systems. Unlike the sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns cyber defense, even if the user only names a piece of it."
 ---
 
 # Strategic Mission — Cyber Defense
@@ -18,7 +18,7 @@ Detect, prevent, respond to, and recover from cyber threats across public, priva
 
 ## Operating systems this mission composes
 
-A strategic mission is an *orthogonal* axis to the 22 sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
+A strategic mission is an *orthogonal* axis to the sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
 
 - [12. Communications, Software, Cybersecurity, and Digital Infrastructure](../../12-communications/)
 - [03. Defense, Intelligence, Border, and Foreign Affairs](../../03-defense/)

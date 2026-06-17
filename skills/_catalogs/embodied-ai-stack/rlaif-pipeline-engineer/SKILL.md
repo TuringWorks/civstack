@@ -18,7 +18,7 @@ The assumed robot architecture is: **LLM brain** (plans, issues actions as tool 
 
 ## When to use this skill
 
-Use this skill when a task calls for this work: designs the reinforcement-learning-from-AI-feedback pipelines and AI critics that shape robot skills and judgment at scale. Pair with `_catalogs/humanoid-robots/` (the physical roles this stack powers) and any operating-system skill (01–22) whose robots this stack will run.
+Use this skill when a task calls for this work: designs the reinforcement-learning-from-AI-feedback pipelines and AI critics that shape robot skills and judgment at scale. Pair with `_catalogs/humanoid-robots/` (the physical roles this stack powers) and any operating-system skill (01–23) whose robots this stack will run.
 
 ## Assumed architecture (recap)
 

@@ -1,6 +1,6 @@
 ---
 name: "mission-strategic-supply-chain"
-description: "Strategic mission (cross-cutting national capability): **Strategic Supply Chain** — Make supply chains visible, resilient, compliant, and aligned with national technology priorities. Unlike the 22 sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns strategic supply chain, even if the user only names a piece of it."
+description: "Strategic mission (cross-cutting national capability): **Strategic Supply Chain** — Make supply chains visible, resilient, compliant, and aligned with national technology priorities. Unlike the sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns strategic supply chain, even if the user only names a piece of it."
 ---
 
 # Strategic Mission — Strategic Supply Chain
@@ -18,7 +18,7 @@ Make supply chains visible, resilient, compliant, and aligned with national tech
 
 ## Operating systems this mission composes
 
-A strategic mission is an *orthogonal* axis to the 22 sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
+A strategic mission is an *orthogonal* axis to the sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
 
 - [11. Transportation, Logistics, Postal, and Mobility](../../11-transportation/)
 - [08. Mining, Materials, Chemicals, and Industrial Inputs](../../08-mining/)

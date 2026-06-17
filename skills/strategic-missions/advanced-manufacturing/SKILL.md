@@ -1,6 +1,6 @@
 ---
 name: "mission-advanced-manufacturing"
-description: "Strategic mission (cross-cutting national capability): **Advanced Manufacturing** — Produce strategic goods reliably, safely, affordably, and at scale. Unlike the 22 sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns advanced manufacturing, even if the user only names a piece of it."
+description: "Strategic mission (cross-cutting national capability): **Advanced Manufacturing** — Produce strategic goods reliably, safely, affordably, and at scale. Unlike the sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns advanced manufacturing, even if the user only names a piece of it."
 ---
 
 # Strategic Mission — Advanced Manufacturing
@@ -18,7 +18,7 @@ Produce strategic goods reliably, safely, affordably, and at scale.
 
 ## Operating systems this mission composes
 
-A strategic mission is an *orthogonal* axis to the 22 sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
+A strategic mission is an *orthogonal* axis to the sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
 
 - [09. Manufacturing and Industrial Production](../../09-manufacturing-and-industrial-production/)
 - [08. Mining, Materials, Chemicals, and Industrial Inputs](../../08-mining/)

@@ -18,7 +18,7 @@ A Class 8 autonomous truck, often a hub-to-hub model with human drivers handling
 
 ## When to use this skill
 
-When a task needs the physical job "haul freight over highway corridors hub-to-hub without a driver in the cab" in environments such as highways, freight corridors, transfer hubs. Pair with the relevant operating-system skill (01–22) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
+When a task needs the physical job "haul freight over highway corridors hub-to-hub without a driver in the cab" in environments such as highways, freight corridors, transfer hubs. Pair with the relevant operating-system skill (01–23) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
 
 ## Cognitive and control architecture (assumed)
 

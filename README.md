@@ -2,7 +2,7 @@
 
 **The operating systems of an economy — staffed by humans, AI agents, and robots.**
 
-CivStack is an open library of **340 agent skills** that maps everything a modern country and economy must reliably do — from governance and energy to farming and eldercare — and assigns each job to the right mix of a human owner, AI personnel, embodied robots, and non-humanoid autonomous machines (self-driving vehicles, farm equipment, drones), with hard accountability boundaries baked in. It is navigable along two axes: by **sector** (the 22 operating systems) and by **strategic mission** (cross-cutting national capabilities like energy abundance or semiconductor sovereignty that compose several sectors).
+CivStack is an open library of **360 agent skills** that maps everything a modern country and economy must reliably do — from governance and energy to farming and eldercare — and assigns each job to the right mix of a human owner, AI personnel, embodied robots, and non-humanoid autonomous machines (self-driving vehicles, farm equipment, drones), with hard accountability boundaries baked in. It is navigable along two axes: by **sector** (the 23 operating systems) and by **strategic mission** (cross-cutting national capabilities like energy abundance or semiconductor sovereignty that compose several sectors). It covers the **formal and the informal economy**, since informal work is the majority of employment in much of the world.
 
 It turns a strategy document (["Country-Economy Core Jobs To Be Done"](docs/country-economy-core-jtbd.md)) into machine-usable [Agent Skills](https://www.anthropic.com/news/skills): every role ships as a `SKILL.md` an LLM or agent can load to get the full context for *who does what, how, and where a human must stay in charge.*
 
@@ -64,13 +64,13 @@ The key idea: the **world models and simulators built to train the machines doub
 | Layer | Count | Where |
 |---|---|---|
 | Framework & index | 1 | `skills/00-framework/` |
-| National operating systems (sector orchestrators) | 22 | `skills/01-…` … `skills/22-…` |
+| National operating systems (sector orchestrators) | 23 | `skills/01-…` … `skills/23-…` |
 | Strategic missions (cross-cutting national capabilities) | 12 | `skills/strategic-missions/` |
 | Human-command roles (accountable owners for missions) | 4 | `skills/_catalogs/human-command/` |
-| AI-personnel role skills | 174 | `skills/NN-…/roles/` |
+| AI-personnel role skills | 182 | `skills/NN-…/roles/` |
 | Embodied robot role skills (sector-nested) | 4 | `skills/05-food/robots/` |
 | Autonomous machine skills (sector-nested) | 27 | `skills/<sector>/autonomous/` |
-| Cross-cutting role archetypes | 12 | `skills/cross-cutting-archetypes/` |
+| Cross-cutting role archetypes | 15 | `skills/cross-cutting-archetypes/` |
 | AI-personnel catalog patterns | 15 | `skills/_catalogs/ai-personnel/` |
 | Humanoid-robot catalog patterns | 10 | `skills/_catalogs/humanoid-robots/` |
 | Autonomous-machine catalog patterns | 15 | `skills/_catalogs/autonomous-machines/` |
@@ -78,13 +78,14 @@ The key idea: the **world models and simulators built to train the machines doub
 | Autonomous-fleet operations roles | 17 | `skills/_catalogs/autonomous-fleet-ops/` |
 | Capability & optimization roles (model tiers + training methods) | 11 | `skills/_catalogs/capability-optimization/` |
 | Simulation & keep-warm roles (anti-deskilling) | 6 | `skills/_catalogs/simulation-training/` |
-| **Total `SKILL.md` packages** | **340** | |
+| Informal-economy support roles | 8 | `skills/_catalogs/informal-economy/` |
+| **Total `SKILL.md` packages** | **360** | |
 
 Plus non-skill assets: **2 deployment checklists** (`checklists/`), **3 authoring templates** (`templates/`), and reference docs (`docs/`) including the capability routing matrix, the keep-warm/deskilling guide, and the coverage matrix.
 
-### The 22 national operating systems
+### The 23 national operating systems
 
-`01` Governance & Law · `02` Public Finance · `03` Defense & Foreign Affairs · `04` Public Safety & Emergency · `05` Food & Agriculture · `06` Water & Sanitation · `07` Energy & Grid · `08` Mining & Materials · `09` Manufacturing · `10` Shelter & Built Environment · `11` Transportation & Logistics · `12` Communications & Software · `13` Healthcare & Public Health · `14` Education & Human Capital · `15` Science & Innovation · `16` Finance & Markets · `17` Commerce & Hospitality · `18` Media & Civic Life · `19` Environment & Climate · `20` Labor & Workforce · `21` Household & Care · `22` Resilience & Continuity
+`01` Governance & Law · `02` Public Finance · `03` Defense & Foreign Affairs · `04` Public Safety & Emergency · `05` Food & Agriculture · `06` Water & Sanitation · `07` Energy & Grid · `08` Mining & Materials · `09` Manufacturing · `10` Shelter & Built Environment · `11` Transportation & Logistics · `12` Communications & Software · `13` Healthcare & Public Health · `14` Education & Human Capital · `15` Science & Innovation · `16` Finance & Markets · `17` Commerce & Hospitality · `18` Media & Civic Life · `19` Environment & Climate · `20` Labor & Workforce · `21` Household & Care · `22` Resilience & Continuity · `23` Identity, Civil Registration & Digital Public Infrastructure
 
 ---
 
@@ -119,10 +120,12 @@ civstack/
 │   │   ├── roles/<role>/SKILL.md
 │   │   ├── robots/<robot>/SKILL.md         # LLM-brained humanoid/embodied roles
 │   │   └── autonomous/<machine>/SKILL.md   # non-humanoid autonomous machines
-│   ├── … (02–22)
+│   ├── … (02–23, incl. 23-identity = Identity / Civil Registration / DPI)
 │   ├── strategic-missions/<mission>/SKILL.md  # cross-cutting national capabilities
 │   ├── cross-cutting-archetypes/<archetype>/SKILL.md
 │   └── _catalogs/
+│       ├── human-command/<role>/SKILL.md
+│       ├── informal-economy/<role>/SKILL.md
 │       ├── ai-personnel/<role>/SKILL.md
 │       ├── humanoid-robots/<role>/SKILL.md
 │       ├── autonomous-machines/<machine>/SKILL.md

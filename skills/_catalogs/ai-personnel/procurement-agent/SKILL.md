@@ -14,7 +14,7 @@ Compare suppliers, draft RFPs, track contract obligations.
 
 ## When to use this skill
 
-Whenever the job "compare suppliers, draft rfps, track contract obligations" appears in any sector. Pair with the relevant operating-system skill (01–22) for domain rules, data, and accountability boundary. Many sector role skills are specializations of this pattern.
+Whenever the job "compare suppliers, draft rfps, track contract obligations" appears in any sector. Pair with the relevant operating-system skill (01–23) for domain rules, data, and accountability boundary. Many sector role skills are specializations of this pattern.
 
 ## Lifecycle
 

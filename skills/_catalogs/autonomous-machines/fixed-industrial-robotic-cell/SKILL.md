@@ -18,7 +18,7 @@ A stationary (non-mobile) robotic cell — the workhorse of automated production
 
 ## When to use this skill
 
-When a task needs the physical job "weld, assemble, pick-and-place, machine-tend, and inspect at a fixed station" in environments such as factories, labs, fabrication shops. Pair with the relevant operating-system skill (01–22) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
+When a task needs the physical job "weld, assemble, pick-and-place, machine-tend, and inspect at a fixed station" in environments such as factories, labs, fabrication shops. Pair with the relevant operating-system skill (01–23) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
 
 ## Cognitive and control architecture (assumed)
 

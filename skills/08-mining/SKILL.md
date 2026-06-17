@@ -5,7 +5,7 @@ description: "Operating-system orchestrator skill for **Mining, Materials, Chemi
 
 # Operating System 08 — Mining, Materials, Chemicals, and Industrial Inputs
 
-> **Layer:** National operating system (1 of 22) · **Personnel model:** human-owned, AI- and robot-augmented
+> **Layer:** National operating system (#8 of 23) · **Personnel model:** human-owned, AI- and robot-augmented
 > **Cross-references:** `00-framework/` (shared concepts, teaming pattern, accountability), source map `Country-Economy Core Jobs To Be Done.md`
 
 ## Mission

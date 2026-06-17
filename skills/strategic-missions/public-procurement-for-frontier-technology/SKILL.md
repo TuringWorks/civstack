@@ -1,6 +1,6 @@
 ---
 name: "mission-public-procurement-for-frontier-technology"
-description: "Strategic mission (cross-cutting national capability): **Public Procurement for Frontier Technology** — Turn national needs into early markets for high-value technologies. Unlike the 22 sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns public procurement for frontier technology, even if the user only names a piece of it."
+description: "Strategic mission (cross-cutting national capability): **Public Procurement for Frontier Technology** — Turn national needs into early markets for high-value technologies. Unlike the sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns public procurement for frontier technology, even if the user only names a piece of it."
 ---
 
 # Strategic Mission — Public Procurement for Frontier Technology
@@ -18,7 +18,7 @@ Turn national needs into early markets for high-value technologies.
 
 ## Operating systems this mission composes
 
-A strategic mission is an *orthogonal* axis to the 22 sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
+A strategic mission is an *orthogonal* axis to the sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
 
 - [02. Public Finance, Tax, Treasury, and Procurement](../../02-public-finance/)
 - [01. Governance, Law, and Public Administration](../../01-governance/)

@@ -780,6 +780,32 @@ S(22, "Resilience, Continuity, and Strategic Foresight",
   "Political prioritization, emergency powers, scarce-resource allocation, evacuation orders, and recovery justice require human legitimacy.",
   ["Public Safety & Justice", "Defense & Intelligence", "Public Finance", "Energy & Utilities"])
 
+S(23, "Identity, Civil Registration, and Digital Public Infrastructure",
+  "Establish legal identity, register vital events, and run the shared digital rails — identity, payments, and consent-based data exchange — that public and private services depend on.",
+  ["When a person is born, exists, or dies, register the vital event so rights, services, and inheritance can operate.",
+   "When people must prove who they are, issue and verify trusted identity without excluding the marginalized.",
+   "When services must reach people, provide interoperable rails (ID, payments, consent-based data exchange) so delivery is fast and inclusive.",
+   "When identity systems hold power over inclusion, govern privacy, consent, security, and redress so they empower rather than exclude or surveil.",
+   "When populations must be counted, run the census and statistics that planning and representation depend on."],
+  ["Civil registrar, vital-statistics officer, records officer",
+   "National ID program manager, enrollment officer, identity architect",
+   "Digital public infrastructure (DPI) architect, interoperability/standards engineer, payments-rail operator",
+   "Data protection officer, consent/privacy officer, grievance and redress officer",
+   "Census director, statistician, demographer, survey operations manager",
+   "Inclusion/last-mile officer, field enrollment agent"],
+  [("Identity verification agent", "verifies identity claims against registries while flagging fraud and exclusion risk", "identity program manager"),
+   ("Civil-registration assistant", "guides and checks birth/death/marriage registration and reconciles records", "civil registrar"),
+   ("Deduplication & fraud agent", "detects duplicate, ghost, and fraudulent identities", "identity assurance lead"),
+   ("Interoperability schema agent", "maps and validates data schemas across registries and services", "DPI architect"),
+   ("Consent & data-exchange agent", "manages consent artifacts and audits data sharing against policy", "data protection officer"),
+   ("Grievance & redress agent", "triages exclusion and error complaints and prepares remediation", "redress officer"),
+   ("Census & survey operations agent", "plans enumeration, monitors coverage, and flags gaps", "census director"),
+   ("Inclusion-gap analyst", "finds populations missing from registries and targets outreach", "inclusion officer")],
+  ["Mobile enrollment kiosk support, document scanning and digitization, records-room retrieval",
+   "Field enrollment logistics in remote or underserved areas"],
+  "Identity issuance and revocation, exclusion and denial decisions, biometric and data-retention policy, surveillance limits, census methodology, and redress remain human-accountable; inclusion of the marginalized is a non-negotiable design constraint.",
+  ["Governance & Law", "Public Finance", "Communications & Software", "Finance & Markets"])
+
 
 # ---------------------------------------------------------------------------
 # ARCHETYPES  (cross-cutting)
@@ -821,6 +847,15 @@ ARCHETYPES = [
     ("Judge", "Make accountable decisions with consequences",
      "judge, regulator, physician, commander, executive, board member",
      "medium as decision support", "low"),
+    ("Entrepreneur", "Create new ventures, products, and markets under risk",
+     "founder, startup CEO, intrapreneur, business builder, social entrepreneur",
+     "high for research, validation, drafting, prototyping, and operations", "low to medium"),
+    ("Investor", "Allocate capital and bear risk under uncertainty",
+     "investor, venture capitalist, portfolio manager, grant-maker, capital allocator",
+     "high for diligence, screening, modeling, and monitoring", "low"),
+    ("Convener", "Mobilize people and coalitions toward collective action",
+     "community organizer, union organizer, coalition builder, movement leader, program convener",
+     "medium for outreach, coordination, and sentiment synthesis", "low"),
 ]
 
 
@@ -1262,7 +1297,7 @@ STRATEGIC_MISSIONS = [
    ["Service owner defines need, reliability target, security tier, data class", "Build with AI coding/test/documentation support",
     "Deploy with CI/CD, observability, access control, rollback", "Cyber teams monitor with AI triage and human incident command",
     "Data teams monitor lineage, quality, privacy, retention", "Maintain physical infra with robot inspection", "Governance reviews incidents, risks, audits, public impact"],
-   [12, 7, 16, 1]),
+   [12, 7, 16, 1, 23]),
 ]
 
 # Human-command roles: the accountable human owners for strategic missions and
@@ -1284,6 +1319,43 @@ HUMAN_COMMAND_ROLES = [
      "use mission-driven public or enterprise procurement to accelerate frontier technology through challenge procurement, pilots, testbeds, vendor evaluation, scale-up decisions, and accountable contracting",
      "procurement executive / mission owner",
      "Turns national needs into early markets while preserving competition, transparency, and accountability; owns award and scale/terminate decisions."),
+]
+
+# Informal-economy roles: AI-personnel support oriented to the informal/subsistence sector
+# (the majority of employment in much of the world). (name, jtbd, served, detail)
+INFORMAL_ECONOMY_ROLES = [
+    ("Informal vendor support agent",
+     "helps street and market vendors with pricing, inventory, micro-licensing, and access to payments and credit",
+     "street and market vendors",
+     "Extends basic business tooling to vendors who never appear in formal registries; works through low-end phones and local languages, and never coerces formalization or exposes vendors to enforcement."),
+    ("Gig & platform-work coordinator",
+     "matches gig and platform workers to work, tracks earnings, and surfaces rights, benefits, and disputes",
+     "gig and platform workers",
+     "Helps workers see their true effective wage, aggregate across platforms, and access portable benefits and collective bargaining; resists opaque algorithmic management."),
+    ("Informal-transport dispatch agent",
+     "coordinates informal transit (auto-rickshaws, minibuses, motorcycle taxis) for routing, fares, and safety",
+     "informal transport operators and riders",
+     "Adds light coordination to paratransit that moves much of the world without displacing the operators who run it."),
+    ("Waste-picker cooperative agent",
+     "organizes routes, weights, prices, and buyer connections for waste pickers and informal recyclers",
+     "waste pickers and informal recyclers",
+     "Strengthens the bargaining position and safety of the recyclers who handle a large share of real-world recycling; integrates them into formal waste systems on fair terms."),
+    ("Smallholder advisory agent",
+     "gives agronomy, weather, market-price, and input advice to smallholder and subsistence farmers",
+     "smallholder and subsistence farmers",
+     "Mobile-first agricultural extension for farmers who own little and buy inputs at the margin; prioritizes affordability, local knowledge, and repairability over precision-ag dependence."),
+    ("Informal finance & savings-group agent",
+     "supports rotating savings groups, microcredit, and mobile-money bookkeeping",
+     "savings groups (ROSCAs/chamas) and micro-entrepreneurs",
+     "Helps community savings and credit groups keep clean books and build a credit history, without trapping members in predatory lending or surveillance scoring."),
+    ("Mutual-aid & community-support coordinator",
+     "coordinates mutual aid, informal care, and crisis support across community networks",
+     "community and mutual-aid networks",
+     "Organizes the informal safety net that catches people the formal system misses; augments rather than replaces relationships of trust."),
+    ("Formalization & benefits navigator",
+     "guides informal workers toward identity, registration, benefits, and formalization where it actually helps them",
+     "informal workers and micro-enterprises",
+     "Makes formalization legible and opt-in — showing the real costs and benefits — and connects workers to ID, social protection, and rights; never a tool for punitive enforcement."),
 ]
 
 # ---------------------------------------------------------------------------
@@ -1585,6 +1657,12 @@ SECTOR_JD = {
    certs="CBCP/MBCP (DRI), CEM, PMP, FRM, ISO 22301 lead auditor, CISSP (cyber-resilience).",
    kpis="RTO/RPO achievement, exercise/test pass rate, time-to-recover, single-point-of-failure coverage, claims throughput.",
    venues="LinkedIn, Indeed, DRI/continuity boards, USAJOBS/GovernmentJobs (emergency management), ClearanceJobs."),
+ 23: dict(
+   ladder="Enrollment/records officer → civil registrar / ID program officer → identity architect / DPI lead → registrar-general / chief digital officer; statistics track: survey operator → statistician → census director. Public roles carry GS or civil-service grades.",
+   tools="Civil-registration and national-ID platforms (e.g. MOSIP), biometric SDKs, interoperability layers (X-Road-style), payment rails, consent/data-exchange platforms, GIS, statistical software (R/SAS/SPSS).",
+   certs="Public-administration background; data-protection (CIPP/CIPM), security (CISSP) for DPI; demography/statistics degrees; civil-service assessment.",
+   kpis="Registration coverage (birth/death), unique-ID coverage, exclusion/error rate, verification latency, rail uptime, grievance-resolution time, census completeness.",
+   venues="USAJOBS/GovernmentJobs (civil registry, census bureau), UN and World Bank ID4D / DPI programs, DPI organizations (e.g. MOSIP), LinkedIn, GovTech boards."),
 }
 
 # Per-sector deskilling watch & keep-warm regime. num -> {risk, counter, sim}
@@ -1655,6 +1733,9 @@ SECTOR_DESKILLING = {
  22: dict(risk="The meta-owner — continuity planning and the fallback bench themselves can deskill.",
    counter="Owns the cross-cutting program: fallback-readiness drills and metrics across all 21 other operating systems.",
    sim="Cross-sector tabletop and full-scale continuity exercises; runs the keep-warm program and bench-readiness metrics for every OS."),
+ 23: dict(risk="Registrars and frontline staff rely on automated matching and verification and lose the judgment to handle edge cases, exclusion, and fraud; manual-registration and grievance-handling skill fades.",
+   counter="Maintain manual registration and adjudication competency; rotate staff through field enrollment; preserve redress-handling and exclusion-detection skill.",
+   sim="Enrollment and adjudication simulators with synthetic edge cases (no documents, name variants, biometric failures); exclusion-handling and grievance drills."),
 }
 
 # Deep per-role JD grounding for flagship sectors. slug -> {titles, tools, certs, note}
@@ -1886,7 +1967,7 @@ description: {desc}
 
 # Operating System {num:02d} — {title}
 
-> **Layer:** National operating system (1 of 22) · **Personnel model:** human-owned, AI- and robot-augmented
+> **Layer:** National operating system (#{num} of {n_os}) · **Personnel model:** human-owned, AI- and robot-augmented
 > **Cross-references:** `00-framework/` (shared concepts, teaming pattern, accountability), source map `Country-Economy Core Jobs To Be Done.md`
 
 ## Mission
@@ -1978,7 +2059,7 @@ The jobs above are universal; how they are staffed is not. Re-read this sector t
 4. Stop at the accountability boundary and route the decision to the accountable human.
 5. Log actions to the control layer and surface anything that trips a failure mode.
 """.format(
-        name=name, desc=desc, num=sec["num"], title=title, title_lower=title.lower(),
+        name=name, desc=desc, num=sec["num"], n_os=len(SECTORS), title=title, title_lower=title.lower(),
         mission=sec["mission"], jtbd=jtbd, lifecycle=lifecycle_block("sector", title),
         families=families, role_list=role_list, robots=robots, nested_robots=nested_robots,
         robot_stack_short=ROBOT_STACK_SHORT, nested_machines=nested_machines,
@@ -2146,7 +2227,7 @@ description: {desc}
 
 ## When to use this skill
 
-Use it whenever you need to instantiate a **{aname}** in any sector — to set up the role, divide the work across human/AI/robot, and wire in the right accountability. Combine with the relevant operating-system skill (01–22) for domain specifics.
+Use it whenever you need to instantiate a **{aname}** in any sector — to set up the role, divide the work across human/AI/robot, and wire in the right accountability. Combine with the relevant operating-system skill (01–23) for domain specifics.
 
 ## Job-board-style titles
 
@@ -2164,7 +2245,7 @@ Use it whenever you need to instantiate a **{aname}** in any sector — to set u
 
 ## How to instantiate in a sector
 
-1. Pick the operating system (01–22) and read its mission and accountability boundary.
+1. Pick the operating system (01–23) and read its mission and accountability boundary.
 2. Map this archetype's job onto that sector's Core JTBD.
 3. Assign the AI-personnel and robot support indicated above.
 4. Name the accountable human and the escalation threshold.
@@ -2207,7 +2288,7 @@ description: {desc}
 
 ## When to use this skill
 
-Whenever the job "{jtbd_lower}" appears in any sector. Pair with the relevant operating-system skill (01–22) for domain rules, data, and accountability boundary. Many sector role skills are specializations of this pattern.
+Whenever the job "{jtbd_lower}" appears in any sector. Pair with the relevant operating-system skill (01–23) for domain rules, data, and accountability boundary. Many sector role skills are specializations of this pattern.
 
 ## Lifecycle
 
@@ -2269,7 +2350,7 @@ The world is already designed around stairs, doors, handles, shelves, carts, too
 
 ## When to use this skill
 
-When a task needs the physical job "{jtbd_lower}" in environments such as {envs}. Pair with the relevant operating-system skill (01–22) for domain safety rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build and operate the brain, policies, and safety layer.
+When a task needs the physical job "{jtbd_lower}" in environments such as {envs}. Pair with the relevant operating-system skill (01–23) for domain safety rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build and operate the brain, policies, and safety layer.
 
 ## Division of labor and safety
 
@@ -2500,7 +2581,7 @@ description: {desc}
 
 ## When to use this skill
 
-When a task needs the physical job "{jtbd}" in environments such as {envs}. Pair with the relevant operating-system skill (01–22) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
+When a task needs the physical job "{jtbd}" in environments such as {envs}. Pair with the relevant operating-system skill (01–23) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
 
 ## Cognitive and control architecture (assumed)
 
@@ -2656,7 +2737,7 @@ The assumed robot architecture is: **LLM brain** (plans, issues actions as tool 
 
 ## When to use this skill
 
-Use this skill when a task calls for this work: {jtbd}. Pair with `_catalogs/humanoid-robots/` (the physical roles this stack powers) and any operating-system skill (01–22) whose robots this stack will run.
+Use this skill when a task calls for this work: {jtbd}. Pair with `_catalogs/humanoid-robots/` (the physical roles this stack powers) and any operating-system skill (01–23) whose robots this stack will run.
 
 ## Assumed architecture (recap)
 
@@ -2749,7 +2830,7 @@ The assumed machine architecture is: a foundation/LLM **planning brain** issuing
 
 ## When to use this skill
 
-Use it when a task calls for this work: {jtbd}. Pair with `_catalogs/autonomous-machines/` (the platforms) and any operating-system skill (01–22) whose fleet this supports.
+Use it when a task calls for this work: {jtbd}. Pair with `_catalogs/autonomous-machines/` (the platforms) and any operating-system skill (01–23) whose fleet this supports.
 
 ## Assumed architecture (recap)
 
@@ -3009,6 +3090,67 @@ Apply the operating loop and command cadence from `../../00-framework/SKILL.md`:
     return rslug, body
 
 
+def render_informal_role(role):
+    rname, jtbd, served, detail = role
+    rslug = slug(rname)
+    name = "informal-%s" % rslug
+    desc = ("Informal-economy role: **%s** — %s. Serves %s — the informal and subsistence sector that is the majority "
+            "of employment in much of the world but is invisible to formal-sector tools. Use this skill when extending "
+            "services, coordination, or rights to informal workers, even if the user describes the need plainly. The "
+            "worker, cooperative, or community is the owner; the agent must not surveil, coerce, or expose them."
+            ) % (rname, jtbd, served)
+    body = """---
+name: {name}
+description: {desc}
+---
+
+# Informal Economy — {rname}
+
+> **Layer:** Informal-economy support (the majority economy in much of the world) · **Serves:** {served}
+> **Shared concepts:** `../../00-framework/SKILL.md` · **Why this layer:** the library's "fits any nation" premise requires roles for the informal sector, not only the formal one
+
+## What this role is
+
+The **{rname}** is an AI-personnel role that {jtbd}. {detail}
+
+## Who it serves and who owns it
+
+It serves **{served}**. The accountable owner is the **worker, cooperative, or community itself** (and, where relevant, a supporting public agency or NGO) — not a platform or the state. The agent works *for* informal workers, not on them.
+
+## When to use this skill
+
+When the task is to {jtbd} for people who sit outside formal registries, payrolls, and org charts. Pair with the relevant operating-system skill for the formal counterpart, and with OS 23 (Identity / DPI) where inclusion and registration are involved.
+
+## Core jobs to be done
+
+- Meet workers where they are: low-end phones, local languages, intermittent connectivity, cash and mobile money.
+- Add light coordination, record-keeping, pricing, and access to services without imposing formal-sector overhead.
+- Strengthen bargaining power, safety, and dignity rather than extracting from or surveilling workers.
+- Make formalization and benefits **legible and opt-in**, never a tool for punitive enforcement.
+
+## Accountability boundary (this layer's hard line)
+
+- No surveillance, scoring, or data sharing that exposes workers to enforcement, eviction, or exploitation.
+- Formalization is the worker's choice, with the real costs and benefits shown honestly.
+- The agent never displaces the relationships of trust the informal economy runs on; it augments them.
+- Coercion, predatory lending, and algorithmic wage-suppression are out of bounds.
+
+## Adapting to any nation (context modifiers)
+
+In low- and middle-income economies this is not a niche — informal employment is often the **majority** of work. In high-income settings it shows up as gig work, cash work, and care work. Re-read through:
+
+{context}
+
+## Operating procedure
+
+1. Confirm who is served, what they need, and that they consent — on their terms.
+2. Deliver the coordination, record-keeping, or access in the simplest channel that reaches them.
+3. Strengthen their position (price, safety, rights, credit history) without creating new dependencies or exposure.
+4. Surface formalization and benefits as opt-in options; connect to OS 23 (Identity/DPI) and social protection when wanted.
+""".format(name=name, desc=desc, rname=rname, jtbd=jtbd, served=served, detail=detail, context=CONTEXT_MODIFIERS)
+    return rslug, body
+
+
 def render_strategic_mission(m):
     mslug = slug(m["name"])
     name = "mission-%s" % mslug
@@ -3021,7 +3163,7 @@ def render_strategic_mission(m):
     ai = "\n".join("- %s." % a for a in m["ai"])
     robots = "\n".join("- %s." % r for r in m["robots"])
     loop = "\n".join("%d. %s." % (i + 1, s) for i, s in enumerate(m["loop"]))
-    desc = ("Strategic mission (cross-cutting national capability): **%s** — %s. Unlike the 22 sector operating "
+    desc = ("Strategic mission (cross-cutting national capability): **%s** — %s. Unlike the sector operating "
             "systems, a mission composes several of them toward one strategic objective. Use this skill to plan or "
             "coordinate this mission end-to-end; trigger whenever work concerns %s, even if the user only names a "
             "piece of it."
@@ -3046,7 +3188,7 @@ description: {desc}
 
 ## Operating systems this mission composes
 
-A strategic mission is an *orthogonal* axis to the 22 sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
+A strategic mission is an *orthogonal* axis to the sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
 
 {composes}
 
@@ -3109,7 +3251,7 @@ def render_framework_index():
             m["name"], slug(m["name"]), ", ".join("%02d" % n for n in m["composes"]))
         for m in STRATEGIC_MISSIONS)
     name = "country-economy-jtbd-index"
-    desc = ("Index and shared framework for the Country-Economy Jobs-To-Be-Done skill library: 22 national "
+    desc = ("Index and shared framework for the Country-Economy Jobs-To-Be-Done skill library: national "
             "operating systems, their AI-personnel role skills, 12 cross-cutting archetypes, and the AI/robot "
             "catalogs. Use this skill first to navigate the library, understand the shared teaming pattern and "
             "accountability model, and find the right operating-system or role skill for any economic task.")
@@ -3126,9 +3268,10 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 
 - `00-framework/` — this index plus the shared concepts every skill assumes (you are here).
 - `01-…` through `22-…` — one folder per **national operating system**. Each has a sector `SKILL.md` (orchestrator) and a `roles/` subfolder of **AI-personnel role skills**.
-- `strategic-missions/` — **cross-cutting national missions** (energy abundance, semiconductor sovereignty, bioeconomy, frontier-AI production, quantum & space, strategic supply chain, science-to-industry, talent formation, public procurement, cyber defense, advanced manufacturing, digital infrastructure). A mission is an *orthogonal axis* to the 22 sectors: it composes several of them toward one objective.
+- `strategic-missions/` — **cross-cutting national missions** (energy abundance, semiconductor sovereignty, bioeconomy, frontier-AI production, quantum & space, strategic supply chain, science-to-industry, talent formation, public procurement, cyber defense, advanced manufacturing, digital infrastructure). A mission is an *orthogonal axis* to the sectors: it composes several of them toward one objective.
 - `cross-cutting-archetypes/` — the 12 role patterns (Strategist, Operator, Builder, …) that recur in every sector.
 - `_catalogs/human-command/` — **accountable human owners** for the strategic missions and cross-cutting authority (national technology strategist, AI governance lead, import/export compliance lead, procurement innovation lead).
+- `_catalogs/informal-economy/` — support roles for the **informal and subsistence sector** (the majority of employment in much of the world): vendor support, gig/platform coordination, informal transport, waste-picker cooperatives, smallholder advisory, savings groups, mutual aid, and formalization navigation — designed to strengthen, not surveil, informal workers.
 - `_catalogs/ai-personnel/` and `_catalogs/humanoid-robots/` — reusable cross-economy role patterns.
 - `_catalogs/autonomous-machines/` — **non-humanoid** autonomous platforms: self-driving cars/trucks/shuttles, autonomous tractors and harvesters, loaders and earthmovers, mining haul trucks, drones (survey, spray, delivery), warehouse movers, and surface vessels. Several sectors also nest domain-specific machines under `<sector>/autonomous/` (e.g. `05-food/autonomous/`, `11-transportation/autonomous/`, `08-mining/autonomous/`).
 - `_catalogs/embodied-ai-stack/` — the roles that **build and operate** both the LLM-brained robots and the autonomous machines: brain/autonomy orchestrator, VLA policy engineer, world-model engineer, robot-gym/sim-to-real engineer, RLAIF pipeline engineer, evaluation/red-team agent, fleet safety officer, teleoperation operator, fleet operations agent, and data/telemetry engineer.
@@ -3184,7 +3327,7 @@ The five-layer pattern says *who* is on the team; this says *how they run togeth
 
 **Universal, not US-specific.** The jobs are invariant across nations; *ownership, formality, and capacity* are local variables. Every skill carries a "context modifiers" section so it can be adapted to any nation — any size, geography, income level, or political system.
 
-## The 22 operating systems
+## The national operating systems
 
 | # | Operating system | Role skills |
 |---|---|---|
@@ -3231,7 +3374,8 @@ Coercive state power; rights-impacting decisions; intimate human care; democrati
 def main():
     counts = dict(sectors=0, roles=0, sector_robots=0, sector_machines=0, archetypes=0,
                   catalog_ai=0, catalog_robot=0, catalog_machine=0, embodied_stack=0, fleet_ops=0,
-                  capability_opt=0, sim_training=0, strategic_missions=0, human_command=0)
+                  capability_opt=0, sim_training=0, strategic_missions=0, human_command=0,
+                  informal_economy=0)
 
     # Framework index
     write(os.path.join(ROOT, "00-framework", "SKILL.md"), render_framework_index())
@@ -3297,6 +3441,10 @@ def main():
         rslug, body = render_human_command_role(r)
         write(os.path.join(ROOT, "_catalogs", "human-command", rslug, "SKILL.md"), body)
         counts["human_command"] += 1
+    for r in INFORMAL_ECONOMY_ROLES:
+        rslug, body = render_informal_role(r)
+        write(os.path.join(ROOT, "_catalogs", "informal-economy", rslug, "SKILL.md"), body)
+        counts["informal_economy"] += 1
 
     total = sum(counts.values()) + 1  # + framework index
     print("Wrote skills to:", ROOT)

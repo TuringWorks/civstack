@@ -5,7 +5,7 @@ description: "Operating-system orchestrator skill for **Labor, Workforce Systems
 
 # Operating System 20 — Labor, Workforce Systems, and Organizational Life
 
-> **Layer:** National operating system (1 of 22) · **Personnel model:** human-owned, AI- and robot-augmented
+> **Layer:** National operating system (#20 of 23) · **Personnel model:** human-owned, AI- and robot-augmented
 > **Cross-references:** `00-framework/` (shared concepts, teaming pattern, accountability), source map `Country-Economy Core Jobs To Be Done.md`
 
 ## Mission

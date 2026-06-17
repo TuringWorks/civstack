@@ -1,6 +1,6 @@
 ---
 name: "mission-science-to-industry"
-description: "Strategic mission (cross-cutting national capability): **Science-to-Industry** — Shorten the path from research insight to national capability. Unlike the 22 sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns science-to-industry, even if the user only names a piece of it."
+description: "Strategic mission (cross-cutting national capability): **Science-to-Industry** — Shorten the path from research insight to national capability. Unlike the sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns science-to-industry, even if the user only names a piece of it."
 ---
 
 # Strategic Mission — Science-to-Industry
@@ -18,7 +18,7 @@ Shorten the path from research insight to national capability.
 
 ## Operating systems this mission composes
 
-A strategic mission is an *orthogonal* axis to the 22 sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
+A strategic mission is an *orthogonal* axis to the sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
 
 - [15. Science, Research, Standards, and Innovation](../../15-science/)
 - [09. Manufacturing and Industrial Production](../../09-manufacturing-and-industrial-production/)

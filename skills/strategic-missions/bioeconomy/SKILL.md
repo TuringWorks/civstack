@@ -1,6 +1,6 @@
 ---
 name: "mission-bioeconomy"
-description: "Strategic mission (cross-cutting national capability): **Bioeconomy** — Use biological systems to improve health, food, materials, environment, and industry while preventing biological harm. Unlike the 22 sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns bioeconomy, even if the user only names a piece of it."
+description: "Strategic mission (cross-cutting national capability): **Bioeconomy** — Use biological systems to improve health, food, materials, environment, and industry while preventing biological harm. Unlike the sector operating systems, a mission composes several of them toward one strategic objective. Use this skill to plan or coordinate this mission end-to-end; trigger whenever work concerns bioeconomy, even if the user only names a piece of it."
 ---
 
 # Strategic Mission — Bioeconomy
@@ -18,7 +18,7 @@ Use biological systems to improve health, food, materials, environment, and indu
 
 ## Operating systems this mission composes
 
-A strategic mission is an *orthogonal* axis to the 22 sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
+A strategic mission is an *orthogonal* axis to the sectors: it pulls roles and capabilities from several of them toward one objective. This mission primarily draws on:
 
 - [13. Healthcare, Public Health, and Biomedical Systems](../../13-healthcare/)
 - [05. Food, Agriculture, Fisheries, and Nutrition](../../05-food/)

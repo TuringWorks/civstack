@@ -18,7 +18,7 @@ A BVLOS delivery UAV for parcels, lab samples, and medicines; requires airspace 
 
 ## When to use this skill
 
-When a task needs the physical job "carry small packages or medical payloads by air" in environments such as suburban, rural, and medical-logistics routes. Pair with the relevant operating-system skill (01–22) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
+When a task needs the physical job "carry small packages or medical payloads by air" in environments such as suburban, rural, and medical-logistics routes. Pair with the relevant operating-system skill (01–23) for domain rules and the human accountability boundary, and with `_catalogs/embodied-ai-stack/` for the roles that build, operate, and keep it safe.
 
 ## Cognitive and control architecture (assumed)
 
