@@ -1,0 +1,13 @@
+category,planning_cost_usd,review_ceiling_usd,stage,notes
+plywood_and_finish,400,700,all,"Includes coupons and replacement stock"
+standard_shafts_bearings_fasteners,900,1400,all,"No custom machining"
+actuators_reductions_and_tendons,6500,9000,all,"Largest uncertainty; freeze only after J1/J2"
+battery_bms_and_power_distribution,900,1500,power,"Certified battery assembly"
+controllers_compute_and_network,900,1500,control,"Brain computer plus distributed MCUs"
+sensors_cameras_and_logging,600,1200,sensing,"Output encoders force sensors IMUs cameras"
+wiring_connectors_and_enclosures,300,700,electrical,"Flexible cable and strain relief"
+safety_hardware_on_robot,600,1200,safety,"E-stops contactors guards disconnect"
+rubber_padding_and_miscellaneous,300,600,all,"Feet hands bumpers"
+prototype_damage_and_contingency,1200,2200,all,"Does not include tools or labor"
+total,12600,20000,all,"USD 600 above target; actuator and mass testing drive value engineering"
+

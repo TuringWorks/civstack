@@ -1,0 +1,12 @@
+load_group,quantity,average_each_w,average_total_w,peak_each_w,peak_total_w,notes
+H_class_actuators,13,25,325,200,2600,"Highly duty-cycle dependent"
+M_class_actuators,10,15,150,100,1000,"Includes elbows and balance axes"
+S_class_actuators,8,5,40,40,320,"Includes grippers"
+brain_compute,1,60,60,100,100,"Local perception and planning"
+real_time_controllers_and_buses,1,15,15,25,25,"Distributed MCU network"
+sensors_cameras_and_logging,1,20,20,35,35,"Cameras IMUs force and storage"
+conversion_wiring_and_idle_losses,1,85,85,150,150,"Planning allowance"
+total,1,695,695,4230,4230,"Peak is non-simultaneous planning envelope"
+battery_usable_energy_wh,1,576,576,576,576,"48 V 15 Ah nominal at 80 percent usable"
+estimated_runtime_minutes,1,49.7,49.7,49.7,49.7,"Usable energy divided by average power; 30 minute requirement retains margin"
+

@@ -15,9 +15,11 @@ run_freecad_script() {
   "$FREECADCMD" -c "p=r'''$script_path'''; exec(compile(open(p).read(),p,'exec'),{'__file__':p,'__name__':'__main__'})"
 }
 
-run_freecad_script "$SCRIPT_DIR/generate_lamina_v4.py"
-run_freecad_script "$SCRIPT_DIR/generate_lamina_v5.py"
-run_freecad_script "$SCRIPT_DIR/finalize_gui_visibility.py"
+if [[ "${1:-}" != "--validate-only" ]]; then
+  run_freecad_script "$SCRIPT_DIR/generate_lamina_v4.py"
+  run_freecad_script "$SCRIPT_DIR/generate_lamina_v5.py"
+  run_freecad_script "$SCRIPT_DIR/finalize_gui_visibility.py"
+fi
 run_freecad_script "$SCRIPT_DIR/validate_generated.py"
 
-echo "Lamina FreeCAD generation and validation completed."
+echo "Lamina FreeCAD validation completed."

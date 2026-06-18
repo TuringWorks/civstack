@@ -236,7 +236,7 @@ def build_assembly():
     # Encoder and guarded sweep envelope.
     encoder = Part.makeCylinder(18, 12, App.Vector(0, 78, 240), App.Vector(0, 1, 0))
     base.add_feature(doc, hardware, "JointEncoder", "Output-shaft absolute encoder envelope", encoder, base.CHARCOAL)
-    guard = Part.makeCylinder(185, 130, App.Vector(0, -65, 240), App.Vector(0, 1, 0), 0, 145)
+    guard = Part.makeCylinder(185, 130, App.Vector(0, -65, 240), App.Vector(0, 1, 0), 145)
     base.add_feature(doc, safety, "GuardEnvelope", "Transparent guard envelope", guard, (0.5, 0.75, 0.85), 85)
 
     doc.recompute()
@@ -255,4 +255,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

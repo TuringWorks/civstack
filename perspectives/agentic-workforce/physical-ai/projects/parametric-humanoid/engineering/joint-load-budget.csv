@@ -1,0 +1,16 @@
+joint_or_group,quantity,class,estimated_static_torque_nm,design_peak_torque_nm,primary_load_case,confidence
+neck_yaw_pitch,2,S,2,8,"Head orientation",medium
+wrist_yaw_pitch,4,S,3,10,"Tool/object orientation",low
+adaptive_gripper,2,S,4,12,"300 N tendon grip target",low
+elbow_pitch,2,M,14,35,"2.5 kg per arm at reach",medium
+shoulder_yaw_roll,4,M,15,40,"Arm and payload redirection",low
+shoulder_pitch,2,H,22,65,"Two-hand 5 kg carry plus arm mass",low
+waist_yaw_roll,2,M,20,50,"Torso disturbance and manipulation",low
+waist_pitch,1,H,45,120,"Floor pickup and recovery",low
+hip_yaw,2,H,20,60,"Foot placement and turning",low
+hip_roll,2,H,35,100,"Single-support balance",low
+hip_pitch,2,H,50,120,"Squat stairs and gait",low
+knee_pitch,2,H,45,120,"Squat stairs and gait",low
+ankle_pitch,2,H,35,100,"Balance push-off and stairs",low
+ankle_roll,2,M,22,50,"Lateral balance",low
+

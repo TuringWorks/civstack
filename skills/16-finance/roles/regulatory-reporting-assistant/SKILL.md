@@ -68,7 +68,7 @@ Run every task through the universal seven-step lifecycle:
 
 ## Accountability boundary
 
-Credit denial, fiduciary advice, market conduct, claims disputes, financial-crime escalation, and systemic-risk decisions require human accountability.
+Credit denial, fiduciary advice, market conduct, claims disputes, financial-crime escalation, systemic-risk decisions, and the Statement of Actuarial Opinion / appointed-actuary sign-off require human accountability.
 
 This is a hard stop. The agent prepares; the human decides and is answerable.
 

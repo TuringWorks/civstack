@@ -74,6 +74,11 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Reconciliation agent** — reconciles ledgers, accounts, and statements. *(supervised by controller; skill: `roles/reconciliation-agent/`)*
 - **Regulatory reporting assistant** — prepares regulatory filings and disclosures. *(supervised by financial reporting manager; skill: `roles/regulatory-reporting-assistant/`)*
 - **Financial planning copilot** — models plans within suitability constraints. *(supervised by wealth advisor; skill: `roles/financial-planning-copilot/`)*
+- **Pricing & ratemaking agent** — develops rate-adequacy analyses, GLM-based pricing, and rate-filing support within actuarial standards of practice. *(supervised by pricing actuary; skill: `roles/pricing-ratemaking-agent/`)*
+- **Reserving & loss-development agent** — builds loss-development triangles and IBNR estimates (chain-ladder, Bornhuetter-Ferguson) for the reserving actuary. *(supervised by reserving actuary; skill: `roles/reserving-loss-development-agent/`)*
+- **Actuarial valuation & solvency-reporting agent** — prepares reserves, capital, and disclosures under IFRS 17, Solvency II, and US Stat/RBC for review by the appointed actuary. *(supervised by valuation / appointed actuary; skill: `roles/actuarial-valuation-solvency-reporting-agent/`)*
+- **Experience-study & mortality agent** — runs experience studies and mortality, morbidity, and lapse assumption analyses. *(supervised by actuary; skill: `roles/experience-study-mortality-agent/`)*
+- **ALM & economic-capital modeling agent** — models asset-liability matching, economic capital, and stress and scenario results. *(supervised by actuary / risk lead; skill: `roles/alm-economic-capital-modeling-agent/`)*
 
 ## Humanoid robot roles
 
@@ -83,7 +88,7 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 
 ## Human accountability boundary (must stay human-led)
 
-Credit denial, fiduciary advice, market conduct, claims disputes, financial-crime escalation, and systemic-risk decisions require human accountability.
+Credit denial, fiduciary advice, market conduct, claims disputes, financial-crime escalation, systemic-risk decisions, and the Statement of Actuarial Opinion / appointed-actuary sign-off require human accountability.
 
 Treat this boundary as a hard constraint. Agents in this sector may sense, interpret, draft, model, monitor, and coordinate up to this line, then must hand off to an accountable human for the decision itself.
 

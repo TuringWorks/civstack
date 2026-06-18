@@ -73,6 +73,7 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Vendor risk analyst** — scores supplier financial, delivery, and integrity risk. *(supervised by vendor manager; skill: `roles/vendor-risk-analyst/`)*
 - **Invoice reconciliation agent** — matches invoices, POs, and receipts and resolves exceptions. *(supervised by accounts-payable lead; skill: `roles/invoice-reconciliation-agent/`)*
 - **Fraud detection agent** — detects procurement and benefits fraud signals for investigation. *(supervised by inspector general investigator; skill: `roles/fraud-detection-agent/`)*
+- **Pension & retirement valuation agent** — performs actuarial pension valuations (funding status, PBO/ABO, contribution projections) for review by the plan actuary. *(supervised by public pension actuary; skill: `roles/pension-retirement-valuation-agent/`)*
 
 ## Humanoid robot roles
 

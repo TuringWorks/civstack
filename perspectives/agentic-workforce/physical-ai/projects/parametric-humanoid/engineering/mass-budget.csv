@@ -1,0 +1,15 @@
+subsystem,target_mass_kg,review_limit_kg,notes
+head_and_neck,1.2,1.5,"Layered head shell cameras and two S joints"
+torso_wood_structure,2.5,3.0,"Open truss spine ribs covers and safety mount"
+pelvis_wood_structure,2.0,2.5,"Motor cage and battery support"
+left_arm_structure,1.8,2.2,"Excludes actuator bank"
+right_arm_structure,1.8,2.2,"Excludes actuator bank"
+hands_and_grippers,0.8,1.0,"Both adaptive hands"
+left_leg_structure_and_foot,3.4,4.0,"Excludes actuator bank"
+right_leg_structure_and_foot,3.4,4.0,"Excludes actuator bank"
+actuators_reductions_and_tendons,9.0,10.5,"All 31 axes; dominant uncertainty"
+battery_and_bms,4.0,5.0,"48 V 15 Ah class planning envelope"
+electronics_sensors_and_wiring,1.5,2.0,"Controllers buses cameras IMUs and harness"
+standard_hardware_guards_and_padding,3.0,3.8,"Shafts bearings bolts rubber and local guards"
+total,34.4,40.7,"Target exceeds preferred 32 kg and triggers a mass-reduction workstream"
+

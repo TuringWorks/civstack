@@ -1,0 +1,897 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="lamina_v06">
+  <material name="wood">
+    <color rgba="0.70 0.48 0.25 1" />
+  </material>
+  <material name="dark">
+    <color rgba="0.08 0.10 0.12 1" />
+  </material>
+  <link name="pelvis">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="8.0000" />
+      <inertia ixx="0.048267" ixy="0" ixz="0" iyy="0.081600" iyz="0" izz="0.086667" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.2 0.18" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.2 0.18" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="waist_yaw_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.4000" />
+      <inertia ixx="0.000453" ixy="0" ixz="0" iyy="0.000453" iyz="0" izz="0.000667" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.06" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.06" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="waist_yaw" type="revolute">
+    <parent link="pelvis" />
+    <child link="waist_yaw_link" />
+    <origin xyz="0 0 0.12" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.047" upper="1.047" effort="60" velocity="1.0" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="waist_roll_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.4000" />
+      <inertia ixx="0.000453" ixy="0" ixz="0" iyy="0.000453" iyz="0" izz="0.000667" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.06" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.06" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="waist_roll" type="revolute">
+    <parent link="waist_yaw_link" />
+    <child link="waist_roll_link" />
+    <origin xyz="0 0 0.04" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.524" upper="0.524" effort="50" velocity="0.8" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="torso">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="7.0000" />
+      <inertia ixx="0.131133" ixy="0" ixz="0" iyy="0.196233" iyz="0" izz="0.121567" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.22 0.42" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.22 0.42" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="waist_pitch" type="revolute">
+    <parent link="waist_roll_link" />
+    <child link="torso" />
+    <origin xyz="0 0 0.23" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.047" upper="0.785" effort="120" velocity="0.8" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="neck_yaw_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.2000" />
+      <inertia ixx="0.000120" ixy="0" ixz="0" iyy="0.000120" iyz="0" izz="0.000120" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.06 0.06" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.06 0.06" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="neck_yaw" type="revolute">
+    <parent link="torso" />
+    <child link="neck_yaw_link" />
+    <origin xyz="0 0 0.27" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.571" upper="1.571" effort="8" velocity="1.5" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="head">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0000" />
+      <inertia ixx="0.005208" ixy="0" ixz="0" iyy="0.005742" iyz="0" izz="0.004283" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.15 0.2" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.15 0.2" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="neck_pitch" type="revolute">
+    <parent link="neck_yaw_link" />
+    <child link="head" />
+    <origin xyz="0 0 0.1" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.524" upper="0.785" effort="8" velocity="1.2" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="left_shoulder_yaw_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.2500" />
+      <inertia ixx="0.000208" ixy="0" ixz="0" iyy="0.000150" iyz="0" izz="0.000208" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 0.06" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 0.06" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_shoulder_yaw" type="revolute">
+    <parent link="torso" />
+    <child link="left_shoulder_yaw_link" />
+    <origin xyz="0.24 0 0.2" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.571" upper="1.571" effort="40" velocity="1.2" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="left_shoulder_roll_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.2500" />
+      <inertia ixx="0.000208" ixy="0" ixz="0" iyy="0.000150" iyz="0" izz="0.000208" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 0.06" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 0.06" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_shoulder_roll" type="revolute">
+    <parent link="left_shoulder_yaw_link" />
+    <child link="left_shoulder_roll_link" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.571" upper="1.571" effort="40" velocity="1.2" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="left_upper_arm">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0000" />
+      <inertia ixx="0.006750" ixy="0" ixz="0" iyy="0.006483" iyz="0" izz="0.001083" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.09 0.27" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.09 0.27" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_shoulder_pitch" type="revolute">
+    <parent link="left_shoulder_roll_link" />
+    <child link="left_upper_arm" />
+    <origin xyz="0 0 -0.14" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.094" upper="2.094" effort="65" velocity="1.2" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="left_forearm">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7000" />
+      <inertia ixx="0.003733" ixy="0" ixz="0" iyy="0.003570" iyz="0" izz="0.000583" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 0.24" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 0.24" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_elbow_pitch" type="revolute">
+    <parent link="left_upper_arm" />
+    <child link="left_forearm" />
+    <origin xyz="0 0 -0.255" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="2.356" effort="35" velocity="1.5" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="left_wrist_yaw_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.1500" />
+      <inertia ixx="0.000063" ixy="0" ixz="0" iyy="0.000063" iyz="0" izz="0.000063" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_wrist_yaw" type="revolute">
+    <parent link="left_forearm" />
+    <child link="left_wrist_yaw_link" />
+    <origin xyz="0 0 -0.145" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.571" upper="1.571" effort="10" velocity="2.0" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="left_hand">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.4000" />
+      <inertia ixx="0.000737" ixy="0" ixz="0" iyy="0.000923" iyz="0" izz="0.000353" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.05 0.14" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.05 0.14" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_wrist_pitch" type="revolute">
+    <parent link="left_wrist_yaw_link" />
+    <child link="left_hand" />
+    <origin xyz="0 0 -0.08" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.047" upper="1.047" effort="10" velocity="2.0" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="left_gripper">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.1000" />
+      <inertia ixx="0.000060" ixy="0" ixz="0" iyy="0.000113" iyz="0" izz="0.000113" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.06 0.06" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.06 0.06" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_grip" type="revolute">
+    <parent link="left_hand" />
+    <child link="left_gripper" />
+    <origin xyz="0 0 -0.08" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.0" effort="12" velocity="2.0" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="right_shoulder_yaw_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.2500" />
+      <inertia ixx="0.000208" ixy="0" ixz="0" iyy="0.000150" iyz="0" izz="0.000208" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 0.06" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 0.06" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_shoulder_yaw" type="revolute">
+    <parent link="torso" />
+    <child link="right_shoulder_yaw_link" />
+    <origin xyz="-0.24 0 0.2" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.571" upper="1.571" effort="40" velocity="1.2" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="right_shoulder_roll_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.2500" />
+      <inertia ixx="0.000208" ixy="0" ixz="0" iyy="0.000150" iyz="0" izz="0.000208" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 0.06" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 0.06" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_shoulder_roll" type="revolute">
+    <parent link="right_shoulder_yaw_link" />
+    <child link="right_shoulder_roll_link" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.571" upper="1.571" effort="40" velocity="1.2" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="right_upper_arm">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0000" />
+      <inertia ixx="0.006750" ixy="0" ixz="0" iyy="0.006483" iyz="0" izz="0.001083" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.09 0.27" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.09 0.27" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_shoulder_pitch" type="revolute">
+    <parent link="right_shoulder_roll_link" />
+    <child link="right_upper_arm" />
+    <origin xyz="0 0 -0.14" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.094" upper="2.094" effort="65" velocity="1.2" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="right_forearm">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7000" />
+      <inertia ixx="0.003733" ixy="0" ixz="0" iyy="0.003570" iyz="0" izz="0.000583" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 0.24" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 0.24" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_elbow_pitch" type="revolute">
+    <parent link="right_upper_arm" />
+    <child link="right_forearm" />
+    <origin xyz="0 0 -0.255" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="2.356" effort="35" velocity="1.5" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="right_wrist_yaw_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.1500" />
+      <inertia ixx="0.000063" ixy="0" ixz="0" iyy="0.000063" iyz="0" izz="0.000063" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_wrist_yaw" type="revolute">
+    <parent link="right_forearm" />
+    <child link="right_wrist_yaw_link" />
+    <origin xyz="0 0 -0.145" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.571" upper="1.571" effort="10" velocity="2.0" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="right_hand">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.4000" />
+      <inertia ixx="0.000737" ixy="0" ixz="0" iyy="0.000923" iyz="0" izz="0.000353" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.05 0.14" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.05 0.14" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_wrist_pitch" type="revolute">
+    <parent link="right_wrist_yaw_link" />
+    <child link="right_hand" />
+    <origin xyz="0 0 -0.08" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.047" upper="1.047" effort="10" velocity="2.0" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="right_gripper">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.1000" />
+      <inertia ixx="0.000060" ixy="0" ixz="0" iyy="0.000113" iyz="0" izz="0.000113" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.06 0.06" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.06 0.06" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_grip" type="revolute">
+    <parent link="right_hand" />
+    <child link="right_gripper" />
+    <origin xyz="0 0 -0.08" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.0" effort="12" velocity="2.0" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="left_hip_yaw_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.3500" />
+      <inertia ixx="0.000379" ixy="0" ixz="0" iyy="0.000330" iyz="0" izz="0.000423" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.09 0.07" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.09 0.07" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hip_yaw" type="revolute">
+    <parent link="pelvis" />
+    <child link="left_hip_yaw_link" />
+    <origin xyz="0.1 0 -0.09" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.785" upper="0.785" effort="60" velocity="0.8" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="left_hip_roll_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.3500" />
+      <inertia ixx="0.000379" ixy="0" ixz="0" iyy="0.000330" iyz="0" izz="0.000423" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.09 0.07" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.09 0.07" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hip_roll" type="revolute">
+    <parent link="left_hip_yaw_link" />
+    <child link="left_hip_roll_link" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.611" upper="0.611" effort="100" velocity="0.8" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="left_thigh">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="2.0000" />
+      <inertia ixx="0.018033" ixy="0" ixz="0" iyy="0.017683" iyz="0" izz="0.003683" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.11 0.31" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.11 0.31" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hip_pitch" type="revolute">
+    <parent link="left_hip_roll_link" />
+    <child link="left_thigh" />
+    <origin xyz="0 0 -0.16" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.094" upper="0.785" effort="120" velocity="0.8" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="left_shank">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.5000" />
+      <inertia ixx="0.015463" ixy="0" ixz="0" iyy="0.015250" iyz="0" izz="0.001812" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.09 0.34" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.09 0.34" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_knee_pitch" type="revolute">
+    <parent link="left_thigh" />
+    <child link="left_shank" />
+    <origin xyz="0 0 -0.32" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="2.356" effort="120" velocity="1.0" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="left_ankle_pitch_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.2500" />
+      <inertia ixx="0.000208" ixy="0" ixz="0" iyy="0.000177" iyz="0" izz="0.000235" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.08 0.06" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.08 0.06" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_ankle_pitch" type="revolute">
+    <parent link="left_shank" />
+    <child link="left_ankle_pitch_link" />
+    <origin xyz="0 0 -0.2" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.785" upper="0.524" effort="100" velocity="1.0" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="left_foot">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.8000" />
+      <inertia ixx="0.004747" ixy="0" ixz="0" iyy="0.001947" iyz="0" izz="0.006213" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.26 0.06" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.26 0.06" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_ankle_roll" type="revolute">
+    <parent link="left_ankle_pitch_link" />
+    <child link="left_foot" />
+    <origin xyz="0 -0.04 -0.05" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.436" upper="0.436" effort="50" velocity="1.0" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="right_hip_yaw_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.3500" />
+      <inertia ixx="0.000379" ixy="0" ixz="0" iyy="0.000330" iyz="0" izz="0.000423" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.09 0.07" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.09 0.07" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hip_yaw" type="revolute">
+    <parent link="pelvis" />
+    <child link="right_hip_yaw_link" />
+    <origin xyz="-0.1 0 -0.09" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.785" upper="0.785" effort="60" velocity="0.8" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="right_hip_roll_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.3500" />
+      <inertia ixx="0.000379" ixy="0" ixz="0" iyy="0.000330" iyz="0" izz="0.000423" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.09 0.07" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.09 0.07" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hip_roll" type="revolute">
+    <parent link="right_hip_yaw_link" />
+    <child link="right_hip_roll_link" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.611" upper="0.611" effort="100" velocity="0.8" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="right_thigh">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="2.0000" />
+      <inertia ixx="0.018033" ixy="0" ixz="0" iyy="0.017683" iyz="0" izz="0.003683" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.11 0.31" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.11 0.31" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hip_pitch" type="revolute">
+    <parent link="right_hip_roll_link" />
+    <child link="right_thigh" />
+    <origin xyz="0 0 -0.16" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.094" upper="0.785" effort="120" velocity="0.8" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="right_shank">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.5000" />
+      <inertia ixx="0.015463" ixy="0" ixz="0" iyy="0.015250" iyz="0" izz="0.001812" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.09 0.34" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.09 0.34" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_knee_pitch" type="revolute">
+    <parent link="right_thigh" />
+    <child link="right_shank" />
+    <origin xyz="0 0 -0.32" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="2.356" effort="120" velocity="1.0" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="right_ankle_pitch_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.2500" />
+      <inertia ixx="0.000208" ixy="0" ixz="0" iyy="0.000177" iyz="0" izz="0.000235" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.08 0.06" />
+      </geometry>
+      <material name="dark" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.08 0.06" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_ankle_pitch" type="revolute">
+    <parent link="right_shank" />
+    <child link="right_ankle_pitch_link" />
+    <origin xyz="0 0 -0.2" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.785" upper="0.524" effort="100" velocity="1.0" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+  <link name="right_foot">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.8000" />
+      <inertia ixx="0.004747" ixy="0" ixz="0" iyy="0.001947" iyz="0" izz="0.006213" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.26 0.06" />
+      </geometry>
+      <material name="wood" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.26 0.06" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_ankle_roll" type="revolute">
+    <parent link="right_ankle_pitch_link" />
+    <child link="right_foot" />
+    <origin xyz="0 -0.04 -0.05" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.436" upper="0.436" effort="50" velocity="1.0" />
+    <dynamics damping="0.5" friction="0.2" />
+  </joint>
+</robot>

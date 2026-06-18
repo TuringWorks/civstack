@@ -2,7 +2,7 @@
 
 **The operating systems of an economy — staffed by humans, AI agents, and robots.**
 
-CivStack is an open library of **376 agent skills** that maps everything a modern country and economy must reliably do — from governance and energy to farming and eldercare — and assigns each job to the right mix of a human owner, AI personnel, embodied robots, and non-humanoid autonomous machines (self-driving vehicles, farm equipment, drones), with hard accountability boundaries baked in. It is navigable along two axes: by **sector** (the 23 operating systems) and by **strategic mission** (cross-cutting national capabilities like energy abundance or semiconductor sovereignty that compose several sectors). It covers the **formal and the informal economy**, since informal work is the majority of employment in much of the world.
+CivStack is an open library of **382 agent skills** that maps everything a modern country and economy must reliably do — from governance and energy to farming and eldercare — and assigns each job to the right mix of a human owner, AI personnel, embodied robots, and non-humanoid autonomous machines (self-driving vehicles, farm equipment, drones), with hard accountability boundaries baked in. It is navigable along two axes: by **sector** (the 23 operating systems) and by **strategic mission** (cross-cutting national capabilities like energy abundance or semiconductor sovereignty that compose several sectors). It covers the **formal and the informal economy**, since informal work is the majority of employment in much of the world.
 
 It turns a strategy document (["Country-Economy Core Jobs To Be Done"](docs/country-economy-core-jtbd.md)) into machine-usable [Agent Skills](https://www.anthropic.com/news/skills): every role ships as a `SKILL.md` an LLM or agent can load to get the full context for *who does what, how, and where a human must stay in charge.*
 
@@ -67,7 +67,7 @@ The key idea: the **world models and simulators built to train the machines doub
 | National operating systems (sector orchestrators) | 23 | `skills/01-…` … `skills/23-…` |
 | Strategic missions (cross-cutting national capabilities) | 12 | `skills/strategic-missions/` |
 | Human-command roles (accountable owners for missions) | 4 | `skills/_catalogs/human-command/` |
-| AI-personnel role skills | 198 | `skills/NN-…/roles/` |
+| AI-personnel role skills | 204 | `skills/NN-…/roles/` |
 | Embodied robot role skills (sector-nested) | 4 | `skills/05-food/robots/` |
 | Autonomous machine skills (sector-nested) | 27 | `skills/<sector>/autonomous/` |
 | Cross-cutting role archetypes | 15 | `skills/cross-cutting-archetypes/` |
@@ -79,7 +79,7 @@ The key idea: the **world models and simulators built to train the machines doub
 | Capability & optimization roles (model tiers + training methods) | 11 | `skills/_catalogs/capability-optimization/` |
 | Simulation & keep-warm roles (anti-deskilling) | 6 | `skills/_catalogs/simulation-training/` |
 | Informal-economy support roles | 8 | `skills/_catalogs/informal-economy/` |
-| **Total `SKILL.md` packages** | **376** | |
+| **Total `SKILL.md` packages** | **382** | |
 
 Plus non-skill assets: **2 deployment checklists** (`checklists/`), **3 authoring templates** (`templates/`), and reference docs (`docs/`) including the capability routing matrix, the keep-warm/deskilling guide, and the coverage matrix.
 

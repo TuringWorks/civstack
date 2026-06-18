@@ -54,11 +54,15 @@ def main():
         except Exception:
             pass
     view = gui.activeView()
-    view.viewAxonometric()
+    # FreeCAD's named views can retain the prior camera in this headless GUI
+    # path. Rotate the default camera explicitly to look along the rig's Y axis.
+    view.setCameraOrientation(App.Rotation(App.Vector(1, 0, 0), -90).Q)
     Gui.updateGui()
     view.fitAll()
     Gui.updateGui()
     view.saveImage(PREVIEW, 1400, 1000, "White")
+    view.setCameraOrientation(App.Rotation(App.Vector(1, 0, 0), -90).Q)
+    view.fitAll()
     doc.save()
     App.closeDocument(doc.Name)
     Gui.getMainWindow().close()
@@ -67,4 +71,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

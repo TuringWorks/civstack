@@ -81,7 +81,7 @@ The five-layer pattern says *who* is on the team; this says *how they run togeth
 | # | Operating system | Role skills |
 |---|---|---|
 | 01 | [Governance, Law, and Public Administration](01-governance/) | 5 AI roles |
-| 02 | [Public Finance, Tax, Treasury, and Procurement](02-public-finance/) | 9 AI roles |
+| 02 | [Public Finance, Tax, Treasury, and Procurement](02-public-finance/) | 10 AI roles |
 | 03 | [Defense, Intelligence, Border, and Foreign Affairs](03-defense/) | 8 AI roles |
 | 04 | [Public Safety, Justice Operations, and Emergency Response](04-public-safety/) | 9 AI roles |
 | 05 | [Food, Agriculture, Fisheries, and Nutrition](05-food/) | 14 AI roles |
@@ -95,7 +95,7 @@ The five-layer pattern says *who* is on the team; this says *how they run togeth
 | 13 | [Healthcare, Public Health, and Biomedical Systems](13-healthcare/) | 9 AI roles |
 | 14 | [Education, Training, Libraries, and Human Capital](14-education/) | 9 AI roles |
 | 15 | [Science, Research, Standards, and Innovation](15-science/) | 9 AI roles |
-| 16 | [Finance, Insurance, Payments, and Capital Markets](16-finance/) | 8 AI roles |
+| 16 | [Finance, Insurance, Payments, and Capital Markets](16-finance/) | 13 AI roles |
 | 17 | [Commerce, Retail, Hospitality, and Customer Operations](17-commerce/) | 12 AI roles |
 | 18 | [Media, Culture, Arts, Sports, Religion, and Civic Life](18-media/) | 7 AI roles |
 | 19 | [Environment, Climate, Waste, and Resource Stewardship](19-environment/) | 6 AI roles |

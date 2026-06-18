@@ -1,0 +1,6 @@
+J1 FreeCAD solids: 24
+Bounds: 530.0 × 260.0 × 425.0 mm
+DXF profiles: 11
+Pose-study solids: 30
+GuiDocument.xml: present
+Validation passed.

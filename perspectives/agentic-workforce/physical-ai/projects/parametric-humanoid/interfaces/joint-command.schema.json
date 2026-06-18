@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lamina bounded joint-group command v0.6",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "sequence", "issued_monotonic_ms", "expires_monotonic_ms", "mode", "group", "targets", "limits"],
+  "properties": {
+    "version": {"const": "0.6"},
+    "sequence": {"type": "integer", "minimum": 0},
+    "issued_monotonic_ms": {"type": "integer", "minimum": 0},
+    "expires_monotonic_ms": {"type": "integer", "minimum": 0},
+    "mode": {"enum": ["hold", "position", "trajectory_segment", "safe_stop"]},
+    "group": {"enum": ["head", "waist", "left_arm", "right_arm", "left_leg", "right_leg", "full_body"]},
+    "targets": {
+      "type": "array",
+      "maxItems": 31,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["joint", "position_rad"],
+        "properties": {
+          "joint": {"type": "string", "pattern": "^[a-z][a-z0-9_]{2,63}$"},
+          "position_rad": {"type": "number"},
+          "velocity_rad_s": {"type": "number"},
+          "feedforward_effort_nm": {"type": "number"}
+        }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["max_velocity_scale", "max_effort_scale", "stop_on_contact_loss"],
+      "properties": {
+        "max_velocity_scale": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "max_effort_scale": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "stop_on_contact_loss": {"type": "boolean"}
+      }
+    }
+  }
+}
+

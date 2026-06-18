@@ -1,0 +1,34 @@
+req_id,requirement,verification_method,evidence,stage,status
+R001,"Height 1500 ±50 mm",inspection,"FreeCAD and as-built measurement",full-body,planned
+R002,"Target mass ≤32 kg; review at 35 kg",analysis_and_inspection,"mass budget and scale measurements",each assembly,planned
+R003,"No custom metal machining",inspection,"BOM and supplier records",procurement,planned
+R004,"31 controlled axes",analysis_and_test,"URDF joint map and commissioning log",simulation/full-body,passed_analysis
+R005,"5 kg two-hand close-body carry",test,"guarded payload test log",manipulation,blocked_hardware
+R006,"2 kg floor pickup",test,"tethered squat/pickup log",full-body,blocked_hardware
+R007,"Initial walking speed 0.15 m/s",test,"tethered walking telemetry",mobility,blocked_hardware
+R008,"180 mm stair rise",test,"instrumented stair fixture",stairs,blocked_hardware
+R009,"Ladder rung 25–35 mm",inspection_and_test,"gripper/rung fixture report",gripper,blocked_hardware
+R010,"Three contacts during ladder transition",analysis_and_test,"state-machine trace and fault tests",ladder,blocked_hardware
+R011,"Minimum 30 minute runtime",analysis_and_test,"power budget and battery discharge test",power,planned
+R012,"Rear shoulder E-stop reachable",inspection_and_test,"reachability trial",full-body,planned
+R013,"Independent drive-enable removal",test,"schematic review and fault test",J1/power,planned
+R014,"Output-side joint sensing",inspection_and_test,"BOM wiring and encoder comparison",each joint,planned
+R015,"Mechanical hard stops",inspection_and_test,"range and overtravel test",each joint,planned
+R016,"Stale command protective stop",test,"timeout fault injection",each controller,planned
+R017,"No motion on boot",test,"power-cycle log",each controller,planned
+R018,"Battery certified assembly",inspection,"supplier declaration and receiving record",procurement,planned
+R019,"Selective branch protection",analysis_and_test,"fault-current study and branch test",power,planned
+R020,"Plywood batch traceability",inspection,"etched IDs and material log",manufacturing,planned
+R021,"Bearing retention",test,"coupon and endurance inspection",J1/J2,blocked_hardware
+R022,"Tendon termination ≥600 N for J1",test,"five-specimen termination report",J1,blocked_hardware
+R023,"J1 proof torque 22 N·m",test,"proof hold report",J1,blocked_hardware
+R024,"J1 10000 representative cycles",test,"endurance telemetry and teardown",J1,blocked_hardware
+R025,"H-class proof torque 120 N·m",test,"J2 proof report",J2,blocked_hardware
+R026,"Protective fall arrest",inspection_and_test,"gantry rating and drop-arrest procedure",facility,planned
+R027,"Safe stair fault behavior",test,"fault injection at each state",stairs,blocked_hardware
+R028,"Positive ladder hook retains on power loss",test,"rung fixture power-loss report",gripper,blocked_hardware
+R029,"Language cannot reset safety fault",analysis_and_test,"interface review and malformed request test",software,planned
+R030,"Configuration traceability",test,"log contains software limits CAD and wiring hashes",integration,planned
+R031,"Maintenance zero-energy verification",test,"lockout audit",maintenance,planned
+R032,"Public operation prohibited",inspection,"operating procedure and signage",operations,planned
+

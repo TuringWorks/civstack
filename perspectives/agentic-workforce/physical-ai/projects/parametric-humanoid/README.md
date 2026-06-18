@@ -1,4 +1,4 @@
-# Parametric Humanoid — Build Package v0.1
+# Parametric Humanoid — Lamina pre-fabrication package v0.6
 
 This package turns the idea of an animated, sliced sculpture into a buildable robotics program. The working name is **Lamina**: a serviceable robot skeleton wearing a replaceable, laser-cut parametric body.
 
@@ -20,6 +20,10 @@ An LLM never produces torque, PWM, or arbitrary joint trajectories. It may reque
 
 Build a **fixed-base upper torso with one 3-DOF arm and a 2-DOF head**, initially under 24 VDC and limited to slow, low-force movement. This proves the distinctive parts of the idea before taking on balance and fall safety.
 
+The current fabrication release begins even smaller: the J1 tendon-joint rig. The
+full humanoid remains the target architecture, but cutting it is gated by measured
+transmission, structural and lower-body evidence. See [project readiness](PROJECT-READINESS.md).
+
 | Attribute | v0 target |
 |---|---|
 | Form | Fixed-base torso, one arm, head |
@@ -33,10 +37,27 @@ Build a **fixed-base upper torso with one 3-DOF arm and a 2-DOF head**, initiall
 
 ## Artifacts
 
+- [Project readiness and release gates](PROJECT-READINESS.md)
+- [Engineering baseline index](engineering/README.md)
+- [Engineering workbook](engineering/Lamina-Engineering-Baseline-v06.xlsx)
+- [System requirements](engineering/system-requirements.md)
+- [Hardware gates](engineering/hardware-gates.md)
 - [Concept and decisions](01-concept-and-decisions.md)
 - [Control architecture](02-control-architecture.md)
+- [Full-body deterministic control](control/full-body-control.md)
+- [Stair and ladder state machines](control/stair-and-ladder-state-machines.md)
+- [Power and network architecture](electronics/power-and-network.md)
 - [Prototype build plan](03-prototype-build-plan.md)
 - [Safety state machine](firmware/safety-state-machine.md)
+- [Safety case](safety/safety-case.md)
+- [Hazard register](safety/hazard-register.csv)
+- [Verification matrix](verification/verification-matrix.csv)
+- [Fabrication standard](manufacturing/fabrication-standard.md)
+- [Assembly sequence](manufacturing/assembly-sequence.md)
+- [Procurement plan](procurement/procurement-plan.md)
+- [Commissioning and operations](operations/commissioning-and-operations.md)
+- [Configuration management](operations/configuration-management.md)
+- [AI/control threat model](security/threat-model.md)
 - [Starter bill of materials](hardware/v0-bom.csv)
 - [Slender biped v3 bill of materials](hardware/slender-biped-v3-bom.csv)
 - [Motion-intent JSON Schema](interfaces/motion-intent.schema.json)
@@ -45,14 +66,15 @@ Build a **fixed-base upper torso with one 3-DOF arm and a 2-DOF head**, initiall
 - [Layer export helper](cad/export-layers.sh)
 - [Latest FreeCAD package](cad/freecad/README.md)
 - [Concept image archive](images/README.md)
+- [Phase-0 single-joint prototype package](prototype-joint-rig/README.md)
+- [31-axis simulation model](simulation/README.md)
 
 ## Immediate use
 
-1. Open `cad/parametric-torso.scad` in OpenSCAD and set `mode = "assembly"` to inspect proportions.
-2. Set `mode = "layer"` and choose `layer_index` to inspect a laser-cut rib.
-3. Run `cad/export-layers.sh` on a machine with OpenSCAD to generate one DXF per layer.
-4. Cut five cheap cardboard layers first. Measure kerf and rod-hole fit before cutting plywood.
-5. Build the actuator-and-link test rig from Phase 0 of the build plan before fabricating a complete body.
+1. Run `./validate-project.sh`.
+2. Open the FreeCAD v5 assembly and engineering workbook for the frozen baseline.
+3. Procure Phase A only and cut the J1 fit coupon.
+4. Build and accept the J1 rig before fabricating a complete body.
 
 ## Non-goals for v0
 

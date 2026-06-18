@@ -4,8 +4,12 @@ CivStack describes the LLM-brained robot architecture abstractly (brain → acti
 calls → VLA/control → a **verified deterministic safety layer** beneath anything learned).
 The Agentic-Workforce viewpoint now ships a concrete, buildable instance of exactly that
 architecture — **Lamina**, a parametric humanoid build package. This doc absorbs its
-architectural lessons; the full package (build docs, FreeCAD/OpenSCAD generators, BOMs,
-firmware contracts, a J1 joint-rig with acceptance tests) lives in
+architectural lessons; the full package — now a complete engineering program (system
+requirements, design decisions, mass/power/cost/joint-load budgets, hardware gates, a
+claim-based safety case + hazard register, a security threat model, full-body & stair/ladder
+control, FreeCAD/OpenSCAD generators, URDF/simulation, manufacturing/QA, procurement,
+commissioning, configuration management, verification, maintenance, and a J1 joint-rig with
+acceptance tests) — lives in
 [`../perspectives/agentic-workforce/physical-ai/projects/parametric-humanoid/`](../perspectives/agentic-workforce/physical-ai/projects/parametric-humanoid/).
 
 It matters because it turns CivStack's most-repeated safety claim — *the safety layer can
@@ -75,6 +79,43 @@ deterministic, safety-critical loop first; add learned/LLM behavior only above a
   engineer** (the firmware/skill controllers) and **formal verification & assurance engineer**
   (the safety state machine).
 - `_catalogs/humanoid-robots/` + sector `robots/`: the physical role the platform fills.
+
+## Safety case & security threat model (the strongest absorption)
+
+The package now carries a **claim-based preliminary safety case** and a **control/AI threat
+model** that, together, are the most precise statement of CivStack's core safety principle.
+
+- **Safety case, claim S1 — "actuation can be made safe *independently of intelligent
+  software*":** a latching E-stop opens an independent drive-enable chain; a hold-to-run
+  pendant; contactors that report actual state; stale-setpoint/heartbeat-loss → protective
+  stop; and — verbatim — *"language and planning processes cannot reset faults or energize
+  drives directly."* Claim S2 controls fall consequences during mobility (rated fall arrest,
+  exclusion zones) — evidence-gated, not assumed.
+- **Threat model trust boundary:** the safety MCU and actuator network are trusted only for
+  bounded deterministic control; *"the local AI computer, language model, microphone, camera
+  and any external network are **untrusted** request sources. Safety does not depend on their
+  correctness."* This is the sharpest possible framing of CivStack's verified-safety-layer
+  rule and its autonomous-machine failure modes (physical-world prompt injection, spoofing).
+- **Hardened "actions as tool calls":** allowlisted, typed motion skills with range/rate/
+  workspace/deadline checks; **no shell, torque, PWM, or raw trajectory exposed to an LLM**;
+  replay/stale-command rejection with monotonic command IDs and watchdogs; physical enable and
+  hardwired E-stop override every software state; default-deny remote access; append-only logs
+  recording command source and rejection reason. (A second typed schema, `joint-command`, sits
+  below `MotionIntent` — a two-tier tool-call contract.)
+
+## Staged readiness — capability routing in hardware
+
+The program's pre-fabrication decision is explicit: *do not cut a complete humanoid yet.*
+Retire the highest-risk mechanisms in order (tendon transmission coupon → one load-bearing
+joint → instrumented leg → tethered lower body → walking/stairs → upper body → ladder work,
+each behind a gate), because a full-body build would *"multiply an unproven joint or tendon
+defect 31 times."* That is CivStack's capability-routing and sim-to-real discipline stated as
+program management: prove the deterministic, safety-critical unit before scaling, and reserve
+learned/LLM behavior for above a verified base. The engineering side backs it with quantified
+**mass / power / cost / joint-load budgets**, **hardware gates**, a **hazard register**, and
+URDF/**simulation** generation (the world-model / robot-gym layer) — a complete lifecycle from
+system requirements through manufacturing, procurement, commissioning, verification, and
+maintenance/configuration management.
 
 ## The takeaway
 
