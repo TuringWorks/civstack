@@ -71,6 +71,8 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Warehouse slotting agent** — optimizes storage slotting and pick paths. *(supervised by warehouse manager; skill: `roles/warehouse-slotting-agent/`)*
 - **Disruption-response coordinator** — re-plans flows during network disruptions. *(supervised by operations manager; skill: `roles/disruption-response-coordinator/`)*
 - **Customer delivery communications agent** — sends delivery status and exception updates. *(supervised by last-mile operations manager; skill: `roles/customer-delivery-communications-agent/`)*
+- **Port operations & berth-planning agent** — plans berth allocation, terminal slots, and quay/yard operations at ports. *(supervised by port operations lead; skill: `roles/port-operations-berth-planning-agent/`)*
+- **Maritime route & weather-routing agent** — plans sea routes and weather routing for vessels and monitors maritime traffic and safety. *(supervised by marine operations lead; skill: `roles/maritime-route-weather-routing-agent/`)*
 
 ## Humanoid robot roles
 

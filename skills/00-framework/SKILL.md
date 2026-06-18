@@ -90,7 +90,7 @@ The five-layer pattern says *who* is on the team; this says *how they run togeth
 | 08 | [Mining, Materials, Chemicals, and Industrial Inputs](08-mining/) | 6 AI roles |
 | 09 | [Manufacturing and Industrial Production](09-manufacturing-and-industrial-production/) | 8 AI roles |
 | 10 | [Shelter, Construction, Land, and the Built Environment](10-shelter/) | 11 AI roles |
-| 11 | [Transportation, Logistics, Postal, and Mobility](11-transportation/) | 7 AI roles |
+| 11 | [Transportation, Logistics, Postal, and Mobility](11-transportation/) | 9 AI roles |
 | 12 | [Communications, Software, Cybersecurity, and Digital Infrastructure](12-communications/) | 11 AI roles |
 | 13 | [Healthcare, Public Health, and Biomedical Systems](13-healthcare/) | 9 AI roles |
 | 14 | [Education, Training, Libraries, and Human Capital](14-education/) | 9 AI roles |
@@ -100,7 +100,7 @@ The five-layer pattern says *who* is on the team; this says *how they run togeth
 | 18 | [Media, Culture, Arts, Sports, Religion, and Civic Life](18-media/) | 7 AI roles |
 | 19 | [Environment, Climate, Waste, and Resource Stewardship](19-environment/) | 6 AI roles |
 | 20 | [Labor, Workforce Systems, and Organizational Life](20-labor/) | 9 AI roles |
-| 21 | [Household, Childcare, Eldercare, and Community Support](21-household/) | 11 AI roles |
+| 21 | [Household, Childcare, Eldercare, and Community Support](21-household/) | 12 AI roles |
 | 22 | [Resilience, Continuity, and Strategic Foresight](22-resilience/) | 6 AI roles |
 | 23 | [Identity, Civil Registration, and Digital Public Infrastructure](23-identity/) | 8 AI roles |
 

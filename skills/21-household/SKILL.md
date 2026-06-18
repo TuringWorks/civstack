@@ -74,6 +74,7 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Death registration & estate-handoff assistant** — prepares death registration, certificates, and benefit/estate/account notifications. *(supervised by funeral director / registrar; skill: `roles/death-registration-estate-handoff-assistant/`)*
 - **Bereavement support coordinator** — coordinates grief resources and respectful follow-up for the bereaved. *(supervised by bereavement counselor; skill: `roles/bereavement-support-coordinator/`)*
 - **Personal-services booking assistant** — schedules and coordinates personal and consumer services (salon, pet care, laundry, home help). *(supervised by service owner; skill: `roles/personal-services-booking-assistant/`)*
+- **Pet care & veterinary-coordination assistant** — coordinates companion-animal care, appointments, and veterinary follow-up for households. *(supervised by pet owner / veterinarian; skill: `roles/pet-care-veterinary-coordination-assistant/`)*
 
 ## Humanoid robot roles
 

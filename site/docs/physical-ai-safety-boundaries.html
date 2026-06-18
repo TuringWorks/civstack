@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>physical-ai-safety-boundaries · CivStack</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="site"><a class="brand" href="../index.html">CivStack</a>
+<span class="muted">browsable skill library</span></header>
+<div class="wrap"><article><h1>Physical AI — Safety &amp; Accountability Boundaries</h1>
+<p>A consolidated reference for the safety controls, human-accountable decisions, and stop conditions that apply to <strong>non-humanoid autonomous machines</strong> (vehicles, drones, farm/heavy equipment, AMRs, vessels, rail, fixed cells). Imported/adapted from Agentic-Workforce. Pairs with the deployment checklist (<code>../checklists/autonomous-machine-deployment-checklist.md</code>) and <code>skills/_catalogs/autonomous-fleet-ops/</code>.</p>
+<h2>Human-accountable decisions (never delegated to the machine)</h2>
+<ul><li>Operating Design Domain (ODD) approval.</li><li>Public-road or public-airspace deployment.</li><li>Worker and bystander safety acceptance.</li><li>Route / geofence authorization.</li><li>Emergency response and incident disclosure.</li><li>Use near children, patients, animals, crowds, traffic, or hazardous sites.</li><li>Chemical application, pesticide use, controlled substances, weapons, and regulated cargo.</li><li>Final approval of construction, mining, utility, rail, aviation, or maritime safety cases.</li></ul>
+<h2>Required safety controls (must be present and tested)</h2>
+<ul><li>Geofence or approved route.</li><li>Speed and payload limits.</li><li>Perception health checks.</li><li>Remote monitoring and intervention (teleop).</li><li>Emergency stop.</li><li>Safe-stop / minimal-risk-maneuver fallback.</li><li>Black-box event recording.</li><li>Pre-shift inspection.</li><li>Maintenance lockout.</li><li>Cybersecurity controls.</li><li>Weather and visibility limits.</li><li>Human/animal detection and exclusion zones.</li><li>Incident investigation process.</li></ul>
+<h2>Stop conditions (trigger a minimal-risk maneuver)</h2>
+<ul><li>Sensor degradation.</li><li>Localization uncertainty.</li><li>Human or animal in an exclusion zone.</li><li>Lost communications beyond the allowed autonomy window.</li><li>Weather outside limits.</li><li>Unknown obstacle.</li><li>Unmapped route or field boundary.</li></ul>
+<h2>How this connects</h2>
+<p>The verified safety layer that enforces these (independently of the planning brain) is owned by the <strong>ODD &amp; safety-case engineer</strong> and the <strong>fleet safety officer</strong> in <code>skills/_catalogs/autonomous-fleet-ops/</code> and <code>skills/_catalogs/embodied-ai-stack/</code>. The roles that watch the human/machine boundary in real time are the <strong>safety-zone monitor</strong>, <strong>perception-failure analyst</strong>, and <strong>route &amp; geofence risk analyst</strong>.</p></article></div></body></html>
