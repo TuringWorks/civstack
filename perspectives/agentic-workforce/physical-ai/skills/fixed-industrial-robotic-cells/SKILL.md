@@ -1,6 +1,6 @@
 ---
-name: "fixed-industrial-robotic-cells-workforce"
-description: "Design roles, AI agents, robotic cells, cobots, fixed automation, machine vision inspection, pick-and-place systems, welding/painting/assembly cells, lab automation cells, and industrial safety controls."
+name: fixed-industrial-robotic-cells-workforce
+description: Design roles, AI agents, robotic cells, cobots, fixed automation, machine vision inspection, pick-and-place systems, welding/painting/assembly cells, lab automation cells, and industrial safety controls.
 ---
 
 # Fixed Industrial Robotic Cells Workforce

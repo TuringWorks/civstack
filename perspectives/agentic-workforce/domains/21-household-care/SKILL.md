@@ -1,6 +1,6 @@
 ---
-name: "household-care-workforce"
-description: "Design roles, AI assistants, humanoid robot support, workflows, and accountability boundaries for household operations, childcare, eldercare, disability support, home health, social work, community care, and family administration."
+name: household-care-workforce
+description: Design roles, AI assistants, humanoid robot support, workflows, and accountability boundaries for household operations, childcare, eldercare, disability support, home health, social work, community care, and family administration.
 ---
 
 # Household, Childcare, Eldercare, and Community Support Workforce

@@ -1,0 +1,7 @@
+Lamina-Adaptive-Gripper-v1.FCStd: 7 shapes; bounds 78.0 x 44.0 x 175.0 mm; z -90.0..85.0
+Lamina-Hollow-Torsion-Link-v1.FCStd: 1 shapes; bounds 92.0 x 108.0 x 320.0 mm; z 0.0..320.0
+Lamina-Rear-Safety-Module-v1.FCStd: 4 shapes; bounds 96.0 x 81.8 x 172.8 mm; z -41.0..131.8
+Lamina-Slender-Biped-v4.FCStd: 118 shapes; bounds 900.0 x 700.0 x 1452.0 mm; z 0.0..1452.0
+Lamina-Slender-Biped-v5.FCStd: 106 shapes; bounds 780.0 x 620.0 x 1466.0 mm; z 0.0..1466.0
+Lamina-Torso-Rib-v1.FCStd: 1 shapes; bounds 400.0 x 220.0 x 6.0 mm; z 0.0..6.0
+Validation passed for all Lamina FreeCAD artifacts.

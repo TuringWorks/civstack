@@ -1,6 +1,6 @@
 ---
-name: "defense-foreign-affairs-workforce"
-description: "Design roles, AI personnel, robot support, and accountability controls for defense, intelligence, diplomacy, border operations, customs, immigration, trade negotiations, sanctions, export controls, and sovereignty protection."
+name: defense-foreign-affairs-workforce
+description: Design roles, AI personnel, robot support, and accountability controls for defense, intelligence, diplomacy, border operations, customs, immigration, trade negotiations, sanctions, export controls, and sovereignty protection.
 ---
 
 # Defense, Intelligence, Border, and Foreign Affairs Workforce

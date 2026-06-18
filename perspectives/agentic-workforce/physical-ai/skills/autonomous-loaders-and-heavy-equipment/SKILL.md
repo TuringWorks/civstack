@@ -1,6 +1,6 @@
 ---
-name: "autonomous-loaders-heavy-equipment-workforce"
-description: "Design roles, AI agents, autonomous loaders, haul trucks, excavators, dozers, graders, mining equipment, construction machines, quarry machines, port loaders, and heavy-equipment autonomy with safety and accountability controls."
+name: autonomous-loaders-heavy-equipment-workforce
+description: Design roles, AI agents, autonomous loaders, haul trucks, excavators, dozers, graders, mining equipment, construction machines, quarry machines, port loaders, and heavy-equipment autonomy with safety and accountability controls.
 ---
 
 # Autonomous Loaders And Heavy Equipment Workforce

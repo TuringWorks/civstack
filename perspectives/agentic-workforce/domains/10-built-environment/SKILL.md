@@ -1,6 +1,6 @@
 ---
-name: "built-environment-workforce"
-description: "Design roles, AI agents, robot support, and accountability boundaries for housing, construction, land use, architecture, engineering, facilities, public works, real estate, permitting, inspection, and resilient buildings."
+name: built-environment-workforce
+description: Design roles, AI agents, robot support, and accountability boundaries for housing, construction, land use, architecture, engineering, facilities, public works, real estate, permitting, inspection, and resilient buildings.
 ---
 
 # Shelter, Construction, Land, and Built Environment Workforce

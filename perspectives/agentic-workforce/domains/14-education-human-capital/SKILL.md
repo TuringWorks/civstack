@@ -1,6 +1,6 @@
 ---
-name: "education-human-capital-workforce"
-description: "Design roles, AI tutors, robot support, curricula, credentialing, training systems, and accountability controls for schools, universities, libraries, workforce development, corporate training, apprenticeships, and human capital formation."
+name: education-human-capital-workforce
+description: Design roles, AI tutors, robot support, curricula, credentialing, training systems, and accountability controls for schools, universities, libraries, workforce development, corporate training, apprenticeships, and human capital formation.
 ---
 
 # Education, Training, Libraries, and Human Capital Workforce

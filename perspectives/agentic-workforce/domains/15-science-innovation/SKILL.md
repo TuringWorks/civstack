@@ -1,6 +1,6 @@
 ---
-name: "science-innovation-workforce"
-description: "Design roles, AI research agents, lab robots, workflows, and governance for science, R&D, standards, metrology, technology transfer, patents, grants, frontier research, and critical emerging technologies."
+name: science-innovation-workforce
+description: Design roles, AI research agents, lab robots, workflows, and governance for science, R&D, standards, metrology, technology transfer, patents, grants, frontier research, and critical emerging technologies.
 ---
 
 # Science, Research, Standards, and Innovation Workforce

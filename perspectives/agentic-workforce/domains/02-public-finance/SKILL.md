@@ -1,6 +1,6 @@
 ---
-name: "public-finance-workforce"
-description: "Design roles, AI agents, robot support, controls, and role definitions for tax, treasury, public budgeting, procurement, grants, audit, public debt, pensions, and public money stewardship."
+name: public-finance-workforce
+description: Design roles, AI agents, robot support, controls, and role definitions for tax, treasury, public budgeting, procurement, grants, audit, public debt, pensions, and public money stewardship.
 ---
 
 # Public Finance, Tax, Treasury, and Procurement Workforce

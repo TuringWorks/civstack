@@ -1,6 +1,6 @@
 ---
-name: "commerce-services-workforce"
-description: "Design roles, AI agents, humanoid robot support, workflows, and accountability controls for retail, sales, customer support, hospitality, restaurants, ecommerce, service operations, pricing, inventory, and customer experience."
+name: commerce-services-workforce
+description: Design roles, AI agents, humanoid robot support, workflows, and accountability controls for retail, sales, customer support, hospitality, restaurants, ecommerce, service operations, pricing, inventory, and customer experience.
 ---
 
 # Commerce, Retail, Hospitality, and Customer Operations Workforce

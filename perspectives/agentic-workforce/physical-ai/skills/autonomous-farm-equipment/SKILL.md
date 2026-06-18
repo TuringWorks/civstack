@@ -1,6 +1,6 @@
 ---
-name: "autonomous-farm-equipment-workforce"
-description: "Design roles, AI agents, autonomous machine roles, operating procedures, safety controls, and accountability for self-driving tractors, sprayers, seeders, planters, tillage equipment, field robots, orchard machines, irrigation robots, and precision agriculture autonomy."
+name: autonomous-farm-equipment-workforce
+description: Design roles, AI agents, autonomous machine roles, operating procedures, safety controls, and accountability for self-driving tractors, sprayers, seeders, planters, tillage equipment, field robots, orchard machines, irrigation robots, and precision agriculture autonomy.
 ---
 
 # Autonomous Farm Equipment Workforce

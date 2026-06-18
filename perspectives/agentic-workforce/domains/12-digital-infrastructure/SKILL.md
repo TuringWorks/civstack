@@ -1,6 +1,6 @@
 ---
-name: "digital-infrastructure-workforce"
-description: "Design roles, AI agents, robot support, and accountability controls for software, communications, telecom, data centers, cloud, cybersecurity, AI platforms, data infrastructure, product engineering, and digital public infrastructure."
+name: digital-infrastructure-workforce
+description: Design roles, AI agents, robot support, and accountability controls for software, communications, telecom, data centers, cloud, cybersecurity, AI platforms, data infrastructure, product engineering, and digital public infrastructure.
 ---
 
 # Communications, Software, Cybersecurity, and Digital Infrastructure Workforce

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.lamina.robot/schemas/motion-intent-v0.1.json",
+  "title": "Lamina MotionIntent v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "intent_id",
+    "created_at",
+    "expires_at",
+    "skill",
+    "priority",
+    "expected_mode",
+    "parameters",
+    "constraints"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.1" },
+    "intent_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{7,63}$"
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "expires_at": { "type": "string", "format": "date-time" },
+    "skill": {
+      "enum": ["home", "hold", "look_at", "gesture", "point_at", "safe_stop"]
+    },
+    "priority": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "expected_mode": { "enum": ["SAFE_IDLE", "RUN"] },
+    "parameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "target_id": { "type": "string", "maxLength": 64 },
+        "gesture_id": {
+          "enum": ["small_wave", "nod_once", "open_palm", "rest"]
+        },
+        "duration_s": { "type": "number", "exclusiveMinimum": 0, "maximum": 10 },
+        "speed_scale": { "type": "number", "exclusiveMinimum": 0, "maximum": 0.25 }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["max_speed_scale", "stop_if_target_lost", "requires_clear_workspace"],
+      "properties": {
+        "max_speed_scale": { "type": "number", "exclusiveMinimum": 0, "maximum": 0.25 },
+        "stop_if_target_lost": { "type": "boolean" },
+        "requires_clear_workspace": { "type": "boolean" },
+        "minimum_target_confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "rationale": { "type": "string", "maxLength": 240 }
+  }
+}
+

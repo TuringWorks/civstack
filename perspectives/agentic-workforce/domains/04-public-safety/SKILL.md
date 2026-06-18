@@ -1,6 +1,6 @@
 ---
-name: "public-safety-workforce"
-description: "Design roles, AI agents, robots, workflows, and accountability controls for emergency response, policing, fire, EMS, disaster management, corrections, investigations, dispatch, and public safety operations."
+name: public-safety-workforce
+description: Design roles, AI agents, robots, workflows, and accountability controls for emergency response, policing, fire, EMS, disaster management, corrections, investigations, dispatch, and public safety operations.
 ---
 
 # Public Safety, Justice Operations, and Emergency Response Workforce

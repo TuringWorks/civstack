@@ -1,6 +1,6 @@
 ---
-name: "finance-markets-workforce"
-description: "Design roles, AI agents, controls, and accountability boundaries for banking, insurance, payments, accounting, capital markets, risk, audit, AML, sanctions, trade finance, credit, and financial advice."
+name: finance-markets-workforce
+description: Design roles, AI agents, controls, and accountability boundaries for banking, insurance, payments, accounting, capital markets, risk, audit, AML, sanctions, trade finance, credit, and financial advice.
 ---
 # Finance, Insurance, Payments, and Capital Markets Workforce
 

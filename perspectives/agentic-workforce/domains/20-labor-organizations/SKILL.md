@@ -1,6 +1,6 @@
 ---
-name: "labor-organizations-workforce"
-description: "Design roles, AI agents, robot-support implications, and accountability controls for workforce systems, HR, recruiting, payroll, labor standards, organizational design, training, job redesign, automation transition, and worker protection."
+name: labor-organizations-workforce
+description: Design roles, AI agents, robot-support implications, and accountability controls for workforce systems, HR, recruiting, payroll, labor standards, organizational design, training, job redesign, automation transition, and worker protection.
 ---
 
 # Labor, Workforce Systems, and Organizational Life Workforce

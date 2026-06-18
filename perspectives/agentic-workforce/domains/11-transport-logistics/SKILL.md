@@ -1,6 +1,6 @@
 ---
-name: "transport-logistics-workforce"
-description: "Design roles, AI agents, robot labor, workflows, and accountability controls for transport, freight, ports, customs brokerage, warehouses, postal systems, aviation, rail, maritime, roads, public transit, and supply-chain logistics."
+name: transport-logistics-workforce
+description: Design roles, AI agents, robot labor, workflows, and accountability controls for transport, freight, ports, customs brokerage, warehouses, postal systems, aviation, rail, maritime, roads, public transit, and supply-chain logistics.
 ---
 
 # Transportation, Logistics, Postal, and Mobility Workforce

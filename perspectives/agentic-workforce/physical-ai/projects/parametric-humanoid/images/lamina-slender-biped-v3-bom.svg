@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf7ee"/>
+      <stop offset="1" stop-color="#efe6d6"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9c996"/>
+      <stop offset="0.52" stop-color="#c99c60"/>
+      <stop offset="1" stop-color="#9d6c37"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#657b8d" stroke-opacity=".09" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#25313a" flood-opacity=".16"/>
+    </filter>
+    <style>
+      .title{font:700 34px system-ui,sans-serif;fill:#17334a;letter-spacing:1px}
+      .subtitle{font:500 15px system-ui,sans-serif;fill:#66747e}
+      .card-title{font:700 20px system-ui,sans-serif;fill:#17334a;letter-spacing:.4px}
+      .line{font:500 15px system-ui,sans-serif;fill:#344955}
+      .small{font:500 13px system-ui,sans-serif;fill:#5b6b75}
+      .qty{font:800 28px system-ui,sans-serif;fill:#b35b35}
+      .leader{stroke:#557994;stroke-width:2;fill:none;stroke-dasharray:6 5}
+      .joint{fill:#26343c;stroke:#0e171c;stroke-width:3}
+      .wood{fill:url(#wood);stroke:#6d4927;stroke-width:3}
+      .cut{fill:none;stroke:#f6dfb6;stroke-width:3;opacity:.75}
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#paper)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <text x="54" y="58" class="title">LAMINA SLENDER BIPED V3 — VISUAL BOM</text>
+  <text x="55" y="85" class="subtitle">Laser-cut wooden structure · standardized purchased hardware · no custom metal machining</text>
+
+  <!-- Cards -->
+  <g filter="url(#shadow)">
+    <g transform="translate(45 120)">
+      <rect width="425" height="150" rx="16" fill="#fffdf8" stroke="#7590a3" stroke-width="2"/>
+      <text x="24" y="35" class="card-title">LASER-CUT WOOD</text>
+      <path d="M24 55h118v65H24zM38 45h118v65H38z" fill="#d8b27b" stroke="#76512d" stroke-width="2"/>
+      <path d="M50 58h28v22H50zm38 0h25v42H88zm35 0h20v25h-20z" fill="#fff7e9" stroke="#956c3e"/>
+      <text x="185" y="72" class="line">4 × 6 mm plywood</text>
+      <text x="185" y="98" class="line">2 × 12 mm plywood</text>
+      <text x="185" y="124" class="line">dowels + spare joint plates</text>
+    </g>
+    <g transform="translate(45 290)">
+      <rect width="425" height="150" rx="16" fill="#fffdf8" stroke="#7590a3" stroke-width="2"/>
+      <text x="24" y="35" class="card-title">SMART ACTUATORS</text><text x="350" y="36" class="qty">31</text>
+      <g transform="translate(35 62)" fill="#26343c" stroke="#0d1519" stroke-width="2">
+        <rect width="62" height="54" rx="10"/><circle cx="31" cy="27" r="15" fill="#bf8748"/>
+        <rect x="74" width="62" height="54" rx="10"/><circle cx="105" cy="27" r="15" fill="#bf8748"/>
+      </g>
+      <text x="194" y="70" class="line">12 leg  ·  12 arm</text>
+      <text x="194" y="97" class="line">3 waist  ·  2 neck</text>
+      <text x="194" y="124" class="line">2 adaptive gripper</text>
+    </g>
+    <g transform="translate(45 460)">
+      <rect width="425" height="150" rx="16" fill="#fffdf8" stroke="#7590a3" stroke-width="2"/>
+      <text x="24" y="35" class="card-title">TENDON DRIVE</text>
+      <circle cx="72" cy="91" r="38" fill="#26343c"/><circle cx="72" cy="91" r="18" fill="#d2a469"/>
+      <path d="M110 91c42-45 57 43 94-10" fill="none" stroke="#171f24" stroke-width="7"/>
+      <text x="225" y="70" class="line">50 m low-stretch line</text>
+      <text x="225" y="97" class="line">40 capstans + pulleys</text>
+      <text x="225" y="124" class="line">6 counterbalance springs</text>
+    </g>
+    <g transform="translate(45 630)">
+      <rect width="425" height="150" rx="16" fill="#fffdf8" stroke="#7590a3" stroke-width="2"/>
+      <text x="24" y="35" class="card-title">JOINT HARDWARE</text>
+      <g transform="translate(25 63)">
+        <circle cx="30" cy="30" r="25" fill="none" stroke="#394850" stroke-width="10"/>
+        <circle cx="92" cy="30" r="25" fill="none" stroke="#394850" stroke-width="10"/>
+        <path d="M135 11v40m22-40v40m22-40v40" stroke="#727b7e" stroke-width="8" stroke-linecap="round"/>
+      </g>
+      <text x="225" y="70" class="line">31 shafts / shoulder bolts</text>
+      <text x="225" y="97" class="line">62 standard bearings</text>
+      <text x="225" y="124" class="line">metric fastener set</text>
+    </g>
+
+    <g transform="translate(1130 120)">
+      <rect width="425" height="150" rx="16" fill="#fffdf8" stroke="#7590a3" stroke-width="2"/>
+      <text x="24" y="35" class="card-title">SENSORS</text>
+      <g transform="translate(28 60)">
+        <rect width="58" height="50" rx="8" fill="#26343c"/><circle cx="29" cy="25" r="13" fill="#6792ad"/>
+        <rect x="72" width="65" height="50" rx="8" fill="#356e62"/><circle cx="92" cy="25" r="6" fill="#d9b56f"/><circle cx="117" cy="25" r="6" fill="#d9b56f"/>
+      </g>
+      <text x="185" y="68" class="line">31 joint encoders</text>
+      <text x="185" y="94" class="line">8 foot sensors  ·  2 IMUs</text>
+      <text x="185" y="120" class="line">2 cameras  ·  1 proximity</text>
+    </g>
+    <g transform="translate(1130 290)">
+      <rect width="425" height="150" rx="16" fill="#fffdf8" stroke="#7590a3" stroke-width="2"/>
+      <text x="24" y="35" class="card-title">CONTROL</text>
+      <g transform="translate(30 59)">
+        <rect width="125" height="62" rx="6" fill="#2e7364" stroke="#173f36" stroke-width="2"/>
+        <rect x="15" y="13" width="42" height="28" fill="#253039"/><rect x="70" y="12" width="40" height="10" fill="#d6b273"/>
+        <path d="M8 54h110M8 8h110" stroke="#d6b273" stroke-width="3" stroke-dasharray="4 6"/>
+      </g>
+      <text x="185" y="68" class="line">2 real-time controllers</text>
+      <text x="185" y="94" class="line">1 local brain computer</text>
+      <text x="185" y="120" class="line">4 isolated bus hubs</text>
+    </g>
+    <g transform="translate(1130 460)">
+      <rect width="425" height="150" rx="16" fill="#fffdf8" stroke="#7590a3" stroke-width="2"/>
+      <text x="24" y="35" class="card-title">POWER</text>
+      <g transform="translate(30 63)">
+        <rect width="135" height="60" rx="8" fill="#26343c" stroke="#0e171c" stroke-width="3"/>
+        <rect x="18" y="15" width="78" height="30" rx="4" fill="#516069"/>
+        <circle cx="113" cy="20" r="5" fill="#c74f3c"/><circle cx="113" cy="40" r="5" fill="#20282c"/>
+      </g>
+      <text x="195" y="70" class="line">battery + BMS</text>
+      <text x="195" y="97" class="line">protected distribution</text>
+      <text x="195" y="124" class="line">DC-DC conversion</text>
+    </g>
+    <g transform="translate(1130 630)">
+      <rect width="425" height="150" rx="16" fill="#fffdf8" stroke="#7590a3" stroke-width="2"/>
+      <text x="24" y="35" class="card-title">SAFETY</text>
+      <g transform="translate(35 62)">
+        <circle cx="35" cy="35" r="30" fill="#d9a243"/><circle cx="35" cy="28" r="22" fill="#bd3e32"/>
+        <path d="M100 2v55c0 25 38 25 38 0V25" fill="none" stroke="#26343c" stroke-width="8"/>
+      </g>
+      <text x="205" y="70" class="line">rear shoulder E-stop</text>
+      <text x="205" y="97" class="line">fall-arrest tether</text>
+      <text x="205" y="124" class="line">hold-to-run pendant</text>
+    </g>
+  </g>
+
+  <!-- Leaders -->
+  <path class="leader" d="M470 195H555L620 260"/><path class="leader" d="M470 365H560L640 340"/>
+  <path class="leader" d="M470 535H560L650 450"/><path class="leader" d="M470 705H575L660 580"/>
+  <path class="leader" d="M1130 195h-90l-65 65"/><path class="leader" d="M1130 365h-90l-75 10"/>
+  <path class="leader" d="M1130 535h-90l-85 80"/><path class="leader" d="M1130 705h-90l-100-35"/>
+
+  <!-- Central exploded wooden biped -->
+  <g transform="translate(800 446)" filter="url(#shadow)">
+    <!-- head -->
+    <g transform="translate(0 -325)">
+      <ellipse rx="67" ry="55" class="wood"/>
+      <path d="M-55-25H55M-63-8H63M-65 10H65M-57 28H57" class="cut"/>
+      <rect x="-53" y="-5" width="106" height="16" rx="8" fill="#26343c"/>
+      <circle cx="-23" cy="3" r="7" fill="#7098aa"/><circle cx="23" cy="3" r="7" fill="#7098aa"/>
+    </g>
+    <rect x="-22" y="-270" width="44" height="40" rx="12" class="joint"/>
+    <!-- torso -->
+    <path d="M-102-225Q0-258 102-225L88-58Q0-28-88-58Z" class="wood"/>
+    <path d="M-76-205H76M-83-170H83M-87-135H87M-89-100H89M-86-67H86" class="cut"/>
+    <rect x="-42" y="-206" width="84" height="132" rx="12" fill="#27353d" opacity=".92"/>
+    <circle cx="0" cy="-180" r="18" fill="#b47b42"/><circle cx="0" cy="-130" r="18" fill="#b47b42"/><circle cx="0" cy="-80" r="18" fill="#b47b42"/>
+    <!-- waist and pelvis -->
+    <rect x="-34" y="-45" width="68" height="46" rx="14" class="joint"/>
+    <path d="M-94 12Q0-15 94 12L78 82H-78Z" class="wood"/>
+    <rect x="-38" y="22" width="76" height="45" rx="8" fill="#27353d"/>
+    <!-- arms -->
+    <g transform="translate(-122 -190) rotate(13)">
+      <circle r="31" class="joint"/><path d="M-25 25L-38 150Q0 172 38 150L25 25Z" class="wood"/>
+      <path d="M-13 42v95M0 36v107M13 42v95" class="cut"/>
+      <circle cy="169" r="27" class="joint"/>
+      <path d="M-25 191L-31 303Q0 322 31 303L25 191Z" class="wood"/>
+      <path d="M-12 205v84M0 199v98M12 205v84" class="cut"/>
+      <g transform="translate(0 330)"><circle r="22" class="joint"/><path d="M-20 15l-18 54 17 6 20-40 2 43h15l2-43 20 40 17-6-18-54z" class="wood"/></g>
+    </g>
+    <g transform="translate(122 -190) rotate(-13)">
+      <circle r="31" class="joint"/><path d="M-25 25L-38 150Q0 172 38 150L25 25Z" class="wood"/>
+      <path d="M-13 42v95M0 36v107M13 42v95" class="cut"/>
+      <circle cy="169" r="27" class="joint"/>
+      <path d="M-25 191L-31 303Q0 322 31 303L25 191Z" class="wood"/>
+      <path d="M-12 205v84M0 199v98M12 205v84" class="cut"/>
+      <g transform="translate(0 330)"><circle r="22" class="joint"/><path d="M-20 15l-18 54 17 6 20-40 2 43h15l2-43 20 40 17-6-18-54z" class="wood"/></g>
+    </g>
+    <!-- legs -->
+    <g transform="translate(-52 77) rotate(2)">
+      <circle r="33" class="joint"/><path d="M-30 28L-39 184Q0 205 39 184L30 28Z" class="wood"/>
+      <path d="M-14 44v124M0 37v140M14 44v124" class="cut"/><circle cy="209" r="29" class="joint"/>
+      <path d="M-26 235L-30 374Q0 393 30 374L26 235Z" class="wood"/><path d="M-11 250v108M0 243v122M11 250v108" class="cut"/>
+      <circle cy="398" r="23" class="joint"/><path d="M-34 418h92l20 29H-38Z" class="wood"/><path d="M-41 448H82" stroke="#1f292f" stroke-width="12" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(52 77) rotate(-2)">
+      <circle r="33" class="joint"/><path d="M-30 28L-39 184Q0 205 39 184L30 28Z" class="wood"/>
+      <path d="M-14 44v124M0 37v140M14 44v124" class="cut"/><circle cy="209" r="29" class="joint"/>
+      <path d="M-26 235L-30 374Q0 393 30 374L26 235Z" class="wood"/><path d="M-11 250v108M0 243v122M11 250v108" class="cut"/>
+      <circle cy="398" r="23" class="joint"/><path d="M-34 418h92l20 29H-38Z" class="wood"/><path d="M-41 448H82" stroke="#1f292f" stroke-width="12" stroke-linecap="round"/>
+    </g>
+    <!-- tendons -->
+    <path d="M-30-210C-95-130-118 20-62 300M30-210C95-130 118 20 62 300" fill="none" stroke="#111a1f" stroke-width="5" stroke-dasharray="8 5"/>
+  </g>
+
+  <text x="800" y="866" text-anchor="middle" class="small">Authoritative quantities: hardware/slender-biped-v3-bom.csv · Concept BOM subject to load testing and actuator sizing</text>
+</svg>

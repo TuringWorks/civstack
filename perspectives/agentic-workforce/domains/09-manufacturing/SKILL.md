@@ -1,6 +1,6 @@
 ---
-name: "manufacturing-workforce"
-description: "Design roles, AI agents, humanoid robot work, operating procedures, and accountability controls for manufacturing, industrial production, quality, automation, robotics, maintenance, factory operations, and advanced manufacturing."
+name: manufacturing-workforce
+description: Design roles, AI agents, humanoid robot work, operating procedures, and accountability controls for manufacturing, industrial production, quality, automation, robotics, maintenance, factory operations, and advanced manufacturing.
 ---
 
 # Manufacturing and Industrial Production Workforce

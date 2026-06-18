@@ -1,6 +1,6 @@
 ---
-name: "environment-waste-workforce"
-description: "Design roles, AI agents, robot support, procedures, and accountability controls for environment, climate adaptation, waste, recycling, pollution, conservation, remediation, sustainability, carbon accounting, and resource stewardship."
+name: environment-waste-workforce
+description: Design roles, AI agents, robot support, procedures, and accountability controls for environment, climate adaptation, waste, recycling, pollution, conservation, remediation, sustainability, carbon accounting, and resource stewardship.
 ---
 
 # Environment, Climate, Waste, and Resource Stewardship Workforce

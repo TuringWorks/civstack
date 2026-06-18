@@ -1,6 +1,6 @@
 ---
-name: "materials-chemicals-workforce"
-description: "Design roles, AI agents, robot support, procedures, and accountability controls for mining, critical minerals, materials science, chemicals, refining, industrial inputs, hazardous materials, and process safety."
+name: materials-chemicals-workforce
+description: Design roles, AI agents, robot support, procedures, and accountability controls for mining, critical minerals, materials science, chemicals, refining, industrial inputs, hazardous materials, and process safety.
 ---
 
 # Mining, Materials, Chemicals, and Industrial Inputs Workforce

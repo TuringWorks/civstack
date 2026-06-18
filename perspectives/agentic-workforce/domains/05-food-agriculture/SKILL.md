@@ -1,6 +1,6 @@
 ---
-name: "food-agriculture-workforce"
-description: "Design roles, AI personnel, robot labor, operating procedures, and accountability controls for agriculture, food security, fisheries, aquaculture, food processing, inspection, cold chain, nutrition, commodities, import/export food flows, and precision farming."
+name: food-agriculture-workforce
+description: Design roles, AI personnel, robot labor, operating procedures, and accountability controls for agriculture, food security, fisheries, aquaculture, food processing, inspection, cold chain, nutrition, commodities, import/export food flows, and precision farming.
 ---
 
 # Food, Agriculture, Fisheries, and Nutrition Workforce

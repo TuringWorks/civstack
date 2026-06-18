@@ -1,6 +1,6 @@
 ---
-name: "drones-aerial-robotics-workforce"
-description: "Design roles, AI agents, drone fleets, operating procedures, safety cases, and accountability controls for agricultural drones, inspection drones, delivery drones, public safety drones, mapping drones, security drones, disaster response drones, and aerial robotics."
+name: drones-aerial-robotics-workforce
+description: Design roles, AI agents, drone fleets, operating procedures, safety cases, and accountability controls for agricultural drones, inspection drones, delivery drones, public safety drones, mapping drones, security drones, disaster response drones, and aerial robotics.
 ---
 
 # Drones And Aerial Robotics Workforce

@@ -1,6 +1,6 @@
 ---
-name: "culture-civic-life-workforce"
-description: "Design roles, AI assistants, robot support, and accountability boundaries for media, journalism, arts, sports, religion, civic life, community organizing, archives, live events, meaning-making, and social cohesion."
+name: culture-civic-life-workforce
+description: Design roles, AI assistants, robot support, and accountability boundaries for media, journalism, arts, sports, religion, civic life, community organizing, archives, live events, meaning-making, and social cohesion.
 ---
 
 # Media, Culture, Arts, Sports, Religion, and Civic Life Workforce

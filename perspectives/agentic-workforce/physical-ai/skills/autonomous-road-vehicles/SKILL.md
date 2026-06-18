@@ -1,6 +1,6 @@
 ---
-name: "autonomous-road-vehicles-workforce"
-description: "Design roles, AI agents, autonomous machine roles, operating models, safety cases, and accountability controls for self-driving cars, trucks, buses, shuttles, delivery vehicles, robotaxis, yard trucks, drayage vehicles, and autonomous road freight."
+name: autonomous-road-vehicles-workforce
+description: Design roles, AI agents, autonomous machine roles, operating models, safety cases, and accountability controls for self-driving cars, trucks, buses, shuttles, delivery vehicles, robotaxis, yard trucks, drayage vehicles, and autonomous road freight.
 ---
 
 # Autonomous Road Vehicles Workforce

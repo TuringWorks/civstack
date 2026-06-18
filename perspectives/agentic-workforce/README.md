@@ -14,6 +14,7 @@ Use this library when designing national capabilities, institution operating mod
 - `checklists/`: deployment readiness, governance, and safety checklists.
 - `strategies/`: cross-domain strategies, including frontier-technology preeminence.
 - `physical-ai/`: non-humanoid physical AI skills and role cards for autonomous vehicles, farm equipment, harvesters, drones, loaders, AMRs, rail, marine, and fixed robotic cells.
+- `physical-ai/projects/`: experimental build packages, including the [Lamina parametric humanoid](physical-ai/projects/parametric-humanoid/README.md).
 
 ## Current Inventory
 

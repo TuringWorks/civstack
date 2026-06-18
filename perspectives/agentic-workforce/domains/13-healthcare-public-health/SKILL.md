@@ -1,6 +1,6 @@
 ---
-name: "healthcare-public-health-workforce"
-description: "Design roles, AI personnel, robot support, clinical workflows, safety controls, and accountability boundaries for healthcare, public health, hospitals, clinics, pharmacy, biomedical systems, eldercare, epidemiology, and care coordination."
+name: healthcare-public-health-workforce
+description: Design roles, AI personnel, robot support, clinical workflows, safety controls, and accountability boundaries for healthcare, public health, hospitals, clinics, pharmacy, biomedical systems, eldercare, epidemiology, and care coordination.
 ---
 
 # Healthcare, Public Health, and Biomedical Systems Workforce

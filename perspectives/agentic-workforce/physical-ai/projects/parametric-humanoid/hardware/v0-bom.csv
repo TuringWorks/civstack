@@ -1,0 +1,23 @@
+subsystem,item,quantity,minimum_spec,selection_note,status
+structure,Weighted base or steel plate,1,"Tip-resistant at full arm extension; floor/bench mounting holes","Verify with measured center of mass",TBD
+structure,Spine extrusion,1,"20x40 mm class; 800 mm nominal","Use as calibration reference and cable chase",candidate
+structure,Arm links,2,"Tube with bolted end fittings","Avoid decorative ribs carrying bending load",TBD
+structure,Plywood sheet,1,"6 mm Baltic birch or equivalent void-free panel","Prototype cardboard first; measure actual thickness",candidate
+structure,Threaded rod and spacers,4,"M6 nominal","One side of rib stack should allow wood movement",candidate
+actuation,Smart servo actuator,5,"Absolute/incremental feedback; current/load; temperature; fault telemetry; RS-485 or CAN","Buy one for Phase 0 before committing family",TBD
+actuation,Joint bearings,10,"Two per driven axis; sized for radial and moment load","Do not use motor output bearing as the only joint bearing",TBD
+actuation,Mechanical hard stops,5,"Energy-absorbing and replaceable","Stops must act before cable or shell collision",TBD
+actuation,Shoulder counterbalance,1,"Spring/gas/constant-force mechanism","Size after link-rig measurement",TBD
+control,Real-time controller,1,"STM32H7/Teensy 4.1 class; watchdog; isolated CAN/RS-485","No language model in real-time loop",candidate
+control,Local brain computer,1,"Linux; hardware video decode; sufficient RAM for selected local models","Keep on separate process and power domain",TBD
+control,Isolated bus interface,1,"CAN or RS-485 matching actuator family","Termination and grounding documented",TBD
+safety,Mushroom emergency stop,1,"Latching; dual-channel preferred","Mount on fixed upper back at shoulder height; reachable from rear and either side; clear of arm sweep shell panels and tether",required
+safety,Safety relay or drive-enable contactor,1,"Removes actuator enable/power on open circuit","Select to match system voltage/current",required
+safety,Fused DC power supply,1,"SELV; current-limited; sized after actuator test","Start at or below 24 VDC when practical",TBD
+safety,Branch fuses or breakers,1 set,"One protected branch per actuator group","Document ratings and wire gauge",required
+safety,Guarding and bellows,1 set,"Covers reachable pinch/shear zones","Clear shell is useful during development",required
+sensing,Head camera,1,"Global shutter preferred; known latency","Perception is not safety-rated",TBD
+sensing,Joint-independent limit switches,5,"Normally closed where practical","Independent of software position limit",required
+sensing,Base IMU,1,"6-axis minimum","Useful for impact/tip detection even on fixed base",candidate
+interface,Physical enable/hold-to-run control,1,"Deadman behavior for commissioning","Required for maintenance jog",required
+logging,Telemetry storage,1,"Monotonic timestamp; configuration hash; fault log","Can reside on local brain",required

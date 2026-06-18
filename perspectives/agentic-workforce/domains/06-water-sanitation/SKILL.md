@@ -1,6 +1,6 @@
 ---
-name: "water-sanitation-workforce"
-description: "Design roles, AI agents, robot support, procedures, and accountability boundaries for drinking water, wastewater, stormwater, public hygiene, contamination response, flood protection, plumbing, and water utility operations."
+name: water-sanitation-workforce
+description: Design roles, AI agents, robot support, procedures, and accountability boundaries for drinking water, wastewater, stormwater, public hygiene, contamination response, flood protection, plumbing, and water utility operations.
 ---
 
 # Water, Sanitation, and Public Hygiene Workforce

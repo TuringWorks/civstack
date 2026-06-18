@@ -104,7 +104,8 @@ civstack/
 │   ├── physical-ai-safety-boundaries.md  # safety controls / stop conditions / human-only calls
 │   ├── frontier-technology-strategy.md   # the thesis behind the strategic missions
 │   ├── viewpoints-comparison.md          # CivStack vs the Agentic-Workforce viewpoint
-│   └── industry-coverage-crosswalk.md    # BLS/ILO/Wikipedia/Simplicable/G2/VerticalIQ -> the 23 OSs
+│   ├── industry-coverage-crosswalk.md    # BLS/ILO/Wikipedia/Simplicable/G2/VerticalIQ -> the 23 OSs
+│   └── embodied-reference-build.md       # "Lamina" — a buildable instance of the robot architecture
 ├── perspectives/                         # alternative, intact viewpoints (not regenerated)
 │   └── agentic-workforce/                # a parallel hand-authored take on the same problem
 ├── checklists/                           # deployment-readiness gates

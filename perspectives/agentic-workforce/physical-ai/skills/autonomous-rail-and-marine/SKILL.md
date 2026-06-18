@@ -1,6 +1,6 @@
 ---
-name: "autonomous-rail-marine-workforce"
-description: "Design roles, AI agents, autonomous rail, metro, yard systems, marine vessels, port vessels, underwater robots, survey vessels, and marine/rail autonomy with operating procedures, safety cases, and accountability controls."
+name: autonomous-rail-marine-workforce
+description: Design roles, AI agents, autonomous rail, metro, yard systems, marine vessels, port vessels, underwater robots, survey vessels, and marine/rail autonomy with operating procedures, safety cases, and accountability controls.
 ---
 
 # Autonomous Rail And Marine Workforce

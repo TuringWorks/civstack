@@ -1,6 +1,6 @@
 ---
-name: "governance-law-workforce"
-description: "Design roles, AI personnel, humanoid robot tasks, operating procedures, and accountability boundaries for governance, law, courts, public administration, public records, regulation, civic technology, and rights-impacting public decisions."
+name: governance-law-workforce
+description: Design roles, AI personnel, humanoid robot tasks, operating procedures, and accountability boundaries for governance, law, courts, public administration, public records, regulation, civic technology, and rights-impacting public decisions.
 ---
 
 # Governance, Law, and Public Administration Workforce

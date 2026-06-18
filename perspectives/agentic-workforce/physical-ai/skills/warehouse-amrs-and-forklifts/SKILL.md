@@ -1,6 +1,6 @@
 ---
-name: "warehouse-amrs-forklifts-workforce"
-description: "Design roles, AI agents, autonomous mobile robots, autonomous forklifts, sortation systems, operating procedures, safety controls, and accountability for warehouses, ports, factories, hospitals, retail backrooms, and distribution centers."
+name: warehouse-amrs-forklifts-workforce
+description: Design roles, AI agents, autonomous mobile robots, autonomous forklifts, sortation systems, operating procedures, safety controls, and accountability for warehouses, ports, factories, hospitals, retail backrooms, and distribution centers.
 ---
 
 # Warehouse AMRs And Autonomous Forklifts Workforce

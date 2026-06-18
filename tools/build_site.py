@@ -213,8 +213,11 @@ def page(title, body_html, prefix, crumb=""):
 
 def main():
     if os.path.isdir(SITE):
-        shutil.rmtree(SITE)
-    os.makedirs(os.path.join(SITE, "assets"))
+        try:
+            shutil.rmtree(SITE)          # clean rebuild where the filesystem allows deletes
+        except OSError:
+            pass                          # otherwise overwrite in place (e.g. restricted mounts)
+    os.makedirs(os.path.join(SITE, "assets"), exist_ok=True)
     open(os.path.join(SITE, "assets", "style.css"), "w").write(CSS)
     open(os.path.join(SITE, "assets", "app.js"), "w").write(APP_JS)
 

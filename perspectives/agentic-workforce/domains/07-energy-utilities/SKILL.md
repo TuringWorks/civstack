@@ -1,6 +1,6 @@
 ---
-name: "energy-utilities-workforce"
-description: "Design roles, AI agents, robot support, procedures, and accountability controls for power grids, fuels, generation, renewables, nuclear, storage, utility restoration, energy markets, and energy security."
+name: energy-utilities-workforce
+description: Design roles, AI agents, robot support, procedures, and accountability controls for power grids, fuels, generation, renewables, nuclear, storage, utility restoration, energy markets, and energy security.
 ---
 
 # Energy, Utilities, and Grid Operations Workforce

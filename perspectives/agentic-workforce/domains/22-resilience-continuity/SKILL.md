@@ -1,6 +1,6 @@
 ---
-name: "resilience-continuity-workforce"
-description: "Design roles, AI agents, robot support, procedures, and accountability controls for resilience, continuity of government, emergency logistics, strategic foresight, risk management, supply-chain shocks, disaster recovery, and national preparedness."
+name: resilience-continuity-workforce
+description: Design roles, AI agents, robot support, procedures, and accountability controls for resilience, continuity of government, emergency logistics, strategic foresight, risk management, supply-chain shocks, disaster recovery, and national preparedness.
 ---
 
 # Resilience, Continuity, and Strategic Foresight Workforce

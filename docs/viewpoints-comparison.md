@@ -46,6 +46,7 @@ both makes each one's assumptions visible.
 | `checklists/*`, `physical-ai/checklists/*` | `checklists/*` |
 | `templates/*` | `templates/*` |
 | `strategies/frontier-technology-preeminence.md` | `docs/frontier-technology-strategy.md` |
+| `physical-ai/projects/parametric-humanoid/` (the **Lamina** build package) | `docs/embodied-reference-build.md` (absorbed lessons) + the embodied-AI-stack & capability-optimization roles |
 | `catalogs/ai-personnel-catalog.md`, `humanoid-robot-catalog.md`, `role-archetypes.md` | `skills/_catalogs/ai-personnel/`, `humanoid-robots/`, `skills/cross-cutting-archetypes/` |
 
 ## When to reach for which

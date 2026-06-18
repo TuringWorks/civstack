@@ -1,6 +1,6 @@
 ---
-name: "autonomous-harvesters-workforce"
-description: "Design roles, AI agents, autonomous harvesting machines, operating procedures, crop-specific safety controls, quality metrics, and accountability for combines, fruit harvesters, vegetable harvesters, orchard/vineyard harvesters, and robotic harvesting systems."
+name: autonomous-harvesters-workforce
+description: Design roles, AI agents, autonomous harvesting machines, operating procedures, crop-specific safety controls, quality metrics, and accountability for combines, fruit harvesters, vegetable harvesters, orchard/vineyard harvesters, and robotic harvesting systems.
 ---
 
 # Autonomous Harvesters Workforce
