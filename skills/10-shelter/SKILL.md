@@ -72,6 +72,9 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Energy modeling agent** — models building energy and comfort performance. *(supervised by MEP engineer; skill: `roles/energy-modeling-agent/`)*
 - **Facilities maintenance planner** — plans preventive maintenance across a building portfolio. *(supervised by facilities manager; skill: `roles/facilities-maintenance-planner/`)*
 - **Lease/document reviewer** — reviews leases and property documents for terms and risk. *(supervised by property manager; skill: `roles/lease-document-reviewer/`)*
+- **Property listing & valuation agent** — drafts listings and runs comparable-based valuations (AVM) for sale or rent. *(supervised by real-estate broker; skill: `roles/property-listing-valuation-agent/`)*
+- **Lease abstraction & management agent** — extracts lease terms and tracks obligations, renewals, and escalations. *(supervised by property manager; skill: `roles/lease-abstraction-management-agent/`)*
+- **Tenant screening & onboarding assistant** — screens applicants and prepares onboarding within fair-housing and anti-discrimination limits. *(supervised by property manager; skill: `roles/tenant-screening-onboarding-assistant/`)*
 
 ## Humanoid robot roles
 

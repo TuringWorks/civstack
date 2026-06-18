@@ -77,6 +77,7 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Livestock health monitoring agent** — monitors animal health, behavior, and welfare signals and flags issues for the vet. *(supervised by veterinarian / animal health technician; skill: `roles/livestock-health-monitoring-agent/`)*
 - **Autonomous machinery dispatch agent** — dispatches and coordinates tractors, drones, and field robots safely across fields. *(supervised by farm operations manager; skill: `roles/autonomous-machinery-dispatch-agent/`)*
 - **Soil and nutrient optimization agent** — recommends fertilizer, amendments, and variable-rate inputs from soil, tissue, and yield data. *(supervised by agronomist / soil scientist; skill: `roles/soil-and-nutrient-optimization-agent/`)*
+- **Forestry & logging operations agent** — plans sustainable harvest, replanting, and logging logistics within stewardship and permit limits. *(supervised by forester / forestry manager; skill: `roles/forestry-logging-operations-agent/`)*
 
 ## Humanoid robot roles
 

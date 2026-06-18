@@ -70,6 +70,10 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Medication reminder** — reminds and tracks medication adherence. *(supervised by home health aide; skill: `roles/medication-reminder/`)*
 - **Fall-risk monitor** — monitors for falls and safety risks under oversight. *(supervised by care team; skill: `roles/fall-risk-monitor/`)*
 - **Social services referral agent** — connects people to housing, food, and legal aid. *(supervised by social worker; skill: `roles/social-services-referral-agent/`)*
+- **Funeral arrangement assistant** — guides families through funeral and cremation arrangements, documents, and logistics with dignity. *(supervised by funeral director; skill: `roles/funeral-arrangement-assistant/`)*
+- **Death registration & estate-handoff assistant** — prepares death registration, certificates, and benefit/estate/account notifications. *(supervised by funeral director / registrar; skill: `roles/death-registration-estate-handoff-assistant/`)*
+- **Bereavement support coordinator** — coordinates grief resources and respectful follow-up for the bereaved. *(supervised by bereavement counselor; skill: `roles/bereavement-support-coordinator/`)*
+- **Personal-services booking assistant** — schedules and coordinates personal and consumer services (salon, pet care, laundry, home help). *(supervised by service owner; skill: `roles/personal-services-booking-assistant/`)*
 
 ## Humanoid robot roles
 

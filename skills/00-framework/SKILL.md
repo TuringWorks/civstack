@@ -84,23 +84,23 @@ The five-layer pattern says *who* is on the team; this says *how they run togeth
 | 02 | [Public Finance, Tax, Treasury, and Procurement](02-public-finance/) | 9 AI roles |
 | 03 | [Defense, Intelligence, Border, and Foreign Affairs](03-defense/) | 8 AI roles |
 | 04 | [Public Safety, Justice Operations, and Emergency Response](04-public-safety/) | 9 AI roles |
-| 05 | [Food, Agriculture, Fisheries, and Nutrition](05-food/) | 13 AI roles |
+| 05 | [Food, Agriculture, Fisheries, and Nutrition](05-food/) | 14 AI roles |
 | 06 | [Water, Sanitation, and Public Hygiene](06-water/) | 6 AI roles |
 | 07 | [Energy, Utilities, and Grid Operations](07-energy/) | 7 AI roles |
 | 08 | [Mining, Materials, Chemicals, and Industrial Inputs](08-mining/) | 6 AI roles |
 | 09 | [Manufacturing and Industrial Production](09-manufacturing-and-industrial-production/) | 8 AI roles |
-| 10 | [Shelter, Construction, Land, and the Built Environment](10-shelter/) | 8 AI roles |
+| 10 | [Shelter, Construction, Land, and the Built Environment](10-shelter/) | 11 AI roles |
 | 11 | [Transportation, Logistics, Postal, and Mobility](11-transportation/) | 7 AI roles |
 | 12 | [Communications, Software, Cybersecurity, and Digital Infrastructure](12-communications/) | 11 AI roles |
 | 13 | [Healthcare, Public Health, and Biomedical Systems](13-healthcare/) | 9 AI roles |
 | 14 | [Education, Training, Libraries, and Human Capital](14-education/) | 9 AI roles |
 | 15 | [Science, Research, Standards, and Innovation](15-science/) | 9 AI roles |
 | 16 | [Finance, Insurance, Payments, and Capital Markets](16-finance/) | 8 AI roles |
-| 17 | [Commerce, Retail, Hospitality, and Customer Operations](17-commerce/) | 8 AI roles |
+| 17 | [Commerce, Retail, Hospitality, and Customer Operations](17-commerce/) | 12 AI roles |
 | 18 | [Media, Culture, Arts, Sports, Religion, and Civic Life](18-media/) | 7 AI roles |
 | 19 | [Environment, Climate, Waste, and Resource Stewardship](19-environment/) | 6 AI roles |
-| 20 | [Labor, Workforce Systems, and Organizational Life](20-labor/) | 8 AI roles |
-| 21 | [Household, Childcare, Eldercare, and Community Support](21-household/) | 7 AI roles |
+| 20 | [Labor, Workforce Systems, and Organizational Life](20-labor/) | 9 AI roles |
+| 21 | [Household, Childcare, Eldercare, and Community Support](21-household/) | 11 AI roles |
 | 22 | [Resilience, Continuity, and Strategic Foresight](22-resilience/) | 6 AI roles |
 | 23 | [Identity, Civil Registration, and Digital Public Infrastructure](23-identity/) | 8 AI roles |
 

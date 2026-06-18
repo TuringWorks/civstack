@@ -72,6 +72,7 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **HR policy assistant** — answers policy questions and drafts policy. *(supervised by HR business partner; skill: `roles/hr-policy-assistant/`)*
 - **Workforce planning simulator** — models headcount, skills, and automation scenarios. *(supervised by workforce planning lead; skill: `roles/workforce-planning-simulator/`)*
 - **Employee sentiment analyst** — analyzes engagement and sentiment signals. *(supervised by people analytics lead; skill: `roles/employee-sentiment-analyst/`)*
+- **Corporate development & portfolio agent** — supports M&A screening, portfolio strategy, and corporate-management decisions for holding companies and enterprises. *(supervised by corporate development lead; skill: `roles/corporate-development-portfolio-agent/`)*
 
 ## Humanoid robot roles
 

@@ -72,6 +72,10 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Pricing analyst** — recommends prices and promotions within guardrails. *(supervised by category manager; skill: `roles/pricing-analyst/`)*
 - **Review summarizer** — summarizes customer reviews and surfaces issues. *(supervised by product/store manager; skill: `roles/review-summarizer/`)*
 - **Marketing campaign agent** — drafts and targets marketing campaigns. *(supervised by growth marketer; skill: `roles/marketing-campaign-agent/`)*
+- **Distribution & allocation agent** — coordinates wholesale distribution, allocations, and backorders across the network. *(supervised by distribution operations manager; skill: `roles/distribution-allocation-agent/`)*
+- **Wholesale assortment & replenishment agent** — plans wholesale assortment and replenishment against demand and terms. *(supervised by buyer / merchandiser; skill: `roles/wholesale-assortment-replenishment-agent/`)*
+- **Equipment-rental fleet & pricing agent** — manages rental/leasing fleet utilization, availability, and pricing. *(supervised by rental operations manager; skill: `roles/equipment-rental-fleet-pricing-agent/`)*
+- **Repair-service scheduling & estimate agent** — schedules repair and maintenance jobs and drafts estimates. *(supervised by service manager; skill: `roles/repair-service-scheduling-estimate-agent/`)*
 
 ## Humanoid robot roles
 
