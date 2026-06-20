@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CivStack · Capability Router</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --ink:#e8eaed; --muted:#9aa3b2;
+    --line:#2a2f3a; --accent:#6ea8fe; --good:#5dd39e; --warn:#ffb454; --crit:#ff6b6b;
+    --chip:#222734;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1040px;margin:0 auto;padding:28px 20px 60px}
+  h1{font-size:22px;margin:0 0 4px}
+  .sub{color:var(--muted);margin:0 0 22px;font-size:14px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .card h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 14px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:13px;color:var(--muted);margin-bottom:5px}
+  select{width:100%;background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:9px 10px;font-size:14px;appearance:none}
+  select:focus{outline:none;border-color:var(--accent)}
+  .out{margin-top:2px}
+  .rec{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:14px 16px;margin-bottom:12px}
+  .rec .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px}
+  .rec .val{font-size:15px;font-weight:600}
+  .rec .val.tier{color:var(--accent)}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px}
+  .chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:4px 11px;font-size:13px;color:var(--ink)}
+  .badge{display:inline-block;border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin-left:8px;vertical-align:middle}
+  .b-low{background:rgba(93,211,158,.15);color:var(--good)}
+  .b-med{background:rgba(255,180,84,.15);color:var(--warn)}
+  .b-high{background:rgba(255,107,107,.16);color:var(--crit)}
+  ul.rules{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:13.5px}
+  ul.rules li{margin-bottom:5px}
+  .foot{color:var(--muted);font-size:12.5px;margin-top:20px;border-top:1px solid var(--line);padding-top:14px}
+  .safety{font-size:13.5px;color:var(--ink);background:rgba(110,168,254,.08);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:10px 12px;margin-top:4px}
+  code{background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:1px 5px;font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Capability Router</h1>
+  <p class="sub">Pick the smallest, most deterministic model tier and the most efficient optimization method for an embodied capability — with a safe fallback. Part of <strong>CivStack</strong> · <code>_catalogs/capability-optimization/</code>. RLAIF is one method among many.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Describe the capability</h2>
+      <div class="field"><label>Safety-criticality / consequence</label>
+        <select id="safety">
+          <option value="low">Low — reversible, no harm</option>
+          <option value="med" selected>Medium — costly errors</option>
+          <option value="high">High — life-safety or irreversible</option>
+        </select></div>
+      <div class="field"><label>Latency budget</label>
+        <select id="latency">
+          <option value="relaxed">Relaxed — cloud round-trip is fine</option>
+          <option value="rt" selected>Real-time — on-device, sub-second</option>
+          <option value="hrt">Hard-real-time — control loop (ms)</option>
+        </select></div>
+      <div class="field"><label>Verifiability need</label>
+        <select id="verify">
+          <option value="nice" selected>Nice to have</option>
+          <option value="req">Required — must be provable</option>
+        </select></div>
+      <div class="field"><label>Task type</label>
+        <select id="task">
+          <option value="control" selected>Structured perception / control</option>
+          <option value="optimize">Optimization / scheduling / allocation</option>
+          <option value="reason">Open-ended reasoning &amp; language</option>
+        </select></div>
+      <div class="field"><label>Data available</label>
+        <select id="data">
+          <option value="demos" selected>Demonstrations</option>
+          <option value="logs">Logged data</option>
+          <option value="sim">Simulator</option>
+          <option value="none">Little / none</option>
+        </select></div>
+      <div class="field"><label>Compute &amp; power</label>
+        <select id="compute">
+          <option value="ample">Ample — cloud / datacenter</option>
+          <option value="edge" selected>Edge-constrained</option>
+          <option value="tiny">Tiny embedded</option>
+        </select></div>
+      <div class="field"><label>Connectivity</label>
+        <select id="conn">
+          <option value="reliable" selected>Reliable</option>
+          <option value="intermittent">Intermittent</option>
+          <option value="none">None</option>
+        </select></div>
+    </div>
+
+    <div class="card">
+      <h2>Recommendation</h2>
+      <div class="out">
+        <div class="rec"><div class="lbl">Model tier <span id="safetyBadge" class="badge"></span></div><div class="val tier" id="rTier">—</div></div>
+        <div class="rec"><div class="lbl">Primary optimization method(s)</div><div class="chips" id="rMethods"></div></div>
+        <div class="rec"><div class="lbl">Fallback &amp; safety</div><div class="safety" id="rFallback">—</div></div>
+        <div class="rec"><div class="lbl">Why (rules fired)</div><ul class="rules" id="rWhy"></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="foot">Heuristic design aid, not a guarantee. Re-derive per context (compute, data, connectivity, regulation vary by nation and operator), validate on the real task, and keep a verified deterministic safety layer beneath anything learned. See <code>docs/capability-routing-matrix.md</code>.</p>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const inputs = ["safety","latency","verify","task","data","compute","conn"].map($);
+
+function recommend(s){
+  const why = [];
+  let tier, fallback;
+  const methods = [];
+
+  // ---- Tier selection (decision rules, in order) ----
+  if(s.safety==="high" && s.latency==="hrt"){
+    tier = "Deterministic controller (PID/MPC) inside a verified envelope — learned models advisory only";
+    why.push("Safety-critical + hard-real-time → deterministic + formal verification; no learned model in the irreversible loop.");
+  } else if(s.latency==="hrt"){
+    tier = "Deterministic controller or tiny LM (distilled), in-loop — no cloud or large model in the loop";
+    why.push("Hard-real-time control loop → keep the loop deterministic/tiny; the brain sets goals, the loop executes.");
+  } else if(s.task==="optimize"){
+    tier = "Deterministic solver (MILP / convex / search) — learned heuristics only to warm-start";
+    why.push("Optimization / scheduling → exact solvers give provable answers; learning only scales or warm-starts.");
+  } else if(s.task==="reason"){
+    if(s.compute==="tiny" || s.conn==="none"){
+      tier = "Distilled SLM / tiny LM on-device, with a deterministic fallback";
+      why.push("Open-ended reasoning but tiny/offline → distilled on-device model; no cloud dependency.");
+    } else if(s.compute==="edge"){
+      tier = "SLM on-device, cascading to an LLM for the long tail";
+      why.push("Open-ended reasoning on an edge budget → SLM on-device, escalate hard cases to an LLM.");
+    } else {
+      tier = "LLM (cloud / high-end edge), cascading down for routine cases";
+      why.push("Open-ended reasoning with ample compute → LLM, with a cascade to smaller tiers for routine work.");
+    }
+  } else { // structured control/perception
+    if(s.compute==="tiny"){
+      tier = "Tiny LM / specialized net (distilled) in-loop";
+      why.push("Structured perception/control on tiny compute → smallest specialized net that hits accuracy.");
+    } else {
+      tier = "SLM / VLA policy on-device";
+      why.push("Structured perception/control → on-device learned policy (SLM/VLA), right-sized to the device.");
+    }
+  }
+
+  if(s.verify==="req"){
+    tier += " · wrapped with formal verification + runtime monitors";
+    why.push("Verifiability required → add formal methods/runtime monitors; prefer classical components where possible.");
+  }
+
+  // ---- Method selection by available data ----
+  if(s.data==="demos"){ methods.push("Imitation / behavior cloning (BC, DAgger)","Offline RL refinement");
+    why.push("Demonstrations available → imitation first (data-efficient), then offline RL to improve."); }
+  else if(s.data==="sim"){ methods.push("Sim-to-real (domain randomization)","Model-based RL");
+    why.push("Simulator available → train in sim (model-based RL) and transfer; avoids risky on-hardware exploration."); }
+  else if(s.data==="logs"){ methods.push("Offline RL","Supervised fine-tuning");
+    why.push("Logged data → offline RL + supervised fine-tuning, no risky online exploration."); }
+  else { methods.push("Self-supervised pretraining","Collect demos / build a simulator","Deterministic baseline meanwhile");
+    why.push("Little/no data → self-supervised pretraining + start a data engine; ship a deterministic baseline now."); }
+
+  if(s.task==="reason"){ methods.push("Supervised fine-tuning + RLHF/RLAIF");
+    why.push("Language/preference behavior → SFT then RLHF/RLAIF for alignment (one option among reward methods)."); }
+  if(s.task==="optimize"){ methods.unshift("Classical optimization (exact: MILP/convex/search)"); }
+
+  if(s.compute==="edge" || s.compute==="tiny"){ methods.push("Distillation → SLM/tiny + quantization/pruning");
+    why.push((s.compute==="tiny"?"Tiny embedded":"Edge-constrained")+" budget → distill large→small and compress to fit power/latency."); }
+
+  // ---- Fallback / safety ----
+  if(s.safety==="high"){
+    fallback = "Verified safe-stop / minimal-risk maneuver that the safety layer can trigger independently of the brain; teleoperation handoff; a human is accountable for the decision.";
+  } else if(s.conn==="none" || s.conn==="intermittent"){
+    fallback = "On-device fallback + safe-stop; do not depend on a cloud model or teleoperation. Degrade gracefully when offline.";
+  } else {
+    fallback = "Human review on low confidence; escalate edge cases. Keep a deterministic safety layer beneath the learned policy.";
+  }
+  if((s.conn==="none"||s.conn==="intermittent") && s.safety!=="high"){
+    why.push("Limited connectivity → autonomy and safe-stop must be on-device, not reliant on teleop/cloud.");
+  }
+  // Always-on rule
+  why.push("Always: a verified deterministic safety layer with a minimal-risk maneuver sits beneath anything learned for physical actions.");
+
+  return {tier, methods, fallback, why};
+}
+
+function render(){
+  const s = {safety:$("safety").value, latency:$("latency").value, verify:$("verify").value,
+             task:$("task").value, data:$("data").value, compute:$("compute").value, conn:$("conn").value};
+  const r = recommend(s);
+  $("rTier").textContent = r.tier;
+  $("rMethods").innerHTML = r.methods.map(m=>`<span class="chip">${m}</span>`).join("");
+  $("rFallback").textContent = r.fallback;
+  $("rWhy").innerHTML = r.why.map(w=>`<li>${w}</li>`).join("");
+  const b = $("safetyBadge");
+  b.textContent = s.safety==="high"?"high-consequence":s.safety==="med"?"medium":"low";
+  b.className = "badge " + (s.safety==="high"?"b-high":s.safety==="med"?"b-med":"b-low");
+}
+inputs.forEach(el=>el.addEventListener("change", render));
+render();
+</script>
+</body>
+</html>

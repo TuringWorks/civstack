@@ -1,6 +1,6 @@
 ---
 name: "country-economy-jtbd-index"
-description: "Index and shared framework for the Country-Economy Jobs-To-Be-Done skill library: national operating systems, their AI-personnel role skills, 12 cross-cutting archetypes, and the AI/robot catalogs. Use this skill first to navigate the library, understand the shared teaming pattern and accountability model, and find the right operating-system or role skill for any economic task."
+description: "Index and shared framework for the Country-Economy Jobs-To-Be-Done skill library: national operating systems, their AI-personnel role skills, work-system completeness roles, 15 cross-cutting archetypes, and the AI/robot catalogs. Use this skill first to navigate the library, understand the shared teaming pattern and accountability model, and find the right operating-system or role skill for any economic task."
 ---
 
 # Country-Economy JTBD Skill Library — Framework & Index
@@ -12,7 +12,7 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 - `00-framework/` — this index plus the shared concepts every skill assumes (you are here).
 - `01-…` through `22-…` — one folder per **national operating system**. Each has a sector `SKILL.md` (orchestrator) and a `roles/` subfolder of **AI-personnel role skills**.
 - `strategic-missions/` — **cross-cutting national missions** (energy abundance, semiconductor sovereignty, bioeconomy, frontier-AI production, quantum & space, strategic supply chain, science-to-industry, talent formation, public procurement, cyber defense, advanced manufacturing, digital infrastructure). A mission is an *orthogonal axis* to the sectors: it composes several of them toward one objective.
-- `cross-cutting-archetypes/` — the 12 role patterns (Strategist, Operator, Builder, …) that recur in every sector.
+- `cross-cutting-archetypes/` — the 15 role patterns (Strategist, Operator, Builder, …) that recur in every sector.
 - `_catalogs/human-command/` — **accountable human owners** for the strategic missions and cross-cutting authority (national technology strategist, AI governance lead, import/export compliance lead, procurement innovation lead).
 - `_catalogs/informal-economy/` — support roles for the **informal and subsistence sector** (the majority of employment in much of the world): vendor support, gig/platform coordination, informal transport, waste-picker cooperatives, smallholder advisory, savings groups, mutual aid, and formalization navigation — designed to strengthen, not surveil, informal workers.
 - `_catalogs/ai-personnel/` and `_catalogs/humanoid-robots/` — reusable cross-economy role patterns.
@@ -21,10 +21,14 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 - `_catalogs/autonomous-fleet-ops/` — the **operations layer for autonomous vehicle/machine fleets**: ODD & safety-case engineer, remote-operations (teleop) center supervisor, HD mapping & localization engineer, V2X/connectivity & infrastructure engineer, homologation & regulatory lead, depot/maintenance lead, in-field safety operator, and incident/disengagement analyst.
 - `_catalogs/capability-optimization/` — the **how-it's-built layer**: the model tiers (LLM, SLM, tiny LM, deterministic) and the spectrum of optimization methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation/compression, classical control, search, formal methods) with the roles that select and run them. **RLAIF is one option among many.**
 - `_catalogs/simulation-training/` — the **anti-deskilling / keep-warm layer**: job and role simulators that keep humans current, rebuild the learning ladder, and capture tacit knowledge — reusing the machine-training world models. Curriculum designer, scenario-generation agent, competency/certification agent, drill & exercise coordinator, dual-use world-model/fidelity engineer, and tacit-knowledge capture agent. See `docs/role-simulation-and-keepwarm.md`.
+- `_catalogs/transition/` — the **transition layer**: the jobs that move a nation *from* today's economy *to* a human-AI-robot one. The end-state map is silent on the path, but the path is its own major piece of work with its own jobs, frictions, and failure modes — and it differs sharply by context. Roadmap architect, automation sequencing analyst, adoption & change-management agent, workforce-transition program manager, distributional-impact & gains-allocation analyst, vendor-pluralism & lock-in analyst, reversibility & rollback-readiness officer, and staged-rollout & blast-radius assurance agent. The accountable owner is the *National AI-robot transition director* in `_catalogs/human-command/`. See the *Transition Dynamics and Sequencing* and *Political Economy of Automation* sections of `docs/country-economy-core-jtbd.md`.
+- `_catalogs/enabling-work/` — the **work-system completeness layer**: reusable ancillary roles that surround core JTBD with **Enable, Integrate, Assure, Adapt, and Sustain** work. Use it for research and evidence, knowledge and tools, dependencies and handoffs, expediting, decision preparation, stakeholder alignment, independent review and challenge, brainstorming, continuous improvement, administration, and sustainable workforce capacity. See `docs/work-system-completeness-map.md`, `checklists/work-system-completeness-checklist.md`, and `tools/work-system-mapper.html`.
 
 ## The shared model every skill assumes
 
 **A job is a durable outcome society must reliably produce. A role is one way to own, coordinate, or execute it.** AI personnel and robots occupy portions of roles; legal, moral, and political accountability stays with humans and institutions.
+
+**Core work is necessary but not sufficient.** For each core JTBD, check the orthogonal work-system families: **Enable** (evidence, knowledge, tools), **Integrate** (dependencies, flow, stakeholders), **Assure** (quality, risk, challenge), **Adapt** (options, learning, improvement), and **Sustain** (administration, capacity, continuity). Do not instantiate every support role automatically; choose embedded, shared, platform, federated, or temporary support according to demand, specialization, consequence, and coordination cost. The reusable skills live in `_catalogs/enabling-work/`.
 
 **The universal seven-step lifecycle** (used in every skill):
 
@@ -80,29 +84,29 @@ The five-layer pattern says *who* is on the team; this says *how they run togeth
 
 | # | Operating system | Role skills |
 |---|---|---|
-| 01 | [Governance, Law, and Public Administration](01-governance/) | 5 AI roles |
-| 02 | [Public Finance, Tax, Treasury, and Procurement](02-public-finance/) | 12 AI roles |
-| 03 | [Defense, Intelligence, Border, and Foreign Affairs](03-defense/) | 8 AI roles |
-| 04 | [Public Safety, Justice Operations, and Emergency Response](04-public-safety/) | 9 AI roles |
-| 05 | [Food, Agriculture, Fisheries, and Nutrition](05-food/) | 14 AI roles |
-| 06 | [Water, Sanitation, and Public Hygiene](06-water/) | 6 AI roles |
-| 07 | [Energy, Utilities, and Grid Operations](07-energy/) | 8 AI roles |
-| 08 | [Mining, Materials, Chemicals, and Industrial Inputs](08-mining/) | 6 AI roles |
-| 09 | [Manufacturing and Industrial Production](09-manufacturing-and-industrial-production/) | 8 AI roles |
-| 10 | [Shelter, Construction, Land, and the Built Environment](10-shelter/) | 11 AI roles |
-| 11 | [Transportation, Logistics, Postal, and Mobility](11-transportation/) | 9 AI roles |
-| 12 | [Communications, Software, Cybersecurity, and Digital Infrastructure](12-communications/) | 12 AI roles |
-| 13 | [Healthcare, Public Health, and Biomedical Systems](13-healthcare/) | 9 AI roles |
-| 14 | [Education, Training, Libraries, and Human Capital](14-education/) | 9 AI roles |
-| 15 | [Science, Research, Standards, and Innovation](15-science/) | 9 AI roles |
-| 16 | [Finance, Insurance, Payments, and Capital Markets](16-finance/) | 13 AI roles |
-| 17 | [Commerce, Retail, Hospitality, and Customer Operations](17-commerce/) | 12 AI roles |
-| 18 | [Media, Culture, Arts, Sports, Religion, and Civic Life](18-media/) | 7 AI roles |
-| 19 | [Environment, Climate, Waste, and Resource Stewardship](19-environment/) | 8 AI roles |
-| 20 | [Labor, Workforce Systems, and Organizational Life](20-labor/) | 10 AI roles |
-| 21 | [Household, Childcare, Eldercare, and Community Support](21-household/) | 12 AI roles |
-| 22 | [Resilience, Continuity, and Strategic Foresight](22-resilience/) | 7 AI roles |
-| 23 | [Identity, Civil Registration, and Digital Public Infrastructure](23-identity/) | 8 AI roles |
+| 01 | [Governance, Law, and Public Administration](../01-governance/) | 5 AI roles |
+| 02 | [Public Finance, Tax, Treasury, and Procurement](../02-public-finance/) | 12 AI roles |
+| 03 | [Defense, Intelligence, Border, and Foreign Affairs](../03-defense/) | 8 AI roles |
+| 04 | [Public Safety, Justice Operations, and Emergency Response](../04-public-safety/) | 9 AI roles |
+| 05 | [Food, Agriculture, Fisheries, and Nutrition](../05-food/) | 14 AI roles |
+| 06 | [Water, Sanitation, and Public Hygiene](../06-water/) | 6 AI roles |
+| 07 | [Energy, Utilities, and Grid Operations](../07-energy/) | 8 AI roles |
+| 08 | [Mining, Materials, Chemicals, and Industrial Inputs](../08-mining/) | 6 AI roles |
+| 09 | [Manufacturing and Industrial Production](../09-manufacturing-and-industrial-production/) | 8 AI roles |
+| 10 | [Shelter, Construction, Land, and the Built Environment](../10-shelter/) | 11 AI roles |
+| 11 | [Transportation, Logistics, Postal, and Mobility](../11-transportation/) | 9 AI roles |
+| 12 | [Communications, Software, Cybersecurity, and Digital Infrastructure](../12-communications/) | 12 AI roles |
+| 13 | [Healthcare, Public Health, and Biomedical Systems](../13-healthcare/) | 9 AI roles |
+| 14 | [Education, Training, Libraries, and Human Capital](../14-education/) | 9 AI roles |
+| 15 | [Science, Research, Standards, and Innovation](../15-science/) | 9 AI roles |
+| 16 | [Finance, Insurance, Payments, and Capital Markets](../16-finance/) | 13 AI roles |
+| 17 | [Commerce, Retail, Hospitality, and Customer Operations](../17-commerce/) | 12 AI roles |
+| 18 | [Media, Culture, Arts, Sports, Religion, and Civic Life](../18-media/) | 7 AI roles |
+| 19 | [Environment, Climate, Waste, and Resource Stewardship](../19-environment/) | 8 AI roles |
+| 20 | [Labor, Workforce Systems, and Organizational Life](../20-labor/) | 10 AI roles |
+| 21 | [Household, Childcare, Eldercare, and Community Support](../21-household/) | 12 AI roles |
+| 22 | [Resilience, Continuity, and Strategic Foresight](../22-resilience/) | 7 AI roles |
+| 23 | [Identity, Civil Registration, and Digital Public Infrastructure](../23-identity/) | 8 AI roles |
 
 ## The 12 strategic missions (the other axis)
 
@@ -110,25 +114,26 @@ Missions are cross-cutting national capabilities that compose several sectors to
 
 | Strategic mission | Composes operating systems |
 |---|---|
-| [Energy Abundance](strategic-missions/energy-abundance/) | 07, 16, 10, 11, 08, 22 |
-| [Semiconductor Sovereignty](strategic-missions/semiconductor-sovereignty/) | 08, 09, 15, 12, 03, 11 |
-| [Bioeconomy](strategic-missions/bioeconomy/) | 13, 05, 15, 08, 19, 03 |
-| [Frontier AI Production](strategic-missions/frontier-ai-production/) | 12, 15, 07, 08, 20 |
-| [Quantum and Space Systems](strategic-missions/quantum-and-space-systems/) | 15, 08, 09, 03, 12 |
-| [Strategic Supply Chain](strategic-missions/strategic-supply-chain/) | 11, 08, 16, 03, 17, 22 |
-| [Science-to-Industry](strategic-missions/science-to-industry/) | 15, 09, 02, 14, 16 |
-| [Frontier Talent Formation](strategic-missions/frontier-talent-formation/) | 14, 20, 15 |
-| [Public Procurement for Frontier Technology](strategic-missions/public-procurement-for-frontier-technology/) | 02, 01, 15 |
-| [Cyber Defense](strategic-missions/cyber-defense/) | 12, 03, 22, 04 |
-| [Advanced Manufacturing](strategic-missions/advanced-manufacturing/) | 09, 08, 11, 20, 15 |
-| [Digital Infrastructure](strategic-missions/digital-infrastructure/) | 12, 07, 16, 01, 23 |
+| [Energy Abundance](../strategic-missions/energy-abundance/) | 07, 16, 10, 11, 08, 22 |
+| [Semiconductor Sovereignty](../strategic-missions/semiconductor-sovereignty/) | 08, 09, 15, 12, 03, 11 |
+| [Bioeconomy](../strategic-missions/bioeconomy/) | 13, 05, 15, 08, 19, 03 |
+| [Frontier AI Production](../strategic-missions/frontier-ai-production/) | 12, 15, 07, 08, 20 |
+| [Quantum and Space Systems](../strategic-missions/quantum-and-space-systems/) | 15, 08, 09, 03, 12 |
+| [Strategic Supply Chain](../strategic-missions/strategic-supply-chain/) | 11, 08, 16, 03, 17, 22 |
+| [Science-to-Industry](../strategic-missions/science-to-industry/) | 15, 09, 02, 14, 16 |
+| [Frontier Talent Formation](../strategic-missions/frontier-talent-formation/) | 14, 20, 15 |
+| [Public Procurement for Frontier Technology](../strategic-missions/public-procurement-for-frontier-technology/) | 02, 01, 15 |
+| [Cyber Defense](../strategic-missions/cyber-defense/) | 12, 03, 22, 04 |
+| [Advanced Manufacturing](../strategic-missions/advanced-manufacturing/) | 09, 08, 11, 20, 15 |
+| [Digital Infrastructure](../strategic-missions/digital-infrastructure/) | 12, 07, 16, 01, 23 |
 
 ## How to use this library
 
 1. **Start here** to orient.
 2. Open the **operating-system skill** for the relevant sector to get the mission, JTBD, roster, and accountability boundary.
 3. Deploy the specific **role skill(s)** under that sector's `roles/` for execution, or an **archetype**/**catalog** skill for a cross-sector pattern.
-4. Always run the seven-step lifecycle and stop at the human-accountability boundary.
+4. Run the **work-system completeness check**: which Enable, Integrate, Assure, Adapt, and Sustain functions are actually required, and should each be embedded, shared, platform-based, federated, or temporary?
+5. Always run the seven-step lifecycle and stop at the human-accountability boundary.
 
 ## Deployment order (high-leverage first)
 

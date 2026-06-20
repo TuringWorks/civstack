@@ -24,6 +24,7 @@ These are the durable outcomes this operating system must reliably produce, writ
 2. When shocks hit, maintain continuity of government, food, water, energy, health, finance, communications, and logistics.
 3. When recovery begins, coordinate claims, rebuilding, mental health, supply chains, and accountability.
 4. When future scenarios diverge, stress-test systems and invest in options.
+5. When functions are handed to AI and robots, keep a rehearsed manual fallback and defined rollback triggers so the system still runs when automation fails.
 
 ## The universal lifecycle, applied
 
@@ -69,6 +70,20 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Supply disruption monitor** — monitors supply chains for disruption signals. *(supervised by supply chain risk manager; skill: `roles/supply-disruption-monitor/`)*
 - **Claims triage agent** — triages post-disaster claims and aid requests. *(supervised by recovery program manager; skill: `roles/claims-triage-agent/`)*
 - **Strategic-reserve optimization agent** — sizes and positions reserves and redundancy for existential inputs (energy, water, food, medicine, payments) against worst-credible shocks. *(supervised by continuity director / resilience lead; skill: `roles/strategic-reserve-optimization-agent/`)*
+
+## Work-system completeness (the work around the core work)
+
+The core roles above are necessary but not sufficient. For each material JTBD, check which ancillary services are required:
+
+| Family | Required support question | Reusable catalog |
+|---|---|---|
+| **Enable** | Do practitioners have the evidence, knowledge, data, tools, access, and skills they need? | `_catalogs/enabling-work/` |
+| **Integrate** | Who owns dependencies, handoffs, queues, decision preparation, and stakeholder alignment? | `_catalogs/enabling-work/` |
+| **Assure** | What needs independent quality review, challenge, testing, risk, safety, legal, or audit work? | `_catalogs/enabling-work/` |
+| **Adapt** | How are alternatives generated and operational experience converted into improvement? | `_catalogs/enabling-work/` |
+| **Sustain** | Who maintains administration, capacity, wellbeing, coverage, assets, and institutional memory? | `_catalogs/enabling-work/` |
+
+Do not clone every support role into this sector. Choose **embedded, shared, platform, federated, or temporary** support according to demand, specialization, consequence, and context. Every ancillary service must name the core JTBD and owner it serves, its trigger, deliverable, service level, decision boundary, outcome link, escalation, and retirement rule. See the [Work-System Completeness Map](../../docs/work-system-completeness-map.md).
 
 ## Humanoid robot roles
 
@@ -143,6 +158,7 @@ The jobs above are universal; how they are staffed is not. Re-read this sector t
 
 1. Identify which Core JTBD the task serves.
 2. Select the role skill(s) under `roles/` that fit, and confirm the human supervisor.
-3. Run the lifecycle: sense → interpret → decide → mobilize → execute → verify → govern.
-4. Stop at the accountability boundary and route the decision to the accountable human.
-5. Log actions to the control layer and surface anything that trips a failure mode.
+3. Run the work-system completeness check and add only the Enable, Integrate, Assure, Adapt, and Sustain services the core outcome requires.
+4. Run the lifecycle: sense → interpret → decide → mobilize → execute → verify → govern.
+5. Stop at the accountability boundary and route the decision to the accountable human.
+6. Log actions to the control layer and surface anything that trips a failure mode.

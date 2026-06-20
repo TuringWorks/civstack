@@ -1,0 +1,104 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>work-system-completeness-map · CivStack</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="site"><a class="brand" href="../index.html">CivStack</a>
+<span class="muted">browsable skill library</span></header>
+<div class="wrap"><article><h1>The Work-System Completeness Map</h1>
+<p><strong>The orthogonal companion to the Country-Economy Core Jobs To Be Done: what must surround core work for an organization to succeed repeatedly.</strong></p>
+<hr>
+<h2>Why this map exists</h2>
+<p>The core JTBD map names the durable outcomes a society must produce: govern, educate, heal, move goods, supply energy, maintain safety, and so on. That is the correct backbone, but a list of core jobs is not yet an operating organization.</p>
+<p>Core practitioners depend on work that is easy to dismiss as “support”: evidence gathering, brainstorming, preparation, scheduling, handoffs, expediting, quality review, stakeholder alignment, documentation, administration, learning, and workforce care. When this work is absent, specialists wait, improvise, repeat mistakes, lose context, or quietly absorb the coordination burden. When it is overbuilt, support becomes bureaucracy and consumes the work it was meant to help.</p>
+<p>The Work-System Completeness Map adds a second coordinate system:</p>
+<ul><li><strong>Core JTBD:</strong> what outcome must be produced?</li><li><strong>Work-system family:</strong> what surrounding work makes that outcome executable, connected, safe, adaptive, and durable?</li></ul>
+<p>The resulting unit of design is not a role list. It is a <strong>complete work system</strong> with an accountable core owner and only the ancillary services the outcome actually requires.</p>
+<hr>
+<h2>Conceptual grounding</h2>
+<p>This model synthesizes several established organizational lenses:</p>
+<ul><li><strong>Value-chain analysis</strong> distinguishes primary outcome-producing activity from support activities.</li><li><strong>Business-capability maps</strong> describe what an organization must be able to do independently of its org chart.</li><li><strong>Service blueprints</strong> expose frontstage delivery, backstage work, support processes, handoffs, and failure points.</li><li><strong>Value-stream and constraint analysis</strong> make queues, delay, rework, bottlenecks, and flow visible.</li><li><strong>Team-topology models</strong> distinguish outcome-aligned teams from enabling, platform, and specialist services and make interaction mode a design choice.</li><li><strong>Viable-system thinking</strong> separates operations, coordination, control, intelligence/adaptation, and policy.</li><li><strong>Decision-rights models</strong> distinguish who contributes, recommends, decides, executes, and must be informed.</li><li><strong>Organizational-design frameworks</strong> require strategy, structure, process, people, incentives, information, and governance to fit together.</li></ul>
+<p>The Map does not adopt any one framework wholesale. It translates their shared insight into CivStack&#x27;s JTBD, human-accountability, and human–AI–robot model.</p>
+<hr>
+<h2>The six work families</h2>
+<table><thead><tr><th>Family</th><th>Defining question</th><th>Typical work</th><th>Failure when absent</th></tr></thead><tbody><tr><td><strong>Core</strong></td><td>What outcome must we reliably produce?</td><td>Professional practice, operation, building, service delivery, accountable decisions</td><td>Activity exists but the public/economic outcome does not</td></tr><tr><td><strong>Enable</strong></td><td>What evidence, knowledge, tools, data, skills, and platforms does core work need?</td><td>Research, knowledge management, workflow/tooling, training, data stewardship, reusable infrastructure</td><td>Reinvention, weak evidence, inaccessible tools, inconsistent practice</td></tr><tr><td><strong>Integrate</strong></td><td>What must be coordinated across people, teams, stages, and stakeholders?</td><td>Handoffs, dependency management, scheduling, expediting, decision preparation, communication, consultation</td><td>Waiting, dropped work, local optimization, unresolved conflicts</td></tr><tr><td><strong>Assure</strong></td><td>What must be checked, challenged, protected, or independently verified?</td><td>Quality review, testing, risk, compliance, safety, security, audit, red team, grievance</td><td>Defects, unsafe release, hidden assumptions, capture, no credible trust</td></tr><tr><td><strong>Adapt</strong></td><td>How do we generate alternatives and learn as reality changes?</td><td>Brainstorming, design, scenarios, experimentation, retrospectives, process improvement</td><td>Stagnation, first-idea lock-in, repeated mistakes, strategy detached from reality</td></tr><tr><td><strong>Sustain</strong></td><td>What keeps people, assets, coverage, records, and continuity viable?</td><td>Administration, workforce capacity, wellbeing, maintenance, succession, institutional memory</td><td>Burnout, single points of failure, decay, lost knowledge, brittle continuity</td></tr></tbody></table>
+<p>“Support” is therefore not one bucket. Expediting is <strong>Integrate</strong> work; brainstorming is <strong>Adapt</strong> work; research is <strong>Enable</strong> work; independent review is <strong>Assure</strong> work; administration and workload coverage are <strong>Sustain</strong> work.</p>
+<hr>
+<h2>Completeness matrix</h2>
+<p>For each core JTBD, complete one row. A cell can contain a dedicated role, a shared service, a platform, a federated responsibility, a temporary intervention, or an explicit “not required.”</p>
+<table><thead><tr><th>Core JTBD and owner</th><th>Enable</th><th>Integrate</th><th>Assure</th><th>Adapt</th><th>Sustain</th></tr></thead><tbody><tr><td>Outcome, population/customer, accountable owner, success measure</td><td>Evidence, knowledge, tools, data, skills</td><td>Dependencies, handoffs, queues, stakeholders</td><td>Quality, risk, safety, legality, challenge</td><td>Options, experiments, learning, redesign</td><td>Admin, capacity, care, maintenance, continuity</td></tr></tbody></table>
+<h3>Required cell fields</h3>
+<p>Each non-empty cell names:</p>
+<ol><li><strong>Service needed</strong> — the supporting outcome, not merely a title.</li><li><strong>Consumer</strong> — the core owner/team receiving it.</li><li><strong>Trigger</strong> — request, threshold, cadence, incident, dependency, or evidence gap.</li><li><strong>Deliverable</strong> — the usable output and acceptance criteria.</li><li><strong>Topology</strong> — embedded, shared, platform, federated, or temporary.</li><li><strong>Authority</strong> — what the support role may do, must defer, and must escalate.</li><li><strong>Service level</strong> — timeliness, availability, quality, and priority rule.</li><li><strong>Outcome link</strong> — how this work changes the core constraint or result.</li><li><strong>Retirement rule</strong> — when the support can be automated, absorbed, or stopped.</li></ol>
+<hr>
+<h2>Deployment topologies</h2>
+<table><thead><tr><th>Topology</th><th>Use when</th><th>Main risk</th></tr></thead><tbody><tr><td><strong>Embedded</strong></td><td>Context is deep, demand is continuous, or response must be immediate</td><td>Duplication, local capture, loss of independent challenge</td></tr><tr><td><strong>Shared service</strong></td><td>Expertise is scarce and demand is repeatable across teams</td><td>Queueing, generic output, distance from the work</td></tr><tr><td><strong>Platform / self-service</strong></td><td>Needs are common, standardizable, and low-risk</td><td>Rigid happy path, hidden exclusion, poorly supported exceptions</td></tr><tr><td><strong>Federated</strong></td><td>Common standards are needed but local context and authority matter</td><td>Ambiguous ownership and inconsistent execution</td></tr><tr><td><strong>Temporary / enabling</strong></td><td>A team needs help learning, redesigning, recovering, or crossing a transition</td><td>Permanent dependency and consultants who never exit</td></tr></tbody></table>
+<p>Prefer the smallest topology that meets consequence, context, and service-level needs. A small organization may combine several families in one person; a large one may use a shared platform with embedded or federated specialists.</p>
+<hr>
+<h2>Reusable ancillary-role catalog</h2>
+<p>The deployable skills live in <code>skills/_catalogs/enabling-work/</code>.</p>
+<table><thead><tr><th>Family</th><th>Role skill</th><th>Primary service</th></tr></thead><tbody><tr><td>Enable</td><td><strong>Evidence &amp; research enablement agent</strong></td><td>Decision-ready evidence with sources, uncertainty, disagreement, and gaps</td></tr><tr><td>Enable</td><td><strong>Knowledge &amp; decision-record curator</strong></td><td>Findable, governed organizational memory and decision rationale</td></tr><tr><td>Enable</td><td><strong>Workflow &amp; tool enablement agent</strong></td><td>Reusable self-service workflows, templates, tools, permissions, and telemetry</td></tr><tr><td>Integrate</td><td><strong>Dependency &amp; handoff coordinator</strong></td><td>Live dependency map and explicit handoff contracts</td></tr><tr><td>Integrate</td><td><strong>Queue &amp; bottleneck expeditor</strong></td><td>Unblock plan focused on the binding constraint without bypassing controls</td></tr><tr><td>Integrate</td><td><strong>Decision-preparation &amp; meeting synthesis agent</strong></td><td>Decision packet, decision log, commitments, owners, and review dates</td></tr><tr><td>Integrate</td><td><strong>Stakeholder communication &amp; alignment agent</strong></td><td>Two-way engagement, concerns, commitments, conflicts, and feedback loops</td></tr><tr><td>Assure</td><td><strong>Quality &amp; completeness reviewer</strong></td><td>Proportionate independent review and traceable defect disposition</td></tr><tr><td>Assure</td><td><strong>Risk, assumption &amp; challenge agent</strong></td><td>Contrary evidence, challenge cases, mitigations, triggers, and residual risk</td></tr><tr><td>Adapt</td><td><strong>Option-generation &amp; brainstorming facilitator</strong></td><td>Diverse, testable option set before accountable selection</td></tr><tr><td>Adapt</td><td><strong>Retrospective &amp; continuous-improvement agent</strong></td><td>Evidence-linked improvement experiments and follow-through</td></tr><tr><td>Sustain</td><td><strong>Resource &amp; administrative coordination agent</strong></td><td>Reliable administrative service queue and audit trail</td></tr><tr><td>Sustain</td><td><strong>Workforce capacity &amp; wellbeing coordinator</strong></td><td>Sustainable demand, skill, leave, fatigue, accommodation, and coverage plan</td></tr></tbody></table>
+<p>These roles complement the generic <code>_catalogs/ai-personnel/</code> patterns. The generic catalog describes reusable AI capability; this catalog defines the <strong>organizational service contract</strong> around that capability.</p>
+<hr>
+<h2>Completeness diagnostic</h2>
+<p>Run these tests against every important core JTBD.</p>
+<h3>1. Core ownership</h3>
+<ul><li>Is the intended outcome, beneficiary/customer, accountable human owner, and success measure named?</li><li>Is the work genuinely required, or is the organization preserving activity without purpose?</li></ul>
+<h3>2. Enablement</h3>
+<ul><li>Can practitioners reach authoritative evidence, data, tools, knowledge, permissions, and training when needed?</li><li>Are they repeatedly rebuilding the same research, spreadsheet, workflow, or explanation?</li></ul>
+<h3>3. Integration</h3>
+<ul><li>Are upstream/downstream handoffs and acceptance criteria explicit?</li><li>Where does work wait, age, bounce, or become orphaned?</li><li>Who owns dependencies and stakeholder conflict that no specialist owns?</li></ul>
+<h3>4. Assurance</h3>
+<ul><li>What must receive a second look, independent challenge, test, audit, appeal, or professional signoff?</li><li>Is assurance proportionate to consequence, or is it either ceremonial or paralyzing?</li></ul>
+<h3>5. Adaptation</h3>
+<ul><li>Where are alternatives generated before selection?</li><li>How do incidents, feedback, frontline experience, and outcome drift change the work system?</li><li>Are experiments reversible and connected to decisions?</li></ul>
+<h3>6. Sustainability</h3>
+<ul><li>Is administrative and coordination load visible, staffed, and fairly distributed?</li><li>Are workload, fatigue, accessibility, maintenance, succession, and manual fallback managed?</li><li>Can the system function when a key person, vendor, model, or facility is unavailable?</li></ul>
+<h3>7. Support fitness</h3>
+<ul><li>Does every support service have an internal customer and measurable outcome link?</li><li>Is support embedded/shared/platform/federated/temporary for a stated reason?</li><li>Can recurrent support demand be eliminated through better system design?</li><li>Is any support unit accumulating shadow authority or optimizing its own workload?</li></ul>
+<hr>
+<h2>Prioritization</h2>
+<p>Do not fill every matrix cell with a role. Add or improve ancillary work when:</p>
+<p><code>expected core-outcome gain × frequency × consequence × tractability ÷ service cost and coordination tax</code></p>
+<p>Consider evidence confidence and distributional effects explicitly. Start with the binding constraint:</p>
+<ul><li>If work is wrong because evidence is weak, strengthen <strong>Enable</strong>.</li><li>If good work waits or breaks at seams, strengthen <strong>Integrate</strong>.</li><li>If defects or unacceptable risk escape, strengthen <strong>Assure</strong>.</li><li>If the organization repeats itself or cannot imagine alternatives, strengthen <strong>Adapt</strong>.</li><li>If people, assets, memory, or coverage are decaying, strengthen <strong>Sustain</strong>.</li></ul>
+<p>Support should shrink, move, or disappear when the constraint changes.</p>
+<hr>
+<h2>Worked examples</h2>
+<h3>Restore electrical service after an outage</h3>
+<table><thead><tr><th>Core</th><th>Enable</th><th>Integrate</th><th>Assure</th><th>Adapt</th><th>Sustain</th></tr></thead><tbody><tr><td>Grid operator/restoration commander restores safe service</td><td>Telemetry, asset records, weather and fault evidence</td><td>Crew, materials, public safety, priority loads, customer communication</td><td>Switching safety, isolation verification, incident review</td><td>Scenario updates and restoration-procedure improvement</td><td>Roster/fatigue, spares, training, manual operation, records</td></tr></tbody></table>
+<h3>Deliver coordinated healthcare</h3>
+<table><thead><tr><th>Core</th><th>Enable</th><th>Integrate</th><th>Assure</th><th>Adapt</th><th>Sustain</th></tr></thead><tbody><tr><td>Licensed care team improves the patient&#x27;s health</td><td>Records, evidence, diagnostics, benefits knowledge</td><td>Referrals, pharmacy, coverage, home and social support</td><td>Clinical review, consent, safety, privacy, grievance</td><td>Case review, pathway redesign, population learning</td><td>Staffing, supplies, scheduling, wellbeing, continuity</td></tr></tbody></table>
+<h3>Issue a lawful permit</h3>
+<table><thead><tr><th>Core</th><th>Enable</th><th>Integrate</th><th>Assure</th><th>Adapt</th><th>Sustain</th></tr></thead><tbody><tr><td>Authorized official reaches a timely, lawful decision</td><td>Rules, precedents, site/data access, application guidance</td><td>Applicant, reviewers, dependencies, queue and status</td><td>Completeness, legal/code review, conflict checks, appeal</td><td>Bottleneck analysis, regulatory/process redesign</td><td>Records, staffing, training, knowledge, system availability</td></tr></tbody></table>
+<p>The expeditor may accelerate the permit, but cannot waive code, silence objections, or issue the decision. The brainstorming facilitator may widen options, but cannot select policy. The assurance reviewer may recommend a hold, but regulated signoff and risk acceptance remain with authorized humans.</p>
+<hr>
+<h2>Relationship to the seven-step lifecycle</h2>
+<p>The seven-step lifecycle—sense, interpret, decide, mobilize, execute, verify, govern—describes <strong>how one job moves through time</strong>. The Work-System Completeness Map describes <strong>what surrounding organizational services make that lifecycle viable</strong>. They are orthogonal:</p>
+<ul><li>Enable roles often strengthen sense, interpretation, and execution infrastructure.</li><li>Integrate roles connect mobilization, execution, and cross-boundary decisions.</li><li>Assure roles strengthen verification and governance.</li><li>Adapt roles reconnect verification to sensing, interpretation, and redesign.</li><li>Sustain roles keep every stage staffed, maintained, and recoverable.</li></ul>
+<p>Neither model replaces the other.</p>
+<hr>
+<h2>Anti-bureaucracy rules</h2>
+<ol><li>No support role without a named core JTBD and consumer.</li><li>No support metric without an end-to-end outcome or constraint measure.</li><li>No meeting without a purpose, decision right, output, and owner.</li><li>No handoff without acceptance criteria and an escalation path.</li><li>No review depth greater than consequence requires.</li><li>No shared service without queue visibility and service-level expectations.</li><li>No platform without supported exceptions and accessible alternatives.</li><li>No permanent enabling team whose client never becomes more capable.</li><li>No AI support role that silently becomes the accountable decision-maker.</li><li>Retire work that exists only because the system around it is poorly designed.</li></ol>
+<hr>
+<h2>Minimum work-system record</h2>
+<p>For each material core JTBD, maintain:</p>
+<pre><code>Core outcome:
+Beneficiary/customer:
+Accountable human owner:
+Outcome and guardrail measures:
+
+Enable services:
+Integrate services:
+Assure services:
+Adapt services:
+Sustain services:
+
+For each service:
+  consumer · trigger · deliverable · topology · authority
+  service level · outcome link · escalation · retirement rule
+
+Current binding constraint:
+Next work-system experiment:
+Review date:</code></pre>
+<p>The test of completeness is not whether every box is populated. It is whether the core outcome can be produced <strong>without invisible heroics, unsafe shortcuts, chronic waiting, repeated rediscovery, organizational amnesia, or unsustainable human load</strong>.</p>
+<h2>Deployment artifacts</h2>
+<ul><li><a href="../checklists/work-system-completeness-checklist.html"><code>../checklists/work-system-completeness-checklist.md</code></a> — the deployment gate for core anchoring, family coverage, service contracts, topology, anti-bureaucracy, and human accountability.</li><li><a href="../tools/work-system-mapper.html"><code>../tools/work-system-mapper.html</code></a> — an interactive local tool that diagnoses friction, recommends relevant catalog roles, and produces an editable work-system record.</li></ul></article></div></body></html>

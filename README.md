@@ -2,7 +2,7 @@
 
 **The operating systems of an economy — staffed by humans, AI agents, and robots.**
 
-CivStack is an open library of **390 agent skills** that maps everything a modern country and economy must reliably do — from governance and energy to farming and eldercare — and assigns each job to the right mix of a human owner, AI personnel, embodied robots, and non-humanoid autonomous machines (self-driving vehicles, farm equipment, drones), with hard accountability boundaries baked in. It is navigable along two axes: by **sector** (the 23 operating systems) and by **strategic mission** (cross-cutting national capabilities like energy abundance or semiconductor sovereignty that compose several sectors). It covers the **formal and the informal economy**, since informal work is the majority of employment in much of the world.
+CivStack is an open library of **412 agent skills** that maps everything a modern country and economy must reliably do — from governance and energy to farming and eldercare — and assigns each job to the right mix of a human owner, AI personnel, embodied robots, and non-humanoid autonomous machines (self-driving vehicles, farm equipment, drones), with hard accountability boundaries baked in. It is navigable by **sector** (the 23 operating systems), **strategic mission** (cross-cutting national capabilities), and **work-system completeness** (the enabling, integrating, assuring, adapting, and sustaining work around every core job). It covers the **formal and the informal economy**, since informal work is the majority of employment in much of the world.
 
 It turns a strategy document (["Country-Economy Core Jobs To Be Done"](docs/country-economy-core-jtbd.md)) into machine-usable [Agent Skills](https://www.anthropic.com/news/skills): every role ships as a `SKILL.md` an LLM or agent can load to get the full context for *who does what, how, and where a human must stay in charge.*
 
@@ -57,6 +57,14 @@ Automating routine work erodes three things over time: the **human fallback benc
 
 The key idea: the **world models and simulators built to train the machines double as the keep-warm simulators that keep humans current** — one simulation substrate, two students (the model and the human). The *verified deterministic fallback beneath anything learned* (capability layer) is its technical complement.
 
+### Work-system completeness (the work around the core work)
+
+Core JTBD are necessary but not sufficient for a viable organization. CivStack now applies a second coordinate system to every important core job: **Enable** it with evidence, knowledge, tools, and skills; **Integrate** dependencies, handoffs, queues, decisions, and stakeholders; **Assure** quality, risk, safety, legality, and completeness; **Adapt** through options, experiments, retrospectives, and improvement; and **Sustain** administration, workforce capacity, wellbeing, coverage, assets, and institutional memory.
+
+- **[`docs/work-system-completeness-map.md`](docs/work-system-completeness-map.md)** defines the completeness matrix, diagnostic, topologies, anti-bureaucracy rules, and worked examples.
+- **[`skills/_catalogs/enabling-work/`](skills/_catalogs/enabling-work/)** contains the reusable ancillary-role skills, including research enablement, brainstorming, dependency coordination, expediting, assurance, stakeholder alignment, improvement, administration, and capacity/wellbeing.
+- **[`checklists/work-system-completeness-checklist.md`](checklists/work-system-completeness-checklist.md)** and **[`tools/work-system-mapper.html`](tools/work-system-mapper.html)** turn the model into a deployment gate and an editable service-contract record.
+
 ---
 
 ## What's in the box
@@ -66,7 +74,7 @@ The key idea: the **world models and simulators built to train the machines doub
 | Framework & index | 1 | `skills/00-framework/` |
 | National operating systems (sector orchestrators) | 23 | `skills/01-…` … `skills/23-…` |
 | Strategic missions (cross-cutting national capabilities) | 12 | `skills/strategic-missions/` |
-| Human-command roles (accountable owners for missions) | 4 | `skills/_catalogs/human-command/` |
+| Human-command roles (accountable owners for missions) | 5 | `skills/_catalogs/human-command/` |
 | AI-personnel role skills | 212 | `skills/NN-…/roles/` |
 | Embodied robot role skills (sector-nested) | 4 | `skills/05-food/robots/` |
 | Autonomous machine skills (sector-nested) | 27 | `skills/<sector>/autonomous/` |
@@ -78,10 +86,12 @@ The key idea: the **world models and simulators built to train the machines doub
 | Autonomous-fleet operations roles | 17 | `skills/_catalogs/autonomous-fleet-ops/` |
 | Capability & optimization roles (model tiers + training methods) | 11 | `skills/_catalogs/capability-optimization/` |
 | Simulation & keep-warm roles (anti-deskilling) | 6 | `skills/_catalogs/simulation-training/` |
+| Transition roles (today's economy → human-AI-robot) | 8 | `skills/_catalogs/transition/` |
+| Enabling-work roles (work-system completeness) | 13 | `skills/_catalogs/enabling-work/` |
 | Informal-economy support roles | 8 | `skills/_catalogs/informal-economy/` |
-| **Total `SKILL.md` packages** | **390** | |
+| **Total `SKILL.md` packages** | **412** | |
 
-Plus non-skill assets: **2 deployment checklists** (`checklists/`), **3 authoring templates** (`templates/`), and reference docs (`docs/`) including the capability routing matrix, the keep-warm/deskilling guide, and the coverage matrix.
+Plus non-skill assets: **3 deployment checklists** (`checklists/`), **3 authoring templates** (`templates/`), and reference docs (`docs/`) including the capability routing matrix, work-system completeness map, keep-warm/deskilling guide, and coverage matrix.
 
 ### The 23 national operating systems
 
@@ -98,8 +108,9 @@ civstack/
 ├── docs/
 │   ├── country-economy-core-jtbd.md      # the source strategy map
 │   ├── capability-routing-matrix.md      # how to route capabilities to tier + method
-│   ├── excellence-map.md                 # read a nation's character -> route to levers (the Excellence Map)
-│   ├── excellence-map-axis-levers.md     # per-axis: how progress builds a better nation + which JTBD/roles move it
+│   ├── work-system-completeness-map.md   # core work + enable/integrate/assure/adapt/sustain
+│   ├── excellence-map.md                 # outcomes -> capabilities -> posture -> missions (Excellence Map 2.0)
+│   ├── excellence-map-axis-levers.md     # route capability constraints to JTBD, roles, and verified outcomes
 │   ├── role-simulation-and-keepwarm.md   # job/role simulators to address deskilling
 │   ├── coverage-matrix.md                # request -> where to look in the library
 │   ├── non-humanoid-platform-taxonomy.md # which physical form for the job
@@ -112,7 +123,8 @@ civstack/
 │   └── agentic-workforce/                # a parallel hand-authored take on the same problem
 ├── checklists/                           # deployment-readiness gates
 │   ├── ai-robot-role-readiness-checklist.md
-│   └── autonomous-machine-deployment-checklist.md
+│   ├── autonomous-machine-deployment-checklist.md
+│   └── work-system-completeness-checklist.md
 ├── templates/                            # blank authoring templates
 │   ├── role-card.md
 │   ├── ai-agent-brief.md
@@ -139,11 +151,14 @@ civstack/
 │       ├── embodied-ai-stack/<role>/SKILL.md
 │       ├── autonomous-fleet-ops/<role>/SKILL.md
 │       ├── capability-optimization/<role>/SKILL.md
-│       └── simulation-training/<role>/SKILL.md
+│       ├── simulation-training/<role>/SKILL.md
+│       ├── transition/<role>/SKILL.md         # the path: today's economy -> human-AI-robot
+│       └── enabling-work/<role>/SKILL.md      # ancillary work around every core JTBD
 └── tools/
     ├── generate_skills.py                # regenerates the whole library
     ├── capability-router.html            # interactive capability -> tier + method selector
-    ├── excellence-map.html               # interactive Excellence Map (character wheel + destinies)
+    ├── excellence-map.html               # interactive layered diagnosis + destinies + mission routing
+    ├── work-system-mapper.html           # core JTBD -> ancillary services + service-contract record
     ├── build.sh                          # regenerate master + mirror to the vault
     └── sync-vault.sh                     # mirror skills/ to the Obsidian vault
 ```
@@ -191,7 +206,7 @@ Built from the strategy map in [`docs/country-economy-core-jtbd.md`](docs/countr
 
 ## Browse the library (self-hostable site)
 
-A static, browsable site is generated into [`site/`](site/) — search and filter all 390
+A static, browsable site is generated into [`site/`](site/) — search and filter all 412
 skills by text, category, and operating system, and read every skill and doc as a rendered
 page. It is fully self-contained (no server, build tools, network, or JS frameworks):
 

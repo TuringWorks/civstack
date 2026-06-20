@@ -2,7 +2,7 @@
 """
 Build a self-contained, static, browsable site for the CivStack library.
 
-- One rendered HTML page per skill (and per docs/*.md), mirroring skills/ structure.
+- One rendered HTML page per skill, doc, and checklist; standalone HTML tools are copied into the site.
 - A search/filter index page with the catalog inlined (works over file://, no fetch).
 - No build dependencies beyond the Python standard library; no network; no JS frameworks.
 
@@ -18,6 +18,8 @@ import shutil
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKILLS = os.path.join(ROOT, "skills")
 DOCS = os.path.join(ROOT, "docs")
+CHECKLISTS = os.path.join(ROOT, "checklists")
+TOOLS = os.path.join(ROOT, "tools")
 SITE = os.path.join(ROOT, "site")
 
 
@@ -35,6 +37,8 @@ def _inline(s):
         text, href = m.group(1), m.group(2)
         if href.endswith("SKILL.md"):            # intra-skill link -> directory page
             href = href[:-len("SKILL.md")]
+        elif href.endswith(".md"):              # rendered documentation page
+            href = href[:-len(".md")] + ".html"
         return '<a href="%s">%s</a>' % (html.escape(href, quote=True), text)
     s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", link, s)
     return s
@@ -257,6 +261,29 @@ def main():
             open(os.path.join(SITE, "docs", f[:-3] + ".html"), "w").write(page(title, art, "../"))
             docs_links.append('<a href="docs/%s.html">%s</a>' % (f[:-3], f[:-3]))
 
+    # checklist pages
+    checklist_links = []
+    if os.path.isdir(CHECKLISTS):
+        os.makedirs(os.path.join(SITE, "checklists"), exist_ok=True)
+        for f in sorted(os.listdir(CHECKLISTS)):
+            if not f.endswith(".md"):
+                continue
+            fm, body = parse_fm(open(os.path.join(CHECKLISTS, f)).read())
+            title = f[:-3]
+            art = "<article>%s</article>" % md_to_html(body)
+            open(os.path.join(SITE, "checklists", f[:-3] + ".html"), "w").write(page(title, art, "../"))
+            checklist_links.append('<a href="checklists/%s.html">%s</a>' % (f[:-3], f[:-3]))
+
+    # standalone interactive HTML tools
+    tool_links = []
+    if os.path.isdir(TOOLS):
+        os.makedirs(os.path.join(SITE, "tools"), exist_ok=True)
+        for f in sorted(os.listdir(TOOLS)):
+            if not f.endswith(".html"):
+                continue
+            shutil.copy2(os.path.join(TOOLS, f), os.path.join(SITE, "tools", f))
+            tool_links.append('<a href="tools/%s">%s</a>' % (f, f[:-5]))
+
     # data.js (inlined catalog so file:// works without fetch)
     import json
     open(os.path.join(SITE, "data.js"), "w").write(
@@ -267,6 +294,7 @@ def main():
 <h1 style="font-size:26px">CivStack — browsable skill library</h1>
 <p style="color:var(--muted)">%d skills across 23 operating systems and 12 strategic missions.
 Search and filter below, or read the <strong>docs</strong>: %s.</p>
+<p style="color:var(--muted)"><strong>Interactive tools:</strong> %s.<br><strong>Deployment checklists:</strong> %s.</p>
 <div class="controls">
   <input id="q" type="search" placeholder="Search skills…" autofocus>
   <select id="cat"><option value="">All categories</option></select>
@@ -275,10 +303,12 @@ Search and filter below, or read the <strong>docs</strong>: %s.</p>
 <div class="count" id="count"></div>
 <ul class="results" id="results"></ul>
 <script src="data.js"></script><script src="assets/app.js"></script>
-""" % (nskills, " · ".join(docs_links) or "(none)")
+""" % (nskills, " · ".join(docs_links) or "(none)",
+       " · ".join(tool_links) or "(none)", " · ".join(checklist_links) or "(none)")
     open(os.path.join(SITE, "index.html"), "w").write(page("Home", home_body, ""))
 
-    print("Built site/ : %d skill pages + %d docs pages." % (nskills, len(docs_links)))
+    print("Built site/ : %d skill pages + %d docs + %d checklists + %d tools." %
+          (nskills, len(docs_links), len(checklist_links), len(tool_links)))
     print("Open site/index.html, or: python3 -m http.server -d site 8000")
 
 

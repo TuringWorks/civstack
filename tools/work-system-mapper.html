@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CivStack · Work-System Mapper</title>
+<style>
+:root{--bg:#0f1115;--panel:#171a21;--panel2:#1e222b;--ink:#e8eaed;--muted:#9aa3b2;--line:#2a2f3a;--accent:#6ea8fe;--good:#5dd39e;--warn:#ffb454;--chip:#222734}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}.wrap{max-width:1320px;margin:auto;padding:28px 20px 60px}h1{font-size:24px;margin:0 0 4px}h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 13px}.sub{color:var(--muted);max-width:900px;margin:0 0 20px}.grid{display:grid;grid-template-columns:350px minmax(420px,1fr) 380px;gap:16px;align-items:start}@media(max-width:1120px){.grid{grid-template-columns:1fr}}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px}.sticky{position:sticky;top:14px}@media(max-width:1120px){.sticky{position:static}}label{display:block;font-size:12px;color:var(--muted);margin:10px 0 4px}input[type=text],textarea,select{width:100%;background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px 9px}textarea{min-height:68px;resize:vertical}.friction{display:flex;gap:8px;align-items:flex-start;padding:7px 0;border-top:1px solid var(--line);font-size:12.5px}.friction:first-child{border-top:0}.friction input{margin-top:3px}.actions{display:flex;gap:8px;margin-top:12px}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--ink);border-radius:8px;padding:8px 10px;cursor:pointer}.btn.primary{border-color:var(--accent);background:rgba(110,168,254,.12)}.family{margin-bottom:14px;border:1px solid var(--line);border-radius:11px;overflow:hidden}.family-head{display:flex;justify-content:space-between;gap:10px;padding:10px 11px;background:var(--panel2)}.family-title{font-weight:700}.family-purpose{font-size:11px;color:var(--muted)}.role{padding:10px 11px;border-top:1px solid var(--line)}.role-top{display:flex;gap:8px;align-items:flex-start}.role-top input{margin-top:4px}.role-name{font-size:13px;font-weight:600}.role-service{font-size:11px;color:var(--muted);margin-top:1px}.contract{display:grid;grid-template-columns:135px 1fr;gap:8px;margin:8px 0 0 24px}.contract select{font-size:11.5px;padding:5px}.contract input{font-size:11.5px;padding:5px}.hint{font-size:11.5px;color:var(--muted);margin:-5px 0 12px}.badge{display:inline-block;border-radius:999px;padding:2px 8px;font-size:10.5px;background:var(--chip);border:1px solid var(--line);color:var(--muted)}.badge.recommended{color:var(--good);border-color:rgba(93,211,158,.45)}#record{min-height:540px;font:12px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace}.empty{color:var(--warn);font-size:12px;padding:8px;border:1px dashed var(--line);border-radius:8px;margin-bottom:10px}.foot{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;margin-top:20px}code{background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:1px 4px}
+</style>
+</head>
+<body>
+<main class="wrap">
+<h1>Work-System Mapper</h1>
+<p class="sub">Start with one core JTBD, diagnose the surrounding friction, and select only the Enable, Integrate, Assure, Adapt, and Sustain services needed. The output is an editable service-contract record—not an automatic org chart.</p>
+<div class="grid">
+  <section class="card">
+    <h2>1 · Anchor the core work</h2>
+    <label for="outcome">Core outcome</label><input id="outcome" type="text" placeholder="e.g. Issue a timely, lawful building permit" />
+    <label for="beneficiary">Beneficiary / customer</label><input id="beneficiary" type="text" placeholder="Applicants, neighbors, and the public" />
+    <label for="owner">Accountable human owner</label><input id="owner" type="text" placeholder="Authorized permitting official" />
+    <label for="measures">Outcome measures and guardrails</label><textarea id="measures" placeholder="Cycle time, lawful decisions, safety/code compliance, appeal rights"></textarea>
+    <label for="constraint">Current binding constraint</label><textarea id="constraint" placeholder="What evidence shows where the work fails or waits?"></textarea>
+    <h2 style="margin-top:20px">2 · Diagnose friction</h2>
+    <p class="hint">Selections recommend roles; they do not select them automatically.</p>
+    <div id="frictions"></div>
+    <div class="actions"><button class="btn primary" id="recommend">Apply recommendations</button><button class="btn" id="reset">Reset</button></div>
+  </section>
+
+  <section class="card">
+    <h2>3 · Select ancillary services</h2>
+    <p class="hint">Each selected role needs a topology and a role-specific service contract. Empty families are valid when deliberate.</p>
+    <div id="families"></div>
+  </section>
+
+  <aside class="card sticky">
+    <h2>4 · Work-system record</h2>
+    <div id="warning" class="empty">Name the core outcome and accountable owner before deploying support.</div>
+    <textarea id="record" aria-label="Generated work-system record"></textarea>
+    <div class="actions"><button class="btn primary" id="generate">Generate record</button><button class="btn" id="copy">Copy</button></div>
+  </aside>
+</div>
+<p class="foot">Every selected service must improve a named core outcome or binding constraint. Expediting cannot waive controls; facilitation cannot choose strategy; assurance cannot accept risk; AI cannot inherit human accountability. Full method: <code>docs/work-system-completeness-map.md</code>.</p>
+</main>
+<script>
+const FAMILIES={
+ Enable:{purpose:"Evidence, knowledge, tools, data, skills, and reusable platforms"},
+ Integrate:{purpose:"Dependencies, handoffs, queues, decisions, and stakeholders"},
+ Assure:{purpose:"Quality, safety, legality, risk, integrity, and independent challenge"},
+ Adapt:{purpose:"Alternatives, experiments, learning, and redesign"},
+ Sustain:{purpose:"Administration, capacity, wellbeing, coverage, assets, and memory"}
+};
+const ROLES=[
+ {id:"evidence",family:"Enable",name:"Evidence & research enablement agent",service:"Decision-ready evidence with sources, uncertainty, disagreement, and gaps"},
+ {id:"knowledge",family:"Enable",name:"Knowledge & decision-record curator",service:"Governed knowledge and preserved decision rationale"},
+ {id:"workflow",family:"Enable",name:"Workflow & tool enablement agent",service:"Reusable workflows, tools, permissions, documentation, and telemetry"},
+ {id:"dependency",family:"Integrate",name:"Dependency & handoff coordinator",service:"Dependency map and explicit handoff contracts"},
+ {id:"expeditor",family:"Integrate",name:"Queue & bottleneck expeditor",service:"Queue health and an unblock plan without bypassing controls"},
+ {id:"decision",family:"Integrate",name:"Decision-preparation & meeting synthesis agent",service:"Decision packet, decision log, actions, owners, and review dates"},
+ {id:"stakeholder",family:"Integrate",name:"Stakeholder communication & alignment agent",service:"Two-way engagement, concerns, commitments, and conflicts"},
+ {id:"quality",family:"Assure",name:"Quality & completeness reviewer",service:"Proportionate review, defects, disposition, and release recommendation"},
+ {id:"challenge",family:"Assure",name:"Risk, assumption & challenge agent",service:"Contrary evidence, assumptions, mitigations, triggers, and residual risk"},
+ {id:"options",family:"Adapt",name:"Option-generation & brainstorming facilitator",service:"Diverse, testable option set before accountable selection"},
+ {id:"improve",family:"Adapt",name:"Retrospective & continuous-improvement agent",service:"Evidence-linked improvement experiments and follow-through"},
+ {id:"admin",family:"Sustain",name:"Resource & administrative coordination agent",service:"Reliable administrative queue, completion record, and audit trail"},
+ {id:"capacity",family:"Sustain",name:"Workforce capacity & wellbeing coordinator",service:"Sustainable demand, skill, leave, fatigue, accommodation, and coverage plan"}
+];
+const FRICTIONS=[
+ ["Weak or disputed evidence",["evidence"]],["People repeatedly rediscover context or decisions",["knowledge"]],
+ ["Tools, access, or repeatable workflows create friction",["workflow"]],["Work breaks at team or institutional handoffs",["dependency"]],
+ ["Queues age or important work remains blocked",["expeditor"]],["Meetings lack decisions, owners, or follow-through",["decision"]],
+ ["Affected stakeholders are surprised, unheard, or misaligned",["stakeholder"]],["Defects, omissions, or unusable outputs escape",["quality"]],
+ ["Assumptions, misuse, conflicts, or contrary evidence stay hidden",["challenge"]],["The first plausible idea becomes the plan",["options"]],
+ ["Incidents and feedback do not change the system",["improve"]],["Routine administration consumes specialist attention",["admin"]],
+ ["Workload, fatigue, skills, leave, or coverage are unsafe",["capacity"]]
+];
+const TOPOLOGIES=["Embedded","Shared service","Platform / self-service","Federated","Temporary / enabling"];
+const byId=id=>document.getElementById(id); const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function renderFrictions(){byId("frictions").innerHTML=FRICTIONS.map((f,i)=>`<label class="friction"><input type="checkbox" data-friction="${i}"><span>${esc(f[0])}</span></label>`).join("")}
+function renderFamilies(){
+ byId("families").innerHTML=Object.keys(FAMILIES).map(f=>`<div class="family"><div class="family-head"><div><div class="family-title">${f}</div><div class="family-purpose">${FAMILIES[f].purpose}</div></div><span class="badge" id="count-${f}">0 selected</span></div>${ROLES.filter(r=>r.family===f).map(r=>`<div class="role" id="role-${r.id}"><div class="role-top"><input type="checkbox" id="pick-${r.id}" data-role="${r.id}"><div><label class="role-name" for="pick-${r.id}" style="margin:0;color:var(--ink)">${esc(r.name)}</label><div class="role-service">${esc(r.service)}</div><span class="badge" id="rec-${r.id}" hidden>recommended</span></div></div><div class="contract"><select aria-label="Topology for ${esc(r.name)}" id="topology-${r.id}">${TOPOLOGIES.map(t=>`<option>${t}</option>`).join("")}</select><input type="text" id="contract-${r.id}" placeholder="Trigger, deliverable, service level, outcome link, retirement rule" aria-label="Service contract for ${esc(r.name)}"></div></div>`).join("")}</div>`).join("");
+ document.querySelectorAll("[data-role]").forEach(x=>x.addEventListener("change",updateCounts));
+}
+function recommended(){const ids=new Set();document.querySelectorAll("[data-friction]:checked").forEach(x=>FRICTIONS[Number(x.dataset.friction)][1].forEach(id=>ids.add(id)));return ids}
+function showRecommendations(){const ids=recommended();ROLES.forEach(r=>{const badge=byId(`rec-${r.id}`);badge.hidden=!ids.has(r.id);badge.classList.toggle("recommended",ids.has(r.id))})}
+function applyRecommendations(){const ids=recommended();ROLES.forEach(r=>{if(ids.has(r.id))byId(`pick-${r.id}`).checked=true});showRecommendations();updateCounts();generate()}
+function updateCounts(){Object.keys(FAMILIES).forEach(f=>{const n=ROLES.filter(r=>r.family===f&&byId(`pick-${r.id}`).checked).length;byId(`count-${f}`).textContent=`${n} selected`})}
+function val(id){return byId(id).value.trim()||"[not specified]"}
+function generate(){
+ const chosen=ROLES.filter(r=>byId(`pick-${r.id}`).checked);const owner=val("owner"),outcome=val("outcome");
+ byId("warning").style.display=(outcome==="[not specified]"||owner==="[not specified]")?"block":"none";
+ let s=`# Work-System Record\n\nCore outcome: ${outcome}\nBeneficiary/customer: ${val("beneficiary")}\nAccountable human owner: ${owner}\nOutcome measures and guardrails: ${val("measures")}\nBinding constraint: ${val("constraint")}\n`;
+ Object.keys(FAMILIES).forEach(f=>{const rs=chosen.filter(r=>r.family===f);s+=`\n## ${f}\n`;if(!rs.length){s+="Intentionally empty / not yet assessed.\n";return}rs.forEach(r=>{s+=`\n- Role: ${r.name}\n  Service: ${r.service}\n  Topology: ${byId(`topology-${r.id}`).value}\n  Contract: ${byId(`contract-${r.id}`).value.trim()||"[define consumer, trigger, deliverable, acceptance, service level, authority, outcome link, escalation, and retirement]"}\n`})});
+ s+=`\n## Governance\nHuman accountability remains with: ${owner}\nUncovered risks / intentionally empty families: [review]\nNext experiment: [define]\nReview date: [define]\n`;
+ byId("record").value=s;
+}
+async function copyRecord(){generate();try{await navigator.clipboard.writeText(byId("record").value);byId("copy").textContent="Copied";setTimeout(()=>byId("copy").textContent="Copy",1200)}catch(_){byId("record").select()}}
+function resetAll(){document.querySelectorAll("input,textarea").forEach(x=>{if(x.type==="checkbox")x.checked=false;else x.value=""});ROLES.forEach(r=>byId(`topology-${r.id}`).selectedIndex=0);showRecommendations();updateCounts();generate()}
+
+renderFrictions();renderFamilies();document.querySelectorAll("[data-friction]").forEach(x=>x.addEventListener("change",showRecommendations));byId("recommend").addEventListener("click",applyRecommendations);byId("generate").addEventListener("click",generate);byId("copy").addEventListener("click",copyRecord);byId("reset").addEventListener("click",resetAll);updateCounts();generate();
+</script>
+</body>
+</html>

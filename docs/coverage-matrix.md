@@ -18,7 +18,7 @@ Where to look in CivStack for common requests — a traceability map from a user
 
 ## By sector
 
-Each of the 22 operating systems (`skills/01-…` … `skills/22-…`) carries its mission, jobs-to-be-done, human role families, AI-personnel role skills (`roles/`), robot/machine roles, accountability boundary, labor-market grounding, and a deskilling/keep-warm regime. Start from the sector skill, then deploy the specific role skills under it.
+Each of the 23 operating systems (`skills/01-…` … `skills/23-…`) carries its mission, jobs-to-be-done, human role families, AI-personnel role skills (`roles/`), robot/machine roles, accountability boundary, labor-market grounding, a work-system completeness check, and a deskilling/keep-warm regime. Start from the sector skill, then deploy the specific role skills under it.
 
 ## By strategic mission
 
@@ -29,6 +29,7 @@ When the goal is a national capability that spans sectors, start from `skills/st
 | You need | Look in |
 |---|---|
 | The reusable role pattern (strategist, operator, builder, …) | `skills/cross-cutting-archetypes/` |
+| Ancillary work around a core JTBD (research, brainstorming, expediting, handoffs, assurance, improvement, administration, capacity) | `docs/work-system-completeness-map.md`, `skills/_catalogs/enabling-work/` |
 | Reusable AI / robot role patterns | `skills/_catalogs/ai-personnel/`, `skills/_catalogs/humanoid-robots/` |
 | How a capability should be built (tier + method) | `docs/capability-routing-matrix.md`, `tools/capability-router.html` |
 | Addressing deskilling / keeping humans current | `docs/role-simulation-and-keepwarm.md`, `skills/_catalogs/simulation-training/`, OS 22 |

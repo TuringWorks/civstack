@@ -3,9 +3,9 @@
 Generator for the Country-Economy JTBD skill library.
 
 Emits an extensive, consistent SKILL.md package for:
-  - each of the 22 national operating systems (sector orchestrator skill)
+  - each national operating system (sector orchestrator skill)
   - each AI-personnel role inside every operating system (deployable agent skills)
-  - the 12 cross-cutting role archetypes
+  - the 15 cross-cutting role archetypes
   - the AI-personnel and humanoid-robot cross-economy catalogs
 
 Folder layout (under <root>/skills):
@@ -17,6 +17,7 @@ Folder layout (under <root>/skills):
   cross-cutting-archetypes/<archetype-slug>/SKILL.md
   _catalogs/ai-personnel/<role-slug>/SKILL.md
   _catalogs/humanoid-robots/<role-slug>/SKILL.md
+  _catalogs/enabling-work/<role-slug>/SKILL.md
 """
 
 import os
@@ -742,6 +743,7 @@ S(20, "Labor, Workforce Systems, and Organizational Life",
   ["When work needs doing, define roles, recruit, assess, hire, onboard, train, manage, pay, and retain.",
    "When workers are harmed or exploited, enforce labor standards and provide remedy.",
    "When technology changes work, redesign jobs and reskill people.",
+   "When automation displaces workers, identify affected cohorts early, fund their transition, and build pathways that actually lead to new jobs.",
    "When organizations coordinate, set goals, communicate, resolve conflict, and maintain culture."],
   ["Recruiter, talent acquisition partner, sourcer, HR business partner",
    "Compensation analyst, benefits administrator, payroll specialist",
@@ -796,7 +798,8 @@ S(22, "Resilience, Continuity, and Strategic Foresight",
   ["When risks accumulate slowly, identify weak signals and prepare before failure.",
    "When shocks hit, maintain continuity of government, food, water, energy, health, finance, communications, and logistics.",
    "When recovery begins, coordinate claims, rebuilding, mental health, supply chains, and accountability.",
-   "When future scenarios diverge, stress-test systems and invest in options."],
+   "When future scenarios diverge, stress-test systems and invest in options.",
+   "When functions are handed to AI and robots, keep a rehearsed manual fallback and defined rollback triggers so the system still runs when automation fails."],
   ["Enterprise risk manager, business continuity manager, emergency planner",
    "National security planner, infrastructure resilience analyst, scenario planner",
    "Supply chain risk manager, insurance catastrophe modeler",
@@ -1153,6 +1156,123 @@ SIM_TRAINING_ROLES = [
      "Records the reasoning behind expert judgment before the cohort retires; the same demonstrations feed imitation learning for machines and case-based learning for humans (a dual-use data engine)."),
 ]
 
+# Transition layer: the jobs that move a nation FROM today's economy TO a human-AI-robot
+# one. The end-state map is silent on the path; the path is its own work with its own
+# frictions and failure modes, and differs sharply by context. See the "Transition Dynamics
+# and Sequencing" and "Political Economy of Automation" sections of
+# docs/country-economy-core-jtbd.md. kind ∈ {agent, engineer, oversight, hitl}.
+TRANSITION_ROLES = [
+    ("Transition roadmap architect", "oversight",
+     "builds and owns the sequenced human-AI-robot transition roadmap — per operating system: the current owner, the target human-AI-robot configuration, the binding adoption constraint, the displaced cohort and its plan, the reversibility of the change, and the rollback triggers",
+     "national transition director / chief transformation officer",
+     "Produces the transition deliverable the source map calls for. Sequences by value at acceptable risk, not by what is merely technically possible, and re-derives the order for the nation's context modifiers."),
+    ("Automation sequencing analyst", "agent",
+     "ranks what to automate when, by value at acceptable risk, and re-derives the order per context — flagging leapfrog opportunities and the labor-intensive rungs that should not be kicked away",
+     "transition roadmap architect",
+     "Turns the default deployment order (digital back-office first, high-consequence physical last) into a context-specific sequence; a low-income economy may leapfrog to mobile payments and AI advisory while skipping the clerical-automation phase entirely."),
+    ("Adoption & change-management agent", "agent",
+     "works the social and institutional bottleneck — legacy integration, regulatory approval, liability and insurance, labor agreements, capital cost, trust, and organizational change — that adds years to technically-feasible deployments",
+     "transformation / operations lead",
+     "Budgets for the institutional bottleneck, not the model release date; surfaces the real adoption constraints so plans are honest about timelines and the part-human/part-agent/part-robot interregnum is designed for, not assumed away."),
+    ("Workforce-transition program manager", "oversight",
+     "runs workforce transition as a funded program: identifies displaced cohorts early, funds income during retraining, builds pathways that actually lead to jobs, and tracks who reskills successfully",
+     "labor authority / chief people officer",
+     "Owns the hardest job in the transition with real owners and metrics, not an aspiration. Works with OS 20 (Labor) and OS 14 (Education); accepts that not everyone reskills and plans for that explicitly."),
+    ("Distributional-impact & gains-allocation analyst", "agent",
+     "analyzes who captures the gains and who bears the cost of each deployment and models the counter-levers — wage insurance, place-based policy, automation taxation, public and cooperative ownership, and open-weight models that prevent single-vendor lock-in",
+     "economic policy lead",
+     "Makes the distributional consequence travel alongside the efficiency case so a deployment plan is not silently regressive or concentrating. Works with OS 02 (Public Finance) and OS 20 (Labor)."),
+    ("Vendor-pluralism & lock-in analyst", "agent",
+     "guards against monoculture and single-vendor lock-in — favoring open standards, data portability, model pluralism, and reversibility in choices that look like procurement but are effectively constitutional",
+     "procurement / standards lead",
+     "Prevents correlated failure and quiet capture by a few compute, model, or robot-fleet vendors; keeps early choices reversible while the technology and its distributional effects are still uncertain. Works with OS 12 and OS 02."),
+    ("Reversibility & rollback-readiness officer", "oversight",
+     "defines and maintains the fallback — manual modes, graceful degradation, a rehearsed human bench, and the trigger conditions for rolling a deployment back",
+     "resilience / continuity director",
+     "Owns the 'automation-off' capability so the system can still run when automation fails. Works with OS 22 (Resilience) and the keep-warm simulators in `_catalogs/simulation-training/`."),
+    ("Staged-rollout & blast-radius assurance agent", "agent",
+     "designs staged rollouts, canaries, circuit breakers, diversity requirements, and rate limits that cap the blast radius of automated failure and machine-speed dynamics",
+     "safety / assurance lead",
+     "Counters correlated failure, cascading dependency, and speed-mismatch as automation spreads; pairs with the verified deterministic safety layer in `_catalogs/capability-optimization/`."),
+]
+
+# Work-system completeness layer: reusable ancillary jobs that surround core JTBD.
+# A core job produces the public/economic outcome; these roles make that work executable,
+# connected, safe, adaptive, and durable. They are intentionally cross-sector and should be
+# embedded, shared, platform-based, federated, or temporary according to context rather than
+# cloned into every operating system.
+def W(name, family, jtbd, supervisor, deliverable, detail):
+    return dict(name=name, family=family, jtbd=jtbd, supervisor=supervisor,
+                deliverable=deliverable, detail=detail)
+
+ENABLING_WORK_ROLES = [
+    W("Evidence & research enablement agent", "Enable",
+      "finds, evaluates, synthesizes, and cites the evidence a core team needs before it acts",
+      "domain lead / research lead",
+      "a decision-ready evidence brief with sources, uncertainty, disagreement, and evidence gaps",
+      "Serves the core team rather than becoming a detached research function; maintains provenance and distinguishes fact, inference, and recommendation."),
+    W("Knowledge & decision-record curator", "Enable",
+      "keeps policies, decisions, rationales, lessons, terminology, and operating knowledge findable and current",
+      "knowledge-management / operations lead",
+      "a governed knowledge base with decision records, ownership, freshness, lineage, and retirement rules",
+      "Prevents the organization from repeatedly rediscovering context and preserves why a decision was made, not only what was decided."),
+    W("Workflow & tool enablement agent", "Enable",
+      "configures reusable workflows, templates, automations, data access, and tool guidance so core teams can execute with less friction",
+      "platform / operations lead",
+      "a supported self-service workflow with permissions, documentation, telemetry, fallback, and named ownership",
+      "Treats internal enablement as a product: observes user friction, standardizes the common path, and keeps exceptions possible."),
+    W("Dependency & handoff coordinator", "Integrate",
+      "maps cross-team dependencies, defines handoff contracts, and keeps upstream and downstream commitments synchronized",
+      "program / operations lead",
+      "a live dependency map with owners, inputs, acceptance criteria, due dates, escalation paths, and dependency risk",
+      "Owns the seams, where otherwise-good specialist work most often stalls or arrives unusable."),
+    W("Queue & bottleneck expeditor", "Integrate",
+      "monitors queues and blocked work, identifies the binding constraint, and expedites exceptions without bypassing safety or due process",
+      "service-delivery / operations lead",
+      "a prioritized unblock plan and queue-health view showing age, cause, owner, next action, and escalation",
+      "Accelerates flow by resolving causes, not by creating a permanent VIP lane or pressuring reviewers to waive controls."),
+    W("Decision-preparation & meeting synthesis agent", "Integrate",
+      "prepares decisions, structures agendas, records commitments, and converts meetings into owned follow-through",
+      "accountable decision owner / chief of staff",
+      "a decision packet plus decision log containing options, evidence, dissent, decision rights, actions, owners, and review date",
+      "Reduces coordination load while preserving disagreement and ensuring that the meeting is not mistaken for the decision authority."),
+    W("Stakeholder communication & alignment agent", "Integrate",
+      "maps affected stakeholders and prepares two-way communication, consultation, negotiation, and alignment around the work",
+      "stakeholder / communications lead",
+      "a stakeholder map and engagement record with concerns, commitments, unresolved conflicts, accessibility needs, and feedback loops",
+      "Treats communication as listening and negotiated coordination, not persuasion theater; escalates unresolved interests to accountable humans."),
+    W("Quality & completeness reviewer", "Assure",
+      "checks work products against requirements, evidence, standards, acceptance criteria, and downstream usability before release",
+      "quality / professional practice lead",
+      "a traceable review record listing tests performed, defects, severity, disposition, residual uncertainty, and release recommendation",
+      "Provides an independent second look proportionate to risk; never converts checklist completion into professional signoff."),
+    W("Risk, assumption & challenge agent", "Assure",
+      "surfaces hidden assumptions, failure modes, misuse paths, conflicts of interest, and contrary evidence before commitments harden",
+      "risk / assurance lead",
+      "an assumption and risk register with challenge cases, evidence, owners, mitigations, trigger thresholds, and residual risk",
+      "Institutionalizes constructive dissent without granting the agent authority to accept risk or veto legitimate human decisions."),
+    W("Option-generation & brainstorming facilitator", "Adapt",
+      "widens the option space through structured ideation, analogies, scenario prompts, and participation from relevant perspectives",
+      "strategy / design lead",
+      "a diverse option set with assumptions, mechanisms, affected groups, dependencies, testability, and reasons options were retained or rejected",
+      "Separates divergence from selection so the first plausible idea does not become the plan; guards against synthetic consensus and novelty bias."),
+    W("Retrospective & continuous-improvement agent", "Adapt",
+      "turns delivery evidence, incidents, near misses, user feedback, and frontline experience into tested process improvements",
+      "service owner / improvement lead",
+      "an improvement backlog linking observed problems to root-cause hypotheses, experiments, owners, measures, and follow-up results",
+      "Closes the learning loop without using retrospectives for blame or allowing local optimization to damage the end-to-end outcome."),
+    W("Resource & administrative coordination agent", "Sustain",
+      "coordinates calendars, records, routine procurement, onboarding, access, travel, facilities requests, and administrative follow-through",
+      "business operations / administration lead",
+      "a current service queue and completion record with request, owner, permissions, due date, status, exception, and audit trail",
+      "Makes invisible support load visible and reliable while respecting privacy, segregation of duties, procurement rules, and worker boundaries."),
+    W("Workforce capacity & wellbeing coordinator", "Sustain",
+      "monitors workload, coverage, skills, fatigue, accessibility, leave, and team-health signals so the core function remains sustainably staffed",
+      "human resources / accountable team lead",
+      "a capacity and coverage plan with demand, skills, rotations, leave, fatigue risks, accommodations, succession, and escalation",
+      "Supports—not surveils—workers; sensitive judgments, accommodations, performance action, and care remain human-led and confidential."),
+]
+
 # ---------------------------------------------------------------------------
 # STRATEGIC MISSIONS (cross-cutting national capabilities that compose many OSs)
 # Imported and adapted from the Agentic-Workforce "operating models".
@@ -1339,6 +1459,10 @@ HUMAN_COMMAND_ROLES = [
      "set national technology direction across frontier AI, compute, chips, energy, robotics, manufacturing, bio, quantum, space, cyber, standards, talent, capital, and public trust",
      "head of government / executive authority",
      "Coordinates national technology preeminence and the strategic missions; identifies national bets, aligns public/private/university/defense/standards systems, and owns the public legitimacy of the strategy."),
+    ("National AI-robot transition director",
+     "own the national transition to a human-AI-robot economy: the sequenced roadmap, workforce transition, distributional outcomes, vendor pluralism, reversibility, and the public legitimacy of the whole program",
+     "head of government / executive authority",
+     "The accountable human owner of the transition as a program, not an event — sequences deployments by value at acceptable risk, ensures displaced workers have funded pathways, keeps early choices reversible, and owns whether the transition's gains are broadly shared. Coordinates the `_catalogs/transition/` roles and re-derives the path per context."),
     ("AI governance lead",
      "govern AI inventories, model risk, evaluation gates, responsible AI, privacy, bias, safety, audit, incident response, and the approval boundaries for AI systems",
      "executive / board",
@@ -2035,6 +2159,20 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 
 {role_list}
 
+## Work-system completeness (the work around the core work)
+
+The core roles above are necessary but not sufficient. For each material JTBD, check which ancillary services are required:
+
+| Family | Required support question | Reusable catalog |
+|---|---|---|
+| **Enable** | Do practitioners have the evidence, knowledge, data, tools, access, and skills they need? | `_catalogs/enabling-work/` |
+| **Integrate** | Who owns dependencies, handoffs, queues, decision preparation, and stakeholder alignment? | `_catalogs/enabling-work/` |
+| **Assure** | What needs independent quality review, challenge, testing, risk, safety, legal, or audit work? | `_catalogs/enabling-work/` |
+| **Adapt** | How are alternatives generated and operational experience converted into improvement? | `_catalogs/enabling-work/` |
+| **Sustain** | Who maintains administration, capacity, wellbeing, coverage, assets, and institutional memory? | `_catalogs/enabling-work/` |
+
+Do not clone every support role into this sector. Choose **embedded, shared, platform, federated, or temporary** support according to demand, specialization, consequence, and context. Every ancillary service must name the core JTBD and owner it serves, its trigger, deliverable, service level, decision boundary, outcome link, escalation, and retirement rule. See the [Work-System Completeness Map](../../docs/work-system-completeness-map.md).
+
 ## Humanoid robot roles
 
 {robots}
@@ -2087,9 +2225,10 @@ The jobs above are universal; how they are staffed is not. Re-read this sector t
 
 1. Identify which Core JTBD the task serves.
 2. Select the role skill(s) under `roles/` that fit, and confirm the human supervisor.
-3. Run the lifecycle: sense → interpret → decide → mobilize → execute → verify → govern.
-4. Stop at the accountability boundary and route the decision to the accountable human.
-5. Log actions to the control layer and surface anything that trips a failure mode.
+3. Run the work-system completeness check and add only the Enable, Integrate, Assure, Adapt, and Sustain services the core outcome requires.
+4. Run the lifecycle: sense → interpret → decide → mobilize → execute → verify → govern.
+5. Stop at the accountability boundary and route the decision to the accountable human.
+6. Log actions to the control layer and surface anything that trips a failure mode.
 """.format(
         name=name, desc=desc, num=sec["num"], n_os=len(SECTORS), title=title, title_lower=title.lower(),
         mission=sec["mission"], jtbd=jtbd, lifecycle=lifecycle_block("sector", title),
@@ -3058,6 +3197,223 @@ Simulators are cheaper and more scalable than real practice, which makes them a 
     return rslug, body
 
 
+def render_enabling_work_role(role):
+    rname = role["name"]
+    family = role["family"]
+    jtbd = role["jtbd"]
+    supervisor = role["supervisor"]
+    deliverable = role["deliverable"]
+    detail = role["detail"]
+    rslug = slug(rname)
+    name = "enabling-work-%s" % rslug
+    family_purpose = {
+        "Enable": "supply the evidence, knowledge, tools, and reusable platforms core work depends on",
+        "Integrate": "connect specialists, decisions, dependencies, handoffs, and stakeholders into end-to-end flow",
+        "Assure": "provide independent challenge and verify quality, risk, legality, safety, and completeness",
+        "Adapt": "widen options and convert experience into learning, redesign, and improved practice",
+        "Sustain": "maintain the people, administration, coverage, assets, and institutional memory that keep work viable",
+    }[family]
+    topology = {
+        "Enable": "Usually shared or platform-based; embed temporarily where domain context is unusually deep.",
+        "Integrate": "Usually embedded in a value stream or mission; federate when dependencies cross institutions.",
+        "Assure": "Maintain enough independence from delivery to challenge it; scale review depth with consequence.",
+        "Adapt": "Often temporary or cadence-based; keep participation broad and selection human-accountable.",
+        "Sustain": "Usually shared with named service ownership; embed where continuity or confidentiality demands it.",
+    }[family]
+    rights = {
+        "Enable": ("- **May** gather, organize, draft, configure, and recommend within approved access and policy.\n"
+                   "- **May not** redefine the core outcome, grant itself new access, or make the accountable decision.\n"
+                   "- **Escalates** missing provenance, access conflicts, stale knowledge, and unsupported conclusions."),
+        "Integrate": ("- **May** route work, request updates, surface dependencies, and trigger agreed escalation paths.\n"
+                      "- **May not** silently reprioritize public rights, waive controls, or commit another owner.\n"
+                      "- **Escalates** unresolved ownership, dependency failure, material delay, and stakeholder conflict."),
+        "Assure": ("- **May** test, challenge, document findings, and recommend hold/rework/release within the review charter.\n"
+                   "- **May not** issue regulated signoff, accept residual risk, or replace independent human judgment.\n"
+                   "- **Escalates** severe defects, contrary evidence, conflicts of interest, and unmitigated risk."),
+        "Adapt": ("- **May** facilitate divergence, synthesize alternatives, propose experiments, and track learning.\n"
+                  "- **May not** manufacture consensus, select strategy, or treat novelty as evidence.\n"
+                  "- **Escalates** excluded perspectives, irreducible value conflicts, and experiments with material downside."),
+        "Sustain": ("- **May** coordinate routine services, capacity signals, records, and approved administrative actions.\n"
+                    "- **May not** make employment, accommodation, disciplinary, procurement-award, or privacy-sensitive judgments.\n"
+                    "- **Escalates** unsafe workload, coverage failure, sensitive cases, authority gaps, and continuity risk."),
+    }[family]
+    desc = ("Work-system completeness role (%s): **%s** — %s. Use this skill when core work needs the surrounding "
+            "enablement, integration, assurance, adaptation, or sustaining support required to succeed repeatedly, even if "
+            "the user only describes friction such as delays, poor handoffs, weak brainstorming, rework, missing context, or "
+            "overload. Supports a core JTBD under a %s; it does not replace the core owner.") % (family, rname, jtbd, supervisor)
+    body = """---
+name: {name}
+description: {desc}
+---
+
+# Work-System Completeness — {family} — {rname}
+
+> **Layer:** Ancillary work · **Family:** {family} · **Human supervisor:** {supervisor}
+> **Reference map:** [Work-System Completeness Map](../../../../docs/work-system-completeness-map.md) · **Framework:** [shared framework](../../../00-framework/SKILL.md)
+
+## What this role is
+
+The **{rname}** {jtbd}. {detail}
+
+It belongs to the **{family}** family, whose purpose is to {family_purpose}. It supports one or more core JTBD; it is not evidence that another core outcome has been created.
+
+## When to use this skill
+
+Use this role when a core team has a recognizable support failure: blocked or aging work, poor handoffs, repeated rediscovery, shallow options, avoidable rework, weak challenge, missing follow-through, unsustainable load, or no learning loop. First name the **core JTBD and accountable owner** this role serves. If those cannot be named, do not add support machinery yet—the work may be orphaned or unnecessary.
+
+## Service contract
+
+- **Internal customer:** the accountable owner and team performing the named core JTBD.
+- **Trigger:** a request, threshold, cadence, incident, dependency, or evidence gap defined with that owner.
+- **Primary deliverable:** {deliverable}.
+- **Acceptance:** the core owner confirms the deliverable is timely, usable, traceable, and proportionate to consequence.
+- **Boundary:** this role prepares, connects, checks, or sustains work; it does not inherit the core owner's authority or accountability.
+
+## Deployment topology
+
+Choose explicitly among **embedded**, **shared service**, **platform/self-service**, **federated**, and **temporary** deployment. {topology} Avoid both extremes: cloning a specialist into every team and centralizing support so far away that it loses context.
+
+## Decision rights & accountability
+
+{rights}
+
+## Operating procedure
+
+1. Name the core JTBD, accountable owner, affected people, outcome measure, and current failure/friction.
+2. Agree the service contract: trigger, inputs, deliverable, acceptance criteria, response time, permissions, and escalation.
+3. Gather only the context and access required; record provenance, assumptions, dependencies, and uncertainty.
+4. Produce the deliverable and keep dissent, exceptions, and unresolved questions visible.
+5. Hand off to the named owner; verify downstream usability rather than counting output volume alone.
+6. Measure whether the support reduced delay, defects, cognitive load, risk, or fragility in the core outcome.
+7. Improve, automate, federate, or retire the support role as demand changes.
+
+## Interfaces
+
+- **Upstream:** the core owner, requesters, authoritative data/policy owners, and affected stakeholders.
+- **Downstream:** core practitioners, decision-makers, assurance functions, and the next value-stream stage.
+- **Peers:** other roles in `_catalogs/enabling-work/`; use handoff contracts instead of informal assumptions.
+- **Control surfaces:** service charter, queue, permissions, evidence/decision log, acceptance criteria, escalation path, and review cadence.
+
+## Success metrics
+
+- **Core-outcome contribution:** measurable change in the outcome or binding constraint this support exists to improve.
+- **Flow:** response time, queue age, blocked time, handoff acceptance, and time-to-decision or execution.
+- **Quality:** first-pass usability, defect/rework reduction, evidence completeness, and exception quality.
+- **Load:** scarce human time returned to core judgment without hidden work shifted to another group.
+- **Trust & safety:** traceability, privacy, fairness, appropriate escalation, and no unauthorized decisions.
+- **Adaptation:** recurring demand eliminated through better platforms/processes, and obsolete support retired.
+
+Do not optimize ticket volume, meeting count, document count, or utilization in isolation; those measures can reward support bureaucracy while the core outcome worsens.
+
+## Failure modes and safeguards
+
+- **Support becomes the work** — activity grows without improving the core outcome. Mitigation: every request names its core JTBD, owner, and outcome link; review and retire low-value demand.
+- **Shadow authority** — the support role quietly makes decisions for the accountable owner. Mitigation: explicit decision rights, visible recommendations, owner signoff where required.
+- **Central-service context loss** — generic output is fast but unusable. Mitigation: embedded discovery, service acceptance measures, federated domain stewards.
+- **Coordination tax** — more handoffs, meetings, and templates than value. Mitigation: prefer self-service platforms and automate recurrent low-risk paths.
+- **Metric gaming** — tickets close while downstream work fails. Mitigation: pair service metrics with end-to-end outcome and rework measures.
+- **Sensitive-data overreach** — convenience expands access. Mitigation: minimum necessary access, purpose limitation, audit logs, retention rules, and human review.
+
+## Human / AI teaming
+
+AI is well suited to retrieval, synthesis, drafting, queue monitoring, comparison, structured facilitation, record maintenance, and reminder/follow-through. Humans retain relationship work, political and moral judgment, risk acceptance, professional signoff, sensitive people decisions, negotiation, and accountability for the core outcome. Use deterministic workflow/rules for permissions, deadlines, routing, and hard controls where possible; use models for language and uncertain synthesis with evidence visible.
+
+## Adapting to any nation or organization
+
+{context}
+
+Also adjust for organizational scale and topology: in a small organization one person may cover several families; in a large one, use shared platforms plus embedded/federated specialists. Informal organizations may rely on oral knowledge and relationships, so digitization must not erase legitimate local practice or create surveillance.
+""".format(name=name, desc=desc, family=family, rname=rname, supervisor=supervisor,
+           jtbd=jtbd, detail=detail, family_purpose=family_purpose, deliverable=deliverable,
+           topology=topology, rights=rights, context=CONTEXT_MODIFIERS)
+    return rslug, body
+
+
+def render_transition_role(role):
+    rname, kind, jtbd, supervisor, detail = role
+    rslug = slug(rname)
+    name = "transition-%s" % rslug
+    kind_label = STACK_KIND_LABEL[kind]
+    if kind == "oversight":
+        rights = ("- **Owns and is accountable for** this part of the transition program and that its safeguards are real, not nominal.\n"
+                  "- **Escalates** stalled adoption, thin fallback benches, regressive distribution, or lock-in as program risks.\n"
+                  "- **Cannot** let speed or efficiency pressure quietly cancel reskilling, reversibility, or distributional review.")
+    elif kind == "agent":
+        rights = ("- **May act autonomously** on routine analysis, drafting, sequencing options, and monitoring within policy.\n"
+                  "- **Must defer** to human owners on the deployment sequence, distributional choices, vendor selection, and rollback decisions.\n"
+                  "- **Must escalate** adoption blockers, distributional harms, lock-in risks, and any plan that lacks a fallback.")
+    else:  # engineer / other
+        rights = ("- **Owns** the technical artifacts (roadmaps, rollout plans, fallback mechanisms) it produces.\n"
+                  "- **Gates** what is safe and reversible enough to deploy with the safety and resilience leads.\n"
+                  "- **Escalates** irreversibility, blast-radius, and transfer risks.")
+    desc = ("Transition role: **%s** (%s) — %s. Part of the layer that moves a nation *from* today's economy *to* a "
+            "human-AI-robot one — the path is its own major piece of work, with its own jobs, frictions, and failure modes, "
+            "and it differs sharply by context. Use this skill when planning, sequencing, or de-risking the adoption of AI "
+            "and robots across an economy or organization, even if the user only describes the underlying need. Works under a %s."
+            ) % (rname, kind_label, jtbd, supervisor)
+    body = """---
+name: {name}
+description: {desc}
+---
+
+# Transition — {rname}
+
+> **Layer:** Transition (today's economy → a human-AI-robot one) · **Type:** {kind_label}
+> **Human supervisor:** {supervisor} · **Reference:** *Transition Dynamics and Sequencing* and *Political Economy of Automation* in `docs/country-economy-core-jtbd.md`
+
+## What this role is
+
+The **{rname}** {jtbd}. {detail}
+
+## Why this layer exists
+
+CivStack describes an **end-state** map — what work a human-AI-robot economy must do and how it is split across humans, agents, and robots. But **no nation jumps to it.** The path is itself a major piece of work, with its own jobs, frictions, and failure modes, and it differs sharply by the *context modifiers* (income level, formality, state capacity, geography, political system, connectivity). This layer holds the jobs that *run the transition itself*: sequencing it, financing it, reskilling people through it, keeping its gains broadly shared, keeping early choices reversible, and keeping a fallback for when automation fails.
+
+The defining frictions this layer manages:
+
+- **Adoption is slower than capability** — integration, regulation, liability, labor agreements, capital, trust, and organizational change, not the model release date, set the timeline.
+- **The reskilling job is real and large** — a funded program with owners and metrics, not a line item.
+- **Path dependence and lock-in** — early vendor, standard, and data choices are effectively constitutional; favor reversibility.
+- **Partial adoption is the norm** — for a long interregnum every function is part-human, part-agent, part-robot, with messy handoffs.
+- **The failure surface is different** — correlated failure, cascading dependency, loss of the human fallback, and machine-speed dynamics.
+
+## When to use this skill
+
+Use it when a task calls for this work: {jtbd}. Pair with OS 20 (Labor) for workforce transition, OS 22 (Resilience) for fallback and rollback, OS 02 (Public Finance) for transition financing, `_catalogs/simulation-training/` for keep-warm benches, and `_catalogs/capability-optimization/` for the verified safety layer.
+
+## Decision rights & accountability
+
+{rights}
+
+## The transition deliverable (what good looks like)
+
+A sequenced roadmap that, **for each operating system**, names: the current owner; the target human-AI-robot configuration; the binding adoption constraint; the displaced cohort and its transition plan; the reversibility of the change; and the trigger conditions for rollback. Sequence by *value at acceptable risk*, re-derived per context — not by what is merely possible.
+
+## Failure modes and safeguards
+
+- **Sequencing by feasibility, not value** — automating what is easy rather than what is worth it at acceptable risk. Mitigation: explicit value-at-risk scoring per context.
+- **Treating labor as fungible** — hiding who is displaced. Mitigation: distributional-impact analysis and funded transition pathways attached to every deployment.
+- **Irreversible lock-in** — vendor/standard choices that are expensive to undo. Mitigation: open standards, data portability, model pluralism, staged and reversible rollouts.
+- **No fallback** — deploying without a rehearsed manual mode or rollback trigger. Mitigation: reversibility/rollback readiness owned by an accountable human.
+
+## Adapting to any nation (context modifiers)
+
+The path is *most* context-dependent part of the whole map — a reform that is efficiency-improving in a high-capacity state can be destabilizing in a low-capacity one. Re-read through:
+
+{context}
+
+## Operating procedure
+
+1. Establish the current state and the target human-AI-robot configuration for the function(s) in scope.
+2. Identify the binding adoption constraint (often institutional, not technical) and the displaced cohort.
+3. Sequence by value at acceptable risk; design the change to be reversible and the rollout to be staged.
+4. Attach the transition plan: who reskills, who captures the gains, what the fallback and rollback triggers are.
+5. Hand decisions that cross the accountability boundary to the named human owner; monitor and re-derive as the context changes.
+""".format(name=name, desc=desc, rname=rname, kind_label=kind_label, supervisor=supervisor,
+           jtbd=jtbd, detail=detail, rights=rights, context=CONTEXT_MODIFIERS)
+    return rslug, body
+
+
 def render_human_command_role(role):
     rname, jtbd, supervisor, detail = role
     rslug = slug(rname)
@@ -3275,16 +3631,16 @@ Whether a nation pursues this mission at all — and how (sovereign build, ally-
 
 def render_framework_index():
     sector_rows = "\n".join(
-        "| %02d | [%s](%s/) | %d AI roles |" % (
+        "| %02d | [%s](../%s/) | %d AI roles |" % (
             s["num"], s["title"], sector_slug(s), len(s["ai"]))
         for s in SECTORS)
     mission_rows = "\n".join(
-        "| [%s](strategic-missions/%s/) | %s |" % (
+        "| [%s](../strategic-missions/%s/) | %s |" % (
             m["name"], slug(m["name"]), ", ".join("%02d" % n for n in m["composes"]))
         for m in STRATEGIC_MISSIONS)
     name = "country-economy-jtbd-index"
     desc = ("Index and shared framework for the Country-Economy Jobs-To-Be-Done skill library: national "
-            "operating systems, their AI-personnel role skills, 12 cross-cutting archetypes, and the AI/robot "
+            "operating systems, their AI-personnel role skills, work-system completeness roles, 15 cross-cutting archetypes, and the AI/robot "
             "catalogs. Use this skill first to navigate the library, understand the shared teaming pattern and "
             "accountability model, and find the right operating-system or role skill for any economic task.")
     body = """---
@@ -3301,7 +3657,7 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 - `00-framework/` — this index plus the shared concepts every skill assumes (you are here).
 - `01-…` through `22-…` — one folder per **national operating system**. Each has a sector `SKILL.md` (orchestrator) and a `roles/` subfolder of **AI-personnel role skills**.
 - `strategic-missions/` — **cross-cutting national missions** (energy abundance, semiconductor sovereignty, bioeconomy, frontier-AI production, quantum & space, strategic supply chain, science-to-industry, talent formation, public procurement, cyber defense, advanced manufacturing, digital infrastructure). A mission is an *orthogonal axis* to the sectors: it composes several of them toward one objective.
-- `cross-cutting-archetypes/` — the 12 role patterns (Strategist, Operator, Builder, …) that recur in every sector.
+- `cross-cutting-archetypes/` — the 15 role patterns (Strategist, Operator, Builder, …) that recur in every sector.
 - `_catalogs/human-command/` — **accountable human owners** for the strategic missions and cross-cutting authority (national technology strategist, AI governance lead, import/export compliance lead, procurement innovation lead).
 - `_catalogs/informal-economy/` — support roles for the **informal and subsistence sector** (the majority of employment in much of the world): vendor support, gig/platform coordination, informal transport, waste-picker cooperatives, smallholder advisory, savings groups, mutual aid, and formalization navigation — designed to strengthen, not surveil, informal workers.
 - `_catalogs/ai-personnel/` and `_catalogs/humanoid-robots/` — reusable cross-economy role patterns.
@@ -3310,10 +3666,14 @@ This library turns the document *Country-Economy Core Jobs To Be Done* into depl
 - `_catalogs/autonomous-fleet-ops/` — the **operations layer for autonomous vehicle/machine fleets**: ODD & safety-case engineer, remote-operations (teleop) center supervisor, HD mapping & localization engineer, V2X/connectivity & infrastructure engineer, homologation & regulatory lead, depot/maintenance lead, in-field safety operator, and incident/disengagement analyst.
 - `_catalogs/capability-optimization/` — the **how-it's-built layer**: the model tiers (LLM, SLM, tiny LM, deterministic) and the spectrum of optimization methods (imitation, model-based/offline RL, RLHF/RLAIF, sim-to-real, distillation/compression, classical control, search, formal methods) with the roles that select and run them. **RLAIF is one option among many.**
 - `_catalogs/simulation-training/` — the **anti-deskilling / keep-warm layer**: job and role simulators that keep humans current, rebuild the learning ladder, and capture tacit knowledge — reusing the machine-training world models. Curriculum designer, scenario-generation agent, competency/certification agent, drill & exercise coordinator, dual-use world-model/fidelity engineer, and tacit-knowledge capture agent. See `docs/role-simulation-and-keepwarm.md`.
+- `_catalogs/transition/` — the **transition layer**: the jobs that move a nation *from* today's economy *to* a human-AI-robot one. The end-state map is silent on the path, but the path is its own major piece of work with its own jobs, frictions, and failure modes — and it differs sharply by context. Roadmap architect, automation sequencing analyst, adoption & change-management agent, workforce-transition program manager, distributional-impact & gains-allocation analyst, vendor-pluralism & lock-in analyst, reversibility & rollback-readiness officer, and staged-rollout & blast-radius assurance agent. The accountable owner is the *National AI-robot transition director* in `_catalogs/human-command/`. See the *Transition Dynamics and Sequencing* and *Political Economy of Automation* sections of `docs/country-economy-core-jtbd.md`.
+- `_catalogs/enabling-work/` — the **work-system completeness layer**: reusable ancillary roles that surround core JTBD with **Enable, Integrate, Assure, Adapt, and Sustain** work. Use it for research and evidence, knowledge and tools, dependencies and handoffs, expediting, decision preparation, stakeholder alignment, independent review and challenge, brainstorming, continuous improvement, administration, and sustainable workforce capacity. See `docs/work-system-completeness-map.md`, `checklists/work-system-completeness-checklist.md`, and `tools/work-system-mapper.html`.
 
 ## The shared model every skill assumes
 
 **A job is a durable outcome society must reliably produce. A role is one way to own, coordinate, or execute it.** AI personnel and robots occupy portions of roles; legal, moral, and political accountability stays with humans and institutions.
+
+**Core work is necessary but not sufficient.** For each core JTBD, check the orthogonal work-system families: **Enable** (evidence, knowledge, tools), **Integrate** (dependencies, flow, stakeholders), **Assure** (quality, risk, challenge), **Adapt** (options, learning, improvement), and **Sustain** (administration, capacity, continuity). Do not instantiate every support role automatically; choose embedded, shared, platform, federated, or temporary support according to demand, specialization, consequence, and coordination cost. The reusable skills live in `_catalogs/enabling-work/`.
 
 **The universal seven-step lifecycle** (used in every skill):
 
@@ -3378,7 +3738,8 @@ Missions are cross-cutting national capabilities that compose several sectors to
 1. **Start here** to orient.
 2. Open the **operating-system skill** for the relevant sector to get the mission, JTBD, roster, and accountability boundary.
 3. Deploy the specific **role skill(s)** under that sector's `roles/` for execution, or an **archetype**/**catalog** skill for a cross-sector pattern.
-4. Always run the seven-step lifecycle and stop at the human-accountability boundary.
+4. Run the **work-system completeness check**: which Enable, Integrate, Assure, Adapt, and Sustain functions are actually required, and should each be embedded, shared, platform-based, federated, or temporary?
+5. Always run the seven-step lifecycle and stop at the human-accountability boundary.
 
 ## Deployment order (high-leverage first)
 
@@ -3406,7 +3767,7 @@ Coercive state power; rights-impacting decisions; intimate human care; democrati
 def main():
     counts = dict(sectors=0, roles=0, sector_robots=0, sector_machines=0, archetypes=0,
                   catalog_ai=0, catalog_robot=0, catalog_machine=0, embodied_stack=0, fleet_ops=0,
-                  capability_opt=0, sim_training=0, strategic_missions=0, human_command=0,
+                  capability_opt=0, sim_training=0, transition=0, enabling_work=0, strategic_missions=0, human_command=0,
                   informal_economy=0)
 
     # Framework index
@@ -3465,6 +3826,14 @@ def main():
         rslug, body = render_sim_role(r)
         write(os.path.join(ROOT, "_catalogs", "simulation-training", rslug, "SKILL.md"), body)
         counts["sim_training"] += 1
+    for r in TRANSITION_ROLES:
+        rslug, body = render_transition_role(r)
+        write(os.path.join(ROOT, "_catalogs", "transition", rslug, "SKILL.md"), body)
+        counts["transition"] += 1
+    for r in ENABLING_WORK_ROLES:
+        rslug, body = render_enabling_work_role(r)
+        write(os.path.join(ROOT, "_catalogs", "enabling-work", rslug, "SKILL.md"), body)
+        counts["enabling_work"] += 1
     for m in STRATEGIC_MISSIONS:
         mslug, body = render_strategic_mission(m)
         write(os.path.join(ROOT, "strategic-missions", mslug, "SKILL.md"), body)

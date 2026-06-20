@@ -73,6 +73,20 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Intelligence triage agent** — prioritizes and routes incoming reporting and tips. *(supervised by threat analyst; skill: `roles/intelligence-triage-agent/`)*
 - **Cyber defense agent** — performs continuous monitoring and incident-response assistance. *(supervised by cyber operator; skill: `roles/cyber-defense-agent/`)*
 
+## Work-system completeness (the work around the core work)
+
+The core roles above are necessary but not sufficient. For each material JTBD, check which ancillary services are required:
+
+| Family | Required support question | Reusable catalog |
+|---|---|---|
+| **Enable** | Do practitioners have the evidence, knowledge, data, tools, access, and skills they need? | `_catalogs/enabling-work/` |
+| **Integrate** | Who owns dependencies, handoffs, queues, decision preparation, and stakeholder alignment? | `_catalogs/enabling-work/` |
+| **Assure** | What needs independent quality review, challenge, testing, risk, safety, legal, or audit work? | `_catalogs/enabling-work/` |
+| **Adapt** | How are alternatives generated and operational experience converted into improvement? | `_catalogs/enabling-work/` |
+| **Sustain** | Who maintains administration, capacity, wellbeing, coverage, assets, and institutional memory? | `_catalogs/enabling-work/` |
+
+Do not clone every support role into this sector. Choose **embedded, shared, platform, federated, or temporary** support according to demand, specialization, consequence, and context. Every ancillary service must name the core JTBD and owner it serves, its trigger, deliverable, service level, decision boundary, outcome link, escalation, and retirement rule. See the [Work-System Completeness Map](../../docs/work-system-completeness-map.md).
+
 ## Humanoid robot roles
 
 - Base logistics, warehouse, maintenance, casualty-evacuation support, hazardous-area reconnaissance.
@@ -158,6 +172,7 @@ The jobs above are universal; how they are staffed is not. Re-read this sector t
 
 1. Identify which Core JTBD the task serves.
 2. Select the role skill(s) under `roles/` that fit, and confirm the human supervisor.
-3. Run the lifecycle: sense → interpret → decide → mobilize → execute → verify → govern.
-4. Stop at the accountability boundary and route the decision to the accountable human.
-5. Log actions to the control layer and surface anything that trips a failure mode.
+3. Run the work-system completeness check and add only the Enable, Integrate, Assure, Adapt, and Sustain services the core outcome requires.
+4. Run the lifecycle: sense → interpret → decide → mobilize → execute → verify → govern.
+5. Stop at the accountability boundary and route the decision to the accountable human.
+6. Log actions to the control layer and surface anything that trips a failure mode.

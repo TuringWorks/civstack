@@ -6,6 +6,14 @@ A blank template for authoring a new role (human, AI-personnel, or human+AI+robo
 
 ## Operating system / strategic mission
 
+## Work-system relationship
+
+- Core JTBD supported:
+- Work family (Core / Enable / Integrate / Assure / Adapt / Sustain):
+- Internal customer / beneficiary:
+- Deployment topology (embedded / shared / platform / federated / temporary):
+- Trigger: · Service level: · Acceptance criteria: · Retirement rule:
+
 ## Mission
 
 State the durable outcome this role must reliably produce.

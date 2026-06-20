@@ -81,6 +81,22 @@ These archetypes appear in nearly every sector.
 | Interpreter    | Translate between domains, cultures, languages, and systems | translator, UX researcher, community liaison, business analyst           | high for language and synthesis                  | low                                           |
 | Judge          | Make accountable decisions with consequences                | judge, regulator, physician, commander, executive, board member          | medium as decision support                       | low                                           |
 
+## Work-System Completeness: the orthogonal support axis
+
+The sections below intentionally identify **core JTBD**: the durable outcomes each national operating system must produce. Core work alone does not constitute a viable organization. Every material JTBD must also be checked against five ancillary work families:
+
+| Family | Job around the core job | Examples |
+|---|---|---|
+| **Enable** | Supply evidence, knowledge, data, tools, skills, and reusable platforms | research, knowledge curation, workflow/tool enablement |
+| **Integrate** | Connect dependencies, handoffs, queues, decisions, and stakeholders | coordination, expediting, meeting synthesis, consultation |
+| **Assure** | Independently check quality, safety, legality, risk, integrity, and completeness | review, testing, audit, challenge, red team |
+| **Adapt** | Generate alternatives and turn experience into redesigned practice | brainstorming, scenarios, retrospectives, continuous improvement |
+| **Sustain** | Maintain administration, workforce capacity, wellbeing, coverage, assets, and memory | scheduling, onboarding, facilities, succession, workload and continuity |
+
+This is a second coordinate system, not another list of sector outcomes. For each core JTBD, identify only the ancillary services actually required and choose their topology deliberately: **embedded, shared service, platform/self-service, federated, or temporary**. Each service must name its core consumer, trigger, deliverable, service level, decision boundary, outcome link, escalation, and retirement rule. Do not instantiate a full support bureaucracy around every row.
+
+The full method, completeness diagnostic, worked examples, and reusable role map are in [`work-system-completeness-map.md`](work-system-completeness-map.md). Deployable ancillary skills are in `skills/_catalogs/enabling-work/`.
+
 ## Automation Suitability Legend
 
 - AI-high: digital information work, repeatable decision support, drafting, analytics, monitoring, software, research, planning.

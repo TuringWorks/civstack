@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>work-system-completeness-checklist · CivStack</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="site"><a class="brand" href="../index.html">CivStack</a>
+<span class="muted">browsable skill library</span></header>
+<div class="wrap"><article><h1>Work-System Completeness Checklist</h1>
+<p>Use this before creating support roles, shared services, coordination layers, or new automation around a core JTBD. The companion method is <a href="../docs/work-system-completeness-map.html"><code>docs/work-system-completeness-map.md</code></a>; reusable roles are in <code>skills/_catalogs/enabling-work/</code>.</p>
+<h2>1. Anchor the core work</h2>
+<ul><li>[ ] The core outcome is stated independently of any role, process, technology, or department.</li><li>[ ] The beneficiary, customer, or affected population is named.</li><li>[ ] One accountable human owner is named.</li><li>[ ] Outcome measures and non-negotiable guardrails are defined.</li><li>[ ] The current binding constraint or failure is evidenced.</li><li>[ ] The work is genuinely required; it is not activity preserved by habit.</li></ul>
+<p>Stop if the core JTBD and owner cannot be named. Do not build support machinery around orphaned work.</p>
+<h2>2. Check the five ancillary families</h2>
+<h3>Enable</h3>
+<ul><li>[ ] Practitioners can reach authoritative evidence, data, policies, tools, permissions, and training.</li><li>[ ] Important decisions distinguish fact, inference, recommendation, uncertainty, and disagreement.</li><li>[ ] Knowledge and decision rationales are findable, current, owned, and retired when stale.</li><li>[ ] Recurrent needs are supported through usable workflows, templates, or platforms.</li></ul>
+<h3>Integrate</h3>
+<ul><li>[ ] Upstream and downstream dependencies have owners and acceptance criteria.</li><li>[ ] Queues expose age, cause, priority rule, next action, and escalation.</li><li>[ ] Meetings produce decisions or owned actions rather than additional coordination debt.</li><li>[ ] Affected stakeholders have two-way consultation and conflict-resolution paths.</li><li>[ ] Expediting cannot bypass safety, legality, rights, or due process.</li></ul>
+<h3>Assure</h3>
+<ul><li>[ ] Review depth is proportional to consequence.</li><li>[ ] Quality, safety, legal, security, privacy, integrity, and downstream-usability checks are assigned.</li><li>[ ] Assumptions, contrary evidence, misuse paths, conflicts of interest, and residual risk are visible.</li><li>[ ] Professional signoff, risk acceptance, appeal, and release authority remain human-owned.</li><li>[ ] Assurance is sufficiently independent from delivery.</li></ul>
+<h3>Adapt</h3>
+<ul><li>[ ] Alternatives are generated before selection.</li><li>[ ] Relevant frontline, expert, public, and dissenting perspectives can shape the option set.</li><li>[ ] Incidents, near misses, feedback, and outcome drift enter a learning loop.</li><li>[ ] Improvements are treated as measurable experiments with owners and review dates.</li><li>[ ] Local improvements are checked against the end-to-end outcome.</li></ul>
+<h3>Sustain</h3>
+<ul><li>[ ] Administrative and coordination load is visible and staffed.</li><li>[ ] Demand, skills, leave, fatigue, accessibility, and coverage are reviewed without worker surveillance.</li><li>[ ] Assets, records, permissions, institutional memory, succession, and manual fallback are maintained.</li><li>[ ] The system can continue through loss of a key person, vendor, model, facility, or data source.</li><li>[ ] Sensitive employment, accommodation, disciplinary, and care decisions remain confidential and human-led.</li></ul>
+<h2>3. Design each required service</h2>
+<p>For every selected ancillary service:</p>
+<ul><li>[ ] Core JTBD and accountable consumer are named.</li><li>[ ] Trigger and required inputs are explicit.</li><li>[ ] Deliverable and acceptance criteria are testable.</li><li>[ ] Deployment topology is chosen: embedded, shared, platform/self-service, federated, or temporary.</li><li>[ ] Service level covers timeliness, availability, quality, and priority rules.</li><li>[ ] Decision rights state what the service may do, must defer, and must escalate.</li><li>[ ] Data access is minimum necessary and purpose-limited.</li><li>[ ] Outcome link explains how the service changes the binding constraint.</li><li>[ ] Cost and coordination tax are justified.</li><li>[ ] Review and retirement rules are defined.</li></ul>
+<h2>4. Select the topology deliberately</h2>
+<ul><li>[ ] <strong>Embedded</strong> only when context depth, continuous demand, or response time requires it.</li><li>[ ] <strong>Shared service</strong> only when scarce expertise outweighs queue and context-loss costs.</li><li>[ ] <strong>Platform/self-service</strong> only when the need is repeatable, standardizable, accessible, and safely exception-handled.</li><li>[ ] <strong>Federated</strong> only when common standards and local context both matter, with ownership made explicit.</li><li>[ ] <strong>Temporary/enabling</strong> work has an exit condition and transfers capability to the core team.</li></ul>
+<h2>5. Guard against support bureaucracy</h2>
+<ul><li>[ ] No support metric is optimized without a core-outcome or constraint measure.</li><li>[ ] Ticket, meeting, document, utilization, and response-volume metrics are not treated as value by themselves.</li><li>[ ] Support cannot accumulate shadow policy, budget, employment, safety, or release authority.</li><li>[ ] Repeated support demand is analyzed for removal through better system design.</li><li>[ ] Low-value requests can be refused or retired transparently.</li><li>[ ] The support layer is periodically tested for duplication, waiting, rework, and context loss.</li><li>[ ] Automation returns time to core judgment rather than moving invisible work elsewhere.</li></ul>
+<h2>6. Deployment gate</h2>
+<ul><li>[ ] Expected core-outcome gain exceeds service cost and coordination tax.</li><li>[ ] The intervention targets the current binding constraint.</li><li>[ ] Evidence confidence and affected groups are documented.</li><li>[ ] Human owner approves the service contract and accountability boundary.</li><li>[ ] Leading service measures and lagging outcome measures have baselines.</li><li>[ ] Failure, incident, grievance, rollback, and retirement paths are operational.</li></ul>
+<h2>Minimum record</h2>
+<pre><code>Core outcome:
+Beneficiary/customer:
+Accountable human owner:
+Outcome measures and guardrails:
+Binding constraint:
+
+Required ancillary services:
+  Family and role:
+  Consumer and trigger:
+  Deliverable and acceptance:
+  Topology and service level:
+  May / must defer / must escalate:
+  Outcome link and measures:
+  Review and retirement rule:
+
+Uncovered risks or intentionally empty families:
+Next experiment:
+Review date:</code></pre>
+<p>Passing means the core outcome can be produced without invisible heroics, unsafe shortcuts, chronic waiting, repeated rediscovery, organizational amnesia, or unsustainable human load. It does not mean every support role exists.</p></article></div></body></html>
