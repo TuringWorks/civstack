@@ -24,7 +24,8 @@ These are the durable outcomes this operating system must reliably produce, writ
 2. When money is limited, prioritize budgets so public value is maximized.
 3. When agencies need goods or services, procure transparently so corruption and waste are minimized.
 4. When financial risks emerge, forecast cash flow, debt, pensions, and macroeconomic exposure.
-5. When public funds are spent, audit and report results so citizens can trust the system.
+5. When a decision binds future generations, price its long-run costs and benefits so the present does not silently borrow from the future.
+6. When public funds are spent, audit and report results so citizens can trust the system.
 
 ## The universal lifecycle, applied
 
@@ -74,6 +75,8 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Invoice reconciliation agent** — matches invoices, POs, and receipts and resolves exceptions. *(supervised by accounts-payable lead; skill: `roles/invoice-reconciliation-agent/`)*
 - **Fraud detection agent** — detects procurement and benefits fraud signals for investigation. *(supervised by inspector general investigator; skill: `roles/fraud-detection-agent/`)*
 - **Pension & retirement valuation agent** — performs actuarial pension valuations (funding status, PBO/ABO, contribution projections) for review by the plan actuary. *(supervised by public pension actuary; skill: `roles/pension-retirement-valuation-agent/`)*
+- **Intergenerational impact analyst** — prices the long-run, cross-generational costs and benefits of major fiscal decisions and flags those that bind future cohorts before signoff. *(supervised by fiscal policy advisor / chief economist; skill: `roles/intergenerational-impact-analyst/`)*
+- **Wellbeing budgeting agent** — scores budget options on a wellbeing frame — health, time, security, life-satisfaction, and distribution — alongside output so spending is judged by lived impact, not output alone. *(supervised by budget analyst / treasury lead; skill: `roles/wellbeing-budgeting-agent/`)*
 
 ## Humanoid robot roles
 

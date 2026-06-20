@@ -77,6 +77,7 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **AI model evaluation agent** — tests AI outputs for quality, safety, bias, and drift. *(supervised by AI governance lead; skill: `roles/ai-model-evaluation-agent/`)*
 - **Privacy impact assessment agent** — drafts privacy and data-protection assessments. *(supervised by privacy officer; skill: `roles/privacy-impact-assessment-agent/`)*
 - **Documentation agent** — produces and maintains technical documentation. *(supervised by domain owner; skill: `roles/documentation-agent/`)*
+- **Algorithmic transparency & audit agent** — documents, tests, and audits automated public-facing decision systems for explainability, fairness, and appealability and prepares the records that make them reviewable. *(supervised by AI governance lead / responsible-AI officer; skill: `roles/algorithmic-transparency-audit-agent/`)*
 
 ## Humanoid robot roles
 

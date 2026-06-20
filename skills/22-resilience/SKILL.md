@@ -68,6 +68,7 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Continuity plan reviewer** — reviews and tests business-continuity plans. *(supervised by business continuity manager; skill: `roles/continuity-plan-reviewer/`)*
 - **Supply disruption monitor** — monitors supply chains for disruption signals. *(supervised by supply chain risk manager; skill: `roles/supply-disruption-monitor/`)*
 - **Claims triage agent** — triages post-disaster claims and aid requests. *(supervised by recovery program manager; skill: `roles/claims-triage-agent/`)*
+- **Strategic-reserve optimization agent** — sizes and positions reserves and redundancy for existential inputs (energy, water, food, medicine, payments) against worst-credible shocks. *(supervised by continuity director / resilience lead; skill: `roles/strategic-reserve-optimization-agent/`)*
 
 ## Humanoid robot roles
 

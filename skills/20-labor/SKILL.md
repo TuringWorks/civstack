@@ -73,6 +73,7 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Workforce planning simulator** — models headcount, skills, and automation scenarios. *(supervised by workforce planning lead; skill: `roles/workforce-planning-simulator/`)*
 - **Employee sentiment analyst** — analyzes engagement and sentiment signals. *(supervised by people analytics lead; skill: `roles/employee-sentiment-analyst/`)*
 - **Corporate development & portfolio agent** — supports M&A screening, portfolio strategy, and corporate-management decisions for holding companies and enterprises. *(supervised by corporate development lead; skill: `roles/corporate-development-portfolio-agent/`)*
+- **Strategic skills-gap forecaster** — projects which deep and broad skills the economy will need years ahead and tells education and immigration systems what to build. *(supervised by workforce planning director; skill: `roles/strategic-skills-gap-forecaster/`)*
 
 ## Humanoid robot roles
 

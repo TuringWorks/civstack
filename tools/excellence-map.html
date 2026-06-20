@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CivStack · Excellence Map</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --ink:#e8eaed; --muted:#9aa3b2;
+    --line:#2a2f3a; --accent:#6ea8fe; --good:#5dd39e; --warn:#ffb454; --crit:#ff6b6b;
+    --target:#c08bff; --chip:#222734;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+  h1{font-size:22px;margin:0 0 4px}
+  .sub{color:var(--muted);margin:0 0 22px;font-size:14px}
+  .grid{display:grid;grid-template-columns:340px 1fr 320px;gap:18px;align-items:start}
+  @media(max-width:1080px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .card h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 14px}
+  .field{margin-bottom:13px}
+  .field .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px}
+  .field label{font-size:12.5px;color:var(--ink)}
+  .field .poles{display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);margin-top:1px}
+  .field .val{font-size:12px;color:var(--accent);font-variant-numeric:tabular-nums;font-weight:600}
+  input[type=range]{width:100%;accent-color:var(--accent);margin:2px 0 0}
+  select{width:100%;background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:9px 10px;font-size:14px;appearance:none}
+  select:focus{outline:none;border-color:var(--accent)}
+  .legend{display:flex;gap:16px;font-size:12.5px;color:var(--muted);margin:6px 0 10px;justify-content:center}
+  .legend .dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:middle}
+  .score{display:flex;gap:10px;margin:6px 0 14px}
+  .score .box{flex:1;background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:12px;text-align:center}
+  .score .box .n{font-size:24px;font-weight:700;font-variant-numeric:tabular-nums}
+  .score .box .l{font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-top:2px}
+  .desc{font-size:12.5px;color:var(--muted);margin:0 0 14px;min-height:34px}
+  .gap{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:9px}
+  .gap .hd{display:flex;justify-content:space-between;align-items:baseline}
+  .gap .ax{font-size:13.5px;font-weight:600}
+  .gap .delta{font-size:12.5px;font-variant-numeric:tabular-nums;font-weight:600}
+  .gap .delta.up{color:var(--good)} .gap .delta.down{color:var(--warn)}
+  .gap .move{font-size:11.5px;color:var(--muted);margin-top:2px}
+  .gap .lev{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+  .chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:3px 9px;font-size:11px;color:var(--ink)}
+  .tension{font-size:12.5px;color:var(--ink);background:rgba(255,180,84,.08);border:1px solid var(--line);border-left:3px solid var(--warn);border-radius:8px;padding:9px 11px;margin-top:6px}
+  .panel-head{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin:18px 0 6px;padding-top:14px;border-top:1px solid var(--line)}
+  .panel-note{font-size:11.5px;color:var(--muted);margin:0 0 9px}
+  .ocheck{background:rgba(93,211,158,.06);border:1px solid var(--line);border-left:3px solid var(--good);border-radius:8px;padding:8px 11px;margin-bottom:7px}
+  .ocheck .oname{display:block;font-size:12.5px;font-weight:600}
+  .ocheck .oq{display:block;font-size:11.5px;color:var(--muted);margin-top:1px}
+  .foot{color:var(--muted);font-size:12.5px;margin-top:22px;border-top:1px solid var(--line);padding-top:14px}
+  code{background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:1px 5px;font-size:12.5px}
+  .btnrow{display:flex;gap:8px;margin-top:6px}
+  button{flex:1;background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:8px;font-size:12.5px;cursor:pointer}
+  button:hover{border-color:var(--accent)}
+  svg text{fill:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Excellence Map</h1>
+  <p class="sub">Read where a nation or organization <em>is</em> across thirteen bipolar dimensions, overlay a <strong>destiny</strong>, and read the gap and the CivStack levers that move it. Part of <strong>CivStack</strong> · see <code>docs/excellence-map.md</code>. Neither pole of any axis is "better" — fit to destiny is what matters.</p>
+
+  <div class="grid">
+    <!-- LEFT: current-state sliders -->
+    <div class="card">
+      <h2>Read the current wheel</h2>
+      <div id="sliders"></div>
+      <div class="btnrow">
+        <button id="resetBtn">Reset to 50</button>
+        <button id="matchBtn">Match destiny</button>
+      </div>
+    </div>
+
+    <!-- CENTER: radar -->
+    <div class="card">
+      <h2>The wheel</h2>
+      <div class="legend">
+        <span><span class="dot" style="background:var(--accent)"></span>Current character</span>
+        <span><span class="dot" style="background:var(--target)"></span>Destiny target</span>
+      </div>
+      <svg id="radar" viewBox="0 0 460 460" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="Civilizational character radar"></svg>
+    </div>
+
+    <!-- RIGHT: destiny + gap -->
+    <div class="card">
+      <h2>Choose a destiny</h2>
+      <div class="field">
+        <label>Aim for a destiny</label>
+        <select id="destiny"></select>
+      </div>
+      <p class="desc" id="destinyDesc"></p>
+      <div class="score">
+        <div class="box"><div class="n" id="alignN">—</div><div class="l">Alignment</div></div>
+        <div class="box"><div class="n" id="moveN">—</div><div class="l">Avg. move needed</div></div>
+      </div>
+      <div style="font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:8px">Biggest gaps → levers</div>
+      <div id="gaps"></div>
+      <div id="tension"></div>
+
+      <div class="panel-head">Outcome &amp; limits check</div>
+      <p class="panel-note">Posture is a <em>means</em>. Validate every destiny against these <em>ends</em> — if a light moves the wrong way, the destiny or the route is wrong (see <code>excellence-map.md</code>).</p>
+      <div class="ocheck"><span class="oname">Human development</span><span class="oq">HDI / IHDI — are living standards rising, and for whom?</span></div>
+      <div class="ocheck"><span class="oname">Subjective well-being</span><span class="oq">Cantril ladder (World Happiness Report) — do people report their lives going well?</span></div>
+      <div class="ocheck"><span class="oname">SDG progress</span><span class="oq">The country's SDG dashboard — are agreed outcomes on track?</span></div>
+      <div class="ocheck"><span class="oname">Ecological limits</span><span class="oq">Planetary-boundary / footprint-vs-biocapacity — staying inside the safe operating space?</span></div>
+    </div>
+  </div>
+
+  <p class="foot">Heuristic steering instrument, not a scoreboard. Axes are coarse on purpose — they exist to make character visible, force the trade-offs to be named, and connect each axis to the levers that move it. Fork the dimensions, re-weight the destinies, fit it to your context. Full method: <code>docs/excellence-map.md</code>.</p>
+</div>
+
+<script>
+// ---- The thirteen dimensions ----
+const AXES = [
+  {k:"TH", name:"Time Horizon",        lo:"Immediate",     hi:"Intergenerational", levers:["OS 22 Resilience","OS 02 Public Finance","Strategic missions"]},
+  {k:"Fr", name:"Frontier Posture",    lo:"Consolidating", hi:"Exploring",         levers:["OS 15 Science","Frontier-AI mission","Quantum & Space"]},
+  {k:"Co", name:"Coordination Mode",   lo:"Emergent",      hi:"Directed/mission",  levers:["Human-command roles","Strategic missions","OS 01 Governance"]},
+  {k:"Op", name:"Openness",            lo:"Sovereign",     hi:"Networked",         levers:["OS 03 Defense & Foreign","OS 11 Logistics","Strategic Supply Chain"]},
+  {k:"Ta", name:"Talent Formation",    lo:"Broad/mass",    hi:"Deep/elite",        levers:["OS 14 Education","Talent Formation mission","OS 20 Labor"]},
+  {k:"VB", name:"Value Base",          lo:"Extractive",    hi:"Generative",        levers:["OS 15 Science","OS 12 Software","OS 09 Manufacturing"]},
+  {k:"Sl", name:"Slack / Antifragility",lo:"Lean",         hi:"Redundant",         levers:["OS 22 Resilience","OS 07 Energy","OS 05 Food","OS 06 Water"]},
+  {k:"Om", name:"Optimand",            lo:"Output",        hi:"Flourishing",       levers:["OS 21 Household & Care","OS 13 Healthcare","OS 18 Civic"]},
+  {k:"DT", name:"Decision Tempo",      lo:"Deliberative",  hi:"Decisive/agile",    levers:["OS 01 Governance","OS 04 Emergency","OS 22 Resilience"]},
+  {k:"PA", name:"Production Autonomy", lo:"Hand",          hi:"Autonomous",        levers:["embodied-ai-stack","autonomous-fleet-ops","capability-optimization"]},
+  {k:"Th", name:"Physical Throughput", lo:"Constrained",   hi:"Abundant",          levers:["Energy Abundance mission","OS 07 Energy","OS 08 Mining"]},
+  {k:"Lg", name:"Legitimacy Base",     lo:"Inherited",     hi:"Verified",          levers:["OS 23 Identity & DPI","OS 01 Governance","Digital Infrastructure"]},
+  {k:"Ec", name:"Ecological Posture",  lo:"Extractive",    hi:"Regenerative",      levers:["OS 19 Environment","Bioeconomy mission","OS 08 Mining","OS 05 Food"]}
+];
+
+// ---- The seven destinies (target vectors, axis order matches AXES) ----
+const DESTINIES = {
+  engine:   {name:"The Engine — higher GDP",                 v:[45,60,55,70,55,70,35,25,70,75,70,60,35], d:"Maximize output. Leans to lean efficiency and measured output over wellbeing; high automation, throughput, and trade."},
+  sanctuary:{name:"The Sanctuary — top of Happiness Index",  v:[65,40,55,55,55,60,70,95,45,60,60,75,75], d:"Maximize flourishing. Buffers and trust over raw output; automation used to remove drudgery and free time."},
+  voyager:  {name:"The Voyager — space-faring generation",   v:[95,90,75,55,85,80,65,40,60,90,90,65,55], d:"Reach beyond Earth. Very long horizon, frontier appetite, deep talent, abundant energy, high autonomy."},
+  lodestar: {name:"The Lodestar — north star of civilization",v:[85,50,50,75,60,65,70,80,45,60,60,95,80], d:"A moral and civic exemplar. Legitimacy, transparency, long horizon, flourishing, and stewardship define the shape."},
+  lighthouse:{name:"The Lighthouse — beacon for technology",  v:[75,95,60,70,90,90,50,40,75,85,75,70,60], d:"Set the technological frontier and diffuse it. Frontier posture, generative value base, and deep talent dominate."},
+  keystone: {name:"The Keystone — the nation others rely on", v:[70,55,70,90,60,70,85,45,65,80,80,80,50], d:"Be indispensable. Maximum openness and redundancy so you never fail those who depend on you; high throughput."},
+  exemplar: {name:"The Exemplar — the nation others want to be",v:[80,75,55,80,80,80,75,80,65,80,75,90,85], d:"The aspirational composite — high and balanced on nearly everything, with legitimacy, flourishing, and stewardship highest."}
+};
+
+const N = AXES.length;
+let current = Array(N).fill(50);
+
+// ---- Build sliders ----
+const slidersEl = document.getElementById("sliders");
+AXES.forEach((a,i)=>{
+  const f=document.createElement("div"); f.className="field";
+  f.innerHTML =
+    `<div class="top"><label>${a.name}</label><span class="val" id="v${i}">50</span></div>
+     <input type="range" min="0" max="100" value="50" id="s${i}">
+     <div class="poles"><span>${a.lo}</span><span>${a.hi}</span></div>`;
+  slidersEl.appendChild(f);
+});
+const sliders = AXES.map((_,i)=>document.getElementById("s"+i));
+sliders.forEach((s,i)=>s.addEventListener("input",()=>{current[i]=+s.value; document.getElementById("v"+i).textContent=s.value; render();}));
+
+// ---- Destiny select ----
+const destSel = document.getElementById("destiny");
+Object.entries(DESTINIES).forEach(([k,d])=>{
+  const o=document.createElement("option"); o.value=k; o.textContent=d.name; destSel.appendChild(o);
+});
+destSel.value="exemplar";
+destSel.addEventListener("change",render);
+
+document.getElementById("resetBtn").addEventListener("click",()=>{
+  current=Array(N).fill(50);
+  sliders.forEach((s,i)=>{s.value=50; document.getElementById("v"+i).textContent="50";});
+  render();
+});
+document.getElementById("matchBtn").addEventListener("click",()=>{
+  const t=DESTINIES[destSel.value].v;
+  current=t.slice();
+  sliders.forEach((s,i)=>{s.value=t[i]; document.getElementById("v"+i).textContent=t[i];});
+  render();
+});
+
+// ---- Radar geometry ----
+const CX=230, CY=232, R=160;
+function pt(i,val){
+  const ang = -Math.PI/2 + i*2*Math.PI/N;
+  const r = R*val/100;
+  return [CX + r*Math.cos(ang), CY + r*Math.sin(ang)];
+}
+function polygon(vals){ return vals.map((v,i)=>pt(i,v).join(",")).join(" "); }
+
+function drawRadar(target){
+  const svg=document.getElementById("radar");
+  let s="";
+  // rings
+  [25,50,75,100].forEach(p=>{
+    s+=`<polygon points="${polygon(Array(N).fill(p))}" fill="none" stroke="#2a2f3a" stroke-width="1"/>`;
+  });
+  // spokes + labels
+  AXES.forEach((a,i)=>{
+    const [x,y]=pt(i,100);
+    s+=`<line x1="${CX}" y1="${CY}" x2="${x}" y2="${y}" stroke="#2a2f3a" stroke-width="1"/>`;
+    const [lx,ly]=pt(i,118);
+    const anchor = Math.abs(lx-CX)<6 ? "middle" : (lx<CX?"end":"start");
+    s+=`<text x="${lx}" y="${ly+3}" font-size="10" text-anchor="${anchor}">${a.k}</text>`;
+  });
+  // target polygon
+  s+=`<polygon points="${polygon(target)}" fill="rgba(192,139,255,.12)" stroke="#c08bff" stroke-width="2" stroke-dasharray="4 3"/>`;
+  // current polygon
+  s+=`<polygon points="${polygon(current)}" fill="rgba(110,168,254,.16)" stroke="#6ea8fe" stroke-width="2"/>`;
+  current.forEach((v,i)=>{const[x,y]=pt(i,v); s+=`<circle cx="${x}" cy="${y}" r="2.6" fill="#6ea8fe"/>`;});
+  svg.innerHTML=s;
+}
+
+// ---- Render everything ----
+function render(){
+  const dest=DESTINIES[destSel.value];
+  const t=dest.v;
+  drawRadar(t);
+  document.getElementById("destinyDesc").textContent=dest.d;
+
+  // gaps
+  const gaps=AXES.map((a,i)=>({a,i,delta:t[i]-current[i]}));
+  const meanAbs = gaps.reduce((s,g)=>s+Math.abs(g.delta),0)/N;
+  document.getElementById("alignN").textContent=Math.round(100-meanAbs);
+  document.getElementById("moveN").textContent=Math.round(meanAbs);
+
+  const top=gaps.slice().sort((x,y)=>Math.abs(y.delta)-Math.abs(x.delta)).slice(0,4).filter(g=>Math.abs(g.delta)>=3);
+  const gapsEl=document.getElementById("gaps");
+  if(!top.length){ gapsEl.innerHTML=`<div class="desc" style="min-height:auto">Already well aligned to this destiny — hold course and re-read on cadence.</div>`; }
+  else {
+    gapsEl.innerHTML=top.map(g=>{
+      const dir=g.delta>0;
+      const toward=dir?g.a.hi:g.a.lo;
+      return `<div class="gap">
+        <div class="hd"><span class="ax">${g.a.name}</span><span class="delta ${dir?'up':'down'}">${dir?'+':''}${g.delta}</span></div>
+        <div class="move">move toward <strong>${toward}</strong></div>
+        <div class="lev">${g.a.levers.map(l=>`<span class="chip">${l}</span>`).join("")}</div>
+      </div>`;
+    }).join("");
+  }
+
+  // tension flag: an axis the destiny pushes to an extreme opposite to a popular rival destiny
+  const tEl=document.getElementById("tension");
+  const omTarget=t[7];
+  let tension="";
+  if(omTarget<=35) tension=`This destiny optimizes <strong>output over wellbeing</strong> (Optimand ≈ ${omTarget}). You cannot also maximize The Sanctuary at the same time — name the trade-off.`;
+  else if(omTarget>=90) tension=`This destiny optimizes <strong>flourishing over raw output</strong> (Optimand ≈ ${omTarget}). The Engine pulls the opposite way — choosing this is choosing against pure GDP maximization.`;
+  tEl.innerHTML = tension ? `<div class="tension">${tension}</div>` : "";
+}
+
+render();
+</script>
+</body>
+</html>

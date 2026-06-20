@@ -72,6 +72,7 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Energy market analyst** — analyzes prices and positions within market rules. *(supervised by energy trader; skill: `roles/energy-market-analyst/`)*
 - **Permitting documentation agent** — prepares siting and interconnection documentation. *(supervised by project engineer; skill: `roles/permitting-documentation-agent/`)*
 - **Customer outage communications agent** — drafts and targets outage and restoration updates. *(supervised by customer operations manager; skill: `roles/customer-outage-communications-agent/`)*
+- **Generation-buildout planning agent** — plans and sequences clean generation, storage, and transmission ahead of forecast demand and works down the interconnection-queue and permitting backlog. *(supervised by resource planner / grid planning lead; skill: `roles/generation-buildout-planning-agent/`)*
 
 ## Humanoid robot roles
 

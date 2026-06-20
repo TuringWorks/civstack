@@ -24,6 +24,7 @@ These are the durable outcomes this operating system must reliably produce, writ
 2. When pollution occurs, monitor, enforce, remediate, and prevent recurrence.
 3. When ecosystems decline, conserve, restore, and manage land/water/wildlife.
 4. When climate risks rise, forecast, adapt, insure, relocate, harden, and decarbonize.
+5. When materials reach end-of-life, recover and recirculate them so virgin extraction and waste fall.
 
 ## The universal lifecycle, applied
 
@@ -69,6 +70,8 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Waste stream optimization agent** — optimizes collection, sorting, and recycling flows. *(supervised by recycling coordinator; skill: `roles/waste-stream-optimization-agent/`)*
 - **Permit compliance agent** — tracks environmental permit obligations. *(supervised by environmental compliance specialist; skill: `roles/permit-compliance-agent/`)*
 - **Environmental impact review assistant** — drafts and checks environmental impact assessments. *(supervised by remediation project manager; skill: `roles/environmental-impact-review-assistant/`)*
+- **Circular-economy material-flow agent** — maps material flows end-to-end and routes end-of-life materials back into production so virgin extraction and waste fall. *(supervised by circular-economy lead / sustainability manager; skill: `roles/circular-economy-material-flow-agent/`)*
+- **Natural-capital accounting agent** — books ecosystems, water, soil, and biodiversity as assets on the national balance sheet and tracks their depletion or restoration. *(supervised by environmental economist; skill: `roles/natural-capital-accounting-agent/`)*
 
 ## Humanoid robot roles
 
