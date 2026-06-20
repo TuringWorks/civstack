@@ -56,6 +56,8 @@ Capabilities are the durable means by which outcomes are produced. They are also
 
 This layer deliberately mirrors the concerns visible in IMF surveillance, World Bank governance diagnostics, sovereign-risk analysis, and OECD/UN development frameworks without reproducing any one institution's ideology or composite score.
 
+These capabilities are not fully orthogonal — C1 (macroeconomic stability) and C3 (financial & external resilience) overlap on financial stability, and C10 (resilience & security) brushes the safety and ecological outcome domains. The redundancy-and-correlation test in the measurement protocol applies to these first; split or merge them in context rather than treating the eleven as independent by assumption.
+
 ### Research anchors
 
 - [IMF surveillance](https://www.imf.org/en/about/factsheets/imf-surveillance) — fiscal, monetary, exchange-rate, financial, structural, external, climate, and digital risks.
@@ -169,4 +171,4 @@ This version is a **national assessment model**. Organizations and coalitions ca
 
 The governing rule is simple: **posture is a choice, capability is a means, outcomes are the test, and missions are the work.**
 
-**See also:** [`tools/excellence-map.html`](../tools/excellence-map.html) for the interactive prototype and [`excellence-map-axis-levers.md`](excellence-map-axis-levers.md) for the domain-to-work routing map.
+**See also:** [`tools/excellence-map.html`](../tools/excellence-map.html) for the interactive prototype and [`excellence-map-levers.md`](excellence-map-levers.md) for the domain-to-work routing map.

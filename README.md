@@ -2,7 +2,7 @@
 
 **The operating systems of an economy — staffed by humans, AI agents, and robots.**
 
-CivStack is an open library of **412 agent skills** that maps everything a modern country and economy must reliably do — from governance and energy to farming and eldercare — and assigns each job to the right mix of a human owner, AI personnel, embodied robots, and non-humanoid autonomous machines (self-driving vehicles, farm equipment, drones), with hard accountability boundaries baked in. It is navigable by **sector** (the 23 operating systems), **strategic mission** (cross-cutting national capabilities), and **work-system completeness** (the enabling, integrating, assuring, adapting, and sustaining work around every core job). It covers the **formal and the informal economy**, since informal work is the majority of employment in much of the world.
+CivStack is an open library of **416 agent skills** that maps everything a modern country and economy must reliably do — from governance and energy to farming and eldercare — and assigns each job to the right mix of a human owner, AI personnel, embodied robots, and non-humanoid autonomous machines (self-driving vehicles, farm equipment, drones), with hard accountability boundaries baked in. It is navigable by **sector** (the 23 operating systems), **strategic mission** (cross-cutting national capabilities), and **work-system completeness** (the enabling, integrating, assuring, adapting, and sustaining work around every core job). It covers the **formal and the informal economy**, since informal work is the majority of employment in much of the world.
 
 It turns a strategy document (["Country-Economy Core Jobs To Be Done"](docs/country-economy-core-jtbd.md)) into machine-usable [Agent Skills](https://www.anthropic.com/news/skills): every role ships as a `SKILL.md` an LLM or agent can load to get the full context for *who does what, how, and where a human must stay in charge.*
 
@@ -75,7 +75,7 @@ Core JTBD are necessary but not sufficient for a viable organization. CivStack n
 | National operating systems (sector orchestrators) | 23 | `skills/01-…` … `skills/23-…` |
 | Strategic missions (cross-cutting national capabilities) | 12 | `skills/strategic-missions/` |
 | Human-command roles (accountable owners for missions) | 5 | `skills/_catalogs/human-command/` |
-| AI-personnel role skills | 212 | `skills/NN-…/roles/` |
+| AI-personnel role skills | 216 | `skills/NN-…/roles/` |
 | Embodied robot role skills (sector-nested) | 4 | `skills/05-food/robots/` |
 | Autonomous machine skills (sector-nested) | 27 | `skills/<sector>/autonomous/` |
 | Cross-cutting role archetypes | 15 | `skills/cross-cutting-archetypes/` |
@@ -89,7 +89,7 @@ Core JTBD are necessary but not sufficient for a viable organization. CivStack n
 | Transition roles (today's economy → human-AI-robot) | 8 | `skills/_catalogs/transition/` |
 | Enabling-work roles (work-system completeness) | 13 | `skills/_catalogs/enabling-work/` |
 | Informal-economy support roles | 8 | `skills/_catalogs/informal-economy/` |
-| **Total `SKILL.md` packages** | **412** | |
+| **Total `SKILL.md` packages** | **416** | |
 
 Plus non-skill assets: **3 deployment checklists** (`checklists/`), **3 authoring templates** (`templates/`), and reference docs (`docs/`) including the capability routing matrix, work-system completeness map, keep-warm/deskilling guide, and coverage matrix.
 
@@ -110,7 +110,7 @@ civstack/
 │   ├── capability-routing-matrix.md      # how to route capabilities to tier + method
 │   ├── work-system-completeness-map.md   # core work + enable/integrate/assure/adapt/sustain
 │   ├── excellence-map.md                 # outcomes -> capabilities -> posture -> missions (Excellence Map 2.0)
-│   ├── excellence-map-axis-levers.md     # route capability constraints to JTBD, roles, and verified outcomes
+│   ├── excellence-map-levers.md          # route capability constraints to JTBD, roles, and verified outcomes
 │   ├── role-simulation-and-keepwarm.md   # job/role simulators to address deskilling
 │   ├── coverage-matrix.md                # request -> where to look in the library
 │   ├── non-humanoid-platform-taxonomy.md # which physical form for the job
@@ -206,7 +206,7 @@ Built from the strategy map in [`docs/country-economy-core-jtbd.md`](docs/countr
 
 ## Browse the library (self-hostable site)
 
-A static, browsable site is generated into [`site/`](site/) — search and filter all 412
+A static, browsable site is generated into [`site/`](site/) — search and filter all 416
 skills by text, category, and operating system, and read every skill and doc as a rendered
 page. It is fully self-contained (no server, build tools, network, or JS frameworks):
 

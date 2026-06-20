@@ -71,6 +71,7 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Legal discovery agent** — reviews evidence, builds timelines, analyzes contracts, precedents, and filings. *(supervised by attorney; skill: `roles/legal-discovery-agent/`)*
 - **Public comment analyzer** — clusters citizen comments, extracts concerns, and surfaces representative quotes. *(supervised by rulemaking officer; skill: `roles/public-comment-analyzer/`)*
 - **Records and transparency agent** — indexes documents, redacts sensitive data, and prepares FOIA/records responses. *(supervised by records manager / FOIA officer; skill: `roles/records-and-transparency-agent/`)*
+- **Delivery-unit coordination agent** — tracks cross-ministry delivery against commitments, surfaces implementation bottlenecks, and verifies that decisions actually reach the front line — the engine of a mission-delivery office. *(supervised by delivery unit lead / chief of staff; skill: `roles/delivery-unit-coordination-agent/`)*
 
 ## Work-system completeness (the work around the core work)
 

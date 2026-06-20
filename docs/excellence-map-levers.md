@@ -44,6 +44,14 @@ An outcome does not have one universal cause. Treat this table as a diagnostic s
 
 All automated work inherits the human-accountability boundaries of the relevant CivStack skill. Policy authority, coercive decisions, rights restrictions, public-resource allocation, and acceptance of residual risk remain human-accountable.
 
+### Build status of the candidate roles
+
+The "candidate" column above mixes roles that already exist in the library with ones still to build. To keep it actionable:
+
+- **Already in the library** — Algorithmic-transparency & audit agent (C6, OS 12), Strategic skills-gap forecaster (C7, OS 20), Generation-buildout planning agent incl. interconnection-queue (C8, OS 07); plus standing anchors: grievance & redress agent (C6, OS 23), care-gap analyst (C7, OS 13), interoperability schema agent (C8, OS 23), dependency-mapping and supply-disruption agents and the keep-warm competency program (C10, OS 22 + `_catalogs/simulation-training/`).
+- **Added in this pass** — Technology-transfer agent (C9, OS 15), Macro-risk scenario agent (C1, OS 16), External-vulnerability analyst (C3, OS 16), and the Delivery-unit coordination agent that staffs the mission-delivery office (C4, OS 01).
+- **Still candidate** — e.g. medium-term fiscal framework / debt-risk simulator (C2), resolution-readiness coordinator (C3), regulatory-impact & caseflow agents (C5), specialist-pipeline planner (C7), infrastructure-portfolio steward (C8), frontier-bet portfolio & complexity-diversification planner (C9), chokepoint analyst & treaty/commitment tracker (C11). Build these the same way — generator data → regenerate — when a real diagnosis makes one binding, rather than pre-emptively.
+
 ---
 
 ## Posture → design implications

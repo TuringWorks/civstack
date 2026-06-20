@@ -73,6 +73,7 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Patent landscape analyst** — maps prior art and patent landscapes. *(supervised by technology transfer officer; skill: `roles/patent-landscape-analyst/`)*
 - **Reproducibility checker** — checks methods and data for reproducibility. *(supervised by lab manager; skill: `roles/reproducibility-checker/`)*
 - **Standards comparison agent** — compares methods and results against standards. *(supervised by standards engineer; skill: `roles/standards-comparison-agent/`)*
+- **Technology-transfer agent** — moves validated discoveries toward firms, licenses, pilot production, standards, and public capability — closing the gap between research and deployed technology. *(supervised by technology-transfer office director; skill: `roles/technology-transfer-agent/`)*
 
 ## Work-system completeness (the work around the core work)
 

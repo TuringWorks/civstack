@@ -79,6 +79,8 @@ Each of the following has a dedicated, extensive skill under `roles/`. Deploy th
 - **Actuarial valuation & solvency-reporting agent** — prepares reserves, capital, and disclosures under IFRS 17, Solvency II, and US Stat/RBC for review by the appointed actuary. *(supervised by valuation / appointed actuary; skill: `roles/actuarial-valuation-solvency-reporting-agent/`)*
 - **Experience-study & mortality agent** — runs experience studies and mortality, morbidity, and lapse assumption analyses. *(supervised by actuary; skill: `roles/experience-study-mortality-agent/`)*
 - **ALM & economic-capital modeling agent** — models asset-liability matching, economic capital, and stress and scenario results. *(supervised by actuary / risk lead; skill: `roles/alm-economic-capital-modeling-agent/`)*
+- **Macro-risk scenario agent** — nowcasts and scenario-models macro-financial risk — inflation, output, credit, and policy consistency — so monetary and fiscal authorities can act on early signals. *(supervised by chief economist / financial-stability lead; skill: `roles/macro-risk-scenario-agent/`)*
+- **External-vulnerability analyst** — monitors reserves, the current account, external debt, and funding concentration and stress-tests exposure to capital-flow and balance-of-payments shocks. *(supervised by financial-stability lead; skill: `roles/external-vulnerability-analyst/`)*
 
 ## Work-system completeness (the work around the core work)
 
