@@ -1,0 +1,50 @@
+name: CivStack CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-style: '3.10'
+
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Verify skill markdown library
+      run: |
+        python tools/verify.py
+
+    - name: Verify data extraction and generation integrity
+      run: |
+        # Extract data and regenerate skills
+        python tools/extract_data.py
+        SKILLS_ROOT=./skills python tools/generate_skills.py
+        # Check that there are no unexpected git changes (parses successfully and matches perfectly)
+        git diff --exit-code skills/
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install Node dependencies
+      run: npm ci || npm install
+
+    - name: Install Playwright Browsers
+      run: npx playwright install chromium --with-deps
+
+    - name: Run Playwright E2E UI Tests
+      run: npm test

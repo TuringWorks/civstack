@@ -10,7 +10,9 @@ Run:  python3 tools/build_site.py
 Open: site/index.html  (double-click) — or:  python3 -m http.server -d site 8000
 Host: commit site/ and point GitHub Pages at it, or copy site/ to any static host.
 """
+import hashlib
 import html
+import json
 import os
 import re
 import shutil
@@ -215,6 +217,21 @@ def page(title, body_html, prefix, crumb=""):
         ('<div class="crumb">%s</div>' % crumb) if crumb else "", body_html)
 
 
+def _content_hash(path, length=8):
+    """Return a short SHA-256 hex digest of the file at `path`."""
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(65536), b""):
+            h.update(chunk)
+    return h.hexdigest()[:length]
+
+
+# APP_JS is now read from site/assets/app.js (built by tools/build_site.py).
+# The source of truth is site/assets/app.js — edit that file directly.
+APP_JS_SRC = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                           "site", "assets", "app.js")
+
+
 def main():
     if os.path.isdir(SITE):
         try:
@@ -223,7 +240,12 @@ def main():
             pass                          # otherwise overwrite in place (e.g. restricted mounts)
     os.makedirs(os.path.join(SITE, "assets"), exist_ok=True)
     open(os.path.join(SITE, "assets", "style.css"), "w").write(CSS)
-    open(os.path.join(SITE, "assets", "app.js"), "w").write(APP_JS)
+    # Copy app.js from source; fall back to embedded copy if missing.
+    app_js_dst = os.path.join(SITE, "assets", "app.js")
+    if os.path.isfile(APP_JS_SRC):
+        shutil.copy2(APP_JS_SRC, app_js_dst)
+    else:
+        open(app_js_dst, "w").write(APP_JS)
 
     index = []
     nskills = 0
@@ -285,9 +307,13 @@ def main():
             tool_links.append('<a href="tools/%s">%s</a>' % (f, f[:-5]))
 
     # data.js (inlined catalog so file:// works without fetch)
-    import json
-    open(os.path.join(SITE, "data.js"), "w").write(
+    data_js_path = os.path.join(SITE, "data.js")
+    open(data_js_path, "w").write(
         "window.SKILLS=" + json.dumps(index, ensure_ascii=False) + ";")
+
+    # Compute content hashes for cache-busting
+    app_hash = _content_hash(app_js_dst)
+    data_hash = _content_hash(data_js_path)
 
     # home / search page
     home_body = """
@@ -302,9 +328,11 @@ Search and filter below, or read the <strong>docs</strong>: %s.</p>
 </div>
 <div class="count" id="count"></div>
 <ul class="results" id="results"></ul>
-<script src="data.js"></script><script src="assets/app.js"></script>
+<script src="data.js?v=%s"></script><script src="assets/app.js?v=%s"></script>
 """ % (nskills, " · ".join(docs_links) or "(none)",
-       " · ".join(tool_links) or "(none)", " · ".join(checklist_links) or "(none)")
+       " · ".join(tool_links) or "(none)", " · ".join(checklist_links) or "(none)",
+       data_hash, app_hash)
+
     open(os.path.join(SITE, "index.html"), "w").write(page("Home", home_body, ""))
 
     print("Built site/ : %d skill pages + %d docs + %d checklists + %d tools." %

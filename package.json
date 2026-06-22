@@ -1,0 +1,12 @@
+{
+  "name": "civstack-web-tests",
+  "version": "1.0.0",
+  "description": "E2E UI tests for CivStack interactive tools",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "playwright": "^1.42.1"
+  }
+}

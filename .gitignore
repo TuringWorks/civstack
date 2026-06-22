@@ -23,3 +23,5 @@ commit-changes.sh
 /\#/
 tools/sync-vault.sh
 tools/build.sh
+/node_modules
+/test-results

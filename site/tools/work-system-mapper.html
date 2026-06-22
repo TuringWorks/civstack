@@ -99,6 +99,92 @@ async function copyRecord(){generate();try{await navigator.clipboard.writeText(b
 function resetAll(){document.querySelectorAll("input,textarea").forEach(x=>{if(x.type==="checkbox")x.checked=false;else x.value=""});ROLES.forEach(r=>byId(`topology-${r.id}`).selectedIndex=0);showRecommendations();updateCounts();generate()}
 
 renderFrictions();renderFamilies();document.querySelectorAll("[data-friction]").forEach(x=>x.addEventListener("change",showRecommendations));byId("recommend").addEventListener("click",applyRecommendations);byId("generate").addEventListener("click",generate);byId("copy").addEventListener("click",copyRecord);byId("reset").addEventListener("click",resetAll);updateCounts();generate();
+
+const WSM_KEY="civstack-work-system-mapper";
+function saveWsm(){
+  try{
+    const data={
+      outcome:byId("outcome").value,beneficiary:byId("beneficiary").value,
+      owner:byId("owner").value,measures:byId("measures").value,constraint:byId("constraint").value,
+      frictions:Array.from(document.querySelectorAll("[data-friction]")).map(x=>x.checked),
+      picks:ROLES.map(r=>byId("pick-"+r.id).checked),
+      topologies:ROLES.map(r=>byId("topology-"+r.id).value),
+      contracts:ROLES.map(r=>byId("contract-"+r.id).value)
+    };
+    localStorage.setItem(WSM_KEY,JSON.stringify(data));
+  }catch(e){}
+}
+function restoreWsm(){
+  try{
+    const raw=localStorage.getItem(WSM_KEY);
+    if(!raw)return;
+    const d=JSON.parse(raw);
+    if(d.outcome)byId("outcome").value=d.outcome;
+    if(d.beneficiary)byId("beneficiary").value=d.beneficiary;
+    if(d.owner)byId("owner").value=d.owner;
+    if(d.measures)byId("measures").value=d.measures;
+    if(d.constraint)byId("constraint").value=d.constraint;
+    if(d.frictions)document.querySelectorAll("[data-friction]").forEach((x,i)=>{if(d.frictions[i]!==undefined)x.checked=d.frictions[i];});
+    if(d.picks)ROLES.forEach((r,i)=>{if(d.picks[i]!==undefined)byId("pick-"+r.id).checked=d.picks[i];});
+    if(d.topologies)ROLES.forEach((r,i)=>{if(d.topologies[i])byId("topology-"+r.id).value=d.topologies[i];});
+    if(d.contracts)ROLES.forEach((r,i)=>{if(d.contracts[i])byId("contract-"+r.id).value=d.contracts[i];});
+    showRecommendations();updateCounts();generate();
+  }catch(e){}
+}
+["outcome","beneficiary","owner","measures","constraint"].forEach(id=>byId(id).addEventListener("input",()=>{generate();saveWsm();}));
+document.querySelectorAll("[data-role]").forEach(x=>x.addEventListener("change",()=>{updateCounts();generate();saveWsm();}));
+
+function exportWsm(){
+  generate();
+  const payload={
+    outcome:byId("outcome").value,beneficiary:byId("beneficiary").value,
+    owner:byId("owner").value,measures:byId("measures").value,constraint:byId("constraint").value,
+    roles:ROLES.filter(r=>byId("pick-"+r.id).checked).map(r=>({
+      id:r.id,name:r.name,family:r.family,topology:byId("topology-"+r.id).value,contract:byId("contract-"+r.id).value
+    })),
+    record:byId("record").value,ts:new Date().toISOString()
+  };
+  const a=document.createElement("a");
+  a.href="data:application/json,"+encodeURIComponent(JSON.stringify(payload,null,2));
+  a.download="work-system-record.json";
+  a.click();
+}
+function importWsm(){
+  const inp=document.createElement("input");
+  inp.type="file";inp.accept=".json,application/json";
+  inp.onchange=e=>{
+    const file=e.target.files[0];if(!file)return;
+    const reader=new FileReader();
+    reader.onload=ev=>{
+      try{
+        const p=JSON.parse(ev.target.result);
+        if(p.outcome)byId("outcome").value=p.outcome;
+        if(p.beneficiary)byId("beneficiary").value=p.beneficiary;
+        if(p.owner)byId("owner").value=p.owner;
+        if(p.measures)byId("measures").value=p.measures;
+        if(p.constraint)byId("constraint").value=p.constraint;
+        if(p.roles){
+          const selected=new Set(p.roles.map(r=>r.id));
+          ROLES.forEach(r=>{
+            byId("pick-"+r.id).checked=selected.has(r.id);
+            const match=p.roles.find(x=>x.id===r.id);
+            if(match){byId("topology-"+r.id).value=match.topology||"";byId("contract-"+r.id).value=match.contract||"";}
+          });
+        }
+        showRecommendations();updateCounts();generate();saveWsm();
+      }catch(err){alert("Invalid JSON: "+err.message);}
+    };
+    reader.readAsText(file);
+  };
+  inp.click();
+}
+restoreWsm();
+
+// Wire export/import buttons (append to actions bar)
+const actBar=byId("generate").parentElement;
+const expBtn=document.createElement("button");expBtn.className="btn";expBtn.textContent="⬇ Export";expBtn.onclick=exportWsm;
+const impBtn=document.createElement("button");impBtn.className="btn";impBtn.textContent="⬆ Import";impBtn.onclick=importWsm;
+actBar.appendChild(expBtn);actBar.appendChild(impBtn);
 </script>
 </body>
 </html>

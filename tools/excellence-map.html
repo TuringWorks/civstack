@@ -100,6 +100,8 @@
       <div class="actions">
         <button type="button" class="btn" id="sampleBtn">Load illustrative baseline</button>
         <button type="button" class="btn" id="clearBtn">Clear layer</button>
+        <button type="button" class="btn" id="exportBtn">⬇ Export</button>
+        <button type="button" class="btn" id="importBtn">⬆ Import</button>
       </div>
     </section>
 
@@ -275,9 +277,53 @@ function renderPriorities(){
   </div>`).join("");
 }
 
-function render(){renderFields();renderProfile();renderPriorities()}
+function render(){renderFields();renderProfile();renderPriorities();saveState();}
+
+const LS_KEY="civstack-excellence-map";
+function saveState(){
+  try{localStorage.setItem(LS_KEY,JSON.stringify({outcomes:state.outcomes,capabilities:state.capabilities,posture:state.posture,destiny:document.getElementById("destiny").value}));}catch(e){}
+}
+function restoreState(){
+  try{
+    const raw=localStorage.getItem(LS_KEY);
+    if(!raw)return;
+    const saved=JSON.parse(raw);
+    if(saved.outcomes)state.outcomes=saved.outcomes;
+    if(saved.capabilities)state.capabilities=saved.capabilities;
+    if(saved.posture)state.posture=saved.posture;
+    if(saved.destiny)document.getElementById("destiny").value=saved.destiny;
+  }catch(e){}
+}
+function exportProfile(){
+  const payload={outcomes:state.outcomes,capabilities:state.capabilities,posture:state.posture,destiny:document.getElementById("destiny").value,ts:new Date().toISOString()};
+  const a=document.createElement("a");
+  a.href="data:application/json,"+encodeURIComponent(JSON.stringify(payload,null,2));
+  a.download="excellence-profile.json";
+  a.click();
+}
+function importProfile(){
+  const inp=document.createElement("input");
+  inp.type="file";inp.accept=".json,application/json";
+  inp.onchange=e=>{
+    const file=e.target.files[0];if(!file)return;
+    const reader=new FileReader();
+    reader.onload=ev=>{
+      try{
+        const p=JSON.parse(ev.target.result);
+        if(p.outcomes)state.outcomes=p.outcomes;
+        if(p.capabilities)state.capabilities=p.capabilities;
+        if(p.posture)state.posture=p.posture;
+        if(p.destiny)document.getElementById("destiny").value=p.destiny;
+        render();
+      }catch(err){alert("Invalid profile JSON: "+err.message);}
+    };
+    reader.readAsText(file);
+  };
+  inp.click();
+}
 
 buildDestinies();
+restoreState();
 document.querySelectorAll("[data-layer]").forEach(button=>button.addEventListener("click",e=>{
   state.layer=e.currentTarget.dataset.layer;
   document.querySelectorAll("[data-layer]").forEach(b=>b.classList.toggle("active",b===e.currentTarget));
@@ -286,6 +332,8 @@ document.querySelectorAll("[data-layer]").forEach(button=>button.addEventListene
 document.getElementById("destiny").addEventListener("change",render);
 document.getElementById("sampleBtn").addEventListener("click",()=>{state[state.layer]=SAMPLE[state.layer].slice();render()});
 document.getElementById("clearBtn").addEventListener("click",()=>{state[state.layer]=Array(itemsFor(state.layer).length).fill(null);render()});
+document.getElementById("exportBtn").addEventListener("click",exportProfile);
+document.getElementById("importBtn").addEventListener("click",importProfile);
 render();
 </script>
 </body>

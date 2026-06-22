@@ -101,10 +101,13 @@
         <div class="rec"><div class="lbl">Fallback &amp; safety</div><div class="safety" id="rFallback">—</div></div>
         <div class="rec"><div class="lbl">Why (rules fired)</div><ul class="rules" id="rWhy"></ul></div>
       </div>
+      <p class="foot">Heuristic design aid, not a guarantee. Re-derive per context (compute, data, connectivity, regulation vary by nation and operator), validate on the real task, and keep a verified deterministic safety layer beneath anything learned. See <code>docs/capability-routing-matrix.md</code>.</p>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <button onclick="exportProfile()" style="background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:7px 14px;cursor:pointer;font-size:13px">⬇ Export profile</button>
+        <button onclick="importProfile()" style="background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:7px 14px;cursor:pointer;font-size:13px">⬆ Import profile</button>
+      </div>
     </div>
   </div>
-
-  <p class="foot">Heuristic design aid, not a guarantee. Re-derive per context (compute, data, connectivity, regulation vary by nation and operator), validate on the real task, and keep a verified deterministic safety layer beneath anything learned. See <code>docs/capability-routing-matrix.md</code>.</p>
 </div>
 
 <script>
@@ -186,9 +189,30 @@ function recommend(s){
   return {tier, methods, fallback, why};
 }
 
+const LS_KEY = "civstack-capability-router";
+
+function getState(){
+  return {safety:$("safety").value, latency:$("latency").value, verify:$("verify").value,
+          task:$("task").value, data:$("data").value, compute:$("compute").value, conn:$("conn").value};
+}
+
+function saveState(){
+  try { localStorage.setItem(LS_KEY, JSON.stringify(getState())); } catch(e){}
+}
+
+function restoreState(){
+  try {
+    const raw = localStorage.getItem(LS_KEY);
+    if(!raw) return;
+    const s = JSON.parse(raw);
+    ["safety","latency","verify","task","data","compute","conn"].forEach(k=>{
+      const el=$(k); if(el && s[k]) el.value=s[k];
+    });
+  } catch(e){}
+}
+
 function render(){
-  const s = {safety:$("safety").value, latency:$("latency").value, verify:$("verify").value,
-             task:$("task").value, data:$("data").value, compute:$("compute").value, conn:$("conn").value};
+  const s = getState();
   const r = recommend(s);
   $("rTier").textContent = r.tier;
   $("rMethods").innerHTML = r.methods.map(m=>`<span class="chip">${m}</span>`).join("");
@@ -197,8 +221,43 @@ function render(){
   const b = $("safetyBadge");
   b.textContent = s.safety==="high"?"high-consequence":s.safety==="med"?"medium":"low";
   b.className = "badge " + (s.safety==="high"?"b-high":s.safety==="med"?"b-med":"b-low");
+  saveState();
 }
+
+function exportProfile(){
+  const state = getState();
+  const rec = recommend(state);
+  const payload = { inputs: state, tier: rec.tier, methods: rec.methods, fallback: rec.fallback, why: rec.why, ts: new Date().toISOString() };
+  const a = document.createElement("a");
+  a.href = "data:application/json," + encodeURIComponent(JSON.stringify(payload, null, 2));
+  a.download = "capability-profile.json";
+  a.click();
+}
+
+function importProfile(){
+  const inp = document.createElement("input");
+  inp.type = "file"; inp.accept = ".json,application/json";
+  inp.onchange = e => {
+    const file = e.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = ev => {
+      try {
+        const payload = JSON.parse(ev.target.result);
+        const s = payload.inputs || payload;
+        ["safety","latency","verify","task","data","compute","conn"].forEach(k=>{
+          const el=$(k); if(el && s[k]) el.value=s[k];
+        });
+        render();
+      } catch(err){ alert("Invalid profile JSON: " + err.message); }
+    };
+    reader.readAsText(file);
+  };
+  inp.click();
+}
+
 inputs.forEach(el=>el.addEventListener("change", render));
+restoreState();
 render();
 </script>
 </body>
