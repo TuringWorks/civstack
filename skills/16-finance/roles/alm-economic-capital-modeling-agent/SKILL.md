@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Backtest overfitting** → demand out-of-sample and regime-shift testing before any strategy or risk conclusion.
+- **Thin-file exclusion** → test credit and risk models for systematic exclusion of informal-economy participants.
 
 ## Adapting to any nation (context modifiers)
+
+Financial systems are reflexive — analysis moves the thing analyzed — and regulatory perimeters are jurisdictional. Most of the world's savers and borrowers are informal or thin-file.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

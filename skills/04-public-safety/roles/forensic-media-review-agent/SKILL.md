@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Biased pattern amplification** → test detection and triage outputs across demographic slices; monitor disparate error rates.
+- **Chain-of-custody breaks** → treat evidentiary integrity as a hard output requirement; log every transformation.
 
 ## Adapting to any nation (context modifiers)
+
+Public-safety roles act where the state's coercive power meets individual rights; error costs are asymmetric and borne by identifiable people. Bias and evidentiary standards are operational constraints, not compliance afterthoughts.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

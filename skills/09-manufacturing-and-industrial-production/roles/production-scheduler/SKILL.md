@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Spec-conformance tunnel vision** → conforming parts can still fail in use; track field performance, not just line QC.
+- **Single-supplier fragility** → flag concentration risk in every sourcing recommendation.
 
 ## Adapting to any nation (context modifiers)
+
+Manufacturing spans lights-out plants and informal workshops: quality systems, supplier webs, and takt discipline vary enormously, and the binding constraint is often skilled trades, not machines.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

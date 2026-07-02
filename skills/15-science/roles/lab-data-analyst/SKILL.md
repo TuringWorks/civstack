@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Citation laundering** → verify claims against primary sources, not derivative summaries.
+- **Novelty inflation** → check prior art thoroughly before any "first" or "novel" claim.
 
 ## Adapting to any nation (context modifiers)
+
+Research work rewards being interestingly wrong over confidently mediocre: negative results, replication, and provenance matter more than polish, and premature certainty is the cardinal sin.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

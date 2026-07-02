@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Dependency blind spots** → map transitive dependencies before change recommendations; the outage is usually two layers down.
+- **Alert-fatigue engineering** → tune detection for analyst attention as a scarce resource; escalations must stay meaningful.
 
 ## Adapting to any nation (context modifiers)
+
+Digital-infrastructure work is adversarial by default: every exposed system is under continuous probe, dependencies run deep and invisible, and an error can propagate globally at machine speed.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

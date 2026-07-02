@@ -93,6 +93,12 @@ Do not clone every support role into this sector. Choose **embedded, shared, pla
 - Assembly assistance, kitting, material movement, machine tending, inspection, rework support.
 - High value in brownfield factories where human-designed tools and spaces already exist.
 
+Dedicated **embodied robot role skills** for this sector (LLM-brained; actions as tool calls via VLA policies):
+
+- **Flexible assembly robot** — kit, position, fasten, and assemble high-mix low-volume products at human-scaled workstations. *(embodied robot skill: `robots/flexible-assembly-robot/`)*
+- **Machine-tending robot** — load and unload CNC machines, presses, and molders, change tooling, and run first-article quality checks. *(embodied robot skill: `robots/machine-tending-robot/`)*
+- **Intralogistics and kitting robot** — pick, kit, stage, and deliver parts and work-in-progress line-side and manage returns and empties. *(embodied robot skill: `robots/intralogistics-and-kitting-robot/`)*
+
 > **How these robots work (assumed architecture):** each is an **LLM-brained embodied agent** — a multimodal LLM brain plans and issues physical **actions as tool calls** (e.g. `grasp`, `navigate_to`, `place`), executed by Vision-Language-Action policies trained on world models, robot gyms, and **RLAIF**. Fleets may share one brain model or mix specialized ones. A verified low-level safety layer can override unsafe actions independently of the brain. Full detail in `00-framework/` and `_catalogs/humanoid-robots/`.
 
 ## Human accountability boundary (must stay human-led)
@@ -150,7 +156,9 @@ Automating routine cases erodes three things over time: the **human fallback ben
 
 ## Adapting to any nation (context modifiers)
 
-The jobs above are universal; how they are staffed is not. Re-read this sector through:
+The jobs above are universal; how they are staffed is not. Manufacturing spans lights-out plants and informal workshops: quality systems, supplier webs, and takt discipline vary enormously, and the binding constraint is often skilled trades, not machines.
+
+Re-read this sector through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

@@ -247,6 +247,23 @@ SECTOR_ROBOTS = {int(k): v for k, v in _raw_data["sector_robots"].items()}
 SECTOR_MACHINES = {int(k): v for k, v in _raw_data["sector_machines"].items()}
 SECTOR_JD = {int(k): v for k, v in _raw_data["sector_jd"].items()}
 SECTOR_DESKILLING = {int(k): v for k, v in _raw_data["sector_deskilling"].items()}
+SECTOR_ROBOT_PROFILES = {int(k): v for k, v in _raw_data["sector_robot_profiles"].items()}
+SECTOR_CONTEXT_LENS = {int(k): v for k, v in _raw_data["sector_context_lens"].items()}
+SECTOR_FAILURE_MODES = {int(k): v for k, v in _raw_data["sector_failure_modes"].items()}
+
+
+def context_block(num):
+    """Sector-specific lens paragraph followed by the shared modifier bullets."""
+    lens = SECTOR_CONTEXT_LENS.get(num)
+    if lens:
+        return lens + "\n\nRe-read the role through:\n\n" + CONTEXT_MODIFIERS
+    return CONTEXT_MODIFIERS
+
+
+def sector_failure_block(num):
+    """Sector-specific failure-mode bullets to append after the generic ones."""
+    extra = SECTOR_FAILURE_MODES.get(num)
+    return ("\n" + "\n".join(extra)) if extra else ""
 
 print("Data loaded from JSON:", len(SECTORS), "sectors")
 
@@ -405,7 +422,9 @@ This sector regularly depends on and feeds: {collabs}. Coordinate handoffs expli
 {deskilling_block}
 ## Adapting to any nation (context modifiers)
 
-The jobs above are universal; how they are staffed is not. Re-read this sector through:
+The jobs above are universal; how they are staffed is not. {lens}
+
+Re-read this sector through:
 
 {context}
 
@@ -424,7 +443,8 @@ The jobs above are universal; how they are staffed is not. Re-read this sector t
         robot_stack_short=ROBOT_STACK_SHORT, nested_machines=nested_machines,
         jd_block=jd_sector_block(sec["num"]), deskilling_block=deskilling_block(sec["num"]),
         missions_block=missions_for_sector(sec["num"]),
-        accountability=sec["accountability"], collabs=collabs, context=CONTEXT_MODIFIERS)
+        accountability=sec["accountability"], collabs=collabs, context=CONTEXT_MODIFIERS,
+        lens=SECTOR_CONTEXT_LENS.get(sec["num"], ""))
     return sslug, body
 
 
@@ -527,7 +547,7 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Prompt injection / poisoned inputs** → treat external content as untrusted; sandbox and sanitize.
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
-- **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.{sector_fail}
 
 ## Adapting to any nation (context modifiers)
 
@@ -557,7 +577,8 @@ Other role skills in this operating system (see `../`), and across these neighbo
         jtbd_short="\n".join("- %s" % j for j in sec["jtbd"][:3]),
         lifecycle=lifecycle_block("role", rname),
         accountability=sec["accountability"], collabs=", ".join(sec["collaborators"]),
-        context=CONTEXT_MODIFIERS, jd_block=jd_role_block(sec["num"], rslug),
+        context=context_block(sec["num"]), sector_fail=sector_failure_block(sec["num"]),
+        jd_block=jd_role_block(sec["num"], rslug),
         deskilling_block=deskilling_block(sec["num"], condensed=True))
     return rslug, body
 
@@ -838,11 +859,12 @@ def render_sector_robot(sec, robot):
     rslug = slug(rname)
     name = "robot-%02d-%s" % (sec["num"], rslug)
     sshort = sec["title"].split(",")[0]
+    prof = SECTOR_ROBOT_PROFILES[sec["num"]]
     desc = ("Humanoid/embodied robot role for the %s operating system: **%s** — %s. Best in: %s. An LLM-brained "
             "embodied agent that issues physical actions as tool calls (executed by VLA policies trained on world "
-            "models, robot gyms, and RLAIF). Use this skill to plan or operate this physical farm/field role; trigger "
-            "whenever the task needs this hands-on work, even if the user only describes the underlying need."
-            ) % (sshort, rname, jtbd, envs)
+            "models, robot gyms, and RLAIF). Use this skill to plan or operate this physical role in the %s sector; "
+            "trigger whenever the task needs this hands-on work, even if the user only describes the underlying need."
+            ) % (sshort, rname, jtbd, envs, sshort.lower())
     body = """---
 name: {name}
 description: {desc}
@@ -860,7 +882,7 @@ The **{rname}** is an embodied robot whose job is to {jtbd}. {detail}
 
 ## Operating-system context
 
-This role serves the *{sshort}* operating system, whose mission is to {mission_lower} It takes physical field, barn, and crop work so human farmers and the sector's AI agents can focus on judgment, planning, and exceptions.
+This role serves the *{sshort}* operating system, whose mission is to {mission_lower} It takes {p_work} so {p_workers} and the sector's AI agents can focus on judgment, planning, and exceptions.
 
 ## When to use this skill
 
@@ -872,25 +894,25 @@ When a task needs the physical job "{jtbd}" in environments such as {envs}. Pair
 
 ## Division of labor and safety
 
-- **Human owner (farmer / ranch manager / vet)** — owns animal welfare, land stewardship, safety, and exceptions; holds override and stop authority.
-- **LLM brain** — perceives the field/barn, plans the task, and issues motor-primitive tool calls (`navigate_to`, `grasp`, `pick`, `place`, `inspect`).
-- **VLA policies** — execute dexterous, delicate manipulation (e.g., picking ripe fruit without bruising) under the engineered safety envelope.
-- **AI agents** — the sector's planning/monitoring agents (crop planning, irrigation, livestock health, machinery dispatch) direct and schedule the robot's work.
-- **Verified safety layer** — validates, refuses, or overrides unsafe tool calls independently of the brain (people, animals, and bystanders protected).
+- **Human owner ({p_owner})** — owns {p_owner_owns}; holds override and stop authority.
+- **LLM brain** — perceives the {p_workspace}, plans the task, and issues motor-primitive tool calls (`navigate_to`, `grasp`, `pick`, `place`, `inspect`).
+- **VLA policies** — execute dexterous, delicate manipulation (e.g., {p_vla_example}) under the engineered safety envelope.
+- **AI agents** — the sector's planning/monitoring agents ({p_ai_examples}) direct and schedule the robot's work.
+- **Verified safety layer** — validates, refuses, or overrides unsafe tool calls independently of the brain ({p_protectees} protected).
 
 ## Accountability boundary
 
 {accountability}
 
-These remain human-owned. The robot executes within an engineered envelope and routes anything outside it — welfare concerns, chemical decisions, or unsafe conditions — to the accountable human.
+These remain human-owned. The robot executes within an engineered envelope and routes anything outside it — {p_routes} — to the accountable human.
 
 ## Operating and safety procedure
 
-1. Confirm the field/barn is mapped, people and animals are protected, and the task is within the engineered envelope.
+1. Confirm the {p_workspace} is mapped, {p_protectees} are protected, and the task is within the engineered envelope.
 2. The brain plans and emits motor-primitive **tool calls**; the safety layer validates each before execution.
-3. Execute within speed, force, reach, and low-stress-handling limits via VLA policies.
-4. Report progress, yields, exceptions, and any safety or welfare event to the sector agents and human owner.
-5. Stop and yield to humans for out-of-distribution conditions, animal-welfare risk, or anything outside the envelope.
+3. Execute within {p_limits} via VLA policies.
+4. Report progress, outcomes, exceptions, and any safety event to the sector agents and human owner.
+5. Stop and yield to humans for {p_stop_risk}.
 
 ## Architecture-specific failure modes
 
@@ -899,7 +921,7 @@ These remain human-owned. The robot executes within an engineered envelope and r
 {jd_block}
 ## Adapting to any nation (context modifiers)
 
-In smallholder and informal-sector agriculture, this role may be shared equipment, cooperatively owned, or rented by the hour rather than owned per farm; affordability and repairability dominate. In high-income, labor-scarce settings it fills chronic field-labor shortages. Re-read through:
+{p_adapt} Re-read through:
 
 {context}
 """.format(name=name, desc=desc, rname=rname, num=sec["num"], sname=sec["title"], sshort=sshort,
@@ -907,7 +929,13 @@ In smallholder and informal-sector agriculture, this role may be shared equipmen
            jtbd=jtbd, detail=detail, envs=envs,
            mission_lower=sec["mission"][0].lower() + sec["mission"][1:],
            stack_full=ROBOT_STACK_FULL, accountability=sec["accountability"],
-           arch_fail=ROBOT_ARCH_FAILURE_MODES, context=CONTEXT_MODIFIERS)
+           arch_fail=ROBOT_ARCH_FAILURE_MODES, context=CONTEXT_MODIFIERS,
+           p_owner=prof["owner"], p_owner_owns=prof["owner_owns"], p_work=prof["work"],
+           p_workers=prof["workers"], p_ai_examples=prof["ai_examples"],
+           p_vla_example=prof["vla_example"], p_routes=prof["routes"],
+           p_protectees=prof["protectees"], p_limits=prof["limits"],
+           p_stop_risk=prof["stop_risk"], p_workspace=prof["workspace"],
+           p_adapt=prof["adapt"])
     return rslug, body
 
 

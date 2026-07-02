@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Dignity erosion by efficiency** → optimize around the person's preferences and rhythm, not task throughput.
+- **Isolation masking** → care metrics can look green while loneliness deepens; check the human relationship, not just the tasks.
 
 ## Adapting to any nation (context modifiers)
+
+Care work is intimate, undervalued, and mostly informal or unpaid: privacy, dignity, and family norms are hard constraints, and the person served often cannot advocate for themselves.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

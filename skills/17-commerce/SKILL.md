@@ -96,6 +96,11 @@ Do not clone every support role into this sector. Choose **embedded, shared, pla
 - Shelf stocking, room-service delivery, housekeeping support, bussing tables, dish handling.
 - Retail floor retrieval, queue assistance, event setup.
 
+Dedicated **embodied robot role skills** for this sector (LLM-brained; actions as tool calls via VLA policies):
+
+- **Store operations robot** — receive, stock, face, and rotate shelf inventory and fulfill in-store pick orders. *(embodied robot skill: `robots/store-operations-robot/`)*
+- **Kitchen and food-service robot** — prep ingredients, run fryers and grills, plate to spec, and wash dishes on a commercial line. *(embodied robot skill: `robots/kitchen-and-food-service-robot/`)*
+
 > **How these robots work (assumed architecture):** each is an **LLM-brained embodied agent** — a multimodal LLM brain plans and issues physical **actions as tool calls** (e.g. `grasp`, `navigate_to`, `place`), executed by Vision-Language-Action policies trained on world models, robot gyms, and **RLAIF**. Fleets may share one brain model or mix specialized ones. A verified low-level safety layer can override unsafe actions independently of the brain. Full detail in `00-framework/` and `_catalogs/humanoid-robots/`.
 
 ## Non-humanoid autonomous machines
@@ -159,7 +164,9 @@ Automating routine cases erodes three things over time: the **human fallback ben
 
 ## Adapting to any nation (context modifiers)
 
-The jobs above are universal; how they are staffed is not. Re-read this sector through:
+The jobs above are universal; how they are staffed is not. Commerce and hospitality run on thin margins and human moments: demand is spiky, labor turnover is high, and micro-enterprises are the sector's global majority.
+
+Re-read this sector through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

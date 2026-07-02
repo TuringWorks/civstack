@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Geotechnical overconfidence** → treat model stability predictions as provisional; physical inspection gates high-consequence calls.
+- **Externalized harm** → account for tailings, water, and community impact inside every recommendation, not in a separate report.
 
 ## Adapting to any nation (context modifiers)
+
+Extractive work sits on three fault lines: worker safety in hostile environments, community and environmental consent, and price cycles that whipsaw every plan. Artisanal and small-scale mining is the informal majority in many producing countries.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

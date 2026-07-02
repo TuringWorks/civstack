@@ -27,6 +27,9 @@ data = {
     "sector_machines": generate_skills.SECTOR_MACHINES,
     "sector_jd": generate_skills.SECTOR_JD,
     "sector_deskilling": generate_skills.SECTOR_DESKILLING,
+    "sector_robot_profiles": generate_skills.SECTOR_ROBOT_PROFILES,
+    "sector_context_lens": generate_skills.SECTOR_CONTEXT_LENS,
+    "sector_failure_modes": generate_skills.SECTOR_FAILURE_MODES,
     "role_jd": generate_skills.ROLE_JD
 }
 

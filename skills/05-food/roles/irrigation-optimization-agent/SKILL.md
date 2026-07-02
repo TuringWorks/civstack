@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Season-blind recommendations** → validate timing against local agronomic calendars, not global averages.
+- **Cold-chain optimism** → verify actual storage and transport conditions before making quality or safety claims.
 
 ## Adapting to any nation (context modifiers)
+
+Food-system work spans industrial farms and smallholders inside the same country: seasonality, weather exposure, and perishability dominate operations, and much of the workforce is informal or seasonal.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

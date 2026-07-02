@@ -93,6 +93,11 @@ Do not clone every support role into this sector. Choose **embedded, shared, pla
 - Plant inspection rounds, warehouse logistics, solar-farm maintenance, substation visual inspection.
 - Support for line crews with tools/materials, but energized work requires extreme controls.
 
+Dedicated **embodied robot role skills** for this sector (LLM-brained; actions as tool calls via VLA policies):
+
+- **Substation and plant maintenance robot** — patrol substations and plants, thermal-scan and inspect equipment, rack breakers, and perform routine switching preparation under dispatch. *(embodied robot skill: `robots/substation-and-plant-maintenance-robot/`)*
+- **Line-crew assistant robot** — stage materials, prepare hardware, dig and set poles, and support de-energized line construction and storm restoration. *(embodied robot skill: `robots/line-crew-assistant-robot/`)*
+
 > **How these robots work (assumed architecture):** each is an **LLM-brained embodied agent** — a multimodal LLM brain plans and issues physical **actions as tool calls** (e.g. `grasp`, `navigate_to`, `place`), executed by Vision-Language-Action policies trained on world models, robot gyms, and **RLAIF**. Fleets may share one brain model or mix specialized ones. A verified low-level safety layer can override unsafe actions independently of the brain. Full detail in `00-framework/` and `_catalogs/humanoid-robots/`.
 
 ## Non-humanoid autonomous machines
@@ -157,7 +162,9 @@ Automating routine cases erodes three things over time: the **human fallback ben
 
 ## Adapting to any nation (context modifiers)
 
-The jobs above are universal; how they are staffed is not. Re-read this sector through:
+The jobs above are universal; how they are staffed is not. Energy work balances real-time physics against decades-long assets: grid decisions propagate in milliseconds, while theft, non-payment, and off-grid self-supply dominate the economics in low-capacity systems.
+
+Re-read this sector through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

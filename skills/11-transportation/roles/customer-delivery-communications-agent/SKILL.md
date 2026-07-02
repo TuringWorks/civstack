@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Cascade underestimation** → model knock-on delays across modes and operators, not just the disrupted link.
+- **Informal-transit invisibility** → minibus and moto networks move most people in many cities; include them in any mobility analysis.
 
 ## Adapting to any nation (context modifiers)
+
+Transport is a network of networks under mixed control — public, private, and informal paratransit — where a local disruption propagates system-wide and safety regimes differ by mode.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

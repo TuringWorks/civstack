@@ -95,6 +95,11 @@ Do not clone every support role into this sector. Choose **embedded, shared, pla
 - Material handling, site cleanup, inspection, painting, drywall support, repetitive tool tasks.
 - Facilities rounds, repair support, janitorial work, disaster damage assessment.
 
+Dedicated **embodied robot role skills** for this sector (LLM-brained; actions as tool calls via VLA policies):
+
+- **Construction laborer robot** — carry, stage, and install materials, assist framing, blocklaying, and rebar work, and keep sites clear and safe. *(embodied robot skill: `robots/construction-laborer-robot/`)*
+- **Finishing-trades robot** — sand, paint, seal, tape drywall, and perform repetitive finishing passes to specification. *(embodied robot skill: `robots/finishing-trades-robot/`)*
+
 > **How these robots work (assumed architecture):** each is an **LLM-brained embodied agent** — a multimodal LLM brain plans and issues physical **actions as tool calls** (e.g. `grasp`, `navigate_to`, `place`), executed by Vision-Language-Action policies trained on world models, robot gyms, and **RLAIF**. Fleets may share one brain model or mix specialized ones. A verified low-level safety layer can override unsafe actions independently of the brain. Full detail in `00-framework/` and `_catalogs/humanoid-robots/`.
 
 ## Non-humanoid autonomous machines
@@ -158,7 +163,9 @@ Automating routine cases erodes three things over time: the **human fallback ben
 
 ## Adapting to any nation (context modifiers)
 
-The jobs above are universal; how they are staffed is not. Re-read this sector through:
+The jobs above are universal; how they are staffed is not. Construction and land work is local by nature: codes, tenure systems, and building practices differ street by street, and informal construction houses most of humanity. Drawings rarely match the as-built world.
+
+Re-read this sector through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

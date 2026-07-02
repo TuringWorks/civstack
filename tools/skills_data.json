@@ -3421,6 +3421,124 @@
         "fields, pastures, irrigation networks, remote plots",
         "Maintains the physical farm: laying and fixing drip/sprinkler lines, mending fences, placing and servicing soil and weather sensors, and collecting georeferenced soil and tissue samples for the agronomy agents. Extends reach into remote acreage that is costly to service by hand."
       ]
+    ],
+    "6": [
+      [
+        "Treatment plant operations robot",
+        "patrol water and wastewater plants, read gauges, take samples, turn valves, and service pumps and dosing systems",
+        "water/wastewater treatment plants, pump stations, chemical dosing rooms",
+        "Takes the physical rounds of plant operation: walking the process train, reading analog gauges legacy SCADA never captured, pulling grab samples, exercising valves, swapping dosing-pump heads, and clearing screens. Extends scarce certified operators across more assets and keeps humans out of chlorine rooms and confined spaces."
+      ],
+      [
+        "Sanitation and public-hygiene robot",
+        "clean and service public toilets, drains, and fecal-sludge collection points and handle waste safely",
+        "public sanitation facilities, informal settlements, drainage networks",
+        "Does the sanitation work that is dangerous and stigmatized when done by hand: servicing public toilet blocks, desludging collection points, clearing blocked drains, and containerizing waste safely. Directly targets the deadly practice of manual scavenging while keeping community sanitation workers in supervisory, better-paid roles."
+      ]
+    ],
+    "7": [
+      [
+        "Substation and plant maintenance robot",
+        "patrol substations and plants, thermal-scan and inspect equipment, rack breakers, and perform routine switching preparation under dispatch",
+        "transmission substations, power plants, switchyards",
+        "Walks the yard so humans enter it less: thermal and visual inspection of transformers, bushings, and switchgear; oil and SF6 checks; racking breakers in and out; and staging routine switching under explicit dispatcher orders. Every energization-adjacent action requires an authenticated human switching order."
+      ],
+      [
+        "Line-crew assistant robot",
+        "stage materials, prepare hardware, dig and set poles, and support de-energized line construction and storm restoration",
+        "distribution corridors, storm-damage zones, rural line builds",
+        "The ground hand of a line crew: staging conductor and hardware, digging and setting poles, pre-assembling crossarms, and clearing storm debris so qualified linemen spend their time on the energized and skilled work. Live-line work stays human; the robot works de-energized zones and the ground."
+      ]
+    ],
+    "9": [
+      [
+        "Flexible assembly robot",
+        "kit, position, fasten, and assemble high-mix low-volume products at human-scaled workstations",
+        "assembly cells, job shops, electronics and light-machinery lines",
+        "Built for the assembly that fixed automation can't justify: short runs, frequent changeovers, and products designed for human hands. Reads work instructions, kits parts, seats connectors, torques fasteners in sequence, and flags deviations instead of forcing them."
+      ],
+      [
+        "Machine-tending robot",
+        "load and unload CNC machines, presses, and molders, change tooling, and run first-article quality checks",
+        "machine shops, stamping and molding plants, lights-out night cells",
+        "Keeps spindles turning: loading blanks, unloading and deburring parts, swapping tools and fixtures, running first-article checks against the drawing, and pausing the cell when measurements drift. Enables lights-out shifts with human machinists owning setups, offsets, and exceptions by day."
+      ],
+      [
+        "Intralogistics and kitting robot",
+        "pick, kit, stage, and deliver parts and work-in-progress line-side and manage returns and empties",
+        "factory floors, kanban supermarkets, warehouses attached to production",
+        "The material water-spider: picking to kit lists, staging line-side to takt, returning empties and rejects, and keeping inventory locations honest. Works aisles and racks built for people, alongside people, and hands clean consumption data to the planning agents."
+      ]
+    ],
+    "10": [
+      [
+        "Construction laborer robot",
+        "carry, stage, and install materials, assist framing, blocklaying, and rebar work, and keep sites clear and safe",
+        "building sites, masonry and framing crews, materials yards",
+        "Takes the heaviest, most injury-prone share of site labor: moving and staging materials across rough ground, tending masons and framers, placing and tying rebar, and continuous site housekeeping. Works to the drawings under a trade crew's direction; structural judgment stays with humans."
+      ],
+      [
+        "Finishing-trades robot",
+        "sand, paint, seal, tape drywall, and perform repetitive finishing passes to specification",
+        "interior fit-outs, repaint and renovation jobs, new-build finishing",
+        "Does the repetitive passes of the finishing trades — sanding, priming, painting, sealing, drywall taping — to a measured spec, room after room, without fatigue-driven quality decay. Skilled finishers cut in, handle detail work, and own the final-quality call."
+      ]
+    ],
+    "13": [
+      [
+        "Hospital logistics robot",
+        "fetch and deliver supplies, medications, linens, meals, and lab samples across the facility under pharmacy and nursing control",
+        "hospitals, clinics, long-term-care facilities, laboratories",
+        "Runs the errands that consume up to a third of clinical staff time: supply runs, pharmacy deliveries under chain-of-custody, lab-sample transport with integrity tracking, linen and meal distribution. Custody of controlled substances always transfers to authenticated humans at both ends."
+      ],
+      [
+        "Patient mobility-assist robot",
+        "help lift, transfer, reposition, and ambulate patients under clinician supervision",
+        "wards, rehabilitation units, nursing homes, home care",
+        "Takes the lifting that injures more nurses than any other task: bed-to-chair transfers, repositioning to prevent pressure injuries, steadying assisted walks, and fall-arrest support. Always operates in the presence and under the direction of a clinician; the patient can stop any assist at any time."
+      ],
+      [
+        "Facility hygiene robot",
+        "clean, disinfect, and turn over patient rooms, operating theaters, and shared spaces",
+        "patient rooms, operating rooms, waiting areas, isolation units",
+        "Delivers verifiable, protocol-exact cleaning: terminal cleans between patients, UV or chemical disinfection cycles with coverage logging, isolation-room turnover without exposing staff, and high-touch-surface rounds. Cleaning verification data feeds infection-control agents directly."
+      ]
+    ],
+    "17": [
+      [
+        "Store operations robot",
+        "receive, stock, face, and rotate shelf inventory and fulfill in-store pick orders",
+        "supermarkets, convenience stores, pharmacies, dark stores",
+        "Works the shelf edge: receiving and breaking down deliveries, stocking and facing to planogram, rotating by date, counting as it goes, and picking online orders from the same shelves. Runs heaviest overnight, leaving daytime staff for customers."
+      ],
+      [
+        "Kitchen and food-service robot",
+        "prep ingredients, run fryers and grills, plate to spec, and wash dishes on a commercial line",
+        "restaurant kitchens, cafeterias, ghost kitchens, hotel food and beverage",
+        "Holds the stations that burn out human cooks: high-volume prep, fry and grill stations with exact timing, plating to photo spec, and the dish pit. Follows food-safety protocol without shortcuts and logs temperatures continuously. The chef owns the menu, the taste, and the pass."
+      ]
+    ],
+    "21": [
+      [
+        "Home assistance robot",
+        "do laundry, dishes, tidying, and fetch-and-carry so households and caregivers get hours back",
+        "homes, apartments, assisted-living units",
+        "A general household hand for the chores that consume unpaid hours: laundry cycles end-to-end, dishes, tidying to the household's own norms, meal transport, and fetch-and-carry for anyone with limited mobility. Learns each home's rules and respects rooms and items marked off-limits."
+      ],
+      [
+        "Eldercare support robot",
+        "steady mobility, fetch items, monitor for falls, and prompt daily routines while intimate care stays human",
+        "aging-in-place homes, assisted living, community eldercare",
+        "Extends independent living: a steady arm for walking and standing, fall detection and gentle-assist response, fetching glasses and medications (prompting, never administering by force), and routine reminders shaped by the person's own preferences. Companionship and intimate care remain human by design — this robot buys time for them, it does not substitute for them."
+      ]
+    ],
+    "22": [
+      [
+        "Disaster response robot",
+        "search rubble, clear debris, shore structures, and deliver supplies in hazardous zones under incident command",
+        "disaster sites, collapsed structures, flood and fire zones",
+        "Goes where sending a human is itself a casualty risk: void search in collapsed structures with acoustic and thermal sensing, selective debris removal that does not destabilize the pile, temporary shoring, and supply delivery through hazardous corridors. Works only under incident command; any sign of a live victim immediately hands control to human rescuers."
+      ]
     ]
   },
   "sector_machines": {
@@ -3888,6 +4006,253 @@
       "counter": "Maintain manual registration and adjudication competency; rotate staff through field enrollment; preserve redress-handling and exclusion-detection skill.",
       "sim": "Enrollment and adjudication simulators with synthetic edge cases (no documents, name variants, biometric failures); exclusion-handling and grievance drills."
     }
+  },
+  "sector_robot_profiles": {
+    "5": {
+      "owner": "farmer / ranch manager / vet",
+      "owner_owns": "animal welfare, land stewardship, safety, and exceptions",
+      "work": "physical field, barn, and crop work",
+      "workers": "human farmers",
+      "ai_examples": "crop planning, irrigation, livestock health, machinery dispatch",
+      "vla_example": "picking ripe fruit without bruising",
+      "routes": "welfare concerns, chemical decisions, or unsafe conditions",
+      "protectees": "people and animals",
+      "limits": "speed, force, reach, and low-stress-handling limits",
+      "stop_risk": "out-of-distribution conditions, animal-welfare risk, or anything outside the envelope",
+      "workspace": "field/barn",
+      "adapt": "In smallholder and informal-sector agriculture, this role may be shared equipment, cooperatively owned, or rented by the hour rather than owned per farm; affordability and repairability dominate. In high-income, labor-scarce settings it fills chronic field-labor shortages."
+    },
+    "6": {
+      "owner": "certified plant operator / utility manager",
+      "owner_owns": "water quality and public-health compliance, chemical dosing decisions, safety, and exceptions",
+      "work": "physical plant rounds, sampling, and sanitation work",
+      "workers": "human operators",
+      "ai_examples": "treatment optimization, water-quality monitoring, asset-maintenance planning",
+      "vla_example": "capturing an uncontaminated grab sample",
+      "routes": "water-quality anomalies, chemical-handling decisions, or unsafe conditions",
+      "protectees": "people and the water supply",
+      "limits": "speed, force, reach, and contamination-control limits",
+      "stop_risk": "out-of-distribution conditions, contamination risk, or anything outside the envelope",
+      "workspace": "plant/site",
+      "adapt": "In low-capacity settings this role may serve many small plants on a circuit, or support community-managed water points where the \"plant\" is a borehole and a tank; robustness and simple field maintenance dominate. In high-income utilities it extends around-the-clock coverage of aging assets and keeps humans out of confined and chemical spaces."
+    },
+    "7": {
+      "owner": "control-room dispatcher / crew supervisor",
+      "owner_owns": "switching orders, energization decisions, worker and public safety, and exceptions",
+      "work": "physical patrol, inspection, and maintenance-support work",
+      "workers": "human operators and line crews",
+      "ai_examples": "grid operations, outage prediction, asset-health analytics, crew dispatch",
+      "vla_example": "racking a breaker or torquing a connection to spec",
+      "routes": "energization or switching decisions, protection anomalies, or unsafe conditions",
+      "protectees": "people and energized equipment",
+      "limits": "speed, force, reach, and electrical-clearance limits",
+      "stop_risk": "out-of-distribution conditions, clearance uncertainty, or anything outside the envelope",
+      "workspace": "substation/site",
+      "adapt": "In fragile or low-income grids this role leans toward loss and theft inspection, minigrid upkeep, and storm response with minimal spare parts; in high-income grids it absorbs the hazardous, repetitive share of an aging-workforce trade. Live-line work remains human-led everywhere."
+    },
+    "9": {
+      "owner": "line lead / plant manager",
+      "owner_owns": "product-quality standards, line-stop authority, worker safety, and exceptions",
+      "work": "physical assembly, machine-tending, and materials work",
+      "workers": "human production workers",
+      "ai_examples": "production planning, quality analytics, predictive maintenance, scheduling",
+      "vla_example": "seating a connector or torquing fasteners in sequence",
+      "routes": "quality-standard deviations, tooling changes with scrap risk, or unsafe conditions",
+      "protectees": "people and equipment",
+      "limits": "speed, force, reach, and collaborative-safety limits",
+      "stop_risk": "out-of-distribution parts or conditions, quality drift, or anything outside the envelope",
+      "workspace": "cell/line",
+      "adapt": "In industrializing economies this role can raise the productivity of small job shops without full-line automation capital — shared or leased cells matter most. In high-income plants it fills chronic machining and assembly trade shortages and enables lights-out shifts with human oversight by day."
+    },
+    "10": {
+      "owner": "site supervisor / general contractor",
+      "owner_owns": "structural and code-compliance signoff, site safety, sequencing, and exceptions",
+      "work": "physical carrying, installing, and finishing work",
+      "workers": "human tradespeople",
+      "ai_examples": "project scheduling, BIM coordination, progress tracking, safety monitoring",
+      "vla_example": "laying block to line and level or feeding sheet goods to an installer",
+      "routes": "structural questions, deviations from drawings, or unsafe conditions",
+      "protectees": "people and adjacent structures",
+      "limits": "speed, force, reach, and exclusion-zone limits",
+      "stop_risk": "out-of-distribution site conditions, stability concerns, or anything outside the envelope",
+      "workspace": "site",
+      "adapt": "Where construction is largely informal, this role enters as rented equipment on larger formal sites first; skills transfer and site-safety basics dominate. In high-income markets it addresses acute trade shortages and takes the heaviest, most injury-prone tasks off human bodies."
+    },
+    "13": {
+      "owner": "charge nurse / clinical supervisor",
+      "owner_owns": "clinical decisions, patient dignity and consent, medication custody, and exceptions",
+      "work": "physical fetching, transfer-assist, and hygiene work",
+      "workers": "human clinicians and care staff",
+      "ai_examples": "care coordination, clinical documentation, capacity management, infection surveillance",
+      "vla_example": "supporting a patient's weight smoothly during a bed-to-chair transfer",
+      "routes": "clinical concerns, patient distress or refusal, or unsafe conditions",
+      "protectees": "patients, staff, and visitors",
+      "limits": "speed, force, reach, and patient-contact limits",
+      "stop_risk": "out-of-distribution situations, patient distress, or anything outside the envelope",
+      "workspace": "ward/facility",
+      "adapt": "In low-resource health systems the highest-value work is logistics — cold chain, samples, linens — that frees scarce clinical staff; in high-income systems it also takes lifting injuries out of nursing. Intimate care, clinical judgment, and consent conversations remain human everywhere."
+    },
+    "17": {
+      "owner": "store / kitchen manager",
+      "owner_owns": "customer experience, food-safety signoff, cash and shrink controls, and exceptions",
+      "work": "physical stocking, prep, and service-support work",
+      "workers": "human staff",
+      "ai_examples": "demand forecasting, inventory optimization, staff scheduling, order orchestration",
+      "vla_example": "facing shelves without crushing packaging, or plating to spec",
+      "routes": "customer incidents, food-safety doubts, or unsafe conditions",
+      "protectees": "customers and staff",
+      "limits": "speed, force, reach, and customer-proximity limits",
+      "stop_risk": "out-of-distribution situations, food-safety risk, or anything outside the envelope",
+      "workspace": "store/kitchen",
+      "adapt": "In markets dominated by micro-retail and street food, this role appears first as shared or franchised equipment in larger formats. In high-income service economies it absorbs chronically unfilled overnight-stocking and kitchen roles while humans own the guest-facing work."
+    },
+    "21": {
+      "owner": "household / family caregiver / care coordinator",
+      "owner_owns": "care decisions, privacy and consent, household norms, and exceptions",
+      "work": "physical chores and fetch-and-carry support",
+      "workers": "household members and caregivers",
+      "ai_examples": "care scheduling, medication reminders, household logistics, wellbeing check-ins",
+      "vla_example": "folding laundry or carrying a meal tray without spills",
+      "routes": "care concerns, consent or privacy questions, or unsafe conditions",
+      "protectees": "residents, children, and pets",
+      "limits": "speed, force, reach, and in-home safety limits",
+      "stop_risk": "out-of-distribution situations, distress or refusal by the person assisted, or anything outside the envelope",
+      "workspace": "home",
+      "adapt": "Affordability decides everything here: shared building-level or community-owned units, subsidized care deployments, and rental models precede private ownership in most of the world. Intimate and emotional care remains human by design, not merely by boundary."
+    },
+    "22": {
+      "owner": "incident commander",
+      "owner_owns": "life-safety priorities, entry decisions into unstable zones, resource allocation, and exceptions",
+      "work": "physical search, debris, and supply work in hazardous zones",
+      "workers": "human responders",
+      "ai_examples": "situational-awareness fusion, resource dispatch, damage assessment, logistics",
+      "vla_example": "shoring a doorway or passing supplies through a rubble void",
+      "routes": "signs of trapped survivors, structural instability, or unsafe conditions",
+      "protectees": "survivors, responders, and bystanders",
+      "limits": "speed, force, reach, and structural-load limits",
+      "stop_risk": "out-of-distribution conditions, secondary-collapse risk, or anything outside the envelope",
+      "workspace": "incident zone",
+      "adapt": "Disaster-prone, low-capacity settings benefit most but afford least: pre-positioned regional shared fleets, mutual-aid pools, and international response caches are the realistic ownership models. High-capacity states integrate this role into standing urban search-and-rescue teams."
+    }
+  },
+  "sector_context_lens": {
+    "1": "Governance work is inseparable from the political settlement: the same drafting or adjudication support that speeds a high-capacity ministry can entrench arbitrary power where checks are weak. Deploy against the local legitimacy chain — who may lawfully decide, who reviews, who can appeal.",
+    "2": "Public-finance roles operate where money meets legitimacy: budget classifications, procurement thresholds, and audit trails differ sharply by legal tradition, and informal revenue (fees, levies, in-kind) can dwarf recorded flows in low-capacity states.",
+    "3": "Defense and foreign-affairs work carries the sharpest accountability boundary in this library: anything touching use of force, targeting, or treaty commitments is human-decided by law and doctrine. Assume adversarial deception in every input.",
+    "4": "Public-safety roles act where the state's coercive power meets individual rights; error costs are asymmetric and borne by identifiable people. Bias and evidentiary standards are operational constraints, not compliance afterthoughts.",
+    "5": "Food-system work spans industrial farms and smallholders inside the same country: seasonality, weather exposure, and perishability dominate operations, and much of the workforce is informal or seasonal.",
+    "6": "Water and sanitation is a public-health system first and a utility second: quality failures compound invisibly until people are sick, and in much of the world the \"network\" includes standpipes, tankers, and community-managed points.",
+    "7": "Energy work balances real-time physics against decades-long assets: grid decisions propagate in milliseconds, while theft, non-payment, and off-grid self-supply dominate the economics in low-capacity systems.",
+    "8": "Extractive work sits on three fault lines: worker safety in hostile environments, community and environmental consent, and price cycles that whipsaw every plan. Artisanal and small-scale mining is the informal majority in many producing countries.",
+    "9": "Manufacturing spans lights-out plants and informal workshops: quality systems, supplier webs, and takt discipline vary enormously, and the binding constraint is often skilled trades, not machines.",
+    "10": "Construction and land work is local by nature: codes, tenure systems, and building practices differ street by street, and informal construction houses most of humanity. Drawings rarely match the as-built world.",
+    "11": "Transport is a network of networks under mixed control — public, private, and informal paratransit — where a local disruption propagates system-wide and safety regimes differ by mode.",
+    "12": "Digital-infrastructure work is adversarial by default: every exposed system is under continuous probe, dependencies run deep and invisible, and an error can propagate globally at machine speed.",
+    "13": "Clinical environments put the strongest premium on calibrated uncertainty: a plausible-but-wrong output can directly harm a patient, and workflows are interrupt-driven with legally protected data.",
+    "14": "Education compounds over decades and its subjects are mostly minors: errors surface years later as missing capability, and equity of access is a design constraint, not an outcome metric.",
+    "15": "Research work rewards being interestingly wrong over confidently mediocre: negative results, replication, and provenance matter more than polish, and premature certainty is the cardinal sin.",
+    "16": "Financial systems are reflexive — analysis moves the thing analyzed — and regulatory perimeters are jurisdictional. Most of the world's savers and borrowers are informal or thin-file.",
+    "17": "Commerce and hospitality run on thin margins and human moments: demand is spiky, labor turnover is high, and micro-enterprises are the sector's global majority.",
+    "18": "Media and civic-life work shapes what a society believes about itself: provenance, plurality, and the line between persuasion and manipulation are the operational constraints.",
+    "19": "Environmental work runs on mismatched clocks — pollutant half-lives, political cycles, and ecosystem recovery times — with monitoring coverage thinnest where damage is worst.",
+    "20": "Labor-market work touches livelihoods directly: classification errors deny benefits, matching errors waste human potential, and informal work is the world's default employment.",
+    "21": "Care work is intimate, undervalued, and mostly informal or unpaid: privacy, dignity, and family norms are hard constraints, and the person served often cannot advocate for themselves.",
+    "22": "Resilience work is judged only in the tail: capabilities must survive the disaster that removes power, connectivity, and the usual chain of command — and drills are the only evidence that they will.",
+    "23": "Identity systems decide who exists administratively: an enrollment error can lock a person out of everything else, and exclusion is usually invisible to the system that caused it."
+  },
+  "sector_failure_modes": {
+    "1": [
+      "- **Due-process shortcuts** → automation must never shrink notice, hearing, or appeal rights; verify procedural steps explicitly.",
+      "- **Capture by incumbents** → log and publish decision criteria; independently audit who benefits from drafted rules."
+    ],
+    "2": [
+      "- **Phantom precision in fiscal projections** → publish assumptions and ranges, not point estimates; backtest against outturns.",
+      "- **Procurement gaming** → screen for split purchases, bid rotation, and spec-rigging patterns; escalate rather than auto-clear."
+    ],
+    "3": [
+      "- **Adversarial deception / spoofed intelligence** → require multi-source corroboration; treat single-source indicators as leads, not facts.",
+      "- **Escalation at automation speed** → build in deliberate human decision pauses; speed is not a virtue near the use-of-force line."
+    ],
+    "4": [
+      "- **Biased pattern amplification** → test detection and triage outputs across demographic slices; monitor disparate error rates.",
+      "- **Chain-of-custody breaks** → treat evidentiary integrity as a hard output requirement; log every transformation."
+    ],
+    "5": [
+      "- **Season-blind recommendations** → validate timing against local agronomic calendars, not global averages.",
+      "- **Cold-chain optimism** → verify actual storage and transport conditions before making quality or safety claims."
+    ],
+    "6": [
+      "- **Silent quality drift** → treat sensor gaps as alarms, not nulls; sample physically when telemetry is stale.",
+      "- **Averaged scarcity** → model household-level access, not system-level volume; averages hide dry taps."
+    ],
+    "7": [
+      "- **Cascading-failure blindness** → simulate N-1/N-2 contingencies before recommending switching or maintenance deferral.",
+      "- **Demand-forecast anchoring** → stress-test against electrification, weather extremes, and behind-the-meter change."
+    ],
+    "8": [
+      "- **Geotechnical overconfidence** → treat model stability predictions as provisional; physical inspection gates high-consequence calls.",
+      "- **Externalized harm** → account for tailings, water, and community impact inside every recommendation, not in a separate report."
+    ],
+    "9": [
+      "- **Spec-conformance tunnel vision** → conforming parts can still fail in use; track field performance, not just line QC.",
+      "- **Single-supplier fragility** → flag concentration risk in every sourcing recommendation."
+    ],
+    "10": [
+      "- **Drawing–reality divergence** → verify field conditions before quantity, cost, or structural recommendations.",
+      "- **Tenure blindness** → land and occupancy rights may be undocumented; treat registry absence as unknown, not vacant."
+    ],
+    "11": [
+      "- **Cascade underestimation** → model knock-on delays across modes and operators, not just the disrupted link.",
+      "- **Informal-transit invisibility** → minibus and moto networks move most people in many cities; include them in any mobility analysis."
+    ],
+    "12": [
+      "- **Dependency blind spots** → map transitive dependencies before change recommendations; the outage is usually two layers down.",
+      "- **Alert-fatigue engineering** → tune detection for analyst attention as a scarce resource; escalations must stay meaningful."
+    ],
+    "13": [
+      "- **Plausible clinical fabrication** → every clinical claim requires citation to the record or literature; no unsourced synthesis.",
+      "- **Deterioration-signal dilution** → never let summarization smooth away outlier vitals or red-flag symptoms."
+    ],
+    "14": [
+      "- **Teaching to the proxy** → optimize for durable learning, not assessment scores; audit for gaming.",
+      "- **Equity regression** → check that personalization narrows rather than widens gaps across student groups."
+    ],
+    "15": [
+      "- **Citation laundering** → verify claims against primary sources, not derivative summaries.",
+      "- **Novelty inflation** → check prior art thoroughly before any \"first\" or \"novel\" claim."
+    ],
+    "16": [
+      "- **Backtest overfitting** → demand out-of-sample and regime-shift testing before any strategy or risk conclusion.",
+      "- **Thin-file exclusion** → test credit and risk models for systematic exclusion of informal-economy participants."
+    ],
+    "17": [
+      "- **Average-demand planning** → plan for the spikes that make or break service, not the mean.",
+      "- **Service-recovery blindness** → complaint and refund patterns are the early-warning system; never optimize them away."
+    ],
+    "18": [
+      "- **Synthetic-content laundering** → provenance-check sources; label AI-generated material without exception.",
+      "- **Engagement-metric capture** → attention is not civic value; audit for outrage amplification."
+    ],
+    "19": [
+      "- **Monitoring-gap extrapolation** → state coverage limits explicitly; sparse sensors plus interpolation is not measurement.",
+      "- **Baseline drift** → anchor change detection to fixed historical baselines, not rolling averages that normalize decline."
+    ],
+    "20": [
+      "- **Credential proxying** → skills and credentials are not the same; match on demonstrated capability where possible.",
+      "- **Displacement blind spots** → any automation recommendation must carry a transition path for affected workers."
+    ],
+    "21": [
+      "- **Dignity erosion by efficiency** → optimize around the person's preferences and rhythm, not task throughput.",
+      "- **Isolation masking** → care metrics can look green while loneliness deepens; check the human relationship, not just the tasks."
+    ],
+    "22": [
+      "- **Fair-weather dependence** → assume degraded comms and power in every plan; test the paper fallback.",
+      "- **Plan-shelf decay** → an unexercised plan is a hypothesis; schedule drills as first-class outputs."
+    ],
+    "23": [
+      "- **Exclusion invisibility** → measure who fails to enroll or authenticate, segmented by group; silence is not success.",
+      "- **Irreversible-linkage creep** → resist linking databases beyond stated purpose; deletion and correction must remain possible."
+    ]
   },
   "role_jd": {
     "coding-agent": {

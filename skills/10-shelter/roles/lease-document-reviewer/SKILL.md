@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Drawing–reality divergence** → verify field conditions before quantity, cost, or structural recommendations.
+- **Tenure blindness** → land and occupancy rights may be undocumented; treat registry absence as unknown, not vacant.
 
 ## Adapting to any nation (context modifiers)
+
+Construction and land work is local by nature: codes, tenure systems, and building practices differ street by street, and informal construction houses most of humanity. Drawings rarely match the as-built world.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

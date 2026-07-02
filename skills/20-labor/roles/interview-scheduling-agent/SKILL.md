@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Credential proxying** → skills and credentials are not the same; match on demonstrated capability where possible.
+- **Displacement blind spots** → any automation recommendation must carry a transition path for affected workers.
 
 ## Adapting to any nation (context modifiers)
+
+Labor-market work touches livelihoods directly: classification errors deny benefits, matching errors waste human potential, and informal work is the world's default employment.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Cascading-failure blindness** → simulate N-1/N-2 contingencies before recommending switching or maintenance deferral.
+- **Demand-forecast anchoring** → stress-test against electrification, weather extremes, and behind-the-meter change.
 
 ## Adapting to any nation (context modifiers)
+
+Energy work balances real-time physics against decades-long assets: grid decisions propagate in milliseconds, while theft, non-payment, and off-grid self-supply dominate the economics in low-capacity systems.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Phantom precision in fiscal projections** → publish assumptions and ranges, not point estimates; backtest against outturns.
+- **Procurement gaming** → screen for split purchases, bid rotation, and spec-rigging patterns; escalate rather than auto-clear.
 
 ## Adapting to any nation (context modifiers)
+
+Public-finance roles operate where money meets legitimacy: budget classifications, procurement thresholds, and audit trails differ sharply by legal tradition, and informal revenue (fees, levies, in-kind) can dwarf recorded flows in low-capacity states.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

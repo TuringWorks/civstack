@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Average-demand planning** → plan for the spikes that make or break service, not the mean.
+- **Service-recovery blindness** → complaint and refund patterns are the early-warning system; never optimize them away.
 
 ## Adapting to any nation (context modifiers)
+
+Commerce and hospitality run on thin margins and human moments: demand is spiky, labor turnover is high, and micro-enterprises are the sector's global majority.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

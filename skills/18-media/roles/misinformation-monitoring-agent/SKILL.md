@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Synthetic-content laundering** → provenance-check sources; label AI-generated material without exception.
+- **Engagement-metric capture** → attention is not civic value; audit for outrage amplification.
 
 ## Adapting to any nation (context modifiers)
+
+Media and civic-life work shapes what a society believes about itself: provenance, plurality, and the line between persuasion and manipulation are the operational constraints.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

@@ -13,7 +13,7 @@ Where to look in CivStack for common requests — a traceability map from a user
 | Warehouses, forklifts, ports | `skills/17-commerce/autonomous/`, `skills/11-transportation/autonomous/` | warehouse AMR, autonomous forklift, port carrier, yard mover | warehouse automation lead |
 | Rail / marine / underwater | `skills/11-transportation/autonomous/`, `_catalogs/autonomous-machines/` | freight/metro train, harbor USV, underwater ROV/AUV | rail authority, marine autonomy lead |
 | Fixed industrial robots | `skills/_catalogs/autonomous-machines/fixed-industrial-robotic-cell/`, `skills/09-manufacturing/` | fixed robotic cell, machine-tending | automation engineering lead |
-| Humanoid robots | `skills/_catalogs/humanoid-robots/`, `skills/05-food/robots/` | material runner, care aide, field/livestock robots | per-sector supervisor |
+| Humanoid robots | `skills/_catalogs/humanoid-robots/`, `skills/<sector>/robots/` (9 sectors) | material runner, care aide, field/livestock robots | per-sector supervisor |
 | How the machines are built & run | `skills/_catalogs/embodied-ai-stack/`, `autonomous-fleet-ops/`, `capability-optimization/` | brain, VLA policy, ODD/safety, teleop, method router | autonomy & safety leads |
 
 ## By sector

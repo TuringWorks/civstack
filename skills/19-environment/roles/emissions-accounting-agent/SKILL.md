@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Monitoring-gap extrapolation** → state coverage limits explicitly; sparse sensors plus interpolation is not measurement.
+- **Baseline drift** → anchor change detection to fixed historical baselines, not rolling averages that normalize decline.
 
 ## Adapting to any nation (context modifiers)
+
+Environmental work runs on mismatched clocks — pollutant half-lives, political cycles, and ecosystem recovery times — with monitoring coverage thinnest where damage is worst.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

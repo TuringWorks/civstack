@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Adversarial deception / spoofed intelligence** → require multi-source corroboration; treat single-source indicators as leads, not facts.
+- **Escalation at automation speed** → build in deliberate human decision pauses; speed is not a virtue near the use-of-force line.
 
 ## Adapting to any nation (context modifiers)
+
+Defense and foreign-affairs work carries the sharpest accountability boundary in this library: anything touching use of force, targeting, or treaty commitments is human-decided by law and doctrine. Assume adversarial deception in every input.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

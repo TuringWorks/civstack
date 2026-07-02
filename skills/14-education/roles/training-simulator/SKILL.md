@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Teaching to the proxy** → optimize for durable learning, not assessment scores; audit for gaming.
+- **Equity regression** → check that personalization narrows rather than widens gaps across student groups.
 
 ## Adapting to any nation (context modifiers)
+
+Education compounds over decades and its subjects are mostly minors: errors surface years later as missing capability, and equity of access is a design constraint, not an outcome metric.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

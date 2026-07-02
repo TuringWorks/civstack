@@ -1,6 +1,6 @@
 ---
 name: "robot-05-irrigation-and-field-infrastructure-robot"
-description: "Humanoid/embodied robot role for the Food operating system: **Irrigation and field-infrastructure robot** — install, inspect, and repair irrigation, fencing, and field sensors and take soil and tissue samples. Best in: fields, pastures, irrigation networks, remote plots. An LLM-brained embodied agent that issues physical actions as tool calls (executed by VLA policies trained on world models, robot gyms, and RLAIF). Use this skill to plan or operate this physical farm/field role; trigger whenever the task needs this hands-on work, even if the user only describes the underlying need."
+description: "Humanoid/embodied robot role for the Food operating system: **Irrigation and field-infrastructure robot** — install, inspect, and repair irrigation, fencing, and field sensors and take soil and tissue samples. Best in: fields, pastures, irrigation networks, remote plots. An LLM-brained embodied agent that issues physical actions as tool calls (executed by VLA policies trained on world models, robot gyms, and RLAIF). Use this skill to plan or operate this physical role in the food sector; trigger whenever the task needs this hands-on work, even if the user only describes the underlying need."
 ---
 
 # Irrigation and field-infrastructure robot
@@ -39,7 +39,7 @@ These robot roles are assumed to be **LLM-brained embodied agents**, not hard-co
 - **LLM brain** — perceives the field/barn, plans the task, and issues motor-primitive tool calls (`navigate_to`, `grasp`, `pick`, `place`, `inspect`).
 - **VLA policies** — execute dexterous, delicate manipulation (e.g., picking ripe fruit without bruising) under the engineered safety envelope.
 - **AI agents** — the sector's planning/monitoring agents (crop planning, irrigation, livestock health, machinery dispatch) direct and schedule the robot's work.
-- **Verified safety layer** — validates, refuses, or overrides unsafe tool calls independently of the brain (people, animals, and bystanders protected).
+- **Verified safety layer** — validates, refuses, or overrides unsafe tool calls independently of the brain (people and animals protected).
 
 ## Accountability boundary
 
@@ -52,7 +52,7 @@ These remain human-owned. The robot executes within an engineered envelope and r
 1. Confirm the field/barn is mapped, people and animals are protected, and the task is within the engineered envelope.
 2. The brain plans and emits motor-primitive **tool calls**; the safety layer validates each before execution.
 3. Execute within speed, force, reach, and low-stress-handling limits via VLA policies.
-4. Report progress, yields, exceptions, and any safety or welfare event to the sector agents and human owner.
+4. Report progress, outcomes, exceptions, and any safety event to the sector agents and human owner.
 5. Stop and yield to humans for out-of-distribution conditions, animal-welfare risk, or anything outside the envelope.
 
 ## Architecture-specific failure modes

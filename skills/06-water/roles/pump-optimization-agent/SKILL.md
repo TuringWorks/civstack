@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Silent quality drift** → treat sensor gaps as alarms, not nulls; sample physically when telemetry is stale.
+- **Averaged scarcity** → model household-level access, not system-level volume; averages hide dry taps.
 
 ## Adapting to any nation (context modifiers)
+
+Water and sanitation is a public-health system first and a utility second: quality failures compound invisibly until people are sick, and in much of the world the "network" includes standpipes, tankers, and community-managed points.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

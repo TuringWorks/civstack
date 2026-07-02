@@ -95,8 +95,14 @@ Other role skills in this operating system (see `../`), and across these neighbo
 - **Specification gaming / reward hacking** → evaluate on outcomes, not proxies; keep the human in the loop.
 - **Silent drift** → monitor for distribution shift; re-evaluate as the domain changes.
 - **Automation bias** → present uncertainty prominently; make it easy for the human to disagree.
+- **Exclusion invisibility** → measure who fails to enroll or authenticate, segmented by group; silence is not success.
+- **Irreversible-linkage creep** → resist linking databases beyond stated purpose; deletion and correction must remain possible.
 
 ## Adapting to any nation (context modifiers)
+
+Identity systems decide who exists administratively: an enrollment error can lock a person out of everything else, and exclusion is usually invisible to the system that caused it.
+
+Re-read the role through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.

@@ -159,7 +159,9 @@ Automating routine cases erodes three things over time: the **human fallback ben
 
 ## Adapting to any nation (context modifiers)
 
-The jobs above are universal; how they are staffed is not. Re-read this sector through:
+The jobs above are universal; how they are staffed is not. Defense and foreign-affairs work carries the sharpest accountability boundary in this library: anything touching use of force, targeting, or treaty commitments is human-decided by law and doctrine. Assume adversarial deception in every input.
+
+Re-read this sector through:
 
 - **Scale** (city-state → federation): whether this role is unified or layered across local/regional/national tiers.
 - **State capacity** (fragile → high-capacity): whether the owning institution exists and can be held to account, or the job is met by markets, households, NGOs, or donors.
