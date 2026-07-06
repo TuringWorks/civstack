@@ -204,7 +204,7 @@ git add -A && git diff --cached --stat
 
 Built from the strategy map in [`docs/country-economy-core-jtbd.md`](docs/country-economy-core-jtbd.md), which draws on public occupational and industrial taxonomies (BLS SOC, O\*NET, NAICS), the U.S. CISA critical-infrastructure model, international cross-walks (ILO ISCO-08, UN ISIC), informal-economy research (ILO, World Bank), and AI/robotics-governance frames (NIST AI RMF, OECD.AI). See the source document's notes for the full list.
 
-## Browse the library (self-hostable site)
+## Browse the library (self-hostable site )
 
 A static, browsable site is generated into [`site/`](site/) — search and filter all 433
 skills by text, category, and operating system, and read every skill and doc as a rendered
